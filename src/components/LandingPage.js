@@ -12,18 +12,18 @@ const LandingPage = () =>{
                     <p>Faites le tri dans vos habits.</p>
                     <p className='text_bold'>Télécharger RenoWear</p>
                     <div className='row'>
-                        <button className='row'>
+                        <button className='row alignitem_center'>
                             <img src={googlePlay} alt='logo google play' />
                             <div>
                                 <p>Get it on</p>
-                                <p>Google Play</p>
+                                <p className='text_bold'>Google Play</p>
                             </div>
                         </button>
-                        <button className='row'>
+                        <button className='row alignitem_center'>
                             <img src={appStore} alt='logo app store' />
                             <div>
                                 <p>Get it on</p>
-                                <p>App Store</p>
+                                <p className='text_bold'>App Store</p>
                             </div>
                         </button>
                     </div>
