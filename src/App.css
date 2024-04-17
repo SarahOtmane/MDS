@@ -1,0 +1,36 @@
+/* 
+                Sommaire
+
+    1:= Fonts
+    2:= Global css
+    3:= Header
+
+
+*/
+
+
+
+
+
+/* ----------- 1:= Fonts ------------ */
+
+
+
+
+/* ----------- 2:= Global css -------- */
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+/* ----------- 3:= Header ------------ */
