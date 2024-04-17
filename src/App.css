@@ -5,6 +5,7 @@
     2:= Constantes
     3:= Global css
     4:= Header
+    5:= Landing Page
 
 
 */
@@ -67,6 +68,19 @@ ul{
     align-items: center;
 }
 
+.text_uppercase{
+    text-transform: uppercase;
+}
+
+.text_bold{
+    font-weight: bolder;
+}
+
+
+.backGris{
+    background-color: var(--gris_background);
+}
+
 
 /* ----------- 4:= Header ------------ */
 header{
@@ -86,3 +100,44 @@ header img{
 header li{
     margin-left: 3rem;
 }
+
+
+/* ----------- 5:= Landing Page ------------ */
+
+/* section 1 */
+.landing .section1 article{
+    width: 60%;
+    padding: 5rem 10rem 0 10rem;
+}
+
+.landing .section1 img{
+    width: 40%;
+}
+
+.landing .section1 h1{
+    font-size: 3rem;
+}
+
+.landing .section1 button{
+    background-color: var(--blanc);
+    color: var(--noir);
+    border: none;
+    margin: 2rem 2rem 0 0;
+    width: 30%;
+}
+
+.landing .section1 button img{
+    width: 20%;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+
+.landing .section1 button p{
+    margin: 0;
+}
+
+.landing .section1 button p:first-child{
+    font-size: .9rem;
+    width: max-content;
+}
+
