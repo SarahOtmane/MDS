@@ -19,9 +19,10 @@
 
 /* ----------- 2:= Constantes -------- */
 :root{
-    --gris_liens : #5C5F6A;
     --noir : #000000;
     --blanc : #FFFFFF;
+    --gris_liens : #5C5F6A;
+    --gris_background : #F6F6F6;
 }
 
 
