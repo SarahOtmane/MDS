@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 
 import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
 
 
 const App = () =>{
@@ -11,7 +12,7 @@ const App = () =>{
             <>
                 <Header />
                 <Routes>
-                    <Route path="/"/> 
+                    <Route path="/" element={<LandingPage />} /> 
                 </Routes> 
             </>
         </BrowserRouter>
