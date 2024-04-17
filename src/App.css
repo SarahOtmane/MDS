@@ -20,6 +20,8 @@
 /* ----------- 2:= Constantes -------- */
 :root{
     --gris_liens : #5C5F6A;
+    --noir : #000000;
+    --blanc : #FFFFFF;
 }
 
 
@@ -43,5 +45,24 @@ a{
     flex-wrap: nowrap;
 }
 
+button{
+    padding: .8rem 1.4rem;
+    border-radius: 2rem;
+    background-color: var(--noir);
+    color: var(--blanc);
+    border: 1px solid var(--noir);
+}
+
 
 /* ----------- 4:= Header ------------ */
+header{
+    padding: 2rem 5rem 3rem 8rem;
+}
+
+header section{
+    width: 80%;
+}
+
+header img{
+    width: 15%;
+}
