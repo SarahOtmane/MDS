@@ -2,8 +2,9 @@
                 Sommaire
 
     1:= Fonts
-    2:= Global css
-    3:= Header
+    2:= Constantes
+    3:= Global css
+    4:= Header
 
 
 */
@@ -16,9 +17,19 @@
 
 
 
+/* ----------- 2:= Constantes -------- */
+:root{
+    --gris_liens : #5C5F6A;
+}
 
-/* ----------- 2:= Global css -------- */
 
+
+/* ----------- 3:= Global css -------- */
+
+a{
+    text-decoration: none;
+    color: var(--gris_liens);
+}
 
 .column{
     display: flex;
@@ -33,4 +44,4 @@
 }
 
 
-/* ----------- 3:= Header ------------ */
+/* ----------- 4:= Header ------------ */
