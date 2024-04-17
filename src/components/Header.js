@@ -3,8 +3,8 @@ import logo from '../assets/pictures/logo_black.png';
 const Header = () =>{
 
     return(
-        <header className='row'>
-            <section className='row'>
+        <header className='row alignitem_center'>
+            <section className='row alignitem_center'>
                 <img src={logo} alt="RenoWear logo en noir" />
                 <nav className='row'>
                     <a href="/">À propos</a>
