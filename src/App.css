@@ -28,10 +28,27 @@
 
 /* ----------- 3:= Global css -------- */
 
+
+button{
+    padding: .8rem 1.4rem;
+    border-radius: 2rem;
+    background-color: var(--noir);
+    color: var(--blanc);
+    border: 1px solid var(--noir);
+    font-size: 1.2rem;
+}
+
 a{
     text-decoration: none;
     color: var(--gris_liens);
+    cursor: pointer;
 }
+
+ul{
+    list-style: none;
+}
+
+
 
 .column{
     display: flex;
@@ -45,18 +62,15 @@ a{
     flex-wrap: nowrap;
 }
 
-button{
-    padding: .8rem 1.4rem;
-    border-radius: 2rem;
-    background-color: var(--noir);
-    color: var(--blanc);
-    border: 1px solid var(--noir);
+.alignitem_center{
+    align-items: center;
 }
 
 
 /* ----------- 4:= Header ------------ */
 header{
-    padding: 2rem 5rem 3rem 8rem;
+    padding: 2rem 5rem 3rem 15rem;
+    font-size: 1.2rem;
 }
 
 header section{
@@ -64,6 +78,10 @@ header section{
 }
 
 header img{
-    width: 10%;
+    width: 15%;
     height: 15px;
+}
+
+header li{
+    margin-left: 3rem;
 }
