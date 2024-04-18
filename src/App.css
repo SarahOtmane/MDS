@@ -76,6 +76,10 @@ ul{
     font-weight: bolder;
 }
 
+.margin_0{
+    margin: 0;
+}
+
 
 .backGris{
     background-color: var(--gris_background);
@@ -132,12 +136,39 @@ header li{
     margin-left: 1rem;
 }
 
-.landing .section1 button p{
-    margin: 0;
-}
-
 .landing .section1 button p:first-child{
     font-size: .9rem;
     width: max-content;
+}
+
+/* section 2 */
+.landing .section2 h2{
+    font-size: 2.6rem;
+    width: 30%;
+    padding: 0 0 0 8rem;
+    margin-top: 5rem;
+}
+
+.landing .section2 h2 + div{
+    width: 70%;
+}
+
+.landing .section2 .card{
+    width: 30%;
+    margin: 5rem 5% 0 0;
+}
+
+.landing .section2 h3{
+    font-size: 1.6rem;
+}
+
+.landing .section2 a{
+    width: 30%;
+    margin: 0 5% 5rem 0;
+}
+
+.landing .section2 a img{
+    height: 8px;
+    margin-left: .5rem;
 }
 
