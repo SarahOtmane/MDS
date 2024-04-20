@@ -79,7 +79,8 @@
 
 h1, h2, h3,
 .landing .section1 article > p + p,
-.landing .section3 p{
+.landing .section3 p,
+.landing .section5 p{
     font-family: 'montserratbold', sans-serif;
 }
 
@@ -143,7 +144,6 @@ figure img{
 .backGris{
     background-color: var(--gris_background);
 }
-
 
 
 
@@ -341,4 +341,21 @@ header li{
 
 .landing .section4 p{
     margin-bottom: 2rem;
+}
+
+
+
+
+/* section 5 */
+.landing .section5{
+    margin: 6rem 8rem 5rem;
+}
+
+.landing .section5 p{
+    font-size: 2.5rem;
+}
+
+.landing .section5 p + p{
+    color: var(--gris_liens);
+    font-size: 1.7rem;
 }
