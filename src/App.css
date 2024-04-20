@@ -128,6 +128,10 @@ figure img{
     text-transform: uppercase;
 }
 
+.text_capitalize{
+    text-transform: capitalize;
+}
+
 .text_bold{
     font-weight: bolder;
 }
