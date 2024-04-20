@@ -57,6 +57,7 @@
     --blanc : #FFFFFF;
     --gris_liens : #5C5F6A;
     --gris_background : #F6F6F6;
+    --gris_background_mockup : #C4C4C4;
 }
 
 
@@ -369,7 +370,7 @@ header li{
 
 .landing .section7 article .haut{
     width: 70%;
-    height: 4rem;
+    height: 3rem;
     border-top-right-radius: 2rem;
 }
 
@@ -387,3 +388,45 @@ header li{
 
 
 /* section 8 */
+.landing .section8{
+    padding: 2rem 10rem;
+    margin-top: 10rem;
+}
+
+.landing .section8 figure{
+    width: 30%;
+}
+
+.landing .section8 article{
+    width: 60%;
+}
+
+.landing .section8 h2 + p{
+   font-size: 1.3rem;
+   margin: 2rem 0;
+}
+
+.landing .section8 button{
+    color: var(--blanc);
+    font-weight: bolder;
+    font-size: 1.4rem;
+    border: none;
+    margin: 2rem 2rem 0 0;
+    width: 35%;
+    border-radius: 1rem;
+}
+
+.landing .section8 button img{
+    width: 20%;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+
+.landing .section8 button .apple{
+    fill: var(--blanc);
+}
+
+.landing .section8 button p:first-child{
+    font-size: .8rem;
+    width: max-content;
+}
