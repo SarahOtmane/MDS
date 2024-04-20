@@ -123,22 +123,22 @@ const LandingPage = () =>{
                 </article>
             </section>
 
-            <section className='section6'>
+            {/* <section className='section6'>
                 <span className='text_uppercase'>ce que nos clients disent de nous</span>
                 <h2 className='text_capitalize'>vos avis</h2>
-            </section>
+            </section> */}
 
-            <section className='section7 row'>
+            <section className='section7 row justifycontent_spbetween alignitem_center'>
                 <article>
-                    <div></div>
+                    <div className='backGris haut'></div>
                     <figure className='row'>
                         <img src={reparer} alt='' />
-                        <div></div>
+                        <div className='backGris droit'></div>
                     </figure>
                 </article>
                 <article>
-                    <span className='text_uppercase'>valeurs RenoWear</span>
-                    <h2 className='text_uppercase'>Ne jetons plus, réparons !</h2>
+                    <span className='text_uppercase text_bold'>valeurs RenoWear</span>
+                    <h2 className='text_uppercase'>Ne jetons plus, <br></br> réparons !</h2>
                     <p>Changeons nos habitudes de consommation, réparons nos vêtements.</p>
                     <p>Notre objectif, démocratiser la réparation grâce au digital, pour lutter contre l’impact négatif de l’industrie textile sur l’environnement.</p>
                     <a href='/' className='row text_bold alignitem_center'>Plus d'info <img src={arrow} alt='flèche' /> </a>
