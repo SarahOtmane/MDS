@@ -23,15 +23,15 @@ const LandingPage = () =>{
                         <button className='row alignitem_center'>
                             <img src={googlePlay} alt='logo google play' />
                             <div>
-                                <p className='margin_0'>Get it on</p>
-                                <p className='text_bold margin_0'>Google Play</p>
+                                <p>Get it on</p>
+                                <p className='text_bold'>Google Play</p>
                             </div>
                         </button>
                         <button className='row alignitem_center'>
                             <img src={appStore} alt='logo app store' />
                             <div>
-                                <p className='margin_0'>Get it on</p>
-                                <p className='text_bold margin_0'>App Store</p>
+                                <p>Get it on</p>
+                                <p className='text_bold'>App Store</p>
                             </div>
                         </button>
                     </div>
@@ -43,15 +43,15 @@ const LandingPage = () =>{
                 <div className='column'>
                     <div className='row'>
                         <article className='column card'>
-                            <h3 className='margin_0'>Couturiers</h3>
+                            <h3>Couturiers</h3>
                             <p>Ils réparent et transforment tous vos textiles, des simples ourlets. Tout est possible, du dressing à la déco d'intérieur.</p>
                         </article>
                         <article className='column card'>
-                            <h3 className='margin_0'>Cordonniers</h3>
+                            <h3>Cordonniers</h3>
                             <p>Ils préviennent l'usure et restaurent vos chaussures, prolongeant ainsi leur durée de vie pas à pas.</p>
                         </article>
                         <article className='column card'>
-                            <h3 className='margin_0'>Maroquiniers</h3>
+                            <h3>Maroquiniers</h3>
                             <p>Ils entretiennent, réparent et revitalisent vos sacs et accessoires en cuir, offrant tout, de la nouvelle teinture à la création sur-mesure.</p>                   
                         </article>
                     </div>
@@ -65,7 +65,7 @@ const LandingPage = () =>{
             <section className='section3 row'>
                 <article>
                     <span>Expérience</span>
-                    <h3 className='margin_0'>Comment <br></br> ça marche ?</h3>
+                    <h3>Comment <br></br> ça marche ?</h3>
                     <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
                     <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
                     <p className='row'> <img src={send} alt="icone svg" /> Envoyez vos articles.</p>
