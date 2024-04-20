@@ -16,6 +16,8 @@ import image3 from '../assets/pictures/landingPage/image3.png';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
+    //section7
+import reparer from '../assets/pictures/landingPage/reparer.png';
 
 
 const LandingPage = () =>{
@@ -118,6 +120,28 @@ const LandingPage = () =>{
                 <article>
                     <p>200 000</p>
                     <p>articles réparés/an</p>
+                </article>
+            </section>
+
+            <section className='section6'>
+                <span className='text_uppercase'>ce que nos clients disent de nous</span>
+                <h2 className='text_capitalize'>vos avis</h2>
+            </section>
+
+            <section className='section7 row'>
+                <article>
+                    <div></div>
+                    <figure className='row'>
+                        <img src={reparer} alt='' />
+                        <div></div>
+                    </figure>
+                </article>
+                <article>
+                    <span className='text_uppercase'>valeurs RenoWear</span>
+                    <h2 className='text_uppercase'>Ne jetons plus, réparons !</h2>
+                    <p>Changeons nos habitudes de consommation, réparons nos vêtements.</p>
+                    <p>Notre objectif, démocratiser la réparation grâce au digital, pour lutter contre l’impact négatif de l’industrie textile sur l’environnement.</p>
+                    <a href='/' className='row text_bold alignitem_center'>Plus d'info <img src={arrow} alt='flèche' /> </a>
                 </article>
             </section>
         </main>
