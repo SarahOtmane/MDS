@@ -18,6 +18,9 @@ import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
     //section7
 import reparer from '../assets/pictures/landingPage/reparer.png';
+    //section8
+import mobileMockup from '../assets/pictures/landingPage/mobile_mockup.png';
+import appStoreWhite from '../assets/pictures/landingPage/appStoreWhite.svg';
 
 
 const LandingPage = () =>{
@@ -142,6 +145,32 @@ const LandingPage = () =>{
                     <p>Changeons nos habitudes de consommation, réparons nos vêtements.</p>
                     <p>Notre objectif, démocratiser la réparation grâce au digital, pour lutter contre l’impact négatif de l’industrie textile sur l’environnement.</p>
                     <a href='/' className='row text_bold alignitem_center'>Plus d'info <img src={arrow} alt='flèche' /> </a>
+                </article>
+            </section>
+
+            <section className='section8 row alignitem_center backGris justifycontent_spbetween'>
+                <figure>
+                    <img src={mobileMockup} alt='' />
+                </figure>
+                <article>
+                    <h2>Prêts à redonner vie à votre <br></br> garde-robe ?</h2>
+                    <p>Téléchargez dès maintenant notre application et donnez une seconde vie à vos vêtements en réveillant l'artisanat français.</p>
+                    <div className='row'>
+                    <button className='row alignitem_center'>
+                            <img src={appStoreWhite} alt='logo app store' className='apple' />
+                            <div>
+                                <p className='span'>Download on the</p>
+                                <p className='text_bold'>App Store</p>
+                            </div>
+                        </button>
+                        <button className='row alignitem_center'>
+                            <img src={googlePlay} alt='logo google play' />
+                            <div>
+                                <p>Get it on</p>
+                                <p className='text_bold'>Google Play</p>
+                            </div>
+                        </button>
+                    </div>
                 </article>
             </section>
         </main>
