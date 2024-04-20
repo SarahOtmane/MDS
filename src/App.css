@@ -41,6 +41,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* ----------- 2:= Constantes -------- */
 :root{
     --noir : #1E1E1E;
@@ -51,6 +61,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 /* ----------- 3:= Global css -------- */
 *{
     font-family: "montserratlight", sans-serif;
@@ -58,7 +77,9 @@
     padding: 0;
 }
 
-h1, h2, h3{
+h1, h2, h3,
+.landing .section1 article > p + p,
+.landing .section3 p{
     font-family: 'montserratbold', sans-serif;
 }
 
@@ -79,6 +100,10 @@ a{
 
 ul{
     list-style: none;
+}
+
+figure img{
+    width: 100%;
 }
 
 
@@ -113,6 +138,18 @@ ul{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- 4:= Header ------------ */
 header{
     padding: 2rem 5rem 3rem 15rem;
@@ -133,7 +170,22 @@ header li{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- 5:= Landing Page ------------ */
+.landing h2{
+    font-size: 3.3rem;
+}
 
 /* section 1 */
 .landing .section1 article{
@@ -141,13 +193,17 @@ header li{
     padding: 5rem 10rem 0 10rem;
 }
 
+.landing .section1 h1{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
 .landing .section1 img{
     width: 40%;
 }
 
-.landing .section1 h1{
-    font-size: 3rem;
-    margin-bottom: 2rem;
+.landing .section1 article > p + p{
+    margin-top: 1rem;
 }
 
 .landing .section1 button{
@@ -169,9 +225,11 @@ header li{
     width: max-content;
 }
 
+
+
+
 /* section 2 */
 .landing .section2 h2{
-    font-size: 2.6rem;
     width: 30%;
     padding: 0 0 0 8rem;
     margin-top: 5rem;
@@ -188,25 +246,72 @@ header li{
 
 .landing .section2 h3{
     font-size: 1.6rem;
+    margin-bottom: 1.5rem;
 }
 
-.landing .section2 a{
+.landing .section2 a,
+.landing .section3 a {
     width: 30%;
-    margin: 0 5% 5rem 0;
+    margin: 2.5rem 5% 5rem 0;
 }
 
-.landing .section2 a img{
+.landing .section2 a img,
+.landing .section3 a img{
     height: 8px;
     margin-left: .5rem;
 }
 
 
+
+
 /* section 3 */
 .landing .section3{
-    margin: 8rem 0 ;
+    margin: 6rem 0 ;
     justify-content: space-between;
-    align-items: center;
 }
+
 .landing .section3 article{
-    width: 45%;
+    width: 40%;
+    padding: 0 0 0 10rem;
+}
+
+.landing .section3 h2{
+    margin: 1rem 0 2.5rem;
+}
+
+.landing .section3 p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.landing .section3 span, .landing .section3 p img{
+    color: var(--gris_liens);
+    fill: var(--gris_liens);
+    font-size: 1.7rem;
+    margin-right: .5rem;
+}
+
+.landing .section3 .twoImages{
+    width: 15%;
+}
+
+.landing .section3 .twoImages img:first-child{
+    margin-bottom: 2.5rem;
+}
+
+.landing .section3 figure div{
+    background-color: var(--gris_background);
+    width: 70%;
+    height: 6rem;
+    align-self: flex-end;
+    border-top-left-radius: 2rem;
+    margin-top: 1rem;
+}
+
+.landing .section3 figure:last-child img{
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83); 
+    box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    width: 110%;
 }
