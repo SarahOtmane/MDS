@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 //import images
     //section1
 import mockup from '../assets/pictures/landingPage/landing_mockup.png';
@@ -23,7 +25,34 @@ import mobileMockup from '../assets/pictures/landingPage/mobile_mockup.png';
 import appStoreWhite from '../assets/pictures/landingPage/appStoreWhite.svg';
 
 
+
 const LandingPage = () =>{
+    const [btnSelected, setBtnSelected] = useState('couture');
+    const testimonialsTabs= [{
+        'pic' : '',
+        'text' : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        'stars' : 2,
+        'type' : ''
+    },{
+        'pic' : '',
+        'text' : '',
+        'stars' : 2
+    },{
+        'pic' : '',
+        'text' : '',
+        'stars' : 2
+    },{
+        'pic' : '',
+        'text' : '',
+        'stars' : 2
+    },{
+        'pic' : '',
+        'text' : '',
+        'stars' : 2
+    }]
+
+    const handleClick = (e) => { setBtnSelected(e.target.id) };
+
     return(
         <main className="landing">
             <section className="section1 backGris row">
@@ -126,10 +155,16 @@ const LandingPage = () =>{
                 </article>
             </section>
 
-            {/* <section className='section6'>
-                <span className='text_uppercase'>ce que nos clients disent de nous</span>
+            <section className='section6'>
+                <span className='text_uppercase text_bold'>ce que nos clients disent de nous</span>
                 <h2 className='text_capitalize'>vos avis</h2>
-            </section> */}
+                <div className='row'>
+                    <button className={btnSelected==='couture' ? 'selected' : ''} onClick={handleClick} id="couture">Couture</button>
+                    <button className={btnSelected==='broderie' ? 'selected' : ''} onClick={handleClick} id="broderie">Broderie</button>
+                    <button className={btnSelected==='maroquinerie' ? 'selected' : ''} onClick={handleClick} id="maroquinerie">Maroquinerie</button>
+                    <button className={btnSelected==='cordonnerie' ? 'selected' : ''} onClick={handleClick} id="cordonnerie">Cordonnerie</button>
+                </div>
+            </section>
 
             <section className='section7 row justifycontent_spbetween alignitem_center'>
                 <article>
