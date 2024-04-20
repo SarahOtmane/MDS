@@ -1,14 +1,22 @@
+//import images
+    //section1
 import mockup from '../assets/pictures/landingPage/landing_mockup.png';
 import appStore from '../assets/pictures/landingPage/appStore.svg';
 import googlePlay from '../assets/pictures/landingPage/playStore.svg';
+    //section2
 import arrow from '../assets/pictures/landingPage/Arrow.png';
 import loupe from '../assets/pictures/landingPage/loupe.svg';
 import check from '../assets/pictures/landingPage/check.svg';
 import send from '../assets/pictures/landingPage/send.svg';
 import ok from '../assets/pictures/landingPage/ok.svg';
+    //section3
 import image1 from '../assets/pictures/landingPage/image1.png';
 import image2 from '../assets/pictures/landingPage/image2.png';
 import image3 from '../assets/pictures/landingPage/image3.png';
+    //section4
+import particulier from '../assets/pictures/landingPage/particuliers.png';
+import artisan from '../assets/pictures/landingPage/artisans.png';
+
 
 const LandingPage = () =>{
     return(
@@ -80,6 +88,21 @@ const LandingPage = () =>{
                     <div></div>
                     <img src={image3} alt='un mannequin ' />
                 </figure>
+            </section>
+
+            <section className='section4 backGris'>
+                <span className='text_uppercase'>RenoWear</span>
+                <h2 className='text_capitalize'>pour qui ?</h2>
+                <div className='row'>
+                    <figure>
+                        <p className='text_uppercase'>Les particuliers</p>
+                        <img src={particulier} alt='' />
+                    </figure>
+                    <figure>
+                        <p className='text_uppercase'>Les artisans</p>
+                        <img src={artisan} alt='' />
+                    </figure>
+                </div>
             </section>
         </main>
     )
