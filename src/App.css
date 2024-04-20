@@ -124,6 +124,10 @@ figure img{
     align-items: center;
 }
 
+.justifycontent_spbetween{
+    justify-content: space-between;
+}
+
 .text_uppercase{
     text-transform: uppercase;
 }
@@ -133,9 +137,8 @@ figure img{
 }
 
 .text_bold{
-    font-weight: bolder;
+    font-weight: 900;
 }
-
 
 .backGris{
     background-color: var(--gris_background);
@@ -271,7 +274,6 @@ header li{
 /* section 3 */
 .landing .section3{
     margin: 6rem 0 ;
-    justify-content: space-between;
 }
 
 .landing .section3 article{
@@ -279,7 +281,8 @@ header li{
     padding: 0 0 0 10rem;
 }
 
-.landing .section3 h2{
+.landing .section3 h2,
+.landing .section4 h2{
     margin: 1rem 0 2.5rem;
 }
 
@@ -288,10 +291,12 @@ header li{
     font-size: 1.2rem;
 }
 
-.landing .section3 span, .landing .section3 p img{
+.landing .section3 span, .landing .section3 p img,
+.landing .section4 span,
+.landing .section4 p{
     color: var(--gris_liens);
     fill: var(--gris_liens);
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-right: .5rem;
 }
 
@@ -318,4 +323,22 @@ header li{
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
     width: 110%;
+}
+
+
+
+
+/* section 4 */
+.landing .section4{
+    text-align: center;
+    padding: 3rem 17rem;
+}
+
+.landing .section4 figure{
+    width: 45%;
+    margin-top: 3rem;
+}
+
+.landing .section4 p{
+    margin-bottom: 2rem;
 }
