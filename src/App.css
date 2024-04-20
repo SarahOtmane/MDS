@@ -15,12 +15,35 @@
 
 
 /* ----------- 1:= Fonts ------------ */
+@font-face {
+    font-family: 'montserratlight';
+    src: url('./assets/fonts/montserratLight/montserrat-light-webfont.eot');
+    src: url('./assets/fonts/montserratLight/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/montserratLight/montserrat-light-webfont.woff2') format('woff2'),
+         url('./assets/fonts/montserratLight/montserrat-light-webfont.woff') format('woff'),
+         url('./assets/fonts/montserratLight/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('./assets/fonts/montserratBold/montserrat-bold-webfont.eot');
+    src: url('./assets/fonts/montserratBold/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/montserratBold/montserrat-bold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/montserratBold/montserrat-bold-webfont.woff') format('woff'),
+         url('./assets/fonts/montserratBold/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 
 /* ----------- 2:= Constantes -------- */
 :root{
-    --noir : #000000;
+    --noir : #1E1E1E;
     --blanc : #FFFFFF;
     --gris_liens : #5C5F6A;
     --gris_background : #F6F6F6;
@@ -29,7 +52,15 @@
 
 
 /* ----------- 3:= Global css -------- */
+*{
+    font-family: "montserratlight", sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+h1, h2, h3{
+    font-family: 'montserratbold', sans-serif;
+}
 
 button{
     padding: .8rem 1.4rem;
@@ -37,7 +68,7 @@ button{
     background-color: var(--noir);
     color: var(--blanc);
     border: 1px solid var(--noir);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 a{
@@ -74,10 +105,6 @@ ul{
 
 .text_bold{
     font-weight: bolder;
-}
-
-.margin_0{
-    margin: 0;
 }
 
 
@@ -120,6 +147,7 @@ header li{
 
 .landing .section1 h1{
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .landing .section1 button{
@@ -172,3 +200,13 @@ header li{
     margin-left: .5rem;
 }
 
+
+/* section 3 */
+.landing .section3{
+    margin: 8rem 0 ;
+    justify-content: space-between;
+    align-items: center;
+}
+.landing .section3 article{
+    width: 45%;
+}
