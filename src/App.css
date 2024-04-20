@@ -281,6 +281,7 @@ header li{
 
 .landing .section3 h2,
 .landing .section4 h2,
+.landing .section6 h2,
 .landing .section7 h2{
     margin: 1rem 0 2.5rem;
 }
@@ -292,6 +293,7 @@ header li{
 
 .landing .section3 span, .landing .section3 p img,
 .landing .section4 span, .landing .section4 p,
+.landing .section6 span,
 .landing .section7 span{
     color: var(--gris_liens);
     fill: var(--gris_liens);
@@ -342,7 +344,7 @@ header li{
 
 
 /* section 5 */
-.landing .section5{
+.landing .section5, .landing .section6{
     margin: 6rem 8rem 5rem;
 }
 
@@ -357,6 +359,30 @@ header li{
 
 
 /* section 6 */
+.landing .section6{
+    text-align: center;
+}
+
+.landing .section6 div{
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: max-content;
+    margin: auto;
+}
+
+.landing .section6 div button{
+    background-color: #f1f1f1;
+    border: none;
+    color: var(--noir);
+    font-weight: bolder;
+}
+
+.landing .section6 div button.selected{
+    background-color: var(--blanc);
+    border-radius: 1rem;
+}
+
 
 
 /* section 7 */
