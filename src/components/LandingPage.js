@@ -105,7 +105,7 @@ const LandingPage = () =>{
                 </div>
             </section>
 
-            <section className='section5 row'>
+            <section className='section5 row justifycontent_spbetween'>
                 <h2>RenoWear c'est</h2>
                 <article>
                     <p>+ 100 k</p>
