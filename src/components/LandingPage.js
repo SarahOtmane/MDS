@@ -16,8 +16,7 @@ const LandingPage = () =>{
             <section className="section1 backGris row">
                 <article>
                     <h1 className='text_uppercase'>pourquoi jeter <br></br> quand on peut réparer ?</h1>
-                    <p>Le concept de réparation et de consommation de vêtements durables</p>
-                    <p>Faites le tri dans vos habits.</p>
+                    <p>Le concept de réparation et de consommation de vêtements durables <br></br>Faites le tri dans vos habits</p>
                     <p className='text_bold'>Télécharger RenoWear</p>
                     <div className='row'>
                         <button className='row alignitem_center'>
@@ -62,20 +61,23 @@ const LandingPage = () =>{
                     </article>
                 </div>
             </section>
-            <section className='section3 row'>
+            <section className='section3 row alignitem_center'>
                 <article>
-                    <span>Expérience</span>
-                    <h3>Comment <br></br> ça marche ?</h3>
+                    <span className='text_bold'>Expérience</span>
+                    <h2 className='text_uppercase'>Comment <br></br> ça marche ?</h2>
                     <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
                     <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
                     <p className='row'> <img src={send} alt="icone svg" /> Envoyez vos articles.</p>
                     <p className='row'> <img src={ok} alt="icone svg" /> Réceptionnez vos vêtements sous 5 à 10 jours.</p>
+
+                    <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
-                <figure className='column 2images'>
+                <figure className='column twoImages'>
                     <img src={image1} alt='une personne qui est entrain de coudre ' />
                     <img src={image2} alt='une machine à coudre ' />
                 </figure>
-                <figure>
+                <figure className='column'>
+                    <div></div>
                     <img src={image3} alt='un mannequin ' />
                 </figure>
             </section>
