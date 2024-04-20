@@ -69,7 +69,7 @@ const LandingPage = () =>{
                     </article>
                 </div>
             </section>
-            <section className='section3 row alignitem_center'>
+            <section className='section3 row alignitem_center justifycontent_spbetween'>
                 <article>
                     <span className='text_bold'>Expérience</span>
                     <h2 className='text_uppercase'>Comment <br></br> ça marche ?</h2>
@@ -91,18 +91,34 @@ const LandingPage = () =>{
             </section>
 
             <section className='section4 backGris'>
-                <span className='text_uppercase'>RenoWear</span>
+                <span className='text_uppercase text_bold'>RenoWear</span>
                 <h2 className='text_capitalize'>pour qui ?</h2>
-                <div className='row'>
+                <div className='row justifycontent_spbetween'>
                     <figure>
-                        <p className='text_uppercase'>Les particuliers</p>
+                        <p className='text_uppercase text_bold'>Les particuliers</p>
                         <img src={particulier} alt='' />
                     </figure>
                     <figure>
-                        <p className='text_uppercase'>Les artisans</p>
+                        <p className='text_uppercase text_bold'>Les artisans</p>
                         <img src={artisan} alt='' />
                     </figure>
                 </div>
+            </section>
+
+            <section className='section5 row'>
+                <h2>RenoWear c'est</h2>
+                <article>
+                    <p>+ 100 k</p>
+                    <p>artisans</p>
+                </article>
+                <article>
+                    <p>90 000</p>
+                    <p>utilisateurs</p>
+                </article>
+                <article>
+                    <p>200 000</p>
+                    <p>articles réparés/an</p>
+                </article>
             </section>
         </main>
     )
