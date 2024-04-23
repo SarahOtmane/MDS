@@ -18,6 +18,11 @@ import image3 from '../assets/pictures/landingPage/image3.png';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
+    //section6
+import product1 from '../assets/pictures/landingPage/product1.png';
+import product2 from '../assets/pictures/landingPage/product2.png';
+import product3 from '../assets/pictures/landingPage/product3.png';
+import product4 from '../assets/pictures/landingPage/product4.png';
     //section7
 import reparer from '../assets/pictures/landingPage/reparer.png';
     //section8
@@ -29,29 +34,71 @@ import appStoreWhite from '../assets/pictures/landingPage/appStoreWhite.svg';
 const LandingPage = () =>{
     const [btnSelected, setBtnSelected] = useState('couture');
     const testimonialsTabs= [{
-        'pic' : '',
-        'text' : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
-        'stars' : 2,
-        'type' : ''
+        id : 1,
+        pic : product1,
+        text : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        stars : 4,
+        type : 'couture'
     },{
-        'pic' : '',
-        'text' : '',
-        'stars' : 2
+        id : 2,
+        pic : product2,
+        text : "“Rapide, efficace, beau travail pour un prix raisonnable.”",
+        stars : 3,
+        type : 'couture'
     },{
-        'pic' : '',
-        'text' : '',
-        'stars' : 2
+        id : 3,
+        pic : product3,
+        text : "“Service très rapide et de très grande qualité.”",
+        stars : 3,
+        type : 'couture'
     },{
-        'pic' : '',
-        'text' : '',
-        'stars' : 2
+        id : 4,
+        pic : product4,
+        text : "“Très bien, avec un travail sérieux. Je recommande !”",
+        stars : 4,
+        type : 'couture'
     },{
-        'pic' : '',
-        'text' : '',
-        'stars' : 2
-    }]
+        id : 5,
+        pic : product2,
+        text : "“Rapide, efficace, beau travail pour un prix raisonnable.”",
+        stars : 4,
+        type : 'broderie'
+    },{
+        id : 6,
+        pic : product1,
+        text : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        stars : 3,
+        type : 'broderie'
+    },{
+        id : 7,
+        pic : product4,
+        text : "“Très bien, avec un travail sérieux. Je recommande !”",
+        stars : 4,
+        type : 'broderie'
+    },{
+        id : 8,
+        pic : product3,
+        text : "“Service très rapide et de très grande qualité.”",
+        stars : 4,
+        type : 'maroquinerie'
+    },{
+        id : 9,
+        pic : product2,
+        text : "“Rapide, efficace, beau travail pour un prix raisonnable.”",
+        stars : 4,
+        type : 'maroquinerie'
+    },{
+        id : 10,
+        pic : product1,
+        text : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        stars : 3,
+        type : 'maroquinerie'
+    },]
 
-    const handleClick = (e) => { setBtnSelected(e.target.id) };
+    const handleClick = (e) => { 
+        setBtnSelected(e.target.id);
+        
+    };
 
     return(
         <main className="landing">
@@ -158,11 +205,21 @@ const LandingPage = () =>{
             <section className='section6'>
                 <span className='text_uppercase text_bold'>ce que nos clients disent de nous</span>
                 <h2 className='text_capitalize'>vos avis</h2>
-                <div className='row'>
+                <div className=' button row'>
                     <button className={btnSelected==='couture' ? 'selected' : ''} onClick={handleClick} id="couture">Couture</button>
                     <button className={btnSelected==='broderie' ? 'selected' : ''} onClick={handleClick} id="broderie">Broderie</button>
                     <button className={btnSelected==='maroquinerie' ? 'selected' : ''} onClick={handleClick} id="maroquinerie">Maroquinerie</button>
                     <button className={btnSelected==='cordonnerie' ? 'selected' : ''} onClick={handleClick} id="cordonnerie">Cordonnerie</button>
+                </div>
+                <div className='row justifycontent_spbetween product'>
+                    {testimonialsTabs
+                        .filter(testimonial => testimonial.type === btnSelected)
+                        .map(testimonial => <article key={testimonial.id}>
+                            <img src={testimonial.pic} alt='' />
+                            <p className='text_bold'>{testimonial.text}</p>
+                            {testimonial.stars===5 && <span></span>}
+                        </article>)
+                    }
                 </div>
             </section>
 
