@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
+import Footer from "./components/Footer";
 
 
 const App = () =>{
@@ -14,6 +15,7 @@ const App = () =>{
                 <Routes>
                     <Route path="/" element={<LandingPage />} /> 
                 </Routes> 
+                <Footer />
             </>
         </BrowserRouter>
     )
