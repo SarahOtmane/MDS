@@ -23,6 +23,8 @@ import product1 from '../assets/pictures/landingPage/product1.png';
 import product2 from '../assets/pictures/landingPage/product2.png';
 import product3 from '../assets/pictures/landingPage/product3.png';
 import product4 from '../assets/pictures/landingPage/product4.png';
+import starFull from  '../assets/pictures/landingPage/starFull.svg';
+import starEmpty from '../assets/pictures/landingPage/starEmpty.svg';
     //section7
 import reparer from '../assets/pictures/landingPage/reparer.png';
     //section8
@@ -211,13 +213,28 @@ const LandingPage = () =>{
                     <button className={btnSelected==='maroquinerie' ? 'selected' : ''} onClick={handleClick} id="maroquinerie">Maroquinerie</button>
                     <button className={btnSelected==='cordonnerie' ? 'selected' : ''} onClick={handleClick} id="cordonnerie">Cordonnerie</button>
                 </div>
-                <div className='row justifycontent_spbetween product'>
+                <div className='row product'>
                     {testimonialsTabs
                         .filter(testimonial => testimonial.type === btnSelected)
                         .map(testimonial => <article key={testimonial.id}>
                             <img src={testimonial.pic} alt='' />
                             <p className='text_bold'>{testimonial.text}</p>
-                            {testimonial.stars===5 && <span></span>}
+                            {testimonial.stars===5 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starFull} alt='' />
+                                <img src={starFull} alt='' /><img src={starFull} alt='' />
+                            </figure>}
+                            {testimonial.stars===4 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starFull} alt='' />
+                                <img src={starFull} alt='' /><img src={starEmpty} alt='' />
+                            </figure>}
+                            {testimonial.stars===3 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starFull} alt='' />
+                                <img src={starEmpty} alt='' /><img src={starEmpty} alt='' />
+                            </figure>}
+                            {testimonial.stars===2 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starEmpty} alt='' />
+                                <img src={starEmpty} alt='' /><img src={starEmpty} alt='' />
+                            </figure>}
                         </article>)
                     }
                 </div>
