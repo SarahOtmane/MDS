@@ -387,16 +387,27 @@ header li{
 }
 
 .landing .section6 article{
-    width: 23%;
+    width: 24%;
+    margin-left: 1.33rem;
+}
+
+.landing .section6 article:first-child{
+    margin-left: 0;
 }
 
 .landing .section6 article img{
     width: 90%;
+    margin-bottom: 1rem;
 }
 
+.landing .section6 article p, .landing .section6 article figure{
+    padding: .5rem 5%;
+    width: 90%;
+    text-align: start;
+}
 
-.landing .section6 article p{
-    padding: 1rem;
+.landing .section6 article figure{
+    width: 35%;
 }
 
 
