@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import '../css/landingPage.css';
+
 //import images
     //section1
 import mockup from '../assets/pictures/landingPage/landing_mockup.png';
