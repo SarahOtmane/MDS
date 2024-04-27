@@ -45,7 +45,7 @@ const CheckCart = () =>{
 
                 <section className='commande' >
                     <h2>Votre commande</h2>
-                    <article className='row alignitem_center'>
+                    <article className='row alignitem_center justifycontent_spbetween'>
                         <figure>
                             <img src={product} alt='' />
                             <img src={product} alt='' />
@@ -55,30 +55,30 @@ const CheckCart = () =>{
                     </article>
 
                     <section className='recap'>
-                        <article className='row'>
-                            <span>Prix :</span>
+                        <article className='row justifycontent_spbetween'>
+                            <span className='text_bold'>Prix :</span>
                             <span>75.00€</span>
                         </article>
 
-                        <article className='row'>
-                            <span>Livraison :</span>
+                        <article className='row justifycontent_spbetween'>
+                            <span className='text_bold'>Livraison :</span>
                             <span>Offerte</span>
                         </article>
 
-                        <article className='row'>
-                            <span>Taxes :</span>
+                        <article className='row justifycontent_spbetween'>
+                            <span className='text_bold'>Taxes :</span>
                             <span>3.00€</span>
                         </article>
 
                         <div></div>
 
-                        <article className='row'>
-                            <span>Total :</span>
+                        <article className='row justifycontent_spbetween'>
+                            <span className='text_bold'>Total :</span>
                             <span>78.00€</span>
                         </article>
                     </section>
 
-                    <button>Payer la commande</button>
+                    <button type='submit'>Payer la commande</button>
                 </section>
             </form>
         </main>
