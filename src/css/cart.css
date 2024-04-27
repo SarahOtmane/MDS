@@ -100,9 +100,27 @@ button{
 
 
 
+/* ----------- 3:= success ------------ */
+.success{
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    padding-top: 8rem;
+}
 
 
-/* ----------- 3:= Desktop ------------ */
+.success h2, .success button{
+    margin: 2rem 0;
+}
+
+.success button svg{
+    margin-left: .5rem;
+}
+
+
+
+
+/* ----------- 4:= Desktop ------------ */
 @media screen and (max-width: 1300px){
     .livraison{
         padding-left: 9rem;
@@ -110,6 +128,10 @@ button{
 
     .commande{
         padding-right: 9rem;
+    }
+
+    .success{
+        width: 30%;
     }
 }
 
@@ -134,5 +156,9 @@ button{
 
     .commande{
         width: 45%;
+    }
+
+    .success{
+        width: 35%;
     }
 }
