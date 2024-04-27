@@ -5,7 +5,7 @@ import Titre from './Titre';
 const SignIn = () =>{
     return(
         <main>
-            <Titre titre="Se connecter" lien="/login" />
+            <Titre titre="Se connecter" lien="/login" classe="backGris" />
 
             <form className='formulaire column'>
                 <lable className="text_bold">Email</lable>

@@ -11,7 +11,7 @@ const CheckCart = () =>{
 
     return(
         <main>
-            <Titre titre="Valider votre panier" lien="/cart/check" />
+            <Titre titre="Valider votre panier" lien="/cart/check" classe="backGris" />
 
             <form className='row'>
                 <section className='livraison column'>

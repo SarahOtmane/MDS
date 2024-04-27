@@ -4,7 +4,7 @@ import Titre from "./Titre.js";
 const ResetMdp = () =>{
     return(
         <main>
-            <Titre titre="Réinitialiser le mot de passe" lien="/resetMdp/reset" />
+            <Titre titre="Réinitialiser le mot de passe" lien="/resetMdp/reset" classe="backGris" />
 
             <form className='formulaire column'>
                 <lable className="text_bold">Nouveau mot de passe</lable>

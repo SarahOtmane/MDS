@@ -5,7 +5,7 @@ import Titre from './Titre';
 const SignUp = () =>{
     return(
         <main>
-            <Titre titre="S'inscrire" lien="/register" />
+            <Titre titre="S'inscrire" lien="/register" classe="backGris" />
 
             <form className='formulaire column'>
                 <lable className="text_bold">Nom</lable>
