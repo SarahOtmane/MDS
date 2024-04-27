@@ -13,6 +13,7 @@ import CheckCart from "./components/CheckCart";
 import SuccefullOrder from "./components/SuccefullOrder";
 import FailedOrder from "./components/FailedOrder";
 import Commandes from "./components/Commandes";
+import PasswordUpdate from "./components/PasswordUpdate";
 
 
 const App = () =>{
@@ -34,6 +35,7 @@ const App = () =>{
                     <Route path="/failed-order" element={<FailedOrder />} />
 
                     <Route path="/my-account" element={<Commandes />} />
+                    <Route path="/my-account/update-password" element={<PasswordUpdate />} />
                 </Routes> 
                 <Footer />
             </>
