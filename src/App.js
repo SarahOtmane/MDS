@@ -9,6 +9,7 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import ForgetMdp from "./components/ForgetMdp";
 import ResetMdp from "./components/ResetMdp";
+import CheckCart from "./components/CheckCart";
 
 
 const App = () =>{
@@ -22,6 +23,7 @@ const App = () =>{
                     <Route path="/login" element={<SignIn />} />
                     <Route path="/resetMdp" element={<ForgetMdp />} />
                     <Route path="/resetMdp/reset" element={<ResetMdp />} />
+                    <Route path="/cart/check" element={<CheckCart />} />
                 </Routes> 
                 <Footer />
             </>
