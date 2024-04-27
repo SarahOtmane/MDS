@@ -8,8 +8,8 @@
         Commades
     2:= commandes
 
-        SuccefullOrder
-    3:= success
+        PasswordUpdate
+    3:= updateMdp
 
     3:= responsive version desktop
     4:= version mobile
@@ -51,7 +51,7 @@
 
 
 /* ----------- 2:= commande ------------ */
-.commandes{
+.commandes, section.updateMdp{
     width: 65%;
     padding: 0 12rem 20rem 0;
     border-left: 1px solid var(--input_border);
@@ -75,4 +75,15 @@
 
 .commandes button svg{
     margin-left: 1rem;
+}
+
+
+
+
+
+
+/* ----------- 2:= updateMdp ------------ */
+form.updateMdp{
+    width: 50%;
+    margin-left: 10%;
 }
