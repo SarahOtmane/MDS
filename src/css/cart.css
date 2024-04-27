@@ -25,7 +25,7 @@ form h2{
 
 /* ----------- 1:= livraison ------------ */
 .livraison{
-    width: 50%;
+    width: 65%;
     padding-right: 5%;
     border-right: 1px solid var(--input_border);
     padding-left: 12rem;
@@ -39,7 +39,7 @@ form h2{
 /* ----------- 2:= commande ------------ */
 
 .commande{
-    width: 50%;
+    width: 35%;
     padding-left: 5%;
     padding-right: 12rem;
 }
@@ -50,9 +50,33 @@ form h2{
 
 .commande img{
     border-radius: 50%;
-    width: 20%;
+    width: 25%;
+    margin-right: .5rem;
 }
 
 .commande article button{
-    
+    color: var(--noir);
+    background-color: var(--blanc);
+    border: 1px solid #B6B7BC;
+    border-radius: .5rem;
+}
+
+
+.commande .recap{
+    margin: 6rem 0 2rem;
+}
+
+.commande .recap article{
+    margin-bottom: 1.5rem;
+}
+
+.commande .recap div{
+    border: 1px solid var(--input_border);
+    margin: 3rem 0;
+}
+
+.commande button[type='submit']{
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: .5rem;
 }
