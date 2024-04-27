@@ -35,11 +35,11 @@
 .formulaire{
     width: 25%;
     margin: auto;
-    padding-top: 8rem;
+    padding: 6rem 0;
 }
 
 .formulaire p{
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .formulaire button{
