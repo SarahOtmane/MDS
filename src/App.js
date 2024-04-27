@@ -12,6 +12,7 @@ import ResetMdp from "./components/ResetMdp";
 import CheckCart from "./components/CheckCart";
 import SuccefullOrder from "./components/SuccefullOrder";
 import FailedOrder from "./components/FailedOrder";
+import Commandes from "./components/Commandes";
 
 
 const App = () =>{
@@ -31,6 +32,8 @@ const App = () =>{
                     <Route path="/cart/check" element={<CheckCart />} />
                     <Route path="/success-order" element={<SuccefullOrder />} />
                     <Route path="/failed-order" element={<FailedOrder />} />
+
+                    <Route path="/my-account" element={<Commandes />} />
                 </Routes> 
                 <Footer />
             </>
