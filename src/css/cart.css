@@ -1,10 +1,14 @@
 /* 
                 Sommaire
 
-        signUp
-
+    
+        CheckCart
     1:= livraison
     2:= commande
+
+        SuccefullOrder
+    3:= success
+
     3:= responsive version desktop
     4:= version mobile
 
@@ -19,6 +23,10 @@ form{
 
 form h2{
     margin-bottom: 5rem;
+}
+
+button{
+    border-radius: .5rem;
 }
 
 
@@ -66,7 +74,6 @@ form h2{
     color: var(--noir);
     background-color: var(--blanc);
     border: 1px solid #B6B7BC;
-    border-radius: .5rem;
 }
 
 
@@ -86,7 +93,6 @@ form h2{
 .commande button[type='submit']{
     width: 100%;
     margin-top: 2rem;
-    border-radius: .5rem;
 }
 
 
