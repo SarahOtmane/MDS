@@ -23,7 +23,7 @@ const CheckCart = () =>{
                     <lable className="text_bold">Ville</lable>
                     <input type="text" placeholder="Boulogne-Billancourt" />
 
-                    <div className='row'>
+                    <div className='row double justifycontent_spbetween'>
                         <div className='column'><lable className="text_bold">Code Postal</lable>
                         <input type="text" placeholder="92100" /></div>
 
@@ -34,7 +34,7 @@ const CheckCart = () =>{
                     <lable className="text_bold">Email</lable>
                     <input type="text" placeholder="test@gmail.com" />
 
-                    <div className='row'>
+                    <div className='row double justifycontent_spbetween'>
                         <div className='column'><lable className="text_bold">Nom</lable>
                         <input type="text" placeholder="Cruz" /></div>
 
@@ -46,8 +46,10 @@ const CheckCart = () =>{
                 <section className='commande' >
                     <h2>Votre commande</h2>
                     <article className='row alignitem_center'>
-                        <img src={product} alt='' />
-                        <img src={product} alt='' />
+                        <figure>
+                            <img src={product} alt='' />
+                            <img src={product} alt='' />
+                        </figure>
 
                         <button onClick={navigate('/')} >Modifier</button>
                     </article>
