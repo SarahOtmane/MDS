@@ -1,7 +1,7 @@
 import '../css/sign.css';
 
 
-const SignUp = () =>{
+const SignIn = () =>{
     return(
         <main>
             <section className='titre backGris'>
@@ -31,4 +31,4 @@ const SignUp = () =>{
     )
 }
 
-export default SignUp;
+export default SignIn;
