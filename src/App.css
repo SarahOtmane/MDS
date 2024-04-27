@@ -20,6 +20,9 @@
     9:= responsive version desktop
     10:= version mobile
 
+        - SignUp.css
+    
+
 
 */
 
@@ -71,6 +74,8 @@
     --gris_liens : #5C5F6A;
     --gris_background : #F6F6F6;
     --gris_background_mockup : #C4C4C4;
+    --input_border : #E6E7E8;
+    --label_text : #474B57
 }
 
 
@@ -120,6 +125,16 @@ figure img{
     width: 100%;
 }
 
+input{
+    border: 2px solid var(--input_border);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: .5rem 0 1.5rem 0;
+}
+
+label{
+    color: var(--label_text);
+}
 
 
 .column{
