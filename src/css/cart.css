@@ -36,8 +36,16 @@ form h2{
 }
 
 
-/* ----------- 2:= commande ------------ */
 
+
+
+
+
+
+
+
+
+/* ----------- 2:= commande ------------ */
 .commande{
     width: 35%;
     padding-left: 5%;
@@ -79,4 +87,46 @@ form h2{
     width: 100%;
     margin-top: 2rem;
     border-radius: .5rem;
+}
+
+
+
+
+
+
+
+
+/* ----------- 3:= Desktop ------------ */
+@media screen and (max-width: 1300px){
+    .livraison{
+        padding-left: 9rem;
+    }
+
+    .commande{
+        padding-right: 9rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .livraison{
+        padding-left: 6rem;
+    }
+
+    .commande{
+        padding-right: 6rem;
+    }
+
+    .commande img{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .livraison{
+        width: 55%;
+    }
+
+    .commande{
+        width: 45%;
+    }
 }
