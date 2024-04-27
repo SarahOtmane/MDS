@@ -14,7 +14,7 @@ const SignIn = () =>{
                 <lable className="text_bold">Mot de passe</lable>
                 <input type="password" placeholder="Mot de passe" />
 
-                <a href='/mdpOublie'> Mot de passe oublié ?</a>
+                <a href='/resetMdp'> Mot de passe oublié ?</a>
 
                 <button type='submit'>Se connecter</button>
                 <p>Vous n'avez pas de compte ? <a href='/register' className='text_bold'>S'inscrire</a></p>
