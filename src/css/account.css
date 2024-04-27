@@ -2,8 +2,8 @@
                 Sommaire
 
     
-        Commandes
-    1:= livraison
+        AccountMenu
+    1:= menu
     2:= commande
 
         SuccefullOrder
@@ -13,3 +13,26 @@
     4:= version mobile
 
 */
+
+
+/* ----------- 1:= menu ------------ */
+.menu{
+    width: 30%;
+    padding: 3rem 0 0 12rem;
+}
+
+.menu a{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.menu a.selected{
+    background-color: var(--gris_background);
+    border-radius: .5rem;
+}
+
+.menu svg{
+    margin-right: 1rem;
+}
+
