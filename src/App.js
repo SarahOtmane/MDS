@@ -7,6 +7,7 @@ import LandingPage from "./components/LandingPage";
 import Footer from "./components/Footer";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
+import ForgetMdp from "./components/ForgetMdp";
 
 
 const App = () =>{
@@ -18,6 +19,7 @@ const App = () =>{
                     <Route path="/landing" element={<LandingPage />} /> 
                     <Route path="/register" element={<SignUp />} />
                     <Route path="/login" element={<SignIn />} />
+                    <Route path="/resetMdp" element={<ForgetMdp />} />
                 </Routes> 
                 <Footer />
             </>
