@@ -3,12 +3,56 @@
 
         signUp
 
-    1:= titre
-    2:= formulaire
+    1:= livraison
+    2:= commande
     3:= responsive version desktop
     4:= version mobile
 
 */
 
 
-/* ----------- 1:= titre ------------ */
+
+form{
+    width: 100%;
+    padding: 5rem 0;
+}
+
+form h2{
+    margin-bottom: 5rem;
+}
+
+
+
+/* ----------- 1:= livraison ------------ */
+.livraison{
+    width: 50%;
+    padding-right: 5%;
+    border-right: 1px solid var(--input_border);
+    padding-left: 12rem;
+}
+
+.livraison .double div{
+    width: 46%;
+}
+
+
+/* ----------- 2:= commande ------------ */
+
+.commande{
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 12rem;
+}
+
+.commande article figure{
+    width: 40%;
+}
+
+.commande img{
+    border-radius: 50%;
+    width: 20%;
+}
+
+.commande article button{
+    
+}
