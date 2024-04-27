@@ -108,7 +108,7 @@ const LandingPage = () =>{
         <main className="landing">
             <section className="section1 backGris row">
                 <article>
-                    <h1 className='text_uppercase'>pourquoi jeter <br></br> quand on peut réparer ?</h1>
+                    <h1 className='text_uppercase'>pourquoi jeter quand on peut réparer ?</h1>
                     <p>Le concept de réparation et de consommation de vêtements durables <br></br>Faites le tri dans vos habits</p>
                     <p className='text_bold'>Télécharger RenoWear</p>
                     <div className='row'>
@@ -131,7 +131,7 @@ const LandingPage = () =>{
                 <img src={mockup} alt='' />
             </section>
             <section className="section2 backGris row">
-                <h2 className='text_uppercase'>Service <br></br> d'artisans</h2>
+                <h2 className='text_uppercase'>Service d'artisans</h2>
                 <div className='column'>
                     <div className='row'>
                         <article className='column card'>
@@ -157,7 +157,7 @@ const LandingPage = () =>{
             <section className='section3 row alignitem_center justifycontent_spbetween'>
                 <article>
                     <span className='text_bold'>Expérience</span>
-                    <h2 className='text_uppercase'>Comment <br></br> ça marche ?</h2>
+                    <h2 className='text_uppercase'>Comment ça marche ?</h2>
                     <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
                     <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
                     <p className='row'> <img src={send} alt="icone svg" /> Envoyez vos articles.</p>
@@ -264,10 +264,10 @@ const LandingPage = () =>{
                     <img src={mobileMockup} alt='' />
                 </figure>
                 <article>
-                    <h2>Prêts à redonner vie à votre <br></br> garde-robe ?</h2>
+                    <h2>Prêts à redonner vie à votre garde-robe ?</h2>
                     <p>Téléchargez dès maintenant notre application et donnez une seconde vie à vos vêtements en réveillant l'artisanat français.</p>
                     <div className='row'>
-                    <button className='row alignitem_center'>
+                        <button className='row alignitem_center'>
                             <img src={appStoreWhite} alt='logo app store' className='apple' />
                             <div>
                                 <p className='span'>Download on the</p>
