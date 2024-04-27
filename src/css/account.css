@@ -4,7 +4,9 @@
     
         AccountMenu
     1:= menu
-    2:= commande
+        
+        Commades
+    2:= commandes
 
         SuccefullOrder
     3:= success
@@ -15,9 +17,14 @@
 */
 
 
+.account{
+    margin: 6rem 0;
+}
+
+
 /* ----------- 1:= menu ------------ */
 .menu{
-    width: 30%;
+    width: 35%;
     padding: 3rem 0 0 12rem;
 }
 
@@ -25,6 +32,7 @@
     font-size: 1.3rem;
     margin-top: 2rem;
     padding: 1rem;
+    margin-right: 20%;
 }
 
 .menu a.selected{
@@ -36,3 +44,35 @@
     margin-right: 1rem;
 }
 
+
+
+
+
+
+
+/* ----------- 2:= commande ------------ */
+.commandes{
+    width: 65%;
+    padding: 0 12rem 20rem 0;
+    border-left: 1px solid var(--input_border);
+    font-size: 1.3rem;
+}
+
+.commandes article{
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.commandes p{
+    margin: 2rem 0;
+}
+
+.commandes button{
+    width: 100%;
+}
+
+.commandes button svg{
+    margin-left: 1rem;
+}
