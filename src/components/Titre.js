@@ -1,9 +1,10 @@
 
 
 
-const Titre = ({titre, lien}) =>{
+const Titre = ({titre, lien, classe}) =>{
+
     return(
-        <section className='titre backGris'>
+        <section className={`titre ${classe}`}>
             <h1>{titre}</h1>
             <article className="row alignitem_center">
                 <a href="/landing">RenoWear</a>
