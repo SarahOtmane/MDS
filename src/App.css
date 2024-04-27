@@ -180,6 +180,14 @@ label{
     background-color: var(--gris_background);
 }
 
+.backRose{
+    background-color: var(--pink_background);
+}
+
+.backVert{
+    background-color: var(--green_background);
+}
+
 
 
 
