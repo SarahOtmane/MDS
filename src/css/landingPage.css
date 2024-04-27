@@ -283,6 +283,7 @@
 .landing .section7 article:first-child{
     width: 40%;
 }
+
 .landing .section7 article:last-child{
     width: 45%;
     padding-right: 8rem;
@@ -365,7 +366,7 @@
 /* ----------- 9:= Desktop ------------ */
 @media screen and (max-width: 1682px) {
     .landing .section1 button{
-        width: 35% !important;
+        width: 35%;
     }
 
     .landing .section1 h1{
@@ -375,14 +376,13 @@
 
 @media screen and (max-width: 1570px) {
     .landing .section1 button{
-        width: 40% !important;
+        width: 40%;
     }
 
     .landing .section8 button{
         font-size: 1.2rem;
     }
 }
-
 
 @media screen and (max-width: 1470px) {
     header{
@@ -392,11 +392,6 @@
     header section{
         width: 75%;
     }
-
-    .landing .section1 button{
-        width: 40% !important;
-    }
-
     .landing .section1 button img{
         margin-right: 1rem;
         margin-left: 0;
@@ -414,10 +409,6 @@
 
     .landing .section1 article{
         padding: 5rem 8rem 0 7rem;
-    }
-
-    .landing .section1 button{
-        width: 40% !important;
     }
 
     .landing .section2 h2{
@@ -483,7 +474,7 @@
     }
 
     .landing .section1 button{
-        width: 50% !important;
+        width: 50%;
     }
 
     .landing h2{
@@ -529,7 +520,7 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1020px) {
     header{
         padding-left: 5rem;
         padding-right: 2rem;
@@ -547,11 +538,133 @@
         flex-wrap: wrap!important;
     }
 
+    .landing .section1 button:last-child{
+        margin-top: 1rem;
+    }
+
+    .landing .section8 article{
+        width: 65%;
+    }
+
+    .landing .section8 button{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .landing .section8{
+        padding: 2rem 5rem;
+    }
+
+    .landing .section8 button{
+        font-size: 1rem;
+    }
+    .landing .section8 button div{
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .landing .section1 button{
+        width: 60%;
+    }
+
+    .landing .section2, .landing .section5{
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section2 h2, .landing .section2 h2 + div{
+        width: 100%;
+        padding: 0 0 0 6rem;
+    }
+
+    .landing .section3 a{
+        width: 70%;
+    }
+
+    .landing .section4{
+        padding: 3rem 8rem;
+    }
+
+    .landing .section5{
+        margin: 5rem;
+    }
+
+    .landing .section5 h2{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .landing .section5 p{
+        font-size: 2rem;
+    }
+    
+    .landing .section5 p + p{
+        color: var(--gris_liens);
+        font-size: 1.3rem;
+    }
+
+    .landing .section7 article:first-child{
+        width: 45%;
+    }    
+
+    .landing .section7 article:last-child{
+        width: 50%;
+        padding: 3rem 1rem 0 0;
+    }
+
+    .landing .section7 p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 880px){
+    .landing .section8{
+        padding: 2rem 4rem;
+        margin-top: 4rem;
+    }
+
+    .landing .section8 figure{
+        width: 37%;
+    }
+
+    .landing .section8 article{
+        width: 56%;
+    }    
+
+    .landing .section8 div{
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section8 button{
+        width: 55%;
+    }
+
+    .landing .section8 button:first-child{
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 790px){
+    header{
+        padding: 2rem;
+    }
+
+    header section{
+        width: 80%;
+    }
+
+    header button{
+        margin-left: 1rem;
+        padding: .5rem;
+    }
+
     .landing .section1 button{
         width: 70%;
     }
 
-    .landing .section1 button:last-child{
-        margin-top: 1rem;
+    .landing .section8 button{
+        width: 60%;
     }
 }
