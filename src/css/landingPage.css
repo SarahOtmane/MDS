@@ -17,6 +17,9 @@
 */
 
 
+
+
+
 .landing h2{
     font-size: 3.3rem;
 }
@@ -542,6 +545,38 @@
         margin-top: 1rem;
     }
 
+    .landing .section2{
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section2 h2, .landing .section2 h2 + div{
+        width: 100%;
+        padding: 0 0 0 6rem;
+    }
+
+    .landing .section2 .card{
+        margin-top: 2rem;
+    }
+
+    .landing .section5{
+        margin: 5rem;
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section5 h2{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .landing .section5 p{
+        font-size: 2rem;
+    }
+    
+    .landing .section5 p + p{
+        color: var(--gris_liens);
+        font-size: 1.1rem;
+    }
+
     .landing .section8 article{
         width: 65%;
     }
@@ -569,39 +604,12 @@
         width: 60%;
     }
 
-    .landing .section2, .landing .section5{
-        flex-wrap: wrap !important;
-    }
-
-    .landing .section2 h2, .landing .section2 h2 + div{
-        width: 100%;
-        padding: 0 0 0 6rem;
-    }
-
     .landing .section3 a{
         width: 70%;
     }
 
     .landing .section4{
         padding: 3rem 8rem;
-    }
-
-    .landing .section5{
-        margin: 5rem;
-    }
-
-    .landing .section5 h2{
-        width: 100%;
-        margin-bottom: 3rem;
-    }
-
-    .landing .section5 p{
-        font-size: 2rem;
-    }
-    
-    .landing .section5 p + p{
-        color: var(--gris_liens);
-        font-size: 1.3rem;
     }
 
     .landing .section7 article:first-child{
