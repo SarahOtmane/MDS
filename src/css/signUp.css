@@ -1,0 +1,47 @@
+/* 
+                Sommaire
+
+        signUp
+
+    1:= titre
+    2:= formulaire
+
+*/
+
+
+/* ----------- 1:= titre ------------ */
+
+.titre{
+    width: 100%;
+    padding: 2rem 0 3rem 12rem;
+}
+
+.titre h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.titre article{
+    font-size: 1.5rem;
+    color: #71747E;
+}
+
+.titre svg{
+    margin: 0 1rem;
+}
+
+
+/* ----------- 2:= formulaire ------------ */
+.formulaire{
+    width: 25%;
+    margin: auto;
+    padding-top: 8rem;
+}
+
+.formulaire p{
+    margin-bottom: 2rem;
+}
+
+.formulaire button{
+    border-radius: .5rem;
+}
