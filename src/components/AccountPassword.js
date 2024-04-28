@@ -4,7 +4,7 @@ import AccountMenu from './AccountMenu';
 import Titre from "./Titre";
 
 
-const PasswordUpdate = () =>{
+const AccountPassword = () =>{
     return(
         <main>
             <Titre titre="Mon compte" lien="/my-account/update-password" classe="backGris" />
@@ -32,4 +32,4 @@ const PasswordUpdate = () =>{
     )
 }
 
-export default PasswordUpdate;
+export default AccountPassword;
