@@ -4,7 +4,7 @@ import AccountMenu from './AccountMenu';
 import Titre from "./Titre";
 
 
-const Commandes = () =>{
+const AccountOrder = () =>{
     return(
         <main>
             <Titre titre="Mon compte" lien="/my-account" classe="backGris" />
@@ -34,4 +34,4 @@ const Commandes = () =>{
     )
 }
 
-export default Commandes;
+export default AccountOrder;
