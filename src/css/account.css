@@ -5,7 +5,7 @@
         AccountMenu.js
     1:= menu
         
-        Commades.js
+        AccountOrder.js
     2:= commandes
 
         PasswordUpdate.js
@@ -14,8 +14,11 @@
         AccountDetails.js
     4:= details
 
-    3:= responsive version desktop
-    4:= version mobile
+        AccountAdress.js
+    5:= adress
+
+    6:= responsive version desktop
+    7:= version mobile
 
 */
 
@@ -54,7 +57,7 @@
 
 
 /* ----------- 2:= commande ------------ */
-.commandes, section.updateMdp, section.details{
+.commandes, section.updateMdp, section.details, section.adress{
     width: 65%;
     padding: 0 12rem 10rem 0;
     border-left: 1px solid var(--input_border);
@@ -86,7 +89,7 @@
 
 
 /* ----------- 3:= updateMdp / 4:= details ------------ */
-form.updateMdp, form.details{
+form.updateMdp, form.details, form.adress{
     width: 50%;
     margin-left: 10%;
 }
@@ -98,4 +101,7 @@ form.updateMdp, form.details{
 
 
 
-/* ----------- 4:= details ------------ */
+/* ----------- 5:= adress ------------ */
+form.adress{
+    width: 60%;
+}

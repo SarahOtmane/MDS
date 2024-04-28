@@ -7,22 +7,27 @@ import Titre from "./Titre";
 const AccountAdress = () =>{
     return(
         <main>
-            <Titre titre="Mon compte" lien="/my-account/details" classe="backGris" />
+            <Titre titre="Mon compte" lien="/my-account/adress" classe="backGris" />
             
             <div className='row account'>
-                <AccountMenu selected="details" />
-                <section className='details'>
-                    <form className='details column'>
-                        <h2>Changer le mot de passe</h2>
+                <AccountMenu selected="adress" />
+                <section className='adress'>
+                    <form className='adress column'>
+                        <h2>Adresse de livraison</h2>
 
-                        <lable className="text_bold">Nom</lable>
-                        <input type="text" placeholder="Cruz" />
+                        <lable className="text_bold">Numéro de la rue</lable>
+                        <input type="text" placeholder="4 Rue Solférino" />
 
-                        <lable className="text_bold">Prénom</lable>
-                        <input type="text" placeholder="Tom" />
+                        <lable className="text_bold">Ville</lable>
+                        <input type="text" placeholder="Boulogne-Billancourt" />
 
-                        <lable className="text_bold">Email</lable>
-                        <input type="email" placeholder="test@gmail.com" />
+                        <div className='row double justifycontent_spbetween'>
+                            <div className='column'><lable className="text_bold">Code Postal</lable>
+                            <input type="text" placeholder="92100" /></div>
+
+                            <div className='column'><lable className="text_bold">Pays</lable>
+                            <input type="text" placeholder="France" /></div>
+                        </div>
 
                         <button type='submit'>Sauvegarder les modifications</button>
                     </form>
