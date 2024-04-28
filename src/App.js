@@ -15,6 +15,7 @@ import FailedOrder from "./components/FailedOrder";
 import Commandes from "./components/Commandes";
 import AccountPassword from "./components/AccountPassword";
 import AccountDetails from "./components/AccountDetails";
+import AccountAdress from "./components/AccountAdress";
 
 
 const App = () =>{
@@ -38,6 +39,7 @@ const App = () =>{
                     <Route path="/my-account" element={<Commandes />} />
                     <Route path="/my-account/update-password" element={<AccountPassword />} />
                     <Route path="/my-account/details" element={<AccountDetails />} />
+                    <Route path="/my-account/adress" element={<AccountAdress />} />
                 </Routes> 
                 <Footer />
             </>
