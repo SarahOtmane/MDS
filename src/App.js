@@ -12,7 +12,7 @@ import ResetMdp from "./components/ResetMdp";
 import CheckCart from "./components/CheckCart";
 import SuccefullOrder from "./components/SuccefullOrder";
 import FailedOrder from "./components/FailedOrder";
-import Commandes from "./components/Commandes";
+import AccountOrder from "./components/AccountOrder";
 import AccountPassword from "./components/AccountPassword";
 import AccountDetails from "./components/AccountDetails";
 import AccountAdress from "./components/AccountAdress";
@@ -36,7 +36,7 @@ const App = () =>{
                     <Route path="/success-order" element={<SuccefullOrder />} />
                     <Route path="/failed-order" element={<FailedOrder />} />
 
-                    <Route path="/my-account" element={<Commandes />} />
+                    <Route path="/my-account" element={<AccountOrder />} />
                     <Route path="/my-account/update-password" element={<AccountPassword />} />
                     <Route path="/my-account/details" element={<AccountDetails />} />
                     <Route path="/my-account/adress" element={<AccountAdress />} />
