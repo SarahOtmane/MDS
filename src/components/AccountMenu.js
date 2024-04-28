@@ -29,7 +29,7 @@ const AccountMenu = ({selected}) =>{
                 <span className="text_bold">Mot de passe</span>
             </a></li>
 
-            <li><a className={`alignitem_center row ${(selected==='commande'? 'selected' : '')}`} href='/'>
+            <li><a className={`alignitem_center row ${(selected==='details'? 'selected' : '')}`} href='/my-account/details'>
                 <svg width="45" height="40" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.03908 9C10.1988 9 11.9497 7.32107 11.9497 5.25C11.9497 3.17894 10.1988 1.5 8.03908 1.5C5.87932 1.5 4.12848 3.17894 4.12848 5.25C4.12848 7.32107 5.87932 9 8.03908 9Z" stroke="#5C5F6A" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M1 19.5V18.6869C1.01245 17.5436 1.32689 16.4219 1.91394 15.4267C2.501 14.4315 3.34151 13.5953 4.35697 12.996C5.37244 12.3968 6.52973 12.0541 7.72072 12C7.8269 11.9952 7.93305 11.9927 8.03908 11.9925C8.1451 11.9927 8.25127 11.9952 8.35745 12C9.54844 12.0541 10.7057 12.3968 11.7212 12.996C12.3051 13.3406 12.8312 13.7636 13.2845 14.25" stroke="#5C5F6A" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
