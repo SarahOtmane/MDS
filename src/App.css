@@ -1,0 +1,235 @@
+/* 
+                Sommaire
+
+        - App.css
+    1:= Fonts
+    2:= Constantes
+    3:= Global css
+    4:= Header
+    5:= Footer
+
+        - landingPage.css
+    1:= Section1
+    2:= Section2
+    3:= Section3
+    4:= Section4
+    5:= Section5
+    6:= Section6
+    7:= Section7
+    8:= Section8
+    9:= responsive version desktop
+    10:= version mobile
+
+        - sign.css =>  SignUp.js, SignIn.js, ForgetMdp.js, ResetMdp.js
+    1:= titre
+    2:= formulaire
+    3:= responsive version desktop
+    4:= version mobile
+    
+    
+
+
+*/
+
+
+
+
+
+/* ----------- 1:= Fonts ------------ */
+@font-face {
+    font-family: 'montserratlight';
+    src: url('./assets/fonts/montserratLight/montserrat-light-webfont.eot');
+    src: url('./assets/fonts/montserratLight/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/montserratLight/montserrat-light-webfont.woff2') format('woff2'),
+         url('./assets/fonts/montserratLight/montserrat-light-webfont.woff') format('woff'),
+         url('./assets/fonts/montserratLight/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('./assets/fonts/montserratBold/montserrat-bold-webfont.eot');
+    src: url('./assets/fonts/montserratBold/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/montserratBold/montserrat-bold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/montserratBold/montserrat-bold-webfont.woff') format('woff'),
+         url('./assets/fonts/montserratBold/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 2:= Constantes -------- */
+:root{
+    --noir : #1E1E1E;
+    --blanc : #FFFFFF;
+    --gris_liens : #5C5F6A;
+    --gris_background : #F6F6F6;
+    --gris_background_mockup : #C4C4C4;
+    --input_border : #E6E7E8;
+    --label_text : #474B57;
+    --pink_background : #FFAEAE;
+    --green_background: #D5E5D7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 3:= Global css -------- */
+*{
+    font-family: "montserratlight", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3,
+.landing .section1 article > p + p,
+.landing .section5 p{
+    font-family: 'montserratbold', sans-serif;
+}
+
+button{
+    padding: .8rem 1.4rem;
+    border-radius: 2rem;
+    background-color: var(--noir);
+    color: var(--blanc);
+    border: 1px solid var(--noir);
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--gris_liens);
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+figure img{
+    width: 100%;
+}
+
+input{
+    border: 2px solid var(--input_border);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: .5rem 0 1.5rem 0;
+}
+
+label{
+    color: var(--label_text);
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.alignitem_center{
+    align-items: center;
+}
+
+.justifycontent_spbetween{
+    justify-content: space-between;
+}
+
+.text_uppercase{
+    text-transform: uppercase;
+}
+
+.text_capitalize{
+    text-transform: capitalize;
+}
+
+.text_bold{
+    font-weight: 900;
+}
+
+.backGris{
+    background-color: var(--gris_background);
+}
+
+.backRose{
+    background-color: var(--pink_background);
+}
+
+.backVert{
+    background-color: var(--green_background);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 4:= Header ------------ */
+header{
+    padding: 2rem 5rem 3rem 12rem;
+    font-size: 1.2rem;
+}
+
+header section{
+    width: 80%;
+}
+
+header img{
+    width: 15%;
+    height: 15px;
+}
+
+header li{
+    margin-left: 3rem;
+}
+
+
+
+
+/* ----------- 6:= Footer ------------ */
+
+
+
+
+
+
+
+
+
+

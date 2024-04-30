@@ -1,0 +1,81 @@
+/* 
+                Sommaire
+
+        sign
+
+    1:= titre
+    2:= formulaire
+    3:= responsive version desktop
+    4:= version mobile
+
+*/
+
+
+/* ----------- 1:= titre ------------ */
+.titre{
+    width: 100%;
+}
+
+.titre h1{
+    font-size: 3rem;
+    margin: 0 0 1rem 12rem;
+    padding-top: 2rem;
+}
+
+.titre article{
+    font-size: 1.5rem;
+    color: #71747E;
+    margin-left: 12rem;
+    padding-bottom: 3rem;
+}
+
+.titre svg{
+    margin: 0 1rem;
+}
+
+
+
+
+
+/* ----------- 2:= formulaire ------------ */
+.formulaire{
+    width: 25%;
+    margin: auto;
+    padding: 6rem 0;
+}
+
+.formulaire p{
+    margin: 2rem 0;
+}
+
+.formulaire button{
+    border-radius: .5rem;
+}
+
+.formulaire input + a{
+    margin-bottom: 1rem;
+}
+
+
+
+/* ----------- 3:= Desktop ------------ */
+@media screen and (max-width: 1300px){
+    .formulaire{
+        width: 30%;
+        padding: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .titre h1{
+        font-size: 2.7rem;
+    }
+
+    .titre article{
+        font-size: 1.2rem;
+    }
+
+    .formulaire{
+        width: 35%;
+    }
+}

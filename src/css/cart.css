@@ -1,0 +1,164 @@
+/* 
+                Sommaire
+
+    
+        CheckCart
+    1:= livraison
+    2:= commande
+
+        SuccefullOrder
+    3:= success
+
+    3:= responsive version desktop
+    4:= version mobile
+
+*/
+
+
+
+form{
+    width: 100%;
+    padding: 5rem 0;
+}
+
+form h2{
+    margin-bottom: 5rem;
+}
+
+button{
+    border-radius: .5rem;
+}
+
+
+
+/* ----------- 1:= livraison ------------ */
+.livraison{
+    width: 65%;
+    padding-right: 5%;
+    border-right: 1px solid var(--input_border);
+    padding-left: 12rem;
+}
+
+.livraison .double div{
+    width: 46%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 2:= commande ------------ */
+.commande{
+    width: 35%;
+    padding-left: 5%;
+    padding-right: 12rem;
+}
+
+.commande article figure{
+    width: 40%;
+}
+
+.commande img{
+    border-radius: 50%;
+    width: 25%;
+    margin-right: .5rem;
+}
+
+.commande article button{
+    color: var(--noir);
+    background-color: var(--blanc);
+    border: 1px solid #B6B7BC;
+}
+
+
+.commande .recap{
+    margin: 6rem 0 2rem;
+}
+
+.commande .recap article{
+    margin-bottom: 1.5rem;
+}
+
+.commande .recap div{
+    border: 1px solid var(--input_border);
+    margin: 3rem 0;
+}
+
+.commande button[type='submit']{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+/* ----------- 3:= success ------------ */
+.success{
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+
+.success h2, .success button{
+    margin: 2rem 0;
+}
+
+.success button svg{
+    margin-left: .5rem;
+}
+
+
+
+
+/* ----------- 4:= Desktop ------------ */
+@media screen and (max-width: 1300px){
+    .livraison{
+        padding-left: 9rem;
+    }
+
+    .commande{
+        padding-right: 9rem;
+    }
+
+    .success{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .livraison{
+        padding-left: 6rem;
+    }
+
+    .commande{
+        padding-right: 6rem;
+    }
+
+    .commande img{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .livraison{
+        width: 55%;
+    }
+
+    .commande{
+        width: 45%;
+    }
+
+    .success{
+        width: 35%;
+    }
+}

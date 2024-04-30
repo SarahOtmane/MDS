@@ -1,0 +1,199 @@
+/* 
+                Sommaire
+
+    
+        AccountMenu.js
+    1:= menu
+        
+        AccountOrder.js
+    2:= commandes
+
+        PasswordUpdate.js
+    3:= updateMdp
+
+        AccountDetails.js
+    4:= details
+
+        AccountAdress.js
+    5:= adress
+
+    6:= responsive version desktop
+    7:= version mobile
+
+*/
+
+
+.account{
+    margin: 6rem 0;
+}
+
+
+/* ----------- 1:= menu ------------ */
+.menu{
+    width: 35%;
+    padding: 3rem 0 0 12rem;
+}
+
+.menu a{
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    margin-right: 20%;
+}
+
+.menu a.selected{
+    background-color: var(--gris_background);
+    border-radius: .5rem;
+}
+
+.menu svg{
+    margin-right: 1rem;
+}
+
+
+
+
+
+
+
+/* ----------- 2:= commande ------------ */
+.commandes, section.updateMdp, section.details, section.adress{
+    width: 65%;
+    padding: 0 12rem 10rem 0;
+    border-left: 1px solid var(--input_border);
+    font-size: 1.3rem;
+}
+
+.commandes article{
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.commandes p{
+    margin: 2rem 0;
+}
+
+.commandes button{
+    width: 100%;
+}
+
+.commandes button svg{
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+/* ----------- 3:= updateMdp / 4:= details ------------ */
+form.updateMdp, form.details, form.adress{
+    width: 50%;
+    margin-left: 10%;
+}
+
+
+
+
+
+
+
+
+/* ----------- 5:= adress ------------ */
+form.adress{
+    width: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= Desktop ------------ */
+@media screen and (max-width: 1400px){
+    .menu{
+        padding-left: 8rem;
+    }
+
+    .menu a{
+        font-size: 1.1rem;
+    }
+
+    .commandes, section.updateMdp, section.details, section.adress{
+        padding-right: 8rem;
+    }
+
+    h2{
+        font-size: 1.4rem !important;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .menu{
+        padding-left: 6rem;
+    }
+
+    .menu a{
+        font-size: 1rem;
+    }
+
+    .commandes, section.updateMdp, section.details, section.adress{
+        padding-right: 6rem;
+        font-size: 1.1rem;
+    }
+
+    h2{
+        font-size: 1.3rem !important;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .menu{
+        width: 40%;
+    }
+
+    .commandes, section.updateMdp, section.details, section.adress{
+        width: 60%;
+    }
+
+    .commandes article, form.updateMdp, form.details{
+        width: 60%;
+    }
+
+    form.adress{
+        width: 70%;
+    }
+
+    h2{
+        font-size: 1.2rem !important;
+    }
+}
+
+
+@media screen and (max-width: 1080px){
+    .menu a{
+        font-size: .8rem;
+    }
+
+    .menu svg{
+        width: 24 !important;
+        height: 25 !important;
+    }
+
+    .commandes article, form.updateMdp, form.details, form.adress{
+        width: 80%;
+    }
+
+    form.adress div.double{
+        flex-direction: column;
+    }
+}
