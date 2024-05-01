@@ -24,22 +24,28 @@ const App = () =>{
             <>
                 <Header />
                 <Routes>
-                    <Route path="/landing" element={<LandingPage />} /> 
+                    <Route path="/user" >
+                        <Route path="/register" element={<SignUp />} />
+                        <Route path="/login" element={<SignIn />} />
 
-                    <Route path="/register" element={<SignUp />} />
-                    <Route path="/login" element={<SignIn />} />
+                        <Route path="/resetMdp" element={<ForgetMdp />} />
+                        <Route path="/resetMdp/reset" element={<ResetMdp />} />
 
-                    <Route path="/resetMdp" element={<ForgetMdp />} />
-                    <Route path="/resetMdp/reset" element={<ResetMdp />} />
-                    
-                    <Route path="/cart/check" element={<CheckCart />} />
-                    <Route path="/success-order" element={<SuccefullOrder />} />
-                    <Route path="/failed-order" element={<FailedOrder />} />
+                        <Route path="/cart/check" element={<CheckCart />} />
+                        <Route path="/success-order" element={<SuccefullOrder />} />
+                        <Route path="/failed-order" element={<FailedOrder />} />
 
-                    <Route path="/my-account" element={<AccountOrder />} />
-                    <Route path="/my-account/update-password" element={<AccountPassword />} />
-                    <Route path="/my-account/details" element={<AccountDetails />} />
-                    <Route path="/my-account/adress" element={<AccountAdress />} />
+                        <Route path="/my-account">
+                            <Route index element={<AccountOrder />} />
+                            <Route path="update-password" element={<AccountPassword  />} />
+                            <Route path="details" element={<AccountDetails  />} />
+                            <Route path="adress" element={<AccountAdress  />} />
+                            <Route path="update-password" element={<AccountPassword  />} />
+                        </Route>
+                    </Route>
+
+                    <Route path="/" element={<LandingPage />} /> 
+
                 </Routes> 
                 <Footer />
             </>
