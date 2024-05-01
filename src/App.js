@@ -17,41 +17,33 @@ import AccountPassword from "./components/AccountPassword";
 import AccountDetails from "./components/AccountDetails";
 import AccountAdress from "./components/AccountAdress";
 
-
-const App = () =>{
-    return(
+const App = () => {
+    return (
         <BrowserRouter>
-            <>
+            <>  
                 <Header />
                 <Routes>
-                    <Route path="/user" >
-                        <Route path="/register" element={<SignUp />} />
-                        <Route path="/login" element={<SignIn />} />
+                    <Route path="/" element={<LandingPage />} />
 
-                        <Route path="/resetMdp" element={<ForgetMdp />} />
-                        <Route path="/resetMdp/reset" element={<ResetMdp />} />
-
-                        <Route path="/cart/check" element={<CheckCart />} />
-                        <Route path="/success-order" element={<SuccefullOrder />} />
-                        <Route path="/failed-order" element={<FailedOrder />} />
-
-                        <Route path="/my-account">
-                            <Route index element={<AccountOrder />} />
-                            <Route path="update-password" element={<AccountPassword  />} />
-                            <Route path="details" element={<AccountDetails  />} />
-                            <Route path="adress" element={<AccountAdress  />} />
-                            <Route path="update-password" element={<AccountPassword  />} />
+                    <Route path="/user" element={<SignUp />}>
+                        <Route path="register" element={<SignUp />} />
+                        <Route path="login" element={<SignIn />} />
+                        <Route path="resetMdp" element={<ForgetMdp />} />
+                        <Route path="resetMdp/reset" element={<ResetMdp />} />
+                        <Route path="cart/check" element={<CheckCart />} />
+                        <Route path="success-order" element={<SuccefullOrder />} />
+                        <Route path="failed-order" element={<FailedOrder />} />
+                        <Route path="my-account" element={<AccountOrder />}>
+                            <Route path="update-password" element={<AccountPassword />} />
+                            <Route path="details" element={<AccountDetails />} />
+                            <Route path="address" element={<AccountAdress />} />
                         </Route>
                     </Route>
-
-                    <Route path="/" element={<LandingPage />} /> 
-
-                </Routes> 
+                </Routes>
                 <Footer />
             </>
         </BrowserRouter>
     )
 }
-
 
 export default App;
