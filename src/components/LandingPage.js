@@ -7,6 +7,9 @@ import '../css/landingPage.css';
 import mockup from '../assets/pictures/landingPage/landing_mockup.png';
 import appStore from '../assets/pictures/landingPage/appStore.svg';
 import googlePlay from '../assets/pictures/landingPage/playStore.svg';
+import boutton from '../assets/pictures/landingPage/boutton_section1.png';
+import deco_haut from '../assets/pictures/landingPage/deco_vert_haut.png';
+import deco_bas from '../assets/pictures/landingPage/deco_vert_bas.png';
     //section2
 import arrow from '../assets/pictures/landingPage/Arrow.png';
 import loupe from '../assets/pictures/landingPage/loupe.svg';
@@ -127,6 +130,9 @@ const LandingPage = () =>{
                             </div>
                         </button>
                     </div>
+                    <img src={deco_bas} alt='' />
+                    <img src={deco_haut} alt='' />
+                    <img src={boutton} alt='' />
                 </article>
                 <img src={mockup} alt='' />
             </section>
