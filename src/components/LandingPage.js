@@ -136,6 +136,11 @@ const LandingPage = () =>{
                 <img src={mockup} alt='' />
             </section>
             <section className="section2 backRose2 row">
+                <img className="picto" src={pelote} alt='' id="pelote" />
+                <img className="picto" src={bobine} alt='' id="bobine" />
+                <img className="picto" src={ciseaux} alt='' id="ciseaux" />
+                <img className="picto" src={aiguilles} alt='' id="aiguilles" />
+                <img className="picto" src={pince} alt='' id="pince" />
                 <h2 className='text_uppercase'>Service d'artisans</h2>
                 <div className='column'>
                     <div className='row'>
