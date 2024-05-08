@@ -185,6 +185,10 @@ label{
     background-color: var(--pink_background);
 }
 
+.backRose2{
+    background-color: var(--pink_background_2);
+}
+
 .backVert{
     background-color: var(--green_background);
 }
