@@ -9,10 +9,6 @@ import appStore from '../assets/pictures/landingPage/appStore.svg';
 import googlePlay from '../assets/pictures/landingPage/playStore.svg';
     //section2
 import arrow from '../assets/pictures/landingPage/Arrow.png';
-import loupe from '../assets/pictures/landingPage/loupe.svg';
-import check from '../assets/pictures/landingPage/check.svg';
-import send from '../assets/pictures/landingPage/send.svg';
-import ok from '../assets/pictures/landingPage/ok.svg';
 import pelote from '../assets/pictures/picto/pelote.png';
 import bobine from '../assets/pictures/picto/bobine.png';
 import ciseaux from '../assets/pictures/picto/ciseaux.png';
@@ -21,7 +17,15 @@ import pince from '../assets/pictures/picto/pince.png';
     //section3
 import image1 from '../assets/pictures/landingPage/image1.png';
 import image2 from '../assets/pictures/landingPage/image2.png';
-import image3 from '../assets/pictures/landingPage/image3.png';
+import image3 from '../assets/pictures/landingPage/image3.jpeg';
+import image4 from '../assets/pictures/landingPage/image4.png';
+import machine from '../assets/pictures/picto/machine.png';
+import ceintre from '../assets/pictures/picto/ceintre.png';
+import picto_Section4 from '../assets/pictures/picto/picto_section4.png';
+import loupe from '../assets/pictures/landingPage/loupe.svg';
+import check from '../assets/pictures/landingPage/check.svg';
+import send from '../assets/pictures/landingPage/send.svg';
+import ok from '../assets/pictures/landingPage/ok.svg';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
@@ -135,6 +139,7 @@ const LandingPage = () =>{
                 </article>
                 <img src={mockup} alt='' />
             </section>
+
             <section className="section2 backRose2 row">
                 <img className="picto" src={pelote} alt='' id="pelote" />
                 <img className="picto" src={bobine} alt='' id="bobine" />
@@ -164,9 +169,14 @@ const LandingPage = () =>{
                 <img className="picto" src={aiguilles} alt='' id="aiguilles" />
                 <img className="picto" src={pince} alt='' id="pince" />
             </section>
+
             <section className='section3 row alignitem_center justifycontent_spbetween'>
+                <img className='picto' id="image4" src={image4} alt='' />
+                <img className='picto' id="machine" src={machine} alt='' />
+                <img className='picto' id="ceintre" src={ceintre} alt='' />
+                <img className='picto' id="picto_Section4" src={picto_Section4} alt='' />
                 <article>
-                    <span className='text_bold'>Expérience</span>
+                    <span className='text_bold textGreen'>Expérience</span>
                     <h2 className='text_uppercase'>Comment ça marche ?</h2>
                     <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
                     <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
@@ -176,11 +186,10 @@ const LandingPage = () =>{
                     <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
                 <figure className='column twoImages'>
-                    <img src={image1} alt='une personne qui est entrain de coudre ' />
                     <img src={image2} alt='une machine à coudre ' />
+                    <img src={image1} alt='une personne qui est entrain de coudre ' />
                 </figure>
                 <figure className='column'>
-                    <div></div>
                     <img src={image3} alt='un mannequin ' />
                 </figure>
             </section>
