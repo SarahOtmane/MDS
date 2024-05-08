@@ -136,7 +136,8 @@
 }
 
 .landing .section2 #ciseaux, .landing .section2 #aiguilles, .landing .section2 #pince{
-    top: 63.2rem;
+    position: absolute;
+    margin-top: 16.8rem;
 }
 
 .landing .section2 #pince{
@@ -145,7 +146,7 @@
 
 .landing .section2 #aiguilles{
     left: 45%;
-    top: 65rem;
+    margin-top: 18.6rem;
 }
 
 .landing .section2 #pelote{
@@ -431,6 +432,16 @@
 
     .landing .section8 button{
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 18rem;
+    }
+
+    .landing .section2 #aiguilles{
+        margin-top: 20rem;
     }
 }
 
