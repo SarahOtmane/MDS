@@ -208,8 +208,8 @@
 .landing .section3 figure:last-child img{
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83); 
     box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     margin-top: 3rem;
 }
 
@@ -452,6 +452,11 @@
         width: 35%;
     }
 
+    .landing .section1 #button{
+        left: 53%;
+        top: 37.6rem;
+    }
+
     .landing .section1 h1{
         font-size: 2.7rem;
     }
@@ -465,6 +470,14 @@
     .landing .section1 button{
         width: 40%;
     }
+    
+    .landing .section1 #button{
+        left: 50%;
+    }
+
+    .landing .section1 #deco2{
+        left: 40%;
+    }
 
     .landing .section8 button{
         font-size: 1.2rem;
@@ -476,6 +489,17 @@
 
     .landing .section4 #deco3{
         margin-top: -7rem;
+    }
+}
+
+@media screen and (max-width: 1520px){
+    .landing .section1 #button{
+        top: 40.8rem;
+        left: 49%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 40.5rem;
     }
 }
 
@@ -505,6 +529,15 @@
         margin-right: 1rem;
         margin-left: 0;
     }
+    
+    .landing .section1 #button{
+        top: 40.8rem;
+        left: 49%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 40.5rem;
+    }
 
     .landing .section3 #image4{
         margin-top: -42rem;
@@ -524,6 +557,12 @@
     }
 }
 
+@media screen and (max-width: 1460px){
+    .landing .section1 #button, .landing .section1 #deco1{
+        top: 42rem;
+    }
+}
+
 @media screen and (max-width: 1415px){
     .landing .section4 #deco4{
         margin-top: 33rem;
@@ -536,7 +575,20 @@
     }
 
     .landing .section1 article{
-        padding: 5rem 8rem 0 7rem;
+        padding: 5rem 8rem 5rem 7rem;
+    }
+
+    .landing .section1 #deco2{
+        left: 38%;
+    }
+
+    .landing .section1 #button{
+        top: 38.7rem;
+        left: 48%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 39.5rem;
     }
 
     .landing .section2 h2{
@@ -582,6 +634,16 @@
     }
 }
 
+@media screen and (max-width: 1345px){
+    .landing .section1 #button{
+        top: 40.1rem;
+    }
+    
+    .landing .section1 #deco1{
+        top: 41rem;
+    }
+}
+
 @media screen and (max-width: 1210px) {
     header{
         font-size: 1rem;
@@ -594,7 +656,7 @@
     }
 
     .landing .section1 article{
-        padding: 5rem 4rem 0 6rem;
+        padding: 5rem 4rem 5rem 6rem;
     }
 
     .landing .section1 button{
@@ -678,6 +740,10 @@
 }
 
 @media screen and (max-width: 1142px){
+    .landing .section1 #deco1{
+        top: 42rem;
+    }
+
     .landing .section2 #pince{
         margin-top: 18.4rem;
     }
@@ -725,6 +791,16 @@
     .landing .section1 button:last-child{
         margin-top: 1rem;
     }
+
+    .landing .section1 #button{
+        top: 36.8rem;
+        left: 43.5%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 39rem;
+    }
+    
 
     .landing .section2{
         flex-wrap: wrap !important;
@@ -784,6 +860,15 @@
 }
 
 @media screen and (max-width: 992px){
+    .landing .section1 #button{
+        top: 39.4rem;
+        left: 43.5%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 42.5rem;
+    }
+
     .landing .section8{
         padding: 2rem 5rem;
     }
@@ -791,6 +876,7 @@
     .landing .section8 button{
         font-size: 1rem;
     }
+    
     .landing .section8 button div{
         text-align: start;
     }
@@ -852,6 +938,15 @@
 }
 
 @media screen and (max-width: 868px){
+    .landing .section1 #button{
+        top: 40.7rem;
+        left: 41%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 44.5rem;
+    }
+
     .landing .section2 #ciseaux, .landing .section2 #pince{
         margin-top: 23.2rem;
     }
