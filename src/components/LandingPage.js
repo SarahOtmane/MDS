@@ -29,6 +29,8 @@ import ok from '../assets/pictures/landingPage/ok.svg';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
+import deco3 from '../assets/pictures/picto/deco3.png';
+import deco4 from '../assets/pictures/picto/deco4.png';
     //section6
 import product1 from '../assets/pictures/landingPage/product1.png';
 import product2 from '../assets/pictures/landingPage/product2.png';
@@ -195,6 +197,8 @@ const LandingPage = () =>{
             </section>
 
             <section className='section4 backGris'>
+                <img className='picto' id="deco3" src={deco3} alt='' />
+                <img className='picto' id="deco4" src={deco4} alt='' />
                 <span className='text_uppercase text_bold'>RenoWear</span>
                 <h2 className='text_capitalize'>pour qui ?</h2>
                 <div className='row justifycontent_spbetween'>
