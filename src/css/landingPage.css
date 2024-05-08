@@ -558,6 +558,14 @@
         margin: 1.5rem 5% 5rem 0;
     }
 
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 16.8rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 18.6rem;
+    }
+
     .landing .section3 article{
         padding-right: 2rem;
     }
@@ -580,6 +588,15 @@
     }
 }
 
+@media screen and (max-width: 1142px){
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 18.1rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 20rem;
+    }
+}
 
 @media screen and (max-width: 1020px) {
     header{
@@ -614,6 +631,14 @@
 
     .landing .section2 .card{
         margin-top: 2rem;
+    }
+
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 22rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 23.7rem;
     }
 
     .landing .section5{
@@ -710,6 +735,16 @@
         margin-top: 0;
     }
 
+}
+
+@media screen and (max-width: 868px){
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 23.2rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 25.1rem;
+    }
 }
 
 @media screen and (max-width: 790px){
