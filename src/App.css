@@ -196,11 +196,11 @@ label{
 }
 
 .textGreen{
-    color: var(--green_text);
+    color: var(--green_text) !important;
 }
 
 .textPink{
-    color: var(--pink_text);
+    color: var(--pink_text) !important;
 }
 
 
