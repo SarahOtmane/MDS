@@ -74,16 +74,18 @@
 
 /* ----------- 2:= Constantes -------- */
 :root{
-    --noir : #1E1E1E;
-    --blanc : #FFFFFF;
+    --black : #1E1E1E;
+    --white : #FFFFFF;
     --gris_liens : #5C5F6A;
     --gris_background : #F6F6F6;
     --gris_background_mockup : #C4C4C4;
     --input_border : #E6E7E8;
     --label_text : #474B57;
     --pink_background : #FFAEAE;
-    --green_background: #D5E5D7;
     --pink_background_2: #FFDBE8;
+    --green_background: #D5E5D7;
+    --green_text: #BDDEB4;
+    --pink_text: #E4A2BE;
 }
 
 
@@ -113,9 +115,9 @@ h1, h2, h3,
 button{
     padding: .8rem 1.4rem;
     border-radius: 2rem;
-    background-color: var(--noir);
-    color: var(--blanc);
-    border: 1px solid var(--noir);
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
     font-size: 1.1rem;
 }
 
@@ -191,6 +193,14 @@ label{
 
 .backVert{
     background-color: var(--green_background);
+}
+
+.textGreen{
+    color: var(--green_text);
+}
+
+.textPink{
+    color: var(--pink_text);
 }
 
 
