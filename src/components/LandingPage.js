@@ -13,6 +13,11 @@ import loupe from '../assets/pictures/landingPage/loupe.svg';
 import check from '../assets/pictures/landingPage/check.svg';
 import send from '../assets/pictures/landingPage/send.svg';
 import ok from '../assets/pictures/landingPage/ok.svg';
+import pelote from '../assets/pictures/picto/pelote.png';
+import bobine from '../assets/pictures/picto/bobine.png';
+import ciseaux from '../assets/pictures/picto/ciseaux.png';
+import aiguilles from '../assets/pictures/picto/aiguilles.png';
+import pince from '../assets/pictures/picto/pince.png';
     //section3
 import image1 from '../assets/pictures/landingPage/image1.png';
 import image2 from '../assets/pictures/landingPage/image2.png';
@@ -131,6 +136,8 @@ const LandingPage = () =>{
                 <img src={mockup} alt='' />
             </section>
             <section className="section2 backRose2 row">
+                <img className="picto" src={pelote} alt='' id="pelote" />
+                <img className="picto" src={bobine} alt='' id="bobine" />
                 <h2 className='text_uppercase'>Service d'artisans</h2>
                 <div className='column'>
                     <div className='row'>
@@ -153,6 +160,9 @@ const LandingPage = () =>{
                         <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                     </article>
                 </div>
+                <img className="picto" src={ciseaux} alt='' id="ciseaux" />
+                <img className="picto" src={aiguilles} alt='' id="aiguilles" />
+                <img className="picto" src={pince} alt='' id="pince" />
             </section>
             <section className='section3 row alignitem_center justifycontent_spbetween'>
                 <article>

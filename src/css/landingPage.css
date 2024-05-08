@@ -93,6 +93,10 @@
 
 
 /* ----------- 2:= section 2 ------------ */
+.landing .section2 h2, .landing .section2 h2 + div{
+    margin-top: 2rem;
+}
+
 .landing .section2 h2{
     width: 30%;
     padding: 0 0 0 8rem;
@@ -127,7 +131,31 @@
     margin-left: .5rem;
 }
 
+.landing .section2 img.picto{
+    position: absolute;
+}
 
+.landing .section2 #ciseaux, .landing .section2 #aiguilles, .landing .section2 #pince{
+    position: absolute;
+    margin-top: 16.8rem;
+}
+
+.landing .section2 #pince{
+    right: 0;
+}
+
+.landing .section2 #aiguilles{
+    left: 45%;
+    margin-top: 18.6rem;
+}
+
+.landing .section2 #pelote{
+    left: 25%;
+}
+
+.landing .section2 #bobine{
+    right: 25%;
+}
 
 
 
@@ -407,6 +435,16 @@
     }
 }
 
+@media screen and (max-width: 1490px) {
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 18rem;
+    }
+
+    .landing .section2 #aiguilles{
+        margin-top: 20rem;
+    }
+}
+
 @media screen and (max-width: 1470px) {
     header{
         padding-left: 10rem;
@@ -520,6 +558,14 @@
         margin: 1.5rem 5% 5rem 0;
     }
 
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 16.8rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 18.6rem;
+    }
+
     .landing .section3 article{
         padding-right: 2rem;
     }
@@ -542,6 +588,15 @@
     }
 }
 
+@media screen and (max-width: 1142px){
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 18.1rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 20rem;
+    }
+}
 
 @media screen and (max-width: 1020px) {
     header{
@@ -576,6 +631,14 @@
 
     .landing .section2 .card{
         margin-top: 2rem;
+    }
+
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 22rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 23.7rem;
     }
 
     .landing .section5{
@@ -672,6 +735,16 @@
         margin-top: 0;
     }
 
+}
+
+@media screen and (max-width: 868px){
+    .landing .section2 #ciseaux, .landing .section2 #pince{
+        margin-top: 23.2rem;
+    }
+    
+    .landing .section2 #aiguilles{
+        margin-top: 25.1rem;
+    }
 }
 
 @media screen and (max-width: 790px){
