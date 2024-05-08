@@ -13,6 +13,11 @@ import loupe from '../assets/pictures/landingPage/loupe.svg';
 import check from '../assets/pictures/landingPage/check.svg';
 import send from '../assets/pictures/landingPage/send.svg';
 import ok from '../assets/pictures/landingPage/ok.svg';
+import pelote from '../assets/pictures/picto/pelote.png';
+import bobine from '../assets/pictures/picto/bobine.png';
+import ciseaux from '../assets/pictures/picto/ciseaux.png';
+import aiguilles from '../assets/pictures/picto/aiguilles.png';
+import pince from '../assets/pictures/picto/pince.png';
     //section3
 import image1 from '../assets/pictures/landingPage/image1.png';
 import image2 from '../assets/pictures/landingPage/image2.png';
