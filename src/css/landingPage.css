@@ -67,27 +67,6 @@
     width: max-content;
 }
 
-/* #button, #deco_haut, #deco_bas{
-    position: relative;
-    width: 70%;
-}
-
-#button{
-    width: 20%;
-    left: 32%;
-    top: .5%;
-}
-
-#deco_haut{
-    top: -75%;
-    left: 55%;
-}
-
-#deco_bas{
-    left: -10rem;
-    top: -10%;
-} */
-
 
 
 
@@ -248,7 +227,13 @@
 }
 
 .landing .section4 p{
-    margin-bottom: 2rem;
+    position: absolute;
+    text-align: start;
+    color: var(--white);
+    margin-top: -22rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    font-family: 'montserratbold', sans-serif;
 }
 
 
