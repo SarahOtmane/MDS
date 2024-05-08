@@ -9,10 +9,6 @@ import appStore from '../assets/pictures/landingPage/appStore.svg';
 import googlePlay from '../assets/pictures/landingPage/playStore.svg';
     //section2
 import arrow from '../assets/pictures/landingPage/Arrow.png';
-import loupe from '../assets/pictures/landingPage/loupe.svg';
-import check from '../assets/pictures/landingPage/check.svg';
-import send from '../assets/pictures/landingPage/send.svg';
-import ok from '../assets/pictures/landingPage/ok.svg';
 import pelote from '../assets/pictures/picto/pelote.png';
 import bobine from '../assets/pictures/picto/bobine.png';
 import ciseaux from '../assets/pictures/picto/ciseaux.png';
@@ -26,6 +22,10 @@ import image4 from '../assets/pictures/landingPage/image4.png';
 import machine from '../assets/pictures/picto/machine.png';
 import ceintre from '../assets/pictures/picto/ceintre.png';
 import picto_Section4 from '../assets/pictures/picto/picto_section4.png';
+import loupe from '../assets/pictures/landingPage/loupe.svg';
+import check from '../assets/pictures/landingPage/check.svg';
+import send from '../assets/pictures/landingPage/send.svg';
+import ok from '../assets/pictures/landingPage/ok.svg';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
@@ -176,7 +176,7 @@ const LandingPage = () =>{
                 <img className='picto' id="ceintre" src={ceintre} alt='' />
                 <img className='picto' id="picto_Section4" src={picto_Section4} alt='' />
                 <article>
-                    <span className='text_bold'>Expérience</span>
+                    <span className='text_bold textGreen'>Expérience</span>
                     <h2 className='text_uppercase'>Comment ça marche ?</h2>
                     <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
                     <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
