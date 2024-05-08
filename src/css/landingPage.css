@@ -43,6 +43,10 @@
     z-index: 3;
 }
 
+.landing .section1 article{
+    padding-bottom: 7rem;
+}
+
 .landing .section1 article > p + p{
     margin-top: 1rem;
     text-align: start;
@@ -66,6 +70,25 @@
     font-size: .9rem;
     width: max-content;
 }
+
+.landing .section1 .picto{
+    width: 22%;
+}
+
+.landing .section1 #button{
+    width: inherit;
+    top: 37.8rem;
+    left: 55%;
+}
+
+.landing .section1 #deco1{
+    top: 36.5rem;
+}
+
+.landing .section1 #deco2{
+    left: 43%;
+}
+
 
 
 
