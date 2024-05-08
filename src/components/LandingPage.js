@@ -22,6 +22,10 @@ import pince from '../assets/pictures/picto/pince.png';
 import image1 from '../assets/pictures/landingPage/image1.png';
 import image2 from '../assets/pictures/landingPage/image2.png';
 import image3 from '../assets/pictures/landingPage/image3.jpeg';
+import image4 from '../assets/pictures/landingPage/image4.png';
+import machine from '../assets/pictures/picto/machine.png';
+import ceintre from '../assets/pictures/picto/ceintre.png';
+import picto_Section4 from '../assets/pictures/picto/picto_section4.png';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
@@ -135,6 +139,7 @@ const LandingPage = () =>{
                 </article>
                 <img src={mockup} alt='' />
             </section>
+
             <section className="section2 backRose2 row">
                 <img className="picto" src={pelote} alt='' id="pelote" />
                 <img className="picto" src={bobine} alt='' id="bobine" />
@@ -164,7 +169,12 @@ const LandingPage = () =>{
                 <img className="picto" src={aiguilles} alt='' id="aiguilles" />
                 <img className="picto" src={pince} alt='' id="pince" />
             </section>
+
             <section className='section3 row alignitem_center justifycontent_spbetween'>
+                <img className='picto' id="image4" src={image4} alt='' />
+                <img className='picto' id="machine" src={machine} alt='' />
+                <img className='picto' id="ceintre" src={ceintre} alt='' />
+                <img className='picto' id="picto_Section4" src={picto_Section4} alt='' />
                 <article>
                     <span className='text_bold'>Expérience</span>
                     <h2 className='text_uppercase'>Comment ça marche ?</h2>
