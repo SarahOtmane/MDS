@@ -93,6 +93,10 @@
 
 
 /* ----------- 2:= section 2 ------------ */
+.landing .section2 h2, .landing .section2 h2 + div{
+    margin-top: 2rem;
+}
+
 .landing .section2 h2{
     width: 30%;
     padding: 0 0 0 8rem;
@@ -127,7 +131,30 @@
     margin-left: .5rem;
 }
 
+.landing .section2 img.picto{
+    position: absolute;
+}
 
+.landing .section2 #ciseaux, .landing .section2 #aiguilles, .landing .section2 #pince{
+    top: 63.2rem;
+}
+
+.landing .section2 #pince{
+    right: 0;
+}
+
+.landing .section2 #aiguilles{
+    left: 45%;
+    top: 65rem;
+}
+
+.landing .section2 #pelote{
+    left: 25%;
+}
+
+.landing .section2 #bobine{
+    right: 25%;
+}
 
 
 
