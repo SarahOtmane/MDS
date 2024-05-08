@@ -7,6 +7,9 @@ import '../css/landingPage.css';
 import mockup from '../assets/pictures/landingPage/landing_mockup.png';
 import appStore from '../assets/pictures/landingPage/appStore.svg';
 import googlePlay from '../assets/pictures/landingPage/playStore.svg';
+import deco1 from '../assets/pictures/picto/deco1.png';
+import deco2 from '../assets/pictures/picto/deco2.png';
+import button from '../assets/pictures/picto/button.png';
     //section2
 import arrow from '../assets/pictures/landingPage/Arrow.png';
 import pelote from '../assets/pictures/picto/pelote.png';
@@ -29,6 +32,8 @@ import ok from '../assets/pictures/landingPage/ok.svg';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
+import deco3 from '../assets/pictures/picto/deco3.png';
+import deco4 from '../assets/pictures/picto/deco4.png';
     //section6
 import product1 from '../assets/pictures/landingPage/product1.png';
 import product2 from '../assets/pictures/landingPage/product2.png';
@@ -116,6 +121,9 @@ const LandingPage = () =>{
     return(
         <main className="landing">
             <section className="section1 backGris row">
+                <img className='picto' id="deco1" src={deco1} alt='' />
+                <img className='picto' id="deco2" src={deco2} alt='' />
+                <img className='picto' id="button" src={button} alt='' />
                 <article>
                     <h1 className='text_uppercase'>pourquoi jeter quand on peut réparer ?</h1>
                     <p>Le concept de réparation et de consommation de vêtements durables <br></br>Faites le tri dans vos habits</p>
@@ -195,16 +203,18 @@ const LandingPage = () =>{
             </section>
 
             <section className='section4 backGris'>
+                <img className='picto' id="deco3" src={deco3} alt='' />
+                <img className='picto' id="deco4" src={deco4} alt='' />
                 <span className='text_uppercase text_bold'>RenoWear</span>
                 <h2 className='text_capitalize'>pour qui ?</h2>
                 <div className='row justifycontent_spbetween'>
                     <figure>
-                        <p className='text_uppercase text_bold'>Les particuliers</p>
                         <img src={particulier} alt='' />
+                        <p className='text_uppercase text_bold'>Les <br></br> particuliers</p>
                     </figure>
                     <figure>
-                        <p className='text_uppercase text_bold'>Les artisans</p>
                         <img src={artisan} alt='' />
+                        <p className='text_uppercase text_bold'>Les <br></br> artisans</p>
                     </figure>
                 </div>
             </section>
@@ -213,15 +223,15 @@ const LandingPage = () =>{
                 <h2>RenoWear c'est</h2>
                 <article>
                     <p>+ 100 k</p>
-                    <p>artisans</p>
+                    <p className='textPink'>artisans</p>
                 </article>
                 <article>
                     <p>90 000</p>
-                    <p>utilisateurs</p>
+                    <p className='textPink'>utilisateurs</p>
                 </article>
                 <article>
                     <p>200 000</p>
-                    <p>articles réparés/an</p>
+                    <p className='textPink'>articles réparés/an</p>
                 </article>
             </section>
 

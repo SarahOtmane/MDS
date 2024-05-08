@@ -43,14 +43,18 @@
     z-index: 3;
 }
 
+.landing .section1 article{
+    padding-bottom: 7rem;
+}
+
 .landing .section1 article > p + p{
     margin-top: 1rem;
     text-align: start;
 }
 
 .landing .section1 button{
-    background-color: var(--blanc);
-    color: var(--noir);
+    background-color: var(--white);
+    color: var(--black);
     border: none;
     margin: 2rem 2rem 0 0;
     width: 30%;
@@ -67,26 +71,24 @@
     width: max-content;
 }
 
-/* #button, #deco_haut, #deco_bas{
-    position: relative;
-    width: 70%;
+.landing .section1 .picto{
+    width: 22%;
 }
 
-#button{
-    width: 20%;
-    left: 32%;
-    top: .5%;
-}
-
-#deco_haut{
-    top: -75%;
+.landing .section1 #button{
+    width: inherit;
+    top: 37.8rem;
     left: 55%;
 }
 
-#deco_bas{
-    left: -10rem;
-    top: -10%;
-} */
+.landing .section1 #deco1{
+    top: 36.5rem;
+}
+
+.landing .section1 #deco2{
+    left: 43%;
+}
+
 
 
 
@@ -206,8 +208,8 @@
 .landing .section3 figure:last-child img{
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83); 
     box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83);
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     margin-top: 3rem;
 }
 
@@ -239,7 +241,7 @@
 /* ----------- 4:= section 4 ------------ */
 .landing .section4{
     text-align: center;
-    padding: 3rem 17rem;
+    padding: 3rem 17rem 8rem;
 }
 
 .landing .section4 figure{
@@ -248,7 +250,25 @@
 }
 
 .landing .section4 p{
-    margin-bottom: 2rem;
+    position: absolute;
+    text-align: start;
+    color: var(--white);
+    margin-top: -22rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.landing .section4 #deco3{
+    left: 0;
+    width: 25%;
+    margin-top: -8rem;
+}
+
+.landing .section4 #deco4{
+    right: 0;
+    width: 25%;
+    margin-top: 40rem;
 }
 
 
@@ -288,7 +308,7 @@
 }
 
 .landing .section6 div.button{
-    background-color: #f1f1f1;
+    background-color: var(--green_text);
     padding: 1rem;
     border-radius: 1.5rem;
     width: max-content;
@@ -296,14 +316,14 @@
 }
 
 .landing .section6 div.button button{
-    background-color: #f1f1f1;
+    background-color: var(--green_text);
     border: none;
-    color: var(--noir);
+    color: var(--black);
     font-weight: bolder;
 }
 
 .landing .section6 div.button button.selected{
-    background-color: var(--blanc);
+    background-color: var(--white);
     border-radius: 1rem;
 }
 
@@ -397,7 +417,7 @@
 }
 
 .landing .section8 button{
-    color: var(--blanc);
+    color: var(--white);
     font-weight: bolder;
     font-size: 1.4rem;
     border: none;
@@ -413,7 +433,7 @@
 }
 
 .landing .section8 button .apple{
-    fill: var(--blanc);
+    fill: var(--white);
 }
 
 .landing .section8 button p:first-child{
@@ -432,14 +452,31 @@
         width: 35%;
     }
 
+    .landing .section1 #button{
+        left: 53%;
+        top: 37.6rem;
+    }
+
     .landing .section1 h1{
         font-size: 2.7rem;
+    }
+
+    .landing .section4 #deco4{
+        margin-top: 35rem;
     }
 }
 
 @media screen and (max-width: 1570px) {
     .landing .section1 button{
         width: 40%;
+    }
+    
+    .landing .section1 #button{
+        left: 50%;
+    }
+
+    .landing .section1 #deco2{
+        left: 40%;
     }
 
     .landing .section8 button{
@@ -448,6 +485,21 @@
 
     .landing .section3 #image4{
         margin-top: -48rem;
+    }
+
+    .landing .section4 #deco3{
+        margin-top: -7rem;
+    }
+}
+
+@media screen and (max-width: 1520px){
+    .landing .section1 #button{
+        top: 40.8rem;
+        left: 49%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 40.5rem;
     }
 }
 
@@ -477,6 +529,15 @@
         margin-right: 1rem;
         margin-left: 0;
     }
+    
+    .landing .section1 #button{
+        top: 40.8rem;
+        left: 49%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 40.5rem;
+    }
 
     .landing .section3 #image4{
         margin-top: -42rem;
@@ -496,13 +557,38 @@
     }
 }
 
+@media screen and (max-width: 1460px){
+    .landing .section1 #button, .landing .section1 #deco1{
+        top: 42rem;
+    }
+}
+
+@media screen and (max-width: 1415px){
+    .landing .section4 #deco4{
+        margin-top: 33rem;
+    }
+}
+
 @media screen and (max-width: 1345px) {
     .landing h2{
         font-size: 3rem;
     }
 
     .landing .section1 article{
-        padding: 5rem 8rem 0 7rem;
+        padding: 5rem 8rem 5rem 7rem;
+    }
+
+    .landing .section1 #deco2{
+        left: 38%;
+    }
+
+    .landing .section1 #button{
+        top: 38.7rem;
+        left: 48%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 39.5rem;
     }
 
     .landing .section2 h2{
@@ -527,7 +613,7 @@
     }
 
     .landing .section4{
-        padding: 3rem 14rem;
+        padding: 3rem 14rem 7rem;
     }
 
     .landing .section5, .landing .section6{
@@ -548,6 +634,16 @@
     }
 }
 
+@media screen and (max-width: 1345px){
+    .landing .section1 #button{
+        top: 40.1rem;
+    }
+    
+    .landing .section1 #deco1{
+        top: 41rem;
+    }
+}
+
 @media screen and (max-width: 1210px) {
     header{
         font-size: 1rem;
@@ -560,7 +656,7 @@
     }
 
     .landing .section1 article{
-        padding: 5rem 4rem 0 6rem;
+        padding: 5rem 4rem 5rem 6rem;
     }
 
     .landing .section1 button{
@@ -621,6 +717,14 @@
         margin-top: 34rem;
     }
 
+    .landing .section4 #deco3{
+        margin-top: -6rem;
+    }
+
+    .landing .section4 #deco4{
+        margin-top: 28rem;
+    }
+
     .landing .section4 figure{
         margin-top: 2rem;
     }
@@ -636,6 +740,10 @@
 }
 
 @media screen and (max-width: 1142px){
+    .landing .section1 #deco1{
+        top: 42rem;
+    }
+
     .landing .section2 #pince{
         margin-top: 18.4rem;
     }
@@ -655,6 +763,10 @@
 
     .landing .section3 .picto, .landing .section2 .picto{
         width: 8%;
+    }
+
+    .landing .section4 #deco4{
+        margin-top: 26rem;
     }
 }
 
@@ -680,6 +792,16 @@
         margin-top: 1rem;
     }
 
+    .landing .section1 #button{
+        top: 36.8rem;
+        left: 43.5%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 39rem;
+    }
+    
+
     .landing .section2{
         flex-wrap: wrap !important;
     }
@@ -703,6 +825,10 @@
     
     .landing .section2 #aiguilles{
         margin-top: 26.5rem;
+    }
+
+    .landing .section4 #deco4{
+        margin-top: 24rem;
     }
 
     .landing .section5{
@@ -734,6 +860,15 @@
 }
 
 @media screen and (max-width: 992px){
+    .landing .section1 #button{
+        top: 39.4rem;
+        left: 43.5%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 42.5rem;
+    }
+
     .landing .section8{
         padding: 2rem 5rem;
     }
@@ -741,6 +876,7 @@
     .landing .section8 button{
         font-size: 1rem;
     }
+    
     .landing .section8 button div{
         text-align: start;
     }
@@ -802,12 +938,25 @@
 }
 
 @media screen and (max-width: 868px){
+    .landing .section1 #button{
+        top: 40.7rem;
+        left: 41%;
+    }
+    
+    .landing .section1 #deco1{
+        top: 44.5rem;
+    }
+
     .landing .section2 #ciseaux, .landing .section2 #pince{
         margin-top: 23.2rem;
     }
     
     .landing .section2 #aiguilles{
         margin-top: 25.1rem;
+    }
+
+    .landing .section4 #deco4{
+        margin-top: 23rem;
     }
 }
 
@@ -827,6 +976,10 @@
 
     .landing .section1 button{
         width: 70%;
+    }
+
+    .landing .section4 #deco4{
+        margin-top: 22rem;
     }
 
     .landing .section8 button{
