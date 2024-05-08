@@ -199,12 +199,12 @@ const LandingPage = () =>{
                 <h2 className='text_capitalize'>pour qui ?</h2>
                 <div className='row justifycontent_spbetween'>
                     <figure>
-                        <p className='text_uppercase text_bold'>Les particuliers</p>
                         <img src={particulier} alt='' />
+                        <p className='text_uppercase text_bold'>Les <br></br> particuliers</p>
                     </figure>
                     <figure>
-                        <p className='text_uppercase text_bold'>Les artisans</p>
                         <img src={artisan} alt='' />
+                        <p className='text_uppercase text_bold'>Les <br></br> artisans</p>
                     </figure>
                 </div>
             </section>
