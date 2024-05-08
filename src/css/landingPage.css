@@ -49,8 +49,8 @@
 }
 
 .landing .section1 button{
-    background-color: var(--blanc);
-    color: var(--noir);
+    background-color: var(--white);
+    color: var(--black);
     border: none;
     margin: 2rem 2rem 0 0;
     width: 30%;
@@ -397,7 +397,7 @@
 }
 
 .landing .section8 button{
-    color: var(--blanc);
+    color: var(--white);
     font-weight: bolder;
     font-size: 1.4rem;
     border: none;
@@ -413,7 +413,7 @@
 }
 
 .landing .section8 button .apple{
-    fill: var(--blanc);
+    fill: var(--white);
 }
 
 .landing .section8 button p:first-child{
