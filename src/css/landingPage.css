@@ -218,7 +218,7 @@
 /* ----------- 4:= section 4 ------------ */
 .landing .section4{
     text-align: center;
-    padding: 3rem 17rem;
+    padding: 3rem 17rem 8rem;
 }
 
 .landing .section4 figure{
@@ -240,6 +240,12 @@
     left: 0;
     width: 25%;
     margin-top: -8rem;
+}
+
+.landing .section4 #deco4{
+    right: 0;
+    width: 25%;
+    margin-top: 40rem;
 }
 
 
