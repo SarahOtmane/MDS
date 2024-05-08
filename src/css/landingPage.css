@@ -288,7 +288,7 @@
 }
 
 .landing .section6 div.button{
-    background-color: #f1f1f1;
+    background-color: var(--green_text);
     padding: 1rem;
     border-radius: 1.5rem;
     width: max-content;
@@ -296,14 +296,14 @@
 }
 
 .landing .section6 div.button button{
-    background-color: #f1f1f1;
+    background-color: var(--green_text);
     border: none;
-    color: var(--noir);
+    color: var(--black);
     font-weight: bolder;
 }
 
 .landing .section6 div.button button.selected{
-    background-color: var(--blanc);
+    background-color: var(--white);
     border-radius: 1rem;
 }
 
