@@ -213,15 +213,15 @@ const LandingPage = () =>{
                 <h2>RenoWear c'est</h2>
                 <article>
                     <p>+ 100 k</p>
-                    <p>artisans</p>
+                    <p className='textPink'>artisans</p>
                 </article>
                 <article>
                     <p>90 000</p>
-                    <p>utilisateurs</p>
+                    <p className='textPink'>utilisateurs</p>
                 </article>
                 <article>
                     <p>200 000</p>
-                    <p>articles réparés/an</p>
+                    <p className='textPink'>articles réparés/an</p>
                 </article>
             </section>
 
