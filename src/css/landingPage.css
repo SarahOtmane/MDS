@@ -208,6 +208,7 @@
     box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
+    margin-top: 3rem;
 }
 
 .landing .section3 #image4{
@@ -444,6 +445,10 @@
     .landing .section8 button{
         font-size: 1.2rem;
     }
+
+    .landing .section3 #image4{
+        margin-top: -48rem;
+    }
 }
 
 @media screen and (max-width: 1490px) {
@@ -453,6 +458,10 @@
 
     .landing .section2 #aiguilles{
         margin-top: 20rem;
+    }
+
+    .landing .section3 #image4{
+        margin-top: -45rem;
     }
 }
 
@@ -467,6 +476,19 @@
     .landing .section1 button img{
         margin-right: 1rem;
         margin-left: 0;
+    }
+
+    .landing .section3 #image4{
+        margin-top: -42rem;
+    }
+
+    .landing .section3 #picto_Section4{
+        margin-top: 40rem;
+        left: 43%;
+    }
+
+    .landing .section3 #ceintre{
+        margin-top: -36rem;
     }
 
     .landing .section8 button{
@@ -581,6 +603,24 @@
         width: 50%;
     }
 
+    .landing .section3 figure:last-child img{
+        margin-top: 7rem;
+    }
+
+    .landing .section3 #image4,
+    .landing .section3 #machine{
+        margin-top: -35rem;
+    }
+    
+    .landing .section3 #ceintre{
+        margin-top: -30rem;
+    }
+
+    .landing .section3 #picto_Section4{
+        left: 42%;
+        margin-top: 34rem;
+    }
+
     .landing .section4 figure{
         margin-top: 2rem;
     }
@@ -596,12 +636,25 @@
 }
 
 @media screen and (max-width: 1142px){
-    .landing .section2 #ciseaux, .landing .section2 #pince{
-        margin-top: 18.1rem;
+    .landing .section2 #pince{
+        margin-top: 18.4rem;
+    }
+
+    .landing .section2 #ciseaux{
+        margin-top: 20.2rem;
     }
     
     .landing .section2 #aiguilles{
-        margin-top: 20rem;
+        margin-top: 22.2rem;
+    }
+
+    .landing .section3 #image4{
+        width: 18%;
+        right: 17%;
+    }
+
+    .landing .section3 .picto, .landing .section2 .picto{
+        width: 8%;
     }
 }
 
@@ -640,12 +693,16 @@
         margin-top: 2rem;
     }
 
-    .landing .section2 #ciseaux, .landing .section2 #pince{
-        margin-top: 22rem;
+    .landing .section2 #pince{
+        margin-top: 23rem;
+    }
+
+    .landing .section2 #ciseaux{
+        margin-top: 24.7rem;
     }
     
     .landing .section2 #aiguilles{
-        margin-top: 23.7rem;
+        margin-top: 26.5rem;
     }
 
     .landing .section5{
