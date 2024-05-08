@@ -130,13 +130,13 @@ const LandingPage = () =>{
                             </div>
                         </button>
                     </div>
-                    <img src={deco_bas} alt='' />
-                    <img src={deco_haut} alt='' />
-                    <img src={boutton} alt='' />
+                    <img id="deco_bas" src={deco_bas} alt='' />
+                    <img id="deco_haut" src={deco_haut} alt='' />
+                    <img id="button" src={boutton} alt='' />
                 </article>
                 <img src={mockup} alt='' />
             </section>
-            <section className="section2 backGris row">
+            <section className="section2 backRose2 row">
                 <h2 className='text_uppercase'>Service d'artisans</h2>
                 <div className='column'>
                     <div className='row'>
