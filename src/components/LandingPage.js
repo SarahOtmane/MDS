@@ -21,7 +21,7 @@ import pince from '../assets/pictures/picto/pince.png';
     //section3
 import image1 from '../assets/pictures/landingPage/image1.png';
 import image2 from '../assets/pictures/landingPage/image2.png';
-import image3 from '../assets/pictures/landingPage/image3.png';
+import image3 from '../assets/pictures/landingPage/image3.jpeg';
     //section4
 import particulier from '../assets/pictures/landingPage/particuliers.png';
 import artisan from '../assets/pictures/landingPage/artisans.png';
