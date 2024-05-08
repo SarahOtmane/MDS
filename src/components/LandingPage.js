@@ -180,7 +180,6 @@ const LandingPage = () =>{
                     <img src={image2} alt='une machine à coudre ' />
                 </figure>
                 <figure className='column'>
-                    <div></div>
                     <img src={image3} alt='un mannequin ' />
                 </figure>
             </section>
