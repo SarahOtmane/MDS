@@ -27,14 +27,14 @@
 
 
 /* ----------- 1:= section 1 ------------ */
-
 .landing .section1 article{
     width: 60%;
-    padding: 5rem 10rem 0 10rem;
+    padding: 5rem 10rem 6rem 10rem;
 }
 
 .landing .section1 h1{
     margin-bottom: 2rem;
+    margin-top: 5rem;
     font-size: 3rem;
 }
 
@@ -66,13 +66,33 @@
     width: max-content;
 }
 
+#button, #deco_haut, #deco_bas{
+    position: absolute;
+    width: 25%;
+}
 
+#button{
+    width: 10%; 
+    top: 38rem;
+    left: 55%;
+}
+
+#deco_haut{
+    left: 40%;
+    top: 8rem;
+}
+
+#deco_bas{
+    left: 0rem;
+    top: 35rem;
+}
 
 
 
 
 
 /* ----------- 2:= section 2 ------------ */
+
 .landing .section2 h2{
     width: 30%;
     padding: 0 0 0 8rem;
