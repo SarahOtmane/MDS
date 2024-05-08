@@ -131,7 +131,7 @@
     margin-left: .5rem;
 }
 
-.landing .section2 img.picto{
+.landing img.picto{
     position: absolute;
 }
 
@@ -169,7 +169,7 @@
 
 .landing .section3 article{
     width: 40%;
-    padding: 0 0 0 10rem;
+    padding: 5rem 0 0 10rem;
 }
 
 .landing .section3 h2,
@@ -196,6 +196,7 @@
 
 .landing .section3 .twoImages{
     width: 15%;
+    z-index: 10;
 }
 
 .landing .section3 .twoImages img:first-child{
@@ -209,7 +210,26 @@
     border-bottom-left-radius: 2rem;
 }
 
+.landing .section3 #image4{
+    right: 14%;
+    margin-top: -51rem;
+}
 
+.landing .section3 #ceintre{
+    right: 0;
+    margin-top: -46rem;
+}
+
+.landing .section3 #machine{
+    left: 30%;
+    margin-top: -40rem;
+}
+
+.landing .section3 #picto_Section4{
+    left: 49%;
+    margin-top: 48rem;
+    z-index: 0;
+}
 
 
 
