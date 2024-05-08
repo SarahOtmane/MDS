@@ -130,9 +130,9 @@ const LandingPage = () =>{
                             </div>
                         </button>
                     </div>
-                    <img id="deco_bas" src={deco_bas} alt='' />
+                    {/* <img id="deco_bas" src={deco_bas} alt='' />
                     <img id="deco_haut" src={deco_haut} alt='' />
-                    <img id="button" src={boutton} alt='' />
+                    <img id="button" src={boutton} alt='' /> */}
                 </article>
                 <img src={mockup} alt='' />
             </section>
