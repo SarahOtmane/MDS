@@ -186,8 +186,8 @@ const LandingPage = () =>{
                     <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
                 <figure className='column twoImages'>
-                    <img src={image1} alt='une personne qui est entrain de coudre ' />
                     <img src={image2} alt='une machine à coudre ' />
+                    <img src={image1} alt='une personne qui est entrain de coudre ' />
                 </figure>
                 <figure className='column'>
                     <img src={image3} alt='un mannequin ' />
