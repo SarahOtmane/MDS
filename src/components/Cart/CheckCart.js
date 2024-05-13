@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import '../css/cart.css'
+import '../../css/cart.css'
 import Titre from '../Titre';
 
 import product from '../assets/pictures/landingPage/product1.png';

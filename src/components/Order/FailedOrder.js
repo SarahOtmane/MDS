@@ -1,4 +1,4 @@
-import '../css/cart.css';
+import '../../css/cart.css';
 import Titre from "../Titre";
 
 import success from '../assets/pictures/failedOrder.svg';

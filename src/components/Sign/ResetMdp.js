@@ -1,4 +1,4 @@
-import '../css/sign.css';
+import '../../css/sign.css';
 import Titre from "../Titre.js";
 
 const ResetMdp = () =>{

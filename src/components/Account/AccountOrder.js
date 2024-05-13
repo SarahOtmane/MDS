@@ -1,4 +1,4 @@
-import '../css/account.css';
+import '../../css/account.css';
 
 import AccountMenu from './AccountMenu';
 import Titre from "../Titre";
