@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../../css/cart.css'
 import Titre from '../Titre';
 
-import product from '../assets/pictures/landingPage/product1.png';
+import product from '../../assets/pictures/landingPage/product1.png';
 
 
 const CheckCart = () =>{
