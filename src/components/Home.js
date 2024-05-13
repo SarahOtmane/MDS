@@ -40,6 +40,42 @@ const Home = () =>{
                 <img className="picto" src={aiguilles} alt='' id="aiguilles" />
                 <img className="picto" src={pince} alt='' id="pince" />
             </section>
+
+            <section className='section5'>
+                <span className='text_uppercase text_bold'>ce que nos clients disent de nous</span>
+                <h2 className='text_capitalize'>vos avis</h2>
+                <div className=' button row'>
+                    <button className={btnSelected==='couture' ? 'selected' : ''} onClick={handleClick} id="couture">Couture</button>
+                    <button className={btnSelected==='broderie' ? 'selected' : ''} onClick={handleClick} id="broderie">Broderie</button>
+                    <button className={btnSelected==='maroquinerie' ? 'selected' : ''} onClick={handleClick} id="maroquinerie">Maroquinerie</button>
+                    <button className={btnSelected==='cordonnerie' ? 'selected' : ''} onClick={handleClick} id="cordonnerie">Cordonnerie</button>
+                </div>
+                <div className='row product'>
+                    {testimonialsTabs
+                        .filter(testimonial => testimonial.type === btnSelected)
+                        .map(testimonial => <article key={testimonial.id}>
+                            <img src={testimonial.pic} alt='' />
+                            <p className='text_bold'>{testimonial.text}</p>
+                            {testimonial.stars===5 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starFull} alt='' />
+                                <img src={starFull} alt='' /><img src={starFull} alt='' />
+                            </figure>}
+                            {testimonial.stars===4 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starFull} alt='' />
+                                <img src={starFull} alt='' /><img src={starEmpty} alt='' />
+                            </figure>}
+                            {testimonial.stars===3 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starFull} alt='' />
+                                <img src={starEmpty} alt='' /><img src={starEmpty} alt='' />
+                            </figure>}
+                            {testimonial.stars===2 && <figure className='row'>
+                                <img src={starFull} alt='' /><img src={starFull} alt='' /><img src={starEmpty} alt='' />
+                                <img src={starEmpty} alt='' /><img src={starEmpty} alt='' />
+                            </figure>}
+                        </article>)
+                    }
+                </div>
+            </section>
         </main>
     )
 }
