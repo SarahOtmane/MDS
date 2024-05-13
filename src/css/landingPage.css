@@ -8,7 +8,7 @@
     3:= Section3
     4:= Section4
     5:= Section5
-    6:= Section6
+    6:= Section6 / Home : Section5
     7:= Section7
     8:= Section8
     9:= Version Desktop
@@ -192,7 +192,8 @@
 .landing .section3 h2,
 .landing .section4 h2,
 .landing .section6 h2,
-.landing .section7 h2{
+.landing .section7 h2,
+.home .section5 h2{
     margin: 1rem 0 2.5rem;
 }
 
@@ -204,7 +205,8 @@
 .landing .section3 span, .landing .section3 p img,
 .landing .section4 span, .landing .section4 p,
 .landing .section6 span,
-.landing .section7 span{
+.landing .section7 span,
+.home .section5 span{
     color: var(--gris_liens);
     fill: var(--gris_liens);
     font-size: 1.6rem;
@@ -294,7 +296,8 @@
 
 
 /* ----------- 5:= section 5 ------------ */
-.landing .section5, .landing .section6{
+.landing .section5, .landing .section6,
+.home .section5{
     margin: 6rem 8rem 5rem;
 }
 
@@ -318,11 +321,13 @@
 
 
 /* ----------- 6:= section 6 ------------ */
-.landing .section6{
+.landing .section6,
+.home .section5{
     text-align: center;
 }
 
-.landing .section6 div.button{
+.landing .section6 div.button,
+.home .section5 div.button{
     background-color: var(--green_text);
     padding: 1rem;
     border-radius: 1.5rem;
@@ -330,43 +335,51 @@
     margin: auto;
 }
 
-.landing .section6 div.button button{
+.landing .section6 div.button button,
+.home .section5 div.button button{
     background-color: var(--green_text);
     border: none;
     color: var(--black);
     font-weight: bolder;
 }
 
-.landing .section6 div.button button.selected{
+.landing .section6 div.button button.selected,
+.home .section5 div.button button.selected{
     background-color: var(--white);
     border-radius: 1rem;
 }
 
-.landing .section6 div.product{
+.landing .section6 div.product,
+.home .section5 div.product{
     margin-top: 6rem;
 }
 
-.landing .section6 article{
+.landing .section6 article,
+.home .section5 article{
     width: 24%;
     margin-left: 1.33rem;
 }
 
-.landing .section6 article:first-child{
+.landing .section6 article:first-child,
+.home .section5 article:first-child{
     margin-left: 0;
 }
 
-.landing .section6 article img{
+.landing .section6 article img,
+.home .section5 article img{
     width: 90%;
     margin-bottom: 1rem;
 }
 
-.landing .section6 article p, .landing .section6 article figure{
+.landing .section6 article p, .landing .section6 article figure,
+.home .section5 article p, .home .section5 article figure{
     padding: .5rem 5%;
     width: 90%;
     text-align: start;
 }
 
-.landing .section6 article figure{
+.landing .section6 article figure,
+.home .section5 article figure{
     width: 35%;
 }
 
