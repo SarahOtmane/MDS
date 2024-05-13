@@ -5,17 +5,19 @@ import './App.css';
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Footer from "./components/Footer";
-import SignUp from "./components/SignUp";
-import SignIn from "./components/SignIn";
-import ForgetMdp from "./components/ForgetMdp";
-import ResetMdp from "./components/ResetMdp";
-import CheckCart from "./components/CheckCart";
-import SuccefullOrder from "./components/SuccefullOrder";
-import FailedOrder from "./components/FailedOrder";
-import AccountOrder from "./components/AccountOrder";
-import AccountPassword from "./components/AccountPassword";
-import AccountDetails from "./components/AccountDetails";
-import AccountAdress from "./components/AccountAdress";
+import SignUp from "./components/Sign/SignUp";
+import SignIn from "./components/Sign/SignIn";
+import ForgetMdp from "./components/Sign/ForgetMdp";
+import ResetMdp from "./components/Sign/ResetMdp";
+import CheckCart from "./components/Cart/CheckCart";
+import SuccefullOrder from "./components/Order/SuccefullOrder";
+import FailedOrder from "./components/Order/FailedOrder";
+import AccountOrder from "./components/Account/AccountOrder";
+import AccountPassword from "./components/Account/AccountPassword";
+import AccountDetails from "./components/Account/AccountDetails";
+import AccountAdress from "./components/Account/AccountAdress";
+
+
 
 const App = () => {
     return (
