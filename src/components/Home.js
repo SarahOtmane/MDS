@@ -10,7 +10,7 @@ import pince from '../assets/pictures/picto/pince.png';
 
 const Home = () =>{
     return(
-        <main className='Home'>
+        <main className='home'>
             <section className="section3 backRose2 row">
                 <img className="picto" src={pelote} alt='' id="pelote" />
                 <img className="picto" src={bobine} alt='' id="bobine" />
