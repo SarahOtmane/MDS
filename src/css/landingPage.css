@@ -4,7 +4,7 @@
         landingPage
 
     1:= Section1
-    2:= Section2
+    2:= Section2  / Home : Section3
     3:= Section3
     4:= Section4
     5:= Section5
@@ -14,13 +14,16 @@
     9:= Version Desktop
     10:= Version mobile
 
+        Home
+    
+
 */
 
 
 
 
 
-.landing h2{
+.landing h2, .home h2{
     font-size: 3.3rem;
 }
 
@@ -95,67 +98,79 @@
 
 
 /* ----------- 2:= section 2 ------------ */
-.landing .section2 h2, .landing .section2 h2 + div{
+.landing .section2 h2, .landing .section2 h2 + div,
+.home .section3 h2, .home .section3 h2 + div{
     margin-top: 2rem;
 }
 
-.landing .section2 h2{
+.landing .section2 h2,
+.home .section3 h2{
     width: 30%;
     padding: 0 0 0 8rem;
     margin-top: 5rem;
 }
 
-.landing .section2 h2 + div{
+.landing .section2 h2 + div,
+.home .section3 h2 + div{
     width: 70%;
 }
 
-.landing .section2 .card{
+.landing .section2 .card,
+.home .section3 .card{
     width: 30%;
     margin: 5rem 5% 0 0;
 }
 
-.landing .section2 h3{
+.landing .section2 h3,
+.home .section3 h3{
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
 }
 
 .landing .section2 a,
 .landing .section3 a,
-.landing .section7 a{
+.landing .section7 a,
+.home .section3 a{
     width: 30%;
     margin: 2.5rem 5% 5rem 0;
 }
 
 .landing .section2 a img,
 .landing .section3 a img,
-.landing .section7 a img{
+.landing .section7 a img,
+.home .section3 a img{
     height: 8px;
     margin-left: .5rem;
 }
 
-.landing img.picto{
+.landing img.picto,
+.home img.picto{
     position: absolute;
 }
 
-.landing .section2 #ciseaux, .landing .section2 #aiguilles, .landing .section2 #pince{
-    position: absolute;
+.landing .section2 #ciseaux, .landing .section2 #aiguilles, .landing .section2 #pince,
+.home .section3 #ciseaux, .home .section3 #aiguilles, .home .section3 #pince{
     margin-top: 16.8rem;
 }
 
-.landing .section2 #pince{
+.landing .section2 #pince,
+.home .section3 #pince{
     right: 0;
 }
 
-.landing .section2 #aiguilles{
+.landing .section2 #aiguilles,
+.home .section3 #aiguilles{
     left: 45%;
     margin-top: 18.6rem;
 }
 
-.landing .section2 #pelote{
+.landing .section2 #pelote,
+.home .section3 #pelote{
     left: 25%;
 }
 
-.landing .section2 #bobine{
+.landing .section2 #bobine,
+.home .section3 #bobine{
     right: 25%;
 }
 
