@@ -1,7 +1,7 @@
 import '../../css/cart.css';
 import Titre from "../Titre";
 
-import success from '../assets/pictures/succefullOrder.png'
+import success from '../../assets/pictures/succefullOrder.png'
 
 
 const SuccefullOrder = () =>{
