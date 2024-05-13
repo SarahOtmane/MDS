@@ -519,15 +519,18 @@
 }
 
 @media screen and (max-width: 1490px) {
-    .landing .section2 #ciseaux, .landing .section2 #pince{
+    .landing .section2 #ciseaux, .landing .section2 #pince,
+    .home .section3 #ciseaux, .home .section3 #pince{
         margin-top: 18rem;
     }
 
-    .landing .section2 #aiguilles{
+    .landing .section2 #aiguilles,
+    .home .section3 #aiguilles{
         margin-top: 20rem;
     }
 
-    .landing .section3 #image4{
+    .landing .section3 #image4,
+    .home .section3 #image4{
         margin-top: -45rem;
     }
 }
@@ -585,7 +588,8 @@
 }
 
 @media screen and (max-width: 1345px) {
-    .landing h2{
+    .landing h2,
+    .home h2{
         font-size: 3rem;
     }
 
@@ -606,7 +610,8 @@
         top: 39.5rem;
     }
 
-    .landing .section2 h2{
+    .landing .section2 h2,
+    .home .section3 h2{
         width: 25%;
         padding: 0 1rem 0 5rem;
     }
@@ -678,31 +683,37 @@
         width: 50%;
     }
 
-    .landing h2{
+    .landing h2,
+    .home h2{
         font-size: 2.3rem;
     }
 
-    .landing .section2 h2{
+    .landing .section2 h2,
+    .home .section3 h2{
         width: 25%;
         padding: 0 0 0 6rem;
     }
 
-    .landing .section2 h3{
+    .landing .section2 h3,
+    .home .section3 h3{
         font-size: 1.4rem;
     }
 
     .landing .section2 a,
     .landing .section3 a,
-    .landing .section7 a{
+    .landing .section7 a,
+    .home .section3 a{
         width: 30%;
         margin: 1.5rem 5% 5rem 0;
     }
 
-    .landing .section2 #ciseaux, .landing .section2 #pince{
+    .landing .section2 #ciseaux, .landing .section2 #pince,
+    .home .section3 #ciseaux, .home .section3 #pince{
         margin-top: 16.8rem;
     }
     
-    .landing .section2 #aiguilles{
+    .landing .section2 #aiguilles,
+    .home .section3 #aiguilles{
         margin-top: 18.6rem;
     }
 
@@ -759,15 +770,18 @@
         top: 42rem;
     }
 
-    .landing .section2 #pince{
+    .landing .section2 #pince,
+    .home .section3 #pince{
         margin-top: 18.4rem;
     }
 
-    .landing .section2 #ciseaux{
+    .landing .section2 #ciseaux,
+    .home .section3 #ciseaux{
         margin-top: 20.2rem;
     }
     
-    .landing .section2 #aiguilles{
+    .landing .section2 #aiguilles,
+    .home .section3 #aiguilles{
         margin-top: 22.2rem;
     }
 
@@ -776,7 +790,8 @@
         right: 17%;
     }
 
-    .landing .section3 .picto, .landing .section2 .picto{
+    .landing .section3 .picto, .landing .section2 .picto,
+    .home .section3 .picto{
         width: 8%;
     }
 
@@ -817,28 +832,34 @@
     }
     
 
-    .landing .section2{
+    .landing .section2,
+    .home .section3{
         flex-wrap: wrap !important;
     }
 
-    .landing .section2 h2, .landing .section2 h2 + div{
+    .landing .section2 h2, .landing .section2 h2 + div,
+    .home .section3 h2, .home .section3 h2 + div{
         width: 100%;
         padding: 0 0 0 6rem;
     }
 
-    .landing .section2 .card{
+    .landing .section2 .card,
+    .home .section3 .card{
         margin-top: 2rem;
     }
 
-    .landing .section2 #pince{
+    .landing .section2 #pince,
+    .home .section3 #pince{
         margin-top: 23rem;
     }
 
-    .landing .section2 #ciseaux{
+    .landing .section2 #ciseaux,
+    .home .section3 #ciseaux{
         margin-top: 24.7rem;
     }
     
-    .landing .section2 #aiguilles{
+    .landing .section2 #aiguilles,
+    .home .section3 #aiguilles{
         margin-top: 26.5rem;
     }
 
@@ -962,11 +983,13 @@
         top: 44.5rem;
     }
 
-    .landing .section2 #ciseaux, .landing .section2 #pince{
+    .landing .section2 #ciseaux, .landing .section2 #pince,
+    .home .section3 #ciseaux, .home .section3 #pince{
         margin-top: 23.2rem;
     }
     
-    .landing .section2 #aiguilles{
+    .landing .section2 #aiguilles,
+    .home .section3 #aiguilles{
         margin-top: 25.1rem;
     }
 
