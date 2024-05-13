@@ -632,7 +632,8 @@
     .landing .section3 span, .landing .section3 p img,
     .landing .section4 span, .landing .section4 p,
     .landing .section6 span,
-    .landing .section7 span{
+    .landing .section7 span,
+    .home .section5 span{
         font-size: 1.3rem;
     }
 
@@ -649,7 +650,8 @@
         padding: 3rem 14rem 7rem;
     }
 
-    .landing .section5, .landing .section6{
+    .landing .section5, .landing .section6,
+    .home .section5{
         margin: 6rem 6rem 5rem;
     }
 
