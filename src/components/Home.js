@@ -1,4 +1,5 @@
 import '../css/landingPage.css';
+import { useState } from 'react';
 
     //section3
 import arrow from '../assets/pictures/landingPage/Arrow.png';
@@ -15,7 +16,77 @@ import product4 from '../assets/pictures/landingPage/product4.png';
 import starFull from  '../assets/pictures/landingPage/starFull.svg';
 import starEmpty from '../assets/pictures/landingPage/starEmpty.svg';
 
+
 const Home = () =>{
+    const [btnSelected, setBtnSelected] = useState('couture');
+    
+    const testimonialsTabs= [{
+        id : 1,
+        pic : product1,
+        text : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        stars : 4,
+        type : 'couture'
+    },{
+        id : 2,
+        pic : product2,
+        text : "“Rapide, efficace, beau travail pour un prix raisonnable.”",
+        stars : 3,
+        type : 'couture'
+    },{
+        id : 3,
+        pic : product3,
+        text : "“Service très rapide et de très grande qualité.”",
+        stars : 3,
+        type : 'couture'
+    },{
+        id : 4,
+        pic : product4,
+        text : "“Très bien, avec un travail sérieux. Je recommande !”",
+        stars : 4,
+        type : 'couture'
+    },{
+        id : 5,
+        pic : product2,
+        text : "“Rapide, efficace, beau travail pour un prix raisonnable.”",
+        stars : 4,
+        type : 'broderie'
+    },{
+        id : 6,
+        pic : product1,
+        text : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        stars : 3,
+        type : 'broderie'
+    },{
+        id : 7,
+        pic : product4,
+        text : "“Très bien, avec un travail sérieux. Je recommande !”",
+        stars : 4,
+        type : 'broderie'
+    },{
+        id : 8,
+        pic : product3,
+        text : "“Service très rapide et de très grande qualité.”",
+        stars : 4,
+        type : 'maroquinerie'
+    },{
+        id : 9,
+        pic : product2,
+        text : "“Rapide, efficace, beau travail pour un prix raisonnable.”",
+        stars : 4,
+        type : 'maroquinerie'
+    },{
+        id : 10,
+        pic : product1,
+        text : "“Très pratique et très satisfaite du travail effectué par l'artisan”",
+        stars : 3,
+        type : 'maroquinerie'
+    },]
+
+    const handleClick = (e) => { 
+        setBtnSelected(e.target.id);
+        
+    };
+
     return(
         <main className='home'>
             <section className="section3 backRose2 row">
