@@ -63,7 +63,7 @@ const App = () => {
                             <Route path="order" element={<AccountOrder />} />
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
-                            <Route path="address" element={<AccountAdress />} />
+                            <Route path="adress" element={<AccountAdress />} />
                         </Route>
                     </Route>
                 </Routes>
