@@ -7,7 +7,7 @@ import success from '../../assets/pictures/failedOrder.svg';
 const FailedOrder = () =>{
     return(
         <main>
-            <Titre titre="Commande échouée" lien="/failed-order" classe="backRose" />
+            <Titre titre="Commande échouée" lien="/user/order/failed" classe="backRose" />
             <section className='success'>
                 <img src={success} alt='' />
                 <h2>Oops! Il y a eu un problème</h2>
