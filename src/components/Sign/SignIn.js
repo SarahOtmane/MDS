@@ -5,7 +5,7 @@ import Titre from '../Titre';
 const SignIn = () =>{
     return(
         <main>
-            <Titre titre="Se connecter" lien="/login" classe="backGris" />
+            <Titre titre="Se connecter" lien="/user/login" classe="backGris" />
 
             <form className='formulaire column'>
                 <lable className="text_bold">Email</lable>
@@ -17,7 +17,7 @@ const SignIn = () =>{
                 <a href='/resetMdp'> Mot de passe oublié ?</a>
 
                 <button type='submit'>Se connecter</button>
-                <p>Vous n'avez pas de compte ? <a href='/register' className='text_bold'>S'inscrire</a></p>
+                <p>Vous n'avez pas de compte ? <a href='/user/register' className='text_bold'>S'inscrire</a></p>
             </form>
         </main>
     )
