@@ -7,7 +7,7 @@ import Titre from "../Titre";
 const AccountAdress = () =>{
     return(
         <main>
-            <Titre titre="Mon compte" lien="/my-account/adress" classe="backGris" />
+            <Titre titre="Mon compte" lien="/user/my-account/adress" classe="backGris" />
             
             <div className='row account'>
                 <AccountMenu selected="adress" />
