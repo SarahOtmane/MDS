@@ -4,8 +4,10 @@ import Titre from '../Titre';
 
 const Mentions = () =>{
     return(
-        <main>
+        <main className='mention'>
             <Titre titre="Mentions légales" lien="/legal/mentions" classe="backGris" />
+            <h2 className='titre'>Mentions légales</h2>
+            
         </main>
     )
 }
