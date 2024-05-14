@@ -4,7 +4,7 @@ import Titre from '../Titre';
 const Politique = () =>{
     return(
         <main>
-            <Titre titre="Politique de Confidentialité" lien="/resetMdp" classe="backGris" />
+            <Titre titre="Politique de Confidentialité" lien="/legal/condition" classe="backGris" />
         </main>
     )
 }
