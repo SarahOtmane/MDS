@@ -35,25 +35,32 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/legal" element={<Mentions />}>
+                    <Route path="/legal">
+                        <Route path="mentions" element={<Mentions />} />
                         <Route path="politique" element={<Politique />} />
                         <Route path="condition" element={<Conditions />} />
                     </Route>
 
-                    <Route path="/user" element={<SignUp />}>
+                    <Route path="/user">
                         <Route path="register" element={<SignUp />} />
                         <Route path="login" element={<SignIn />} />
 
-                        <Route path="resetMdp" element={<ForgetMdp />}>
+                        <Route path="password">
+                            <Route path="forget" element={<ForgetMdp />} />
                             <Route path="reset" element={<ResetMdp />} />
                         </Route>
 
-                        <Route path="cart/check" element={<CheckCart />} />
+                        <Route path="cart">
+                            <Route path="check" element={<CheckCart />} />
+                        </Route>
 
-                        <Route path="success-order" element={<SuccefullOrder />} />
-                        <Route path="failed-order" element={<FailedOrder />} />
+                        <Route path="order">
+                            <Route path="success" element={<SuccefullOrder />} />
+                            <Route path="failed" element={<FailedOrder />} />
+                        </Route>
 
-                        <Route path="my-account" element={<AccountOrder />}>
+                        <Route path="my-account">
+                            <Route path="order" element={<AccountOrder />} />
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
                             <Route path="address" element={<AccountAdress />} />
