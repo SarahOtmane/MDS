@@ -5,7 +5,7 @@ import Titre from '../Titre';
 const Conditions = () =>{
     return(
         <main>
-            <Titre titre="Conditions génrales" lien="/resetMdp" classe="backGris" />
+            <Titre titre="Conditions génrales" lien="/legal/condition" classe="backGris" />
         </main>
     )
 }
