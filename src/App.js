@@ -22,7 +22,9 @@ import AccountPassword from "./components/Account/AccountPassword";
 import AccountDetails from "./components/Account/AccountDetails";
 import AccountAdress from "./components/Account/AccountAdress";
 
-
+import Mentions from "./components/Legal/Mentions";
+import Conditions from "./components/Legal/Conditions";
+import Politique from "./components/Legal/Politique";
 
 
 const App = () => {
@@ -33,6 +35,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/legal" element={<Mentions />}>
+                        <Route path="politique" element={<Politique />} />
+                        <Route path="condition" element={<Conditions />} />
+                    </Route>
 
                     <Route path="/user" element={<SignUp />}>
                         <Route path="register" element={<SignUp />} />
