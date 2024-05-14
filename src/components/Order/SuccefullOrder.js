@@ -7,7 +7,7 @@ import success from '../../assets/pictures/succefullOrder.png'
 const SuccefullOrder = () =>{
     return(
         <main>
-            <Titre titre="Commande réussie" lien="/success-order" classe="backVert" />
+            <Titre titre="Commande réussie" lien="/user/order/success" classe="backVert" />
             <section className='success'>
                 <img src={success} alt='' />
                 <h2>Merci, à bientôt !</h2>
