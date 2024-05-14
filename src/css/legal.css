@@ -3,7 +3,7 @@
 
         legal
 
-    1:= titre
+    1:= politique
     2:= formulaire
     3:= responsive version desktop
     4:= version mobile
@@ -12,4 +12,32 @@
 
 
 
-/* ----------- 1:= titre ------------ */
+/* ----------- 1:= politique ------------ */
+.politique h2.titre{
+    font-size: 2.6rem;
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0 5rem 0;
+}
+
+.politique h2 + section{
+    padding: 1rem 15rem;
+    text-align: justify;
+}
+
+.politique h3{
+    margin-bottom: 2rem;
+}
+
+.politique .ordonne li{
+    list-style-type: decimal;
+    margin-left: 1rem;
+}
+
+.politique .nonOrdonne li{
+    list-style-type: disc;
+}
+
+.politique .liOrdonne{
+    margin-top: 1.5rem;
+}
