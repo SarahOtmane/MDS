@@ -60,6 +60,7 @@ const Politique = () =>{
                         <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications seront effectives immédiatement après leur publication sur le site. Nous vous encourageons à consulter régulièrement cette page pour rester informé de toute mise à jour.</p>
                     </li>
                 </ol>
+                <p>Pour toute question concernant cette politique, veuillez nous contacter à [Adresse e-mail de contact].</p>
             </section>
         </main>
     )
