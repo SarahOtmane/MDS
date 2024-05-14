@@ -7,7 +7,7 @@ import Titre from "../Titre";
 const AccountPassword = () =>{
     return(
         <main>
-            <Titre titre="Mon compte" lien="/my-account/update-password" classe="backGris" />
+            <Titre titre="Mon compte" lien="/user/my-account/update-password" classe="backGris" />
             
             <div className='row account'>
                 <AccountMenu selected="motdepasse" />
