@@ -13,23 +13,27 @@
 
 
 /* ----------- 1:= politique ------------ */
-.politique h2.titre{
+.politique h2.titre,
+.condition h2.titre{
     font-size: 2.6rem;
     width: 100%;
     text-align: center;
     margin: 4rem 0 5rem 0;
 }
 
-.politique h2 + section{
+.politique h2 + section,
+.condition h2 + section{
     padding: 1rem 15rem;
     text-align: justify;
 }
 
-.politique h3{
+.politique h3, 
+.condition h3{
     margin-bottom: 2rem;
 }
 
-.politique .ordonne li{
+.politique .ordonne li,
+.condition .ordonne li{
     list-style-type: decimal;
     margin-left: 1rem;
 }
@@ -38,7 +42,8 @@
     list-style-type: disc;
 }
 
-.politique .liOrdonne{
+.politique .liOrdonne,
+.condition .liOrdonne{
     margin-top: 1.5rem;
 }
 
