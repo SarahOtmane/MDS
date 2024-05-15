@@ -26,6 +26,8 @@ import Mentions from "./components/Legal/Mentions";
 import Conditions from "./components/Legal/Conditions";
 import Politique from "./components/Legal/Politique";
 
+import RepaChoice from "./components/Reparation/RepaChoice";
+
 
 const App = () => {
     return (
@@ -64,6 +66,10 @@ const App = () => {
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
                             <Route path="adress" element={<AccountAdress />} />
+                        </Route>
+
+                        <Route path="reparation">
+                            <Route path="choice" element={<RepaChoice />} />
                         </Route>
                     </Route>
                 </Routes>
