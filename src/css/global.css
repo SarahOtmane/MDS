@@ -13,8 +13,11 @@
         UserArtisan
     4:= userArtisan
 
+        Avis
+    5:= avis
+
         LandingPage
-    5:= section5
+    6:= section5
 
 */
 
@@ -182,7 +185,7 @@
 
 .fonctionnement h2,
 .userArtisan h2,
-.landing .section6 h2,
+.avis h2,
 .landing .section7 h2{
     margin: 1rem 0 2.5rem;
 }
@@ -194,7 +197,7 @@
 
 .fonctionnement span, .fonctionnement p img,
 .userArtisan span, .userArtisan p,
-.landing .section6 span,
+.avis span,
 .landing .section7 span{
     color: var(--gris_liens);
     fill: var(--gris_liens);
@@ -294,8 +297,76 @@
 
 
 
-/* ----------- 5:= section 5 ------------ */
-.landing .section5, .landing .section6,
+/* ----------- 5:= avis ------------ */
+.avis{
+    text-align: center;
+}
+
+.avis div.button{
+    background-color: var(--green_text);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: max-content;
+    margin: auto;
+}
+
+.avis div.button button{
+    background-color: var(--green_text);
+    border: none;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.avis div.button button.selected{
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.avis div.product{
+    margin-top: 6rem;
+}
+
+.avis article{
+    width: 24%;
+    margin-left: 1.33rem;
+}
+
+.avis article:first-child{
+    margin-left: 0;
+}
+
+.avis article img{
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.avis article p, .avis article figure{
+    padding: .5rem 5%;
+    width: 90%;
+    text-align: start;
+}
+
+.avis article figure{
+    width: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= section 5 ------------ */
+.landing .section5, .avis,
 .home .section5{
     margin: 6rem 8rem 5rem;
 }
@@ -426,7 +497,7 @@
 
     .fonctionnement span, .fonctionnement p img,
     .userArtisan span, .userArtisan p,
-    .landing .section6 span,
+    .avis span,
     .landing .section7 span{
         font-size: 1.3rem;
     }
@@ -485,7 +556,7 @@
         padding: 3rem 14rem 7rem;
     }
 
-    .landing .section5, .landing .section6{
+    .landing .section5, .avis{
         margin: 6rem 6rem 5rem;
     }
 
