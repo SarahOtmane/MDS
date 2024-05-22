@@ -488,8 +488,38 @@ img.picto{
 /* ----------- 9:= newsletter ------------ */
 .newsletter h2{
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.7rem;
     margin: 3rem auto;
+}
+
+.newsletter article{
+    padding: 3rem 15rem;
+}
+
+.newsletter div, .newsletter form{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter h3{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter span{
+    color: #999999;
+}
+
+.newsletter input{
+    width: 75%;
+    margin-right: 5%;
+    border: 1px solid var(--black);
+}
+
+.newsletter button{
+   padding-top: 0!important;
+   padding-bottom: 0!important;
 }
 
 
