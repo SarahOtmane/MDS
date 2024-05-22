@@ -4,7 +4,7 @@ import deco3 from '../assets/pictures/picto/deco3.png';
 import deco4 from '../assets/pictures/picto/deco4.png';
 
 
-const Fonctionnement = () =>{
+const UserArtisan = () =>{
     return(
         <section className='section4 backGris'>
             <img className='picto' id="deco3" src={deco3} alt='' />
@@ -25,4 +25,4 @@ const Fonctionnement = () =>{
     )
 }
 
-export default Fonctionnement;
+export default UserArtisan;
