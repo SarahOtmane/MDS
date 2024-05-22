@@ -1,3 +1,4 @@
+import '../css/global.css';
 
     //section7
 import reparer from '../assets/pictures/landingPage/reparer.png';
