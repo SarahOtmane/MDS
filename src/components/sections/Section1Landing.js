@@ -1,9 +1,9 @@
-import mockup from '../assets/pictures/landingPage/landing_mockup.png';
-import appStore from '../assets/pictures/landingPage/appStore.svg';
-import googlePlay from '../assets/pictures/landingPage/playStore.svg';
-import deco1 from '../assets/pictures/picto/deco1.png';
-import deco2 from '../assets/pictures/picto/deco2.png';
-import button from '../assets/pictures/picto/button.png';
+import mockup from '../../assets/pictures/landingPage/landing_mockup.png';
+import appStore from '../../assets/pictures/landingPage/appStore.svg';
+import googlePlay from '../../assets/pictures/landingPage/playStore.svg';
+import deco1 from '../../assets/pictures/picto/deco1.png';
+import deco2 from '../../assets/pictures/picto/deco2.png';
+import button from '../../assets/pictures/picto/button.png';
 
 
 const Section1Landing = () =>{
