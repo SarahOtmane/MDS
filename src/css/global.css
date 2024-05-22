@@ -18,6 +18,9 @@
 
         LandingPage
     6:= section5
+    7:= Section7
+    8:= Section8
+
 
 */
 
@@ -388,6 +391,95 @@
 
 
 
+/* ----------- 7:= section 7 ------------ */
+.landing .section7 article:first-child{
+    width: 40%;
+}
+
+.landing .section7 article:last-child{
+    width: 45%;
+    padding-right: 8rem;
+}
+
+.landing .section7 article .haut{
+    width: 70%;
+    height: 3rem;
+    border-top-right-radius: 2rem;
+}
+
+.landing .section7 article .droit{
+    width: 4rem;
+    margin: 30% 0 8%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.landing .section7 p{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 8:= section 8 ------------ */
+.landing .section8{
+    padding: 2rem 10rem;
+    margin-top: 10rem;
+}
+
+.landing .section8 figure{
+    width: 30%;
+}
+
+.landing .section8 article{
+    width: 60%;
+}
+
+.landing .section8 h2 + p{
+   font-size: 1.3rem;
+   margin: 2rem 0;
+}
+
+.landing .section8 button{
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 1.4rem;
+    border: none;
+    margin: 2rem 2rem 0 0;
+    width: 35%;
+    border-radius: 1rem;
+}
+
+.landing .section8 button img{
+    width: 20%;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+
+.landing .section8 button .apple{
+    fill: var(--white);
+}
+
+.landing .section8 button p:first-child{
+    font-size: .8rem;
+    width: max-content;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -432,6 +524,10 @@
 
     .userArtisan #deco3{
         margin-top: -7rem;
+    }
+
+    .landing .section8 button{
+        font-size: 1.2rem;
     }
 }
 
@@ -510,6 +606,10 @@
         width: 90%;
         align-self: flex-end;
     }
+
+    .landing .section8 button{
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 1460px){
@@ -566,6 +666,11 @@
 
     .landing .section5 p + p{
         font-size: 1.5rem;
+    }
+
+    .landing .section8{
+        padding: 2rem 6rem;
+        margin-top: 10rem;
     }
 }
 
@@ -660,6 +765,15 @@
 
     .userArtisan figure{
         margin-top: 2rem;
+    }
+
+    .landing .section8 button{
+        width: 45%;
+        font-size: 1.2rem;
+    }
+
+    .landing .section8 button img{
+        margin-right: 1rem;
     }
 }
 
@@ -777,6 +891,14 @@
         color: var(--gris_liens);
         font-size: 1.1rem;
     }
+
+    .landing .section8 article{
+        width: 65%;
+    }
+
+    .landing .section8 button{
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -787,6 +909,18 @@
     
     .section1Landing #deco1{
         top: 42.5rem;
+    }
+
+    .landing .section8{
+        padding: 2rem 5rem;
+    }
+
+    .landing .section8 button{
+        font-size: 1rem;
+    }
+    
+    .landing .section8 button div{
+        text-align: start;
     }
 }
 
@@ -802,9 +936,46 @@
     .userArtisan{
         padding: 3rem 8rem;
     }
+
+    .landing .section7 article:first-child{
+        width: 45%;
+    }    
+
+    .landing .section7 article:last-child{
+        width: 50%;
+        padding: 3rem 1rem 0 0;
+    }
+
+    .landing .section7 p{
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 880px){
+    .landing .section8{
+        padding: 2rem 4rem;
+        margin-top: 4rem;
+    }
+
+    .landing .section8 figure{
+        width: 37%;
+    }
+
+    .landing .section8 article{
+        width: 56%;
+    }    
+
+    .landing .section8 div{
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section8 button{
+        width: 55%;
+    }
+
+    .landing .section8 button:first-child{
+        margin-top: 0;
+    }
 
 }
 
