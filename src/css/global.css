@@ -21,6 +21,9 @@
     7:= Section7
     8:= Section8
 
+        Newsletter
+    9:= newsletter
+
 
 */
 
@@ -471,6 +474,25 @@ img.picto{
     font-size: .8rem;
     width: max-content;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 9:= newsletter ------------ */
+.newsletter h2{
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 3rem auto;
+}
+
+
 
 
 
