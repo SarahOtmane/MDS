@@ -6,7 +6,7 @@ import deco4 from '../assets/pictures/picto/deco4.png';
 
 const UserArtisan = () =>{
     return(
-        <section className='section4 backGris'>
+        <section className='userArtisan backGris'>
             <img className='picto' id="deco3" src={deco3} alt='' />
             <img className='picto' id="deco4" src={deco4} alt='' />
             <span className='text_uppercase text_bold'>RenoWear</span>
