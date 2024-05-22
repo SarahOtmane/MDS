@@ -9,7 +9,7 @@ const Newsletter = () =>{
             <h2 className="text_uppercase">construisez une relation durables avec vos articles</h2>
             <article className="row">
                 <div>
-                    <h3>abonnez vous à notre newsletter</h3>
+                    <h3 className="text_capitalize">abonnez vous à notre newsletter</h3>
                     <span>Nous aimons vous surprendre avec des cadeaux occasionnels.</span>
                 </div>
 
