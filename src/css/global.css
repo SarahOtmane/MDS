@@ -29,6 +29,10 @@
     font-size: 3.3rem;
 }
 
+img.picto{
+    position: absolute;
+}
+
 
 /* ----------- 1:= section1Landing ------------ */
 .section1Landing article{
@@ -138,10 +142,6 @@
 .landing .section7 a img{
     height: 8px;
     margin-left: .5rem;
-}
-
-.landing img.picto{
-    position: absolute;
 }
 
 .service #ciseaux, .service #aiguilles, .service #pince{
