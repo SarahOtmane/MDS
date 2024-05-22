@@ -1,5 +1,11 @@
 import '../css/global.css';
 
+import Section1Landing from './sections/Section1Landing';
+import Service from './sections/Service';
+import Fonctionnement from './sections/Fonctionnement';
+import UserArtisan from './sections/UserArtisan';
+import Avis from './sections/Avis';
+
     //section7
 import reparer from '../assets/pictures/landingPage/reparer.png';
 import arrow from '../assets/pictures/landingPage/Arrow.png';
@@ -14,6 +20,10 @@ const LandingPage = () =>{
 
     return(
         <main className="landing">
+            <Section1Landing />
+            <Service />
+            <Fonctionnement />
+            <UserArtisan />
 
             <section className='section5 row justifycontent_spbetween'>
                 <h2>RenoWear c'est</h2>
@@ -30,6 +40,8 @@ const LandingPage = () =>{
                     <p className='textPink'>articles réparés/an</p>
                 </article>
             </section>
+
+            <Avis />
 
             <section className='section7 row justifycontent_spbetween alignitem_center'>
                 <article>
