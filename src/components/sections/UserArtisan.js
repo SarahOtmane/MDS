@@ -1,7 +1,7 @@
-import particulier from '../assets/pictures/landingPage/particuliers.png';
-import artisan from '../assets/pictures/landingPage/artisans.png';
-import deco3 from '../assets/pictures/picto/deco3.png';
-import deco4 from '../assets/pictures/picto/deco4.png';
+import particulier from '../../assets/pictures/landingPage/particuliers.png';
+import artisan from '../../assets/pictures/landingPage/artisans.png';
+import deco3 from '../../assets/pictures/picto/deco3.png';
+import deco4 from '../../assets/pictures/picto/deco4.png';
 
 
 const UserArtisan = () =>{
