@@ -8,7 +8,7 @@ import button from '../assets/pictures/picto/button.png';
 
 const Section1Landing = () =>{
     return(
-        <section className="section1 backGris row">
+        <section className="section1Landing backGris row">
             <img className='picto' id="deco1" src={deco1} alt='' />
             <img className='picto' id="deco2" src={deco2} alt='' />
             <img className='picto' id="button" src={button} alt='' />
