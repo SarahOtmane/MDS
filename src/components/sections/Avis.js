@@ -7,7 +7,7 @@ import product4 from '../../assets/pictures/landingPage/product4.png';
 import starFull from  '../../assets/pictures/landingPage/starFull.svg';
 import starEmpty from '../../assets/pictures/landingPage/starEmpty.svg';
 
-const UserArtisan = () =>{
+const Avis = () =>{
     const [btnSelected, setBtnSelected] = useState('couture');
     const testimonialsTabs= [{
         id : 1,
@@ -115,4 +115,4 @@ const UserArtisan = () =>{
     )
 }
 
-export default UserArtisan;
+export default Avis;
