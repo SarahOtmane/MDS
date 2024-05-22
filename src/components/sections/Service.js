@@ -1,9 +1,9 @@
-import arrow from '../assets/pictures/landingPage/Arrow.png';
-import pelote from '../assets/pictures/picto/pelote.png';
-import bobine from '../assets/pictures/picto/bobine.png';
-import ciseaux from '../assets/pictures/picto/ciseaux.png';
-import aiguilles from '../assets/pictures/picto/aiguilles.png';
-import pince from '../assets/pictures/picto/pince.png';
+import arrow from '../../assets/pictures/landingPage/Arrow.png';
+import pelote from '../../assets/pictures/picto/pelote.png';
+import bobine from '../../assets/pictures/picto/bobine.png';
+import ciseaux from '../../assets/pictures/picto/ciseaux.png';
+import aiguilles from '../../assets/pictures/picto/aiguilles.png';
+import pince from '../../assets/pictures/picto/pince.png';
 
 
 const Service = () =>{
