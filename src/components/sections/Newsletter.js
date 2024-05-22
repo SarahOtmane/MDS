@@ -6,7 +6,7 @@
 const Newsletter = () =>{
     return(
         <section className="newsletter column">
-            <h2>construisez une relation durables avec vos articles</h2>
+            <h2 className="text_uppercase">construisez une relation durables avec vos articles</h2>
             <article className="row">
                 <div>
                     <h3>abonnez vous à notre newsletter</h3>
