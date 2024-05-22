@@ -3,6 +3,7 @@ import '../css/global.css';
 import Service from './sections/Service';
 import Fonctionnement from './sections/Fonctionnement';
 import Avis from './sections/Avis';
+import Newsletter from './sections/Newsletter';
 
 const Home = () =>{
 
@@ -11,6 +12,7 @@ const Home = () =>{
             <Service />
             <Fonctionnement />
             <Avis />
+            <Newsletter />
         </main>
     )
 }
