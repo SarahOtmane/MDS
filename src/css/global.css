@@ -3,7 +3,9 @@
 
         Section1Landing
     1:= section1Landing
-    
+
+        Service
+    2:= service
 
 */
 
@@ -79,6 +81,92 @@
 
 
 
+
+
+
+
+
+/* ----------- 2:= service ------------ */
+.service h2, .service h2 + div{
+    margin-top: 2rem;
+}
+
+.service h2{
+    width: 30%;
+    padding: 0 0 0 8rem;
+    margin-top: 5rem;
+}
+
+.service h2 + div{
+    width: 70%;
+}
+
+.service .card{
+    width: 30%;
+    margin: 5rem 5% 0 0;
+}
+
+.service h3{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.service a,
+.landing .section3 a,
+.landing .section7 a{
+    width: 30%;
+    margin: 2.5rem 5% 5rem 0;
+}
+
+.service a img,
+.landing .section3 a img,
+.landing .section7 a img{
+    height: 8px;
+    margin-left: .5rem;
+}
+
+.landing img.picto{
+    position: absolute;
+}
+
+.service #ciseaux, .service #aiguilles, .service #pince{
+    margin-top: 16.8rem;
+}
+
+.service #pince{
+    right: 0;
+}
+
+.service #aiguilles{
+    left: 45%;
+    margin-top: 18.6rem;
+}
+
+.service #pelote{
+    left: 25%;
+}
+
+.service #bobine{
+    right: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- 9:= Desktop ------------ */
 @media screen and (max-width: 1682px) {
     .section1Landing button{
@@ -121,7 +209,13 @@
 }
 
 @media screen and (max-width: 1490px) {
-    
+    .service #ciseaux, .service #pince{
+        margin-top: 18rem;
+    }
+
+    .service #aiguilles{
+        margin-top: 20rem;
+    }
 }
 
 @media screen and (max-width: 1470px) {
@@ -179,6 +273,11 @@
     .section1Landing #deco1{
         top: 41rem;
     }
+
+    .service h2{
+        width: 25%;
+        padding: 0 1rem 0 5rem;
+    }
 }
 
 
@@ -205,11 +304,51 @@
     .home h2{
         font-size: 2.3rem;
     }
+
+    .service h2{
+        width: 25%;
+        padding: 0 0 0 6rem;
+    }
+
+    .service h3{
+        font-size: 1.4rem;
+    }
+
+    .service a,
+    .landing .section3 a,
+    .landing .section7 a{
+        width: 30%;
+        margin: 1.5rem 5% 5rem 0;
+    }
+
+    .service #ciseaux, .service #pince{
+        margin-top: 16.8rem;
+    }
+    
+    .service #aiguilles{
+        margin-top: 18.6rem;
+    }
 }
 
 @media screen and (max-width: 1142px){
     .section1Landing #deco1{
         top: 42rem;
+    }
+
+    .service #pince{
+        margin-top: 18.4rem;
+    }
+
+    .service #ciseaux{
+        margin-top: 20.2rem;
+    }
+    
+    .service #aiguilles{
+        margin-top: 22.2rem;
+    }
+
+    .service .picto{
+        width: 8%;
     }
 }
 
@@ -244,6 +383,31 @@
     .section1Landing #deco1{
         top: 39rem;
     }
+
+    .service{
+        flex-wrap: wrap !important;
+    }
+
+    .service h2, .service h2 + div{
+        width: 100%;
+        padding: 0 0 0 6rem;
+    }
+
+    .service .card{
+        margin-top: 2rem;
+    }
+
+    .service #pince{
+        margin-top: 23rem;
+    }
+
+    .service #ciseaux{
+        margin-top: 24.7rem;
+    }
+    
+    .service #aiguilles{
+        margin-top: 26.5rem;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -275,6 +439,14 @@
     
     .section1Landing #deco1{
         top: 44.5rem;
+    }
+
+    .service #ciseaux, .service #pince{
+        margin-top: 23.2rem;
+    }
+    
+    .service #aiguilles{
+        margin-top: 25.1rem;
     }
 }
 
