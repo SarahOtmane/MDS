@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import product1 from '../assets/pictures/landingPage/product1.png';
-import product2 from '../assets/pictures/landingPage/product2.png';
-import product3 from '../assets/pictures/landingPage/product3.png';
-import product4 from '../assets/pictures/landingPage/product4.png';
-import starFull from  '../assets/pictures/landingPage/starFull.svg';
-import starEmpty from '../assets/pictures/landingPage/starEmpty.svg';
+import product1 from '../../assets/pictures/landingPage/product1.png';
+import product2 from '../../assets/pictures/landingPage/product2.png';
+import product3 from '../../assets/pictures/landingPage/product3.png';
+import product4 from '../../assets/pictures/landingPage/product4.png';
+import starFull from  '../../assets/pictures/landingPage/starFull.svg';
+import starEmpty from '../../assets/pictures/landingPage/starEmpty.svg';
 
 const UserArtisan = () =>{
     const [btnSelected, setBtnSelected] = useState('couture');
