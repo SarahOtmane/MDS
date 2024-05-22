@@ -14,7 +14,7 @@ import arrow from '../assets/pictures/landingPage/Arrow.png';
 
 const Fonctionnement = () =>{
     return(
-        <section className='section3 row alignitem_center justifycontent_spbetween'>
+        <section className='fonctionnement row alignitem_center justifycontent_spbetween'>
             <img className='picto' id="image4" src={image4} alt='' />
             <img className='picto' id="machine" src={machine} alt='' />
             <img className='picto' id="ceintre" src={ceintre} alt='' />
