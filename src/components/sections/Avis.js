@@ -77,7 +77,7 @@ const UserArtisan = () =>{
     };
 
     return(
-        <section className='section6'>
+        <section className='avis'>
             <span className='text_uppercase text_bold'>ce que nos clients disent de nous</span>
             <h2 className='text_capitalize'>vos avis</h2>
             <div className=' button row'>
