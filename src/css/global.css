@@ -13,6 +13,9 @@
         UserArtisan
     4:= userArtisan
 
+        LandingPage
+    5:= section5
+
 */
 
 
@@ -289,6 +292,36 @@
 
 
 
+
+
+/* ----------- 5:= section 5 ------------ */
+.landing .section5, .landing .section6,
+.home .section5{
+    margin: 6rem 8rem 5rem;
+}
+
+.landing .section5 p{
+    font-size: 2.5rem;
+}
+
+.landing .section5 p + p{
+    color: var(--gris_liens);
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- 9:= Desktop ------------ */
 @media screen and (max-width: 1682px) {
     .section1Landing button{
@@ -450,6 +483,18 @@
 
     .userArtisan{
         padding: 3rem 14rem 7rem;
+    }
+
+    .landing .section5, .landing .section6{
+        margin: 6rem 6rem 5rem;
+    }
+
+    .landing .section5 p{
+        font-size: 2.3rem;
+    }
+
+    .landing .section5 p + p{
+        font-size: 1.5rem;
     }
 }
 
@@ -641,6 +686,25 @@
 
     .userArtisan #deco4{
         margin-top: 24rem;
+    }
+
+    .landing .section5{
+        margin: 5rem;
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section5 h2{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .landing .section5 p{
+        font-size: 2rem;
+    }
+    
+    .landing .section5 p + p{
+        color: var(--gris_liens);
+        font-size: 1.1rem;
     }
 }
 
