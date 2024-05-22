@@ -10,6 +10,9 @@
         Fonctionnement
     3:= fonctionnement
 
+        UserArtisan
+    4:= userArtisan
+
 */
 
 
@@ -175,7 +178,7 @@
 }
 
 .fonctionnement h2,
-.landing .section4 h2,
+.userArtisan h2,
 .landing .section6 h2,
 .landing .section7 h2{
     margin: 1rem 0 2.5rem;
@@ -187,7 +190,7 @@
 }
 
 .fonctionnement span, .fonctionnement p img,
-.landing .section4 span, .landing .section4 p,
+.userArtisan span, .userArtisan p,
 .landing .section6 span,
 .landing .section7 span{
     color: var(--gris_liens);
@@ -243,6 +246,45 @@
 
 
 
+/* ----------- 4:= userArtisan ------------ */
+.userArtisan{
+    text-align: center;
+    padding: 3rem 17rem 8rem;
+}
+
+.userArtisan figure{
+    width: 45%;
+    margin-top: 3rem;
+}
+
+.userArtisan p{
+    position: absolute;
+    text-align: start;
+    color: var(--white);
+    margin-top: -22rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.userArtisan #deco3{
+    left: 0;
+    width: 25%;
+    margin-top: -8rem;
+}
+
+.userArtisan #deco4{
+    right: 0;
+    width: 25%;
+    margin-top: 40rem;
+}
+
+
+
+
+
+
+
 
 
 
@@ -261,6 +303,10 @@
     .section1Landing h1{
         font-size: 2.7rem;
     }
+
+    .userArtisan #deco4{
+        margin-top: 35rem;
+    }
 }
 
 @media screen and (max-width: 1570px) {
@@ -278,6 +324,10 @@
     
     .fonctionnement #image4{
         margin-top: -48rem;
+    }
+
+    .userArtisan #deco3{
+        margin-top: -7rem;
     }
 }
 
@@ -342,7 +392,7 @@
     }
 
     .fonctionnement span, .fonctionnement p img,
-    .landing .section4 span, .landing .section4 p,
+    .userArtisan span, .userArtisan p,
     .landing .section6 span,
     .landing .section7 span{
         font-size: 1.3rem;
@@ -365,7 +415,9 @@
 }
 
 @media screen and (max-width: 1415px){
-    
+    .userArtisan #deco4{
+        margin-top: 33rem;
+    }
 }
 
 @media screen and (max-width: 1345px) {
@@ -394,6 +446,10 @@
     .service h2{
         width: 25%;
         padding: 0 1rem 0 5rem;
+    }
+
+    .userArtisan{
+        padding: 3rem 14rem 7rem;
     }
 }
 
@@ -477,6 +533,18 @@
         left: 42%;
         margin-top: 34rem;
     }
+
+    .userArtisan #deco3{
+        margin-top: -6rem;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 28rem;
+    }
+
+    .userArtisan figure{
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 1142px){
@@ -507,6 +575,10 @@
 
     .fonctionnement .picto{
         width: 8%;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 26rem;
     }
 }
 
@@ -566,6 +638,10 @@
     .service #aiguilles{
         margin-top: 26.5rem;
     }
+
+    .userArtisan #deco4{
+        margin-top: 24rem;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -586,6 +662,10 @@
 
     .fonctionnement a{
         width: 70%;
+    }
+
+    .userArtisan{
+        padding: 3rem 8rem;
     }
 }
 
@@ -610,6 +690,10 @@
     .service #aiguilles{
         margin-top: 25.1rem;
     }
+
+    .userArtisan #deco4{
+        margin-top: 23rem;
+    }
 }
 
 @media screen and (max-width: 790px){
@@ -628,5 +712,9 @@
 
     .section1Landing button{
         width: 70%;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 22rem;
     }
 }
