@@ -22,9 +22,9 @@
     margin: 4rem 0 5rem 0;
 }
 
-.politique h2 + section,
-.condition h2 + section,
-.mention h2 + section{
+.politique .section,
+.condition .section,
+.mention .section{
     padding: 1rem 15rem;
     text-align: justify;
 }
