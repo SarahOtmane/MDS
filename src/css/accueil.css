@@ -3,6 +3,7 @@
 
         Concept
     1:= presentation
+    2:= description
 
         Service
     2:= service
@@ -32,18 +33,50 @@
 
 
 /* ----------- 1:= presentation ------------ */
-.concept .presentation article{
+.concept .presentation article,
+.description div{
     width: 35%;
     margin: auto;
     padding: 5rem 0 7rem;
 }
 
-.concept .presentation h2{
+.concept .presentation h2,
+.description h3{
     font-size: 3.3rem;
     margin-bottom: 2rem;
 }
 
-.concept .presentation p{
+.concept .presentation p,
+.description p{
     font-size: 1.2rem;
     text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 2:= description ------------ */
+.description figure{
+    padding: 0 1.5rem;
+}
+
+.description figure img{
+    width: 25%;
+    height: 2rem;
+}
+
+.description figure img:nth-child(2){
+    width: 11%;
+    height: 3rem;
+}
+
+.description hr{
+    border: 1px solid #DFE1E7;
+    margin: 3rem auto;
 }
