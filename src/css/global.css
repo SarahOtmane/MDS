@@ -493,22 +493,27 @@ img.picto{
 }
 
 .newsletter article{
-    padding: 3rem 15rem;
+    padding: 3rem 10rem;
 }
 
 .newsletter div, .newsletter form{
-    width: 50%;
+    width: 60%;
     margin: 0;
     padding: 0;
 }
 
+.newsletter form{
+    width: 40%;
+}
+
 .newsletter h3{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .newsletter span{
     color: #999999;
+    font-size: .9rem;
 }
 
 .newsletter input{
