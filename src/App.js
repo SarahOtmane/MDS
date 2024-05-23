@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import Concept from "./components/Concept";
 
 import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
@@ -37,6 +38,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path='/concept' element={<Concept />} />
                     <Route path="/legal">
                         <Route path="mentions" element={<Mentions />} />
                         <Route path="politique" element={<Politique />} />
