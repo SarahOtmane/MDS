@@ -1,4 +1,4 @@
-import '../css/global.css';
+import '../css/homeLanding.css';
 
     //import des composants qui represente les section
 import Section1Landing from './sections/Section1Landing';
