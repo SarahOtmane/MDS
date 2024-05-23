@@ -7,6 +7,14 @@ import Newsletter from '../sections/Newsletter';
 import echos from '../../assets/pictures/acceuil/echos.png';
 import forbes from '../../assets/pictures/acceuil/forbes.png';
 import sudOuest from '../../assets/pictures/acceuil/sudOuest.png';
+import aiguilles from '../../assets/pictures/acceuil/aiguilles.png';
+import boutton from '../../assets/pictures/acceuil/boutton.png';
+import ceintre from '../../assets/pictures/acceuil/ceintre.png';
+import ciseaux from '../../assets/pictures/acceuil/ciseaux.png';
+import deco1 from '../../assets/pictures/acceuil/deco1.png';
+import deco2 from '../../assets/pictures/acceuil/deco2.png';
+import deco3 from '../../assets/pictures/acceuil/deco3.png';
+import pelote from '../../assets/pictures/acceuil/pelote.png';
 
 
 const Concept = () =>{
