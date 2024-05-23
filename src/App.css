@@ -200,6 +200,12 @@ label{
     background-color: var(--green_background_2);
 }
 
+.backImg{
+    background-image: url('./assets/pictures/backgroundPink.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .textGreen{
     color: var(--green_text) !important;
 }
