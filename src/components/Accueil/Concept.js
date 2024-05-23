@@ -1,3 +1,5 @@
+import '../../css/accueil.css';
+
 import Titre from '../Titre';
 import Newsletter from '../sections/Newsletter';
 
