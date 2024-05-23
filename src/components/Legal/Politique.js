@@ -7,8 +7,8 @@ const Politique = () =>{
     return(
         <main className='politique'>
             <Titre titre="Politique de Confidentialité" lien="/legal/politique" classe="backGris" />
-            <h2 className='titre'>Politique de Confidentialité</h2>
-            <section>
+            <section className='backImg section'>
+                <h2 className='titre'>Politique de Confidentialité</h2>
                 <h3>Date d'entrée en vigueur : 29 Avril 2024</h3>
                 <p>Bienvenue sur RenoWear, votre service de réparation de vêtements par des artisans qualifiés.</p>
                 <ol className='ordonne'>

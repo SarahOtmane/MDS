@@ -6,8 +6,8 @@ const Mentions = () =>{
     return(
         <main className='mention'>
             <Titre titre="Mentions légales" lien="/legal/mentions" classe="backGris" />
-            <h2 className='titre'>Mentions légales</h2>
-            <section>
+            <section className='backImg section'>
+                <h2 className='titre'>Mentions légales</h2>
                 <h3>Date d'entrée en vigueur : 29 Avril 2024</h3>
                 <p>
                     Le site [Nom du Site] est édité par [Nom de la Société], une société [forme juridique] au capital de [montant] euros, inscrite au Registre du Commerce et des Sociétés de [Ville] sous le numéro [numéro d'inscription].

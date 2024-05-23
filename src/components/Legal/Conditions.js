@@ -5,9 +5,9 @@ import Titre from '../Titre';
 const Conditions = () =>{
     return(
         <main className='condition'>
-            <Titre titre="Conditions génrales" lien="/legal/condition" classe="backGris" />
-            <h2 className='titre'>Conditions génrales</h2>
-            <section>
+            <Titre titre="Conditions génrales" lien="/legal/condition" classe="backGris" /> 
+            <section className='backImg section'>
+                <h2 className='titre'>Conditions génrales</h2>
                 <h3>Date d'entrée en vigueur : 29 Avril 2024</h3>
                 <p>Bienvenue sur RenoWear, le spécialiste de la réparation de vêtements par des artisans compétents. En utilisant notre site web et nos services, vous acceptez de vous conformer aux conditions générales suivantes :</p>
                 <ol className='ordonne'>
