@@ -4,24 +4,26 @@ import Titre from '../Titre';
 import Newsletter from '../sections/Newsletter';
 
 
-
 const Concept = () =>{
     return(
-        <main className="concept backVert2">
+        <main className="concept">
             <Titre titre="Le concept" lien="/concept" classe="backGris"  />
-            <section className='presentation'>
-                <h2>Hey, nous c'est Renowear</h2>
-                <p>
-                    Offrez une nouvelle vie à vos vêtements et accessoires. 
-                    Transformez vos pièces usées en créations uniques et personnalisées. 
-                    Plus abordable, meilleure pour la planète mais tout aussi performante.
-                </p>
+            <section className='presentation backVert2'>
+                <article>
+                    <h2>Hey, nous c'est Renowear</h2>
+                    <p>
+                        Offrez une nouvelle vie à vos vêtements et accessoires. 
+                        Transformez vos pièces usées en créations uniques et personnalisées. 
+                        Plus abordable, meilleure pour la planète mais tout aussi performante.
+                    </p>
+                </article>
             </section>
             <section className='valeur'>
                 <div>
                     <article>
                         <h3>Une place de marché mondiale pour la réparation d’articles</h3>
                         <p>RenoWear est une place de marché mondiale de réparation de vêtements. Grâce à notre processus de vérification rigoureux, notre charte qualité exigeante, seuls les meilleurs artisans peuvent nous rejoindre sur notre site et sublimé votre garde-robe.</p>
+                        
                     </article>
                     <hr></hr>
                     <article>
