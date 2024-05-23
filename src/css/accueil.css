@@ -62,8 +62,17 @@
 
 
 /* ----------- 2:= description ------------ */
+.description{
+    padding: 7rem 0;
+}
+
 .description figure{
     padding: 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.description p{
+    margin-top: 3rem;
 }
 
 .description figure img{
@@ -78,5 +87,5 @@
 
 .description hr{
     border: 1px solid #DFE1E7;
-    margin: 3rem auto;
+    margin: 7rem auto;
 }
