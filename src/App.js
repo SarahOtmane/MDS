@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 
 import Concept from "./components/Accueil/Concept";
+import Aide from "./components/Accueil/Aide";
 
 import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
@@ -31,6 +32,40 @@ import Politique from "./components/Legal/Politique";
 import RepaChoice from "./components/Reparation/RepaChoice";
 
 
+
+
+
+/*
+            Les routes
+
+    /home
+    /concept
+    /legal :
+        /mentions
+        /politique
+        /condition
+    /user :
+        /register
+        /login
+        /password :
+            /forget
+            /reset
+        /cart :
+            /check
+        /order : 
+            /success
+            /failed
+        /my-account :
+            /order
+            /update-password
+            /details
+            /adress
+        /reparation :
+            /choice
+
+*/
+
+
 const App = () => {
     return (
         <BrowserRouter>
@@ -40,6 +75,8 @@ const App = () => {
                     <Route path="/" element={<LandingPage />} />
                     <Route path="/home" element={<Home />} />
                     <Route path='/concept' element={<Concept />} />
+                    <Route path="/help" element={<Aide />} />
+
                     <Route path="/legal">
                         <Route path="mentions" element={<Mentions />} />
                         <Route path="politique" element={<Politique />} />
