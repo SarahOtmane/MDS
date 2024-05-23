@@ -1,5 +1,5 @@
-import Titre from './Titre';
-import Newsletter from './sections/Newsletter';
+import Titre from '../Titre';
+import Newsletter from '../sections/Newsletter';
 
 
 
@@ -7,7 +7,7 @@ const Concept = () =>{
     return(
         <main className="concept backVert2">
             <Titre titre="Le concept" lien="/concept" classe="backGris"  />
-            <section>
+            <section className='presentation'>
                 <h2>Hey, nous c'est Renowear</h2>
                 <p>
                     Offrez une nouvelle vie à vos vêtements et accessoires. 
