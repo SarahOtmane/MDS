@@ -23,7 +23,7 @@ const Concept = () =>{
                     </p>
                 </article>
             </section>
-            <section className='valeur'>
+            <section className='description'>
                 <div>
                     <article>
                         <h3>Une place de marché mondiale pour la réparation d’articles</h3>
