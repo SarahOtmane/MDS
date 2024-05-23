@@ -1,4 +1,4 @@
-import '../css/global.css';
+import '../css/homeLanding.css';
 
 import Service from './sections/Service';
 import Fonctionnement from './sections/Fonctionnement';
