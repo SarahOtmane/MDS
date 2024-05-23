@@ -32,6 +32,14 @@ const Concept = () =>{
                 </article>
             </section>
             <section className='description'>
+                <img className='picto aiguilles' src={aiguilles} alt='' />
+                <img className='picto boutton' src={boutton} alt='' />
+                <img className='picto ceintre' src={ceintre} alt='' />
+                <img className='picto ciseaux' src={ciseaux} alt='' />
+                <img className='picto pelote' src={pelote} alt='' />
+                <img className='picto deco1' src={deco1} alt='' />
+                <img className='picto deco2' src={deco2} alt='' />
+                <img className='picto deco3' src={deco3} alt='' />
                 <div>
                     <article>
                         <h3>Une place de marché mondiale pour la réparation d’articles</h3>
