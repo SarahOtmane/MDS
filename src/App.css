@@ -84,6 +84,7 @@
     --pink_background : #FFAEAE;
     --pink_background_2: #FFDBE8;
     --green_background: #D5E5D7;
+    --green_background_2: #BDDFB4;
     --green_text: #BDDEB4;
     --pink_text: #E4A2BE;
 }
@@ -193,6 +194,10 @@ label{
 
 .backVert{
     background-color: var(--green_background);
+}
+
+.backVert2{
+    background-color: var(--green_background_2);
 }
 
 .textGreen{
