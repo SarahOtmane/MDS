@@ -1,11 +1,13 @@
 import '../css/global.css';
 
+    //import des composants qui represente les section
 import Section1Landing from './sections/Section1Landing';
 import Service from './sections/Service';
 import Fonctionnement from './sections/Fonctionnement';
 import UserArtisan from './sections/UserArtisan';
 import Avis from './sections/Avis';
 
+//import des images
     //section7
 import reparer from '../assets/pictures/landingPage/reparer.png';
 import arrow from '../assets/pictures/landingPage/Arrow.png';
