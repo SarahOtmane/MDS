@@ -2,7 +2,7 @@
                 Sommaire
 
         Concept
-    1:= concept
+    1:= presentation
 
         Service
     2:= service
@@ -31,8 +31,19 @@
 
 
 
-/* ----------- 1:= concept ------------ */
+/* ----------- 1:= presentation ------------ */
 .concept .presentation{
-    width: 40%;
+    width: 35%;
     margin: auto;
+    padding: 5rem 0 7rem;
+}
+
+.concept .presentation h2{
+    font-size: 3.3rem;
+    margin-bottom: 2rem;
+}
+
+.concept .presentation p{
+    font-size: 1.2rem;
+    text-align: justify;
 }
