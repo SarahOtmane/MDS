@@ -28,7 +28,7 @@ const Concept = () =>{
                     <article>
                         <h3>Une place de marché mondiale pour la réparation d’articles</h3>
                         <p>RenoWear est une place de marché mondiale de réparation de vêtements. Grâce à notre processus de vérification rigoureux, notre charte qualité exigeante, seuls les meilleurs artisans peuvent nous rejoindre sur notre site et sublimé votre garde-robe.</p>
-                        <figure className='row'>
+                        <figure className='row justifycontent_spbetween alignitem_center'>
                             <img src={echos} alt="echos" />
                             <img src={sudOuest} alt="sudOuest" />
                             <img src={forbes} alt="forbes" />
