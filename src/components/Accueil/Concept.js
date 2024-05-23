@@ -3,6 +3,11 @@ import '../../css/accueil.css';
 import Titre from '../Titre';
 import Newsletter from '../sections/Newsletter';
 
+//import image
+import echos from '../../assets/pictures/acceuil/echos.png';
+import forbes from '../../assets/pictures/acceuil/forbes.png';
+import sudOuest from '../../assets/pictures/acceuil/sudOuest.png';
+
 
 const Concept = () =>{
     return(
@@ -23,7 +28,11 @@ const Concept = () =>{
                     <article>
                         <h3>Une place de marché mondiale pour la réparation d’articles</h3>
                         <p>RenoWear est une place de marché mondiale de réparation de vêtements. Grâce à notre processus de vérification rigoureux, notre charte qualité exigeante, seuls les meilleurs artisans peuvent nous rejoindre sur notre site et sublimé votre garde-robe.</p>
-                        
+                        <figure className='row'>
+                            <img src={echos} alt="echos" />
+                            <img src={sudOuest} alt="sudOuest" />
+                            <img src={forbes} alt="forbes" />
+                        </figure>
                     </article>
                     <hr></hr>
                     <article>
