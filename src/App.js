@@ -30,7 +30,6 @@ import Mentions from "./components/Legal/Mentions";
 import Conditions from "./components/Legal/Conditions";
 import Politique from "./components/Legal/Politique";
 
-import RepaChoice from "./components/Reparation/RepaChoice";
 
 
 
@@ -64,7 +63,7 @@ import RepaChoice from "./components/Reparation/RepaChoice";
             /details
             /adress
         /reparation :
-            /choice
+            
 
 */
 
@@ -113,7 +112,7 @@ const App = () => {
                         </Route>
 
                         <Route path="reparation">
-                            <Route path="choice" element={<RepaChoice />} />
+                            
                         </Route>
                     </Route>
                 </Routes>
