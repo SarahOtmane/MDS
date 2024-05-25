@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 
 import Concept from "./components/Accueil/Concept";
 import Aide from "./components/Accueil/Aide";
+import Repare from "./components/Accueil/Repare";
 
 import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
@@ -40,6 +41,8 @@ import RepaChoice from "./components/Reparation/RepaChoice";
 
     /home
     /concept
+    /aide
+    /repare
     /legal :
         /mentions
         /politique
@@ -76,6 +79,7 @@ const App = () => {
                     <Route path="/home" element={<Home />} />
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
+                    <Route path="/repare" element={<Repare />} />
 
                     <Route path="/legal">
                         <Route path="mentions" element={<Mentions />} />
