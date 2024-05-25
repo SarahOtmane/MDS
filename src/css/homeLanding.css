@@ -896,6 +896,10 @@ img.picto{
         width: 8%;
     }
 
+    .userArtisan p{
+        margin-top: -15rem;
+    }
+
     .userArtisan #deco4{
         margin-top: 26rem;
     }
@@ -951,6 +955,11 @@ img.picto{
     
     .service #aiguilles{
         margin-top: 26.5rem;
+    }
+
+    .userArtisan{
+        padding-left: 10rem;
+        padding-right: 10rem;
     }
 
     .userArtisan #deco4{
