@@ -149,3 +149,43 @@
 
 
 /* ----------- 10:= Desktop ------------ */
+@media screen and (max-width: 1180px) {
+    .concept .presentation article,
+    .description div{
+        width: 45%;
+    }
+
+    .concept .picto{
+        width: 30% !important;
+    }
+
+    .description .boutton, .description .ceintre, .description .pelote,
+    .description .ciseaux, .description .aiguilles{
+        width: 15% !important;
+    }
+
+    .description .deco1{
+        margin-top: -4%;
+    }
+    
+    .description .deco2{
+        margin-top: -12%;
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .description .deco1{
+        margin-top: 0;
+    }
+    
+    .description .deco2{
+        margin-top: -8%;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .concept .presentation article,
+    .description div{
+        width: 55%;
+    }
+}
