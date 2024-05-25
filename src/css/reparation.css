@@ -2,6 +2,12 @@
                 Sommaire
 
         Couture
-    1:= section
+    1:= couture__contenu
 
 */
+
+
+/* ----------- 1:= couture__contenu ------------ */
+.couture__contenu {
+    padding: 5rem 10rem;
+}
