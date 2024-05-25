@@ -30,6 +30,7 @@ import Mentions from "./components/Legal/Mentions";
 import Conditions from "./components/Legal/Conditions";
 import Politique from "./components/Legal/Politique";
 
+import Couture from "./components/Reparation/Couture";
 
 
 
@@ -112,7 +113,7 @@ const App = () => {
                         </Route>
 
                         <Route path="reparation">
-                            
+                            <Route path="couture" element={<Couture />} />
                         </Route>
                     </Route>
                 </Routes>
