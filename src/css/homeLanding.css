@@ -27,6 +27,9 @@
         Etape
     10:= etape
 
+        Home
+    11:= home
+
 
 
 */
@@ -490,12 +493,6 @@ img.picto{
 
 
 /* ----------- 9:= newsletter ------------ */
-.newsletter h2{
-    text-align: center;
-    font-size: 2.7rem;
-    margin: 3rem auto;
-}
-
 .newsletter article{
     padding: 3rem 10rem;
 }
@@ -582,6 +579,21 @@ img.picto{
 
 
 
+
+
+
+
+
+
+
+
+/* ----------- 10:= home ------------ */
+
+.home h2.newsletter{
+    text-align: center;
+    font-size: 2.7rem;
+    padding: 3rem 0;
+}
 
 
 
