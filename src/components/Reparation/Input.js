@@ -17,7 +17,8 @@ const Input = ({name}) =>{
     return(
         <Select
         className="basic-single"
-        classNamePrefix={name}
+        classNamePrefix="select"
+        placeholder={name}
         isClearable= 'true'
         name="color"
         options={colourOptions}
