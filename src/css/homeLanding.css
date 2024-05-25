@@ -868,6 +868,10 @@ img.picto{
     .landing .section8 button img{
         margin-right: 1rem;
     }
+
+    .etape{
+        margin: 0 6rem;
+    }
 }
 
 @media screen and (max-width: 1142px){
@@ -1009,6 +1013,14 @@ img.picto{
     
     .landing .section8 button div{
         text-align: start;
+    }
+
+    .etape h4{
+        font-size: 1rem;
+    }
+
+    .etape p{
+        font-size: .6rem;
     }
 }
 
