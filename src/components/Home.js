@@ -14,6 +14,7 @@ const Home = () =>{
             <Fonctionnement />
             <Etape />
             <Avis />
+            <h2 className="text_uppercase">construisez une relation durables avec vos articles</h2>
             <Newsletter />
         </main>
     )
