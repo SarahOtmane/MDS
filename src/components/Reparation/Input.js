@@ -14,11 +14,19 @@ const Input = ({name}) =>{
         { value: 'silver', label: 'Silver', color: '#666666' },
     ];
 
+    let placeholder="";
+
+    if(name === 'categorie') placeholder="Catégorie"
+    else if(name === 'clotheType') placeholder="Type de vêtement"
+    else if(name === 'clotheMatiere') placeholder="Matière du vêtement"
+    else if(name === 'reparationType') placeholder="Type de réparation"
+    else if(name === 'besoinType') placeholder="Type de besoin"
+
     return(
         <Select
         className="basic-single"
         classNamePrefix="select"
-        placeholder={name}
+        placeholder={placeholder}
         isClearable= 'true'
         name="color"
         options={colourOptions}
