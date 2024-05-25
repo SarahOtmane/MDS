@@ -25,7 +25,7 @@
 .politique .section,
 .condition .section,
 .mention .section{
-    padding: 1rem 15rem;
+    padding: 1rem 15rem 4rem;
     text-align: justify;
 }
 
@@ -68,4 +68,14 @@
 
 .mention h3:first-child{
     margin-top: 0;
+}
+
+
+/* ----------- 3:= Desktop ------------ */
+@media screen and (max-width: 1100px){
+    .politique .section,
+    .condition .section,
+    .mention .section{
+        padding: 1rem 10rem 4rem;
+    }
 }
