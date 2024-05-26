@@ -13,6 +13,7 @@
 
         Rejoindre
     5:= presentation
+    6:= description
 
 
 
@@ -187,12 +188,62 @@
     text-align: center;
 }
 
-.rejoindre .presentation a{
+.rejoindre .presentation a, .rejoindre .description a{
     color: var(--white);
     background-color: var(--black);
     padding: 1rem 1.5rem;
     border-radius: .5rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= description ------------ */
+.rejoindre .description{
+    padding-bottom: 0;
+}
+
+.rejoindre .description h3:not(.first){
+    margin-top: 10rem;
+}
+
+.rejoindre .description li{
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.rejoindre .description li span{
+    font-weight: bolder;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.rejoindre .description p.rejoindre{
+    margin-bottom: 4rem;
+}
+
+.rejoindre .description a{
+    margin-left: 35%;
+}
+
+.description .deco1{
+    margin-top: 0;
+}
+
+.description .deco2{
+    margin-top: 0;
+}
+
+
+
+
 
 
 
