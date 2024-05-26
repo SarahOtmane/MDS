@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Concept from "./components/Accueil/Concept";
 import Aide from "./components/Accueil/Aide";
 import Repare from "./components/Accueil/Repare";
+import Rejoindre from "./components/Accueil/Rejoindre";
 
 import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
@@ -44,6 +45,7 @@ import CouturePics from "./components/Reparation/CouturePics";
     /concept
     /aide
     /repare
+    /rejoindre
     /legal :
         /mentions
         /politique
@@ -82,6 +84,7 @@ const App = () => {
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare />} />
+                    <Route path="/rejoindre" element={<Rejoindre />} />
 
                     <Route path="/legal">
                         <Route path="mentions" element={<Mentions />} />
