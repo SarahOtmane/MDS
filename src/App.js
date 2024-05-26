@@ -31,6 +31,7 @@ import Conditions from "./components/Legal/Conditions";
 import Politique from "./components/Legal/Politique";
 
 import Couture from "./components/Reparation/Couture";
+import CouturePics from "./components/Reparation/CouturePics";
 
 
 
@@ -64,7 +65,8 @@ import Couture from "./components/Reparation/Couture";
             /details
             /adress
         /reparation :
-            
+            /couture
+            /couture-pics
 
 */
 
@@ -114,6 +116,7 @@ const App = () => {
 
                         <Route path="reparation">
                             <Route path="couture" element={<Couture />} />
+                            <Route path="couturepics" element={<CouturePics />} />
                         </Route>
                     </Route>
                 </Routes>
