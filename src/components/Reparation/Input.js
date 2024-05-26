@@ -18,6 +18,7 @@ const Input = ({ name }) => {
             '&:hover': {
               borderColor: isFocused ? '#BDDEB4' : 'black',
             },
+            height: '4rem',
         }),
         option: (styles, { isFocused, isSelected }) => ({
             ...styles,
