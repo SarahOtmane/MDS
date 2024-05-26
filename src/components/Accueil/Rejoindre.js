@@ -17,19 +17,19 @@ import deco3 from '../../assets/pictures/acceuil/deco3.png';
 import pelote from '../../assets/pictures/acceuil/pelote.png';
 
 
-const Concept = () =>{
+const Rejoindre = () =>{
     return(
-        <main className="concept">
-            <Titre titre="Le concept" lien="/concept" classe="backGris"  />
-            <section className='presentation backVert2'>
+        <main className="concept rejoindre">
+            <Titre titre="Nous rejoindre" lien="/rejoindre" classe="backGris"  />
+            <section className='presentation'>
                 <article>
-                    <h2>Hey, nous c'est Renowear</h2>
+                    <h2>Vous êtes artisans ?</h2>
                     <p>
-                        Offrez une nouvelle vie à vos vêtements et accessoires. 
-                        Transformez vos pièces usées en créations uniques et personnalisées. 
-                        Plus abordable, meilleure pour la planète mais tout aussi performante.
+                        Avec  RenoWear rejoignez une communauté de plus de 500 talents qui vous ressemblent et profitez d’un service clé en main pour vous reconnecter à vos clients.
                     </p>
+                    <a href='/'>Rejoindre RenoWear</a>
                 </article>
+                
             </section>
             <section className='description'>
                 <div>
@@ -67,4 +67,4 @@ const Concept = () =>{
     )
 }
 
-export default Concept;
+export default Rejoindre;
