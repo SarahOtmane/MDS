@@ -2,78 +2,60 @@ import React from 'react';
 import Select from 'react-select';
 
 const Input = ({ name }) => {
-  const colourOptions = [
-    { value: 'purple', label: 'Purple', color: '#5243AA' },
-    { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
-    { value: 'orange', label: 'Orange', color: '#FF8B00' },
-    { value: 'yellow', label: 'Yellow', color: '#FFC400' },
-    { value: 'green', label: 'Green', color: '#36B37E' },
-    { value: 'forest', label: 'Forest', color: '#00875A' },
-    { value: 'slate', label: 'Slate', color: '#253858' },
-    { value: 'silver', label: 'Silver', color: '#666666' },
-  ];
+    const valueOptions = [
+        { value: 'Test', label: 'TEST' },
+        { value: 'Okay', label: 'OKAY' },
+        { value: 'Faux', label: 'FAUX' },
+        { value: 'Vrai', label: 'VRAI' },
+    ];
 
-  const colourStyles = {
-    control: (styles, { isFocused }) => ({
-      ...styles,
-      backgroundColor: 'white',
-      borderColor: isFocused ? 'green' : styles.borderColor,
-      boxShadow: isFocused ? '0 0 0 1px green' : styles.boxShadow,
-      '&:hover': {
-        borderColor: isFocused ? 'green' : styles['&:hover'].borderColor,
-      },
-    }),
-    option: (styles, { isDisabled, isFocused, isSelected }) => {
-      return {
-        ...styles,
-        backgroundColor: isDisabled
-          ? undefined
-          : isSelected
-          ? 'green'
-          : isFocused
-          ? 'pink'
-          : undefined,
-        color: isDisabled
-          ? '#ccc'
-          : isSelected
-          ? 'white'
-          : 'black',
-        cursor: isDisabled ? 'not-allowed' : 'default',
+    const valueStyles = {
+        control: (styles, { isFocused }) => ({
+            ...styles,
+            backgroundColor: 'white',
+            borderColor: isFocused ? '#BDDEB4' : 'black',
+            boxShadow: isFocused ? '0 0 0 1px #BDDEB4' : styles.boxShadow,
+            '&:hover': {
+              borderColor: isFocused ? '#BDDEB4' : 'black',
+            },
+        }),
+        option: (styles, { isFocused, isSelected }) => ({
+            ...styles,
+            backgroundColor: isSelected
+                ? '#BDDEB4'
+                : isFocused
+                ? 'rgba(189, 222, 180, 0.4)'
+                : '#F6F6F6',
+            color: '#1E1E1E',
+            cursor: 'default',
+            ':active': {
+                ...styles[':active'],
+                backgroundColor: isSelected ? '#BDDEB4' : 'rgba(189, 222, 180, 0.4)',
+            },
+          }),
+          input: (styles) => ({ ...styles, color: '#1E1E1E' }),
+          singleValue: (styles) => ({ ...styles, color: '#1E1E1E' }),
+    };
 
-        ':active': {
-          ...styles[':active'],
-          backgroundColor: !isDisabled
-            ? isSelected
-              ? 'green'
-              : 'pink'
-            : undefined,
-        },
-      };
-    },
-    input: (styles) => ({ ...styles }),
-    placeholder: (styles) => ({ ...styles }),
-    singleValue: (styles) => ({ ...styles, color: 'black' }),
-  };
+    let placeholder = "";
 
-  let placeholder = "";
+    if (name === 'categorie') placeholder = "Catégorie";
+    else if (name === 'clotheType') placeholder = "Type de vêtements";
+    else if (name === 'clotheMatiere') placeholder = "Matière du vêtement";
+    else if (name === 'reparationType') placeholder = "Type de réparation";
+    else if (name === 'besoinType') placeholder = "Type de besoin";
 
-  if (name === 'categorie') placeholder = "Catégorie";
-  else if (name === 'clotheType') placeholder = "Type de vêtements";
-  else if (name === 'clotheMatiere') placeholder = "Matière du vêtement";
-  else if (name === 'reparationType') placeholder = "Type de réparation";
-  else if (name === 'besoinType') placeholder = "Type de besoin";
-
-  return (
-    <Select
-      className="input"
-      classNamePrefix="select"
-      placeholder={placeholder}
-      isClearable={true}
-      name={name}
-      options={colourOptions}
-      styles={colourStyles}
-    />
-  );
+    return (
+        <Select
+            className="input"
+            classNamePrefix="select"
+            placeholder={placeholder}
+            isClearable={true}
+            name={name}
+            options={valueOptions}
+            styles={valueStyles}
+        />
+    );
 };
 
 export default Input;
