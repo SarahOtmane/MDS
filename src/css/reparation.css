@@ -18,3 +18,13 @@
 .couture__contenu {
     padding: 5rem 10rem;
 }
+
+.couture__contenu img{
+    width: 35%;
+    height: 20rem;
+}
+
+.couture__contenu form{
+    width: 50%;
+    padding: 0;
+}
