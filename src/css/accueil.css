@@ -11,6 +11,9 @@
         Repare
     4:= repare
 
+        Rejoindre
+    5:= presentation
+
 
 
 
@@ -160,6 +163,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+/* ----------- 5:= presentation ------------ */
+.rejoindre .presentation{
+    background-image: url('../assets/pictures/BackgroundRejoindre.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.rejoindre .presentation p{
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rejoindre .presentation a{
+    color: var(--white);
+    background-color: var(--black);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+}
 
 
 
