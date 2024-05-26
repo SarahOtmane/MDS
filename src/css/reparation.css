@@ -8,6 +8,9 @@
     2:= loading
     3:= couture__contenu
 
+        CouturePics
+    4:= inputPics
+
 */
 
 /* ----------- 1:= input ------------ */
@@ -111,3 +114,37 @@
     margin: 4rem 0 6rem;
 }
 
+
+
+
+
+
+
+
+
+/* ----------- 4:= inputPics ------------ */
+.inputPics{
+    border: 1px solid var(--black);
+    height: 30rem;
+    margin-top: 2rem;
+    border-radius: .5rem;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid var(--input_border);
+    border-radius: 5px;
+    color: var(--input_border);
+    background-color: white;
+    text-align: center;
+    transition: all 0.3s;
+    margin: 12rem 35%;
+    width: max-content;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--input_border);
+    color: white;
+}
