@@ -9,7 +9,7 @@ const Couture = () =>{
     return(
         <main className="couture">
             <Titre titre="Couture" lien="/reparation/couture" />
-            <section className="couture__contenu">
+            <section className="couture__contenu row">
                 <img src={reparation} alt='' />
                 <form>
                     <Input name="categorie" />
