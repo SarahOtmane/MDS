@@ -5,7 +5,8 @@
     1:= input
 
         Couture
-    2:= couture__contenu
+    2:= loading
+    3:= couture__contenu
 
 */
 
@@ -14,14 +15,65 @@
     margin: 1.5rem 0 3rem;
 }
 
+
+
+
+
 /* ----------- 2:= couture__contenu ------------ */
-.couture__contenu {
-    padding: 5rem 10rem;
+.loading, .couture__contenu{
+    padding: 2rem 10rem;
 }
 
-.couture__contenu img{
+.loading{
+    margin-top: 3rem;
+    align-items: self-end;
+}
+
+.progress-bar {
+    width: 55%;
+    background-color: #C4C4C4; 
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.progress-bar .green {
+    width: 30%; 
+    height: 3px;
+    background-color: var(--green_background_2); 
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.progress-bar .black {
+    width: 70%; 
+    height: 1px;
+    background-color: #C4C4C4; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1px;
+}
+
+.repa2 .green{
+    width: 60%;
+}
+
+.repa .black{
+    width: 40%;
+}
+
+
+
+
+
+
+
+/* ----------- 3:= couture__contenu ------------ */
+.couture__contenu img.repa{
     width: 35%;
     height: 20rem;
+    margin-top: 11rem;
 }
 
 .couture__contenu form{
@@ -47,5 +99,15 @@
     color: var(--black) !important;
     font-weight: bolder;
     font-size: 1.2rem;
+}
+
+.couture__contenu svg{
+    margin-left: .5rem;
+}
+
+.couture__contenu button{
+    width: max-content;
+    align-self: flex-end;
+    margin: 4rem 0 6rem;
 }
 
