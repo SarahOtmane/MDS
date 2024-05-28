@@ -33,7 +33,6 @@ const SignIn = () =>{
             
             const token = response.data.token;
             localStorage.setItem('token', token);
-            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             navigate('/user/my-account/order');
         } catch (error) {
