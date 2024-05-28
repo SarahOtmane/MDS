@@ -45,6 +45,7 @@ import CouturePics from "./components/Reparation/CouturePics";
     /aide
     /repare
     /rejoindre
+    /artisans
     /legal :
         /mentions
         /politique
