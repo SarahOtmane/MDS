@@ -48,6 +48,12 @@ img.picto{
 .section1Landing article{
     width: 60%;
     padding: 5rem 10rem 0 10rem;
+    background-image: 
+        url('../assets/pictures/picto/button.png'),
+        url('../assets/pictures/picto/deco1.png'),
+        url('../assets/pictures/picto/deco2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 100% 100%, 0 100%, 100% 0;
 }
 
 .section1Landing h1{
@@ -91,23 +97,6 @@ img.picto{
 
 .section1Landing .picto{
     width: 22%;
-}
-
-.section1Landing #button{
-    width: 12%;
-    left: 55%;
-}
-
-.section1Landing #deco1{
-    left: 43%;
-}
-
-.section1Landing #deco2, .section1Landing #button{
-    margin-top: 3%;
-}
-
-.section1Landing #deco2{
-    left: 0;
 }
 
 
@@ -613,12 +602,6 @@ img.picto{
 
 
 /* ----------- 9:= Desktop ------------ */
-@media screen and (max-width: 1688px){
-    .section1Landing #deco2, .section1Landing #button{
-        margin-top: 4%;
-    }
-}
-
 @media screen and (max-width: 1682px) {
     .section1Landing button{
         width: 35%;
@@ -636,18 +619,6 @@ img.picto{
 @media screen and (max-width: 1570px) {
     .section1Landing button{
         width: 40%;
-    }
-
-    .section1Landing #deco2, .section1Landing #button{
-        margin-top: 5%;
-    }
-
-    .section1Landing #deco1{
-        left: 40%;
-    }
-
-    .section1Landing #button{
-        left: 50%;
     }
     
     .fonctionnement #image4{
@@ -960,10 +931,6 @@ img.picto{
         margin-top: 1rem;
     }
 
-    .section1Landing #deco2, .section1Landing #button{
-        margin-top: 18%;
-    }
-
     .service{
         flex-wrap: wrap !important;
     }
@@ -1027,9 +994,6 @@ img.picto{
 }
 
 @media screen and (max-width: 992px){
-    .section1Landing #deco2, .section1Landing #button{
-        margin-top: 20%;
-    }
 
     .landing .section8{
         padding: 2rem 5rem;
@@ -1075,10 +1039,6 @@ img.picto{
         width: 60%;
     }
 
-    .section1Landing #deco2, .section1Landing #button{
-        margin-top: 22%;
-    }
-
     .fonctionnement a{
         width: 70%;
     }
@@ -1102,10 +1062,6 @@ img.picto{
 }
 
 @media screen and (max-width: 880px){
-    .section1Landing #deco2, .section1Landing #button{
-        margin-top: 24%;
-    }
-
     .landing .section8{
         padding: 2rem 4rem;
         margin-top: 4rem;
