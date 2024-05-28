@@ -76,8 +76,8 @@ const SignUp = () =>{
         }
     
         try {
-            const response = await axios.post('http://localhost:5000/users/register', formData);
-            console.log('Utilisateur enregistré avec succès:', response.data);
+            const response = await axios.post('http://localhost:3003/users/register', formData);
+            console.log(response);
             // navigate('/user/login');
         } catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
@@ -137,13 +137,13 @@ const SignUp = () =>{
                 <input 
                     type="tel" 
                     pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" 
-                    name='phone'
+                    name='mobile'
                     placeholder="06 36 46 79 12" 
-                    value={formData.phone}
+                    value={formData.mobile}
                     onChange={updateChamps}
                     required
                 />
-                {errors.telephone && <p style={{ color: 'red' }}>{errors.telephone}</p>}
+                {errors.mobile && <p style={{ color: 'red' }}>{errors.mobile}</p>}
 
                 <p>En créant un compte, vous acceptez nos conditions d'utilisations et notre politique de confidentialité</p>
 
