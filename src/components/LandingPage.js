@@ -1,5 +1,7 @@
 import '../css/homeLanding.css';
 
+import logo from '../assets/pictures/logo_black.png';
+
     //import des composants qui represente les section
 import Section1Landing from './sections/Section1Landing';
 import Service from './sections/Service';
@@ -21,7 +23,22 @@ import googlePlay from '../assets/pictures/landingPage/playStore.svg';
 const LandingPage = () =>{
 
     return(
-        <main className="landing">
+        <>
+            <header className='row alignitem_center'>
+            <section className='row alignitem_center'>
+                <img src={logo} alt="RenoWear logo en noir" />
+                <nav>
+                    <ul className='row'>
+                        <li><a href="/">À propos</a></li>
+                        <li><a href="/">Nos artisans</a></li>
+                        <li><a href="/">Aide</a></li>
+                        <li><a href="/">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <button>Commencer à réparer</button>
+            </header>
+            <main className="landing">
             <Section1Landing />
             <Service />
             <Fonctionnement />
@@ -88,6 +105,7 @@ const LandingPage = () =>{
                 </article>
             </section>
         </main>
+        </>
     )
 }
 
