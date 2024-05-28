@@ -42,7 +42,7 @@
 }
 
 .menu a.selected{
-    background-color: var(--gris_background);
+    background-color: var(--pink_background_2);
     border-radius: .5rem;
 }
 
