@@ -29,7 +29,12 @@ const SignIn = () =>{
         e.preventDefault();
     
         try {
-            await axios.post('http://localhost:3003/users/login', formData);
+            const response = await axios.post('http://localhost:3003/users/login', formData);
+            
+            const token = response.data.token;
+            localStorage.setItem('token', token);
+            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
             navigate('/user/my-account/order');
         } catch (error) {
             if (error.response.status === 401 || error.response.status === 404) {
