@@ -78,7 +78,7 @@ const SignUp = () =>{
         try {
             const response = await axios.post('http://localhost:3003/users/register', formData);
             console.log(response);
-            // navigate('/user/login');
+            navigate('/user/login');
         } catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
         }
