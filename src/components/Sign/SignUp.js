@@ -1,27 +1,149 @@
+import React, { useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import '../../css/sign.css';
+
 import Titre from '../Titre';
 
-
 const SignUp = () =>{
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({
+        lastname: '',
+        firstname: '',
+        email: '',
+        password: '',
+        mobile: '',
+        streetAdress: '',
+        city: '',
+        country: '',
+        postalCode: ''
+    });
+
+    const [errors, setErrors] = useState({});
+
+    const updateChamps = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value.trim()
+        });
+    };
+
+    const validate = () => {
+        const newErrors = {};
+    
+        // Nom validation
+        if (!formData.lastname) {
+          newErrors.lastname = 'Nom est requis';
+        }
+    
+        // Prénom validation
+        if (!formData.firstname) {
+          newErrors.firstname = 'Prénom est requis';
+        }
+    
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+          newErrors.email = 'Email n\'est pas valide';
+        }
+    
+        // Password validation
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+        if (!passwordRegex.test(formData.password)) {
+          newErrors.password = 'Le mot de passe doit contenir au moins 8 caractères, dont une majuscule, une minuscule, un chiffre et un caractère spécial';
+        }
+    
+        // Téléphone validation
+        const phoneRegex = /^[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}$/;
+        if (!phoneRegex.test(formData.mobile)) {
+          newErrors.mobile = 'Le téléphone n\'est pas valide';
+        }
+    
+        setErrors(newErrors);
+
+        //retourne true ou false en fonction de si ya des erreurs ou pas
+        return Object.keys(newErrors).length === 0;
+    };
+    
+    const submitForm = async (e) => {
+        e.preventDefault();
+    
+        if (!validate()) {
+          return;
+        }
+    
+        try {
+            const response = await axios.post('http://localhost:5000/users/register', formData);
+            console.log('Utilisateur enregistré avec succès:', response.data);
+            // navigate('/user/login');
+        } catch (error) {
+            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+        }
+    };
+
     return(
         <main>
             <Titre titre="S'inscrire" lien="/user/register" classe="backGris" />
 
-            <form className='formulaire column'>
+            <form className='formulaire column' onSubmit={submitForm}>
                 <lable className="text_bold">Nom</lable>
-                <input type="text" placeholder="Cruz" />
+                <input 
+                    type="text" 
+                    name='lastname'
+                    placeholder="Cruz" 
+                    value={formData.lastname}
+                    onChange={updateChamps}
+                    required
+                />
+                {errors.lastname && <p style={{ color: 'red' }}>{errors.lastname}</p>}
 
                 <lable className="text_bold">Prénom</lable>
-                <input type="text" placeholder="Tom" />
+                <input 
+                    type="text" 
+                    name='firstname'
+                    placeholder="Tom" 
+                    value={formData.firstname}
+                    onChange={updateChamps}
+                    required
+                />
+                {errors.firstname && <p style={{ color: 'red' }}>{errors.firstname}</p>}
 
                 <lable className="text_bold">Email</lable>
-                <input type="text" placeholder="email@gmail.com" />
+                <input 
+                    type="email" 
+                    name="email"
+                    placeholder="email@gmail.com" 
+                    value={formData.email}
+                    onChange={updateChamps}
+                    required
+                />
+                {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
 
                 <lable className="text_bold">Mot de passe</lable>
-                <input type="password" placeholder="Mot de passe" />
+                <input 
+                    type="password" 
+                    name='password'
+                    placeholder="Mot de passe" 
+                    value={formData.password}
+                    onChange={updateChamps}
+                    required
+                />
+                {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
 
                 <lable className="text_bold">Téléphone</lable>
-                <input type="tel" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" placeholder="06 36 46 79 12" />
+                <input 
+                    type="tel" 
+                    pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" 
+                    name='phone'
+                    placeholder="06 36 46 79 12" 
+                    value={formData.phone}
+                    onChange={updateChamps}
+                    required
+                />
+                {errors.telephone && <p style={{ color: 'red' }}>{errors.telephone}</p>}
 
                 <p>En créant un compte, vous acceptez nos conditions d'utilisations et notre politique de confidentialité</p>
 
