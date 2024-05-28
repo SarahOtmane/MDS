@@ -1,18 +1,70 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import '../../css/sign.css';
+
 import Titre from '../Titre';
 
 
 const SignIn = () =>{
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
+
+    const [error, setError] = useState(false);
+
+    const updateChamps = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value.trim()
+        });
+    };
+
+    const submitForm = async (e) => {
+        e.preventDefault();
+    
+        try {
+            await axios.post('http://localhost:3003/users/login', formData);
+            navigate('/user/my-account/order');
+        } catch (error) {
+            if (error.response.status === 401 || error.response.status === 404) {
+                setError(true);
+            }else{
+                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
+            }
+        }
+    };
+
     return(
         <main>
             <Titre titre="Se connecter" lien="/user/login" classe="backGris" />
 
-            <form className='formulaire column'>
-                <lable className="text_bold">Email</lable>
-                <input type="text" placeholder="email@gmail.com" />
+            <form className='formulaire column' onSubmit={submitForm}>
+                {error && <p style={{ color: 'red' }}>Email ou mot de passe incorrect.</p>}
+                <label className="text_bold">Email</label>
+                <input 
+                    type="email" 
+                    name="email"
+                    placeholder="email@gmail.com" 
+                    value={formData.email}
+                    onChange={updateChamps}
+                    required
+                />
 
-                <lable className="text_bold">Mot de passe</lable>
-                <input type="password" placeholder="Mot de passe" />
+                <label className="text_bold">Mot de passe</label>
+                <input 
+                    type="password" 
+                    name='password'
+                    value={formData.password}
+                    onChange={updateChamps}
+                    placeholder="Mot de passe" 
+                    required
+                />
 
                 <a href='/resetMdp'> Mot de passe oublié ?</a>
 
