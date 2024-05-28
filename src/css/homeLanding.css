@@ -162,28 +162,6 @@ img.picto{
     margin-left: .5rem;
 }
 
-.service #ciseaux, .service #aiguilles, .service #pince{
-    margin-top: 16.8rem;
-}
-
-.service #pince{
-    right: 0;
-}
-
-.service #aiguilles{
-    left: 45%;
-    margin-top: 18.6rem;
-}
-
-.service #pelote{
-    left: 25%;
-}
-
-.service #bobine{
-    right: 25%;
-}
-
-
 
 
 
@@ -651,14 +629,6 @@ img.picto{
 }
 
 @media screen and (max-width: 1490px) {
-    .service #ciseaux, .service #pince{
-        margin-top: 18rem;
-    }
-
-    .service #aiguilles{
-        margin-top: 20rem;
-    }
-
     .fonctionnement #image{
         margin-top: -45rem;
     }
@@ -803,14 +773,6 @@ img.picto{
         margin: 1.5rem 5% 5rem 0;
     }
 
-    .service #ciseaux, .service #pince{
-        margin-top: 16.8rem;
-    }
-    
-    .service #aiguilles{
-        margin-top: 18.6rem;
-    }
-
     .fonctionnement a,
     .landing .section7 a{
         width: 30%;
@@ -874,22 +836,6 @@ img.picto{
 }
 
 @media screen and (max-width: 1142px){
-    .service #pince{
-        margin-top: 18.4rem;
-    }
-
-    .service #ciseaux{
-        margin-top: 20.2rem;
-    }
-    
-    .service #aiguilles{
-        margin-top: 22.2rem;
-    }
-
-    .service .picto{
-        width: 8%;
-    }
-    
     .fonctionnement #image4{
         width: 18%;
         right: 17%;
@@ -958,18 +904,6 @@ img.picto{
 
     .service .card{
         margin-top: 2rem;
-    }
-
-    .service #pince{
-        margin-top: 23rem;
-    }
-
-    .service #ciseaux{
-        margin-top: 24.7rem;
-    }
-    
-    .service #aiguilles{
-        margin-top: 26.5rem;
     }
 
     .userArtisan{
@@ -1106,14 +1040,6 @@ img.picto{
 }
 
 @media screen and (max-width: 868px){
-    .service #ciseaux, .service #pince{
-        margin-top: 23.2rem;
-    }
-    
-    .service #aiguilles{
-        margin-top: 25.1rem;
-    }
-
     .userArtisan #deco4{
         margin-top: 23rem;
     }
