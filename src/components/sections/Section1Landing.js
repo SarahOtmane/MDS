@@ -1,15 +1,11 @@
 import mockup from '../../assets/pictures/landingPage/landing_mockup.png';
 import appStore from '../../assets/pictures/landingPage/appStore.svg';
 import googlePlay from '../../assets/pictures/landingPage/playStore.svg';
-import deco1 from '../../assets/pictures/picto/deco1.png';
-import deco2 from '../../assets/pictures/picto/deco2.png';
-import button from '../../assets/pictures/picto/button.png';
 
 
 const Section1Landing = () =>{
     return(
         <section className="section1Landing backGris row">
-            <img className='picto' id="deco1" src={deco2} alt='' />
             <article>
                 <h1 className='text_uppercase'>pourquoi jeter quand on peut réparer ?</h1>
                 <p>Le concept de réparation et de consommation de vêtements durables <br></br>Faites le tri dans vos habits</p>
@@ -29,8 +25,6 @@ const Section1Landing = () =>{
                             <p className='text_bold'>App Store</p>
                         </div>
                     </button>
-                    <img className='picto' id="deco2" src={deco1} alt='' />
-                    <img className='picto' id="button" src={button} alt='' />
                 </div>
             </article>
             <img src={mockup} alt='' />
