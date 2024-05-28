@@ -1,0 +1,52 @@
+/* 
+                Sommaire
+
+        Error
+    1:= error
+
+
+
+*/
+
+
+
+/* ----------- 1:= error ------------ */
+.error{
+    background-image: 
+        url('../assets/pictures/error.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.error div{
+    background-image: 
+        url('../assets/pictures/acceuil/deco4.png'),
+        url('../assets/pictures/acceuil/boutton.png'),
+        url('../assets/pictures/acceuil/pelote.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position:
+        0 100%,
+        102% 0,
+        90% 101%;
+    text-align: center;
+}
+
+.error div > *{
+    padding: 0 15rem;
+}
+
+.error h1{
+    font-size: 6rem;
+    padding: 10rem 15rem 3rem 15rem;
+}
+
+.error p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.error button{
+    padding: 1rem 2rem;
+    margin: 4rem 0;
+}   
+
