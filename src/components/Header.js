@@ -3,9 +3,9 @@ import logo from '../assets/pictures/logo_black.png';
 const Header = () =>{
 
     return(
-        <header className='row alignitem_center'>
+        <header>
             <p>Bonus Réparation. RenoWear labellisés Refashion.</p>
-            <section>
+            <section className='row alignitem_center'>
                 <img src={logo} alt="RenoWear logo en noir" />
                 <nav>
                     <ul className='row'>
@@ -16,7 +16,7 @@ const Header = () =>{
                         <li><a href="/aide">Aide</a></li>
                     </ul>
                 </nav>
-                <ul>
+                <ul className='row alignitem_center'>
                     <li><a href="/">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1H4.38321L5.58853 12.9769C5.63862 13.3071 5.80643 13.608 6.06102 13.8243C6.31561 14.0406 6.63984 14.1576 6.97395 14.1538H15.7021C16.0042 14.1696 16.3032 14.0861 16.5534 13.9161C16.8035 13.7461 16.9912 13.4989 17.0875 13.2123L18.9302 7.67385C18.999 7.46564 19.0173 7.24406 18.9836 7.02739C18.9498 6.81072 18.865 6.60517 18.7362 6.42769C18.6021 6.23894 18.4227 6.08681 18.2146 5.98522C18.0065 5.88362 17.7761 5.83581 17.5447 5.84615H4.8681" stroke="#E4A2BE" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
