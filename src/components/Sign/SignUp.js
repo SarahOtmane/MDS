@@ -22,6 +22,7 @@ const SignUp = () =>{
     });
 
     const [errors, setErrors] = useState({});
+    const [emailExist, setEmailExist] = useState(false);
 
     const updateChamps = (e) => {
         const { name, value } = e.target;
@@ -77,10 +78,13 @@ const SignUp = () =>{
     
         try {
             const response = await axios.post('http://localhost:3003/users/register', formData);
-            console.log(response);
+            console.log(response.data);
             navigate('/user/login');
         } catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+            if (error.response.status === 409) {
+                setEmailExist(true);
+            }
         }
     };
 
@@ -121,6 +125,7 @@ const SignUp = () =>{
                     required
                 />
                 {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+                {emailExist && <p style={{ color: 'red' }}>Cet email est associé à un compte existant.</p>}
 
                 <label className="text_bold">Mot de passe</label>
                 <input 
