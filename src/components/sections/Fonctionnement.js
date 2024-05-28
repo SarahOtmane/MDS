@@ -2,9 +2,6 @@ import image1 from '../../assets/pictures/landingPage/image1.png';
 import image2 from '../../assets/pictures/landingPage/image2.png';
 import image3 from '../../assets/pictures/landingPage/image3.jpeg';
 import image4 from '../../assets/pictures/landingPage/image4.png';
-import machine from '../../assets/pictures/picto/machine.png';
-import ceintre from '../../assets/pictures/picto/ceintre.png';
-import picto_Section4 from '../../assets/pictures/picto/picto_section4.png';
 import loupe from '../../assets/pictures/landingPage/loupe.svg';
 import check from '../../assets/pictures/landingPage/check.svg';
 import send from '../../assets/pictures/landingPage/send.svg';
@@ -16,9 +13,6 @@ const Fonctionnement = () =>{
     return(
         <section className='fonctionnement row alignitem_center justifycontent_spbetween'>
             <img className='picto' id="image4" src={image4} alt='' />
-            <img className='picto' id="machine" src={machine} alt='' />
-            <img className='picto' id="ceintre" src={ceintre} alt='' />
-            <img className='picto' id="picto_Section4" src={picto_Section4} alt='' />
             <article>
                 <span className='text_bold textGreen'>Expérience</span>
                 <h2 className='text_uppercase'>Comment ça marche ?</h2>
