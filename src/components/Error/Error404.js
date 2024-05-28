@@ -14,6 +14,7 @@ const Error404 = () =>{
         <main>  
             <Titre titre="Erreur" lien="/erreur404" classe="backGris" />
             <section className="error">
+                <div>
                 <h1>OOPS ! Page introuvable</h1>
                 <p>
                     Code erreur 404 <br></br>
@@ -21,6 +22,7 @@ const Error404 = () =>{
                     Détendez-vous, tout va bien se passer ! <br></br>
                 </p>
                 <button onClick={() => navigate('/')}>Accéder à Renowear</button>
+                </div>
             </section>
             <Newsletter />
         </main>
