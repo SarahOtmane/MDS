@@ -24,7 +24,7 @@ const LandingPage = () =>{
 
     return(
         <>
-            <header className='row alignitem_center'>
+            <header className='row alignitem_center headerLanding'>
             <section className='row alignitem_center'>
                 <img src={logo} alt="RenoWear logo en noir" />
                 <nav>
