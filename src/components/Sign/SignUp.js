@@ -89,7 +89,7 @@ const SignUp = () =>{
             <Titre titre="S'inscrire" lien="/user/register" classe="backGris" />
 
             <form className='formulaire column' onSubmit={submitForm}>
-                <lable className="text_bold">Nom</lable>
+                <label className="text_bold">Nom</label>
                 <input 
                     type="text" 
                     name='lastname'
@@ -100,7 +100,7 @@ const SignUp = () =>{
                 />
                 {errors.lastname && <p style={{ color: 'red' }}>{errors.lastname}</p>}
 
-                <lable className="text_bold">Prénom</lable>
+                <label className="text_bold">Prénom</label>
                 <input 
                     type="text" 
                     name='firstname'
@@ -111,7 +111,7 @@ const SignUp = () =>{
                 />
                 {errors.firstname && <p style={{ color: 'red' }}>{errors.firstname}</p>}
 
-                <lable className="text_bold">Email</lable>
+                <label className="text_bold">Email</label>
                 <input 
                     type="email" 
                     name="email"
@@ -122,7 +122,7 @@ const SignUp = () =>{
                 />
                 {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
 
-                <lable className="text_bold">Mot de passe</lable>
+                <label className="text_bold">Mot de passe</label>
                 <input 
                     type="password" 
                     name='password'
@@ -133,7 +133,7 @@ const SignUp = () =>{
                 />
                 {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
 
-                <lable className="text_bold">Téléphone</lable>
+                <label className="text_bold">Téléphone</label>
                 <input 
                     type="tel" 
                     pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" 
