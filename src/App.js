@@ -33,6 +33,10 @@ import Politique from "./components/Legal/Politique";
 import Couture from "./components/Reparation/Couture";
 import CouturePics from "./components/Reparation/CouturePics";
 
+import Error404 from "./components/Error/Error404";
+import Error403 from "./components/Error/Error403";
+import Error500 from "./components/Error/Error500";
+
 
 
 
@@ -46,6 +50,9 @@ import CouturePics from "./components/Reparation/CouturePics";
     /repare
     /rejoindre
     /artisans
+    /erreur404
+    /erreur403
+    /erreur500
     /legal :
         /mentions
         /politique
@@ -85,6 +92,9 @@ const App = () => {
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
+                    <Route path="/erreur404" element={<Error404 />} />
+                    <Route path="/erreur403" element={<Error403 />} />
+                    <Route path="/erreur500" element={<Error500 />} />
 
                     <Route path="/legal">
                         <Route path="mentions" element={<Mentions />} />
