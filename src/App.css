@@ -203,6 +203,76 @@ label{
 
 
 /* ----------- 4:= Header ------------ */
+header p{
+    background-color: #0E1422;
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+
+
+/* ----------- 6:= Footer ------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= headerLanding ------------ */
+
 .headerLanding{
     padding: 2rem 5rem 3rem 12rem;
     font-size: 1.2rem;
@@ -222,16 +292,47 @@ label{
 }
 
 
+@media screen and (max-width: 1470px) {
+    .headerLanding{
+        padding-left: 10rem;
+    }
 
+    .headerLanding section{
+        width: 75%;
+    }
+}
 
-/* ----------- 6:= Footer ------------ */
+@media screen and (max-width: 1210px) {
+    .headerLanding{
+        font-size: 1rem;
+        padding-left: 8rem;
+    }
 
+    .headerLanding button{
+        padding: 1rem 1rem;
+        font-size: .9rem;
+    }
+}
 
+@media screen and (max-width: 1020px) {
+    .headerLanding{
+        padding-left: 5rem;
+        padding-right: 2rem;
+    }
+}
 
+@media screen and (max-width: 790px){
+    .headerLanding{
+        padding: 2rem;
+    }
 
+    .headerLanding section{
+        width: 80%;
+    }
 
-
-
-
-
+    .headerLanding button{
+        margin-left: 1rem;
+        padding: .5rem;
+    }
+}
 
