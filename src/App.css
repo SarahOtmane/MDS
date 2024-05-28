@@ -210,6 +210,31 @@ header p{
     text-align: center;
 }
 
+header section{
+    margin: 2rem 10rem;
+}
+
+header img{
+    width: 10%;
+    height: 1rem;
+}
+
+header nav{
+    width: 80%;
+}
+
+header nav ul{
+    width: 70%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+header nav + ul{
+    width: 10%;
+    justify-content: space-around;
+}
+
+
 
 
 
