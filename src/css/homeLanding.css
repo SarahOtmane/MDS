@@ -653,13 +653,6 @@ img.picto{
 }
 
 @media screen and (max-width: 1470px) {
-    header{
-        padding-left: 10rem;
-    }
-
-    header section{
-        width: 75%;
-    }
     .section1Landing button img{
         margin-right: 1rem;
         margin-left: 0;
@@ -752,16 +745,6 @@ img.picto{
 
 
 @media screen and (max-width: 1210px) {
-    header{
-        font-size: 1rem;
-        padding-left: 8rem;
-    }
-
-    header button{
-        padding: 1rem 1rem;
-        font-size: .9rem;
-    }
-
     .section1Landing article{
         padding: 5rem 4rem 5rem 6rem;
     }
@@ -890,11 +873,6 @@ img.picto{
 
 
 @media screen and (max-width: 1020px) {
-    header{
-        padding-left: 5rem;
-        padding-right: 2rem;
-    }
-
     .section1Landing article{
         padding-top: 2rem;
     }
@@ -1064,19 +1042,6 @@ img.picto{
 }
 
 @media screen and (max-width: 790px){
-    header{
-        padding: 2rem;
-    }
-
-    header section{
-        width: 80%;
-    }
-
-    header button{
-        margin-left: 1rem;
-        padding: .5rem;
-    }
-
     .section1Landing button{
         width: 70%;
     }
