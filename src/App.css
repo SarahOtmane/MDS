@@ -203,21 +203,21 @@ label{
 
 
 /* ----------- 4:= Header ------------ */
-header{
+.headerLanding{
     padding: 2rem 5rem 3rem 12rem;
     font-size: 1.2rem;
 }
 
-header section{
+.headerLanding section{
     width: 80%;
 }
 
-header img{
+.headerLanding img{
     width: 15%;
     height: 15px;
 }
 
-header li{
+.headerLanding li{
     margin-left: 3rem;
 }
 
