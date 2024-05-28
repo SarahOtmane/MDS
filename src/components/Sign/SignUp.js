@@ -78,12 +78,12 @@ const SignUp = () =>{
     
         try {
             const response = await axios.post('http://localhost:3003/users/register', formData);
-            console.log(response.data);
             navigate('/user/login');
         } catch (error) {
-            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
             if (error.response.status === 409) {
                 setEmailExist(true);
+            }else{
+                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
             }
         }
     };
