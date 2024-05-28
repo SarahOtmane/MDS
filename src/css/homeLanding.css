@@ -172,9 +172,17 @@ img.picto{
 
 
 /* ----------- 3:= section1Landing ------------ */
-
 .fonctionnement{
     margin: 6rem 0 ;
+    background-image: 
+        url('../assets/pictures/picto/ceintre.png'),
+        url('../assets/pictures/picto/machine.png'),
+        url('../assets/pictures/picto/picto_section4.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 
+        100% -5%,
+        33% 0,
+        52% 100%;
 }
 
 .fonctionnement article{
