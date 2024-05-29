@@ -38,6 +38,8 @@ import Error403 from "./components/Error/Error403";
 import Error500 from "./components/Error/Error500";
 import Error401 from "./components/Error/Error401";
 
+import ArtisanSignUp from "./components/Artisan/Sign/SignUp";
+
 
 
 
@@ -78,7 +80,8 @@ import Error401 from "./components/Error/Error401";
         /reparation :
             /couture
             /couture-pics
-
+    /artisan : 
+        /register
 */
 
 
@@ -134,6 +137,9 @@ const App = () => {
                             <Route path="couture" element={<Couture />} />
                             <Route path="couturepics" element={<CouturePics />} />
                         </Route>
+                    </Route>
+                    <Route path="/artisan">
+                        <Route path="register" element={<ArtisanSignUp />} />
                     </Route>
                 </Routes>
                 <Footer />
