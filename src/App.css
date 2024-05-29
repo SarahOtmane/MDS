@@ -96,6 +96,7 @@ button{
     color: var(--white);
     border: 1px solid var(--black);
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 a{
