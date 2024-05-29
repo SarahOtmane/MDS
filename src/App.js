@@ -94,10 +94,10 @@ const App = () => {
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
-                    <Route path="/erreur401" element={<Error401 />} />
-                    <Route path="/erreur404" element={<Error404 />} />
-                    <Route path="/erreur403" element={<Error403 />} />
-                    <Route path="/erreur500" element={<Error500 />} />
+                    <Route path="/error401" element={<Error401 />} />
+                    <Route path="/error404" element={<Error404 />} />
+                    <Route path="/error403" element={<Error403 />} />
+                    <Route path="/error500" element={<Error500 />} />
 
                     <Route path="/legal">
                         <Route path="mentions" element={<Mentions />} />
