@@ -59,7 +59,7 @@
 
 
 /* ----------- 2:= description ------------ */
-.description{
+.description div{
     padding: 7rem 0;
 }
 
@@ -85,6 +85,28 @@
 .description hr{
     border: 1px solid #DFE1E7;
     margin: 7rem auto;
+}
+
+.description{
+    background-image: 
+        url('../assets/pictures/acceuil/deco3.png'),
+        url('../assets/pictures/acceuil/boutton.png'),
+        url('../assets/pictures/acceuil/ceintre.png'),
+        url('../assets/pictures/acceuil/pelote.png'),
+        url('../assets/pictures/acceuil/ciseaux.png'),
+        url('../assets/pictures/acceuil/aiguilles.png'),
+        url('../assets/pictures/acceuil/deco1.png'),
+        url('../assets/pictures/acceuil/deco2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        0 0,
+        100% -3%,
+        0 33%,
+        93% 23%,
+        100% 57%,
+        11% 71%,
+        100% 100%,
+        0 100%;
 }
 
         /* picto */
@@ -231,6 +253,28 @@
 
 .rejoindre .description a{
     margin-left: 35%;
+}
+
+.rejoindre .description{
+    background-image: 
+        url('../assets/pictures/acceuil/deco3.png'),
+        url('../assets/pictures/acceuil/boutton.png'),
+        url('../assets/pictures/acceuil/ceintre.png'),
+        url('../assets/pictures/acceuil/pelote.png'),
+        url('../assets/pictures/acceuil/ciseaux.png'),
+        url('../assets/pictures/acceuil/aiguilles.png'),
+        url('../assets/pictures/acceuil/deco1.png'),
+        url('../assets/pictures/acceuil/deco2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        0 8%,
+        100% -2%,
+        0 32%,
+        93% 26%,
+        100% 55%,
+        11% 65%,
+        100% 100%,
+        0 100%;
 }
 
 .description .deco1{
