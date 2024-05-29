@@ -109,43 +109,6 @@
         0 100%;
 }
 
-        /* picto */
-
-.description .boutton{
-    right: 0;
-    margin-top: -14rem;
-    z-index: 1;
-}
-
-.description .deco3{
-    margin-top: -10rem;
-    left: 0;
-}
-
-.description .ceintre, .description .deco2{
-    left: 0;
-}
-
-.description .pelote{
-    right: 6%;
-}
-
-.description .ciseaux, .description .deco1{
-    right: 0;
-}
-
-.description .aiguilles{
-    left: 10%;
-}
-
-.description .deco1{
-    margin-top: -7rem;
-}
-
-.description .deco2{
-    margin-top: -13rem;
-}
-
 
 
 /* ----------- 3:= section ------------ */
@@ -277,14 +240,6 @@
         0 100%;
 }
 
-.description .deco1{
-    margin-top: 0;
-}
-
-.description .deco2{
-    margin-top: 0;
-}
-
 
 
 
@@ -309,20 +264,6 @@
     .concept .picto{
         width: 30% !important;
     }
-
-    .description .boutton, .description .ceintre, .description .pelote,
-    .description .ciseaux, .description .aiguilles{
-        width: 15% !important;
-    }
-
-    .description .deco1{
-        margin-top: -4%;
-    }
-    
-    .description .deco2{
-        margin-top: -12%;
-    }
-
     .aide .accordion{
         width: 60%;
         font-size: 1.1rem;
@@ -338,14 +279,6 @@
 }
 
 @media screen and (max-width: 998px){
-    .description .deco1{
-        margin-top: 0;
-    }
-    
-    .description .deco2{
-        margin-top: -8%;
-    }
-
     .aide .section{
         padding: 7rem 5rem;
     }
