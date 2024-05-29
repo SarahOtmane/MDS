@@ -1,3 +1,6 @@
+import React, { useEffect, useState} from 'react';
+import axiosInstance from '../../axiosConfig';
+
 import '../../css/account.css';
 
 import AccountMenu from './AccountMenu';
@@ -5,6 +8,60 @@ import Titre from "../Titre";
 
 
 const AccountDetails = () =>{
+    const [user, setUser] = useState({});
+    const [update, setUpdate] = useState(false);
+
+    const [formData, setFormData]=useState({
+        lastname: '',
+        firstname: '',
+        mobile: '',
+    });
+
+    useEffect(() => {
+        const getUser = async () => {
+            try {
+                const response = await axiosInstance.get('/users');
+                setUser(response.data);
+                setFormData({
+                    lastname: response.data.lastname,
+                    firstname: response.data.firstname,
+                    mobile: response.data.mobile,
+                });
+            } catch (error) {
+                console.error('Erreur lors de la récupération des informations de l utilisateur:', error);
+            }
+        };
+
+        getUser();
+    }, []);
+
+    const updateChamps = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value.trim()
+        });
+    };
+
+    const submitForm = async (e) => {
+        e.preventDefault();
+
+        const data = {
+            ...user,
+            lastname: formData.lastname,
+            firstname: formData.firstname,
+            mobile: formData.mobile,
+        }
+    
+        try {
+            await axiosInstance.put('users', data);
+            setUpdate(true);
+        } catch (error) {
+            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)      
+        }
+    };
+
+
     return(
         <main>
             <Titre titre="Mon compte" lien="/user/my-account/details" classe="backGris" />
@@ -12,17 +69,45 @@ const AccountDetails = () =>{
             <div className='row account'>
                 <AccountMenu selected="details" />
                 <section className='details'>
-                    <form className='details column'>
-                        <h2>Changer le mot de passe</h2>
+                    {update &&  <p className='messageGreen'>
+                        <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 6L9.3125 18L4 12.5455" stroke="#057234" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        Informations mises à jous avec succès
+                    </p>}
+                    <form className='details column' onSubmit={submitForm}>
+                        <h2>Détails du compte</h2>
 
-                        <lable className="text_bold">Nom</lable>
-                        <input type="text" placeholder="Cruz" />
+                        <label className="text_bold">Nom</label>
+                        <input 
+                            type="text" 
+                            name='lastname'
+                            placeholder="Cruz" 
+                            defaultValue={formData.lastname}
+                            onChange={updateChamps}
+                            required
+                        />
 
-                        <lable className="text_bold">Prénom</lable>
-                        <input type="text" placeholder="Tom" />
+                        <label className="text_bold">Prénom</label>
+                        <input 
+                            type="text" 
+                            name='firstname'
+                            placeholder="Tom" 
+                            defaultValue={formData.firstname}
+                            onChange={updateChamps}
+                            required
+                        />
 
-                        <lable className="text_bold">Email</lable>
-                        <input type="email" placeholder="test@gmail.com" />
+                        <label className="text_bold">Téléphone</label>
+                        <input 
+                            type="tel" 
+                            pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" 
+                            name='mobile'
+                            placeholder="06 36 46 79 12" 
+                            defaultValue={formData.mobile}
+                            onChange={updateChamps}
+                            required
+                        />
 
                         <button type='submit'>Sauvegarder les modifications</button>
                     </form>
