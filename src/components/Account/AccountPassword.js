@@ -68,11 +68,23 @@ const AccountPassword = () =>{
             removeToken();
             navigate('/user/login');
         } catch (error) {
-            if(error.response.status === 401) navigate('../Error401.js')
-                else if(error.response.status === 404) navigate('../Error404.js')
-                else if(error.response.status === 403) navigate('../Error403.js')
-                else if(error.response.status === 500) navigate('../Error500.js')
-                else console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)   
+            const status = error.response ? error.response.status : 500;
+            switch (status) {
+                case 401:
+                    navigate('../Error/Error401');
+                    break;
+                case 403:
+                    navigate('../Error/Error403');
+                    break;
+                case 404:
+                    navigate('../Error/Error404');
+                    break;
+                case 500:
+                    navigate('../Error/Error500');
+                    break;
+                default:
+                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+            }  
         }
     };
 
