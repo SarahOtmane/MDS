@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance, { removeToken }  from '../../axiosConfig';
 
@@ -10,6 +10,34 @@ import Titre from "../Titre";
 
 const AccountPassword = () =>{
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const getUser = async () => {
+            try {
+                await axiosInstance.get('/users');
+            } catch (error) {
+                const status = error.response ? error.response.status : 500;
+                switch (status) {
+                    case 401:
+                        navigate('/error401');
+                        break;
+                    case 403:
+                        navigate('/error403');
+                        break;
+                    case 404:
+                        navigate('/error404');
+                        break;
+                    case 500:
+                        navigate('/error500');
+                        break;
+                    default:
+                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                }  
+            }
+        };
+
+        getUser();
+    }, [navigate]);
 
     const [formData, setFormData]=useState({
         oldPassword:'',
