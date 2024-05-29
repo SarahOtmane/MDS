@@ -20,12 +20,28 @@ const AccountAdress = () =>{
                 const response = await axiosInstance.get('/users');
                 setUser(response.data);
             } catch (error) {
-                console.error('Erreur lors de la récupération des informations de l utilisateur:', error);
+                const status = error.response ? error.response.status : 500;
+                switch (status) {
+                    case 401:
+                        navigate('/error401');
+                        break;
+                    case 403:
+                        navigate('/error403');
+                        break;
+                    case 404:
+                        navigate('/error404');
+                        break;
+                    case 500:
+                        navigate('/error500');
+                        break;
+                    default:
+                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                }  
             }
         };
 
         getUser();
-    }, []);
+    }, [navigate]);
 
     const updateChamps = (e) => {
         const { name, value } = e.target;
