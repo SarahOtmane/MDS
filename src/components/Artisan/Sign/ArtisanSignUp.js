@@ -181,7 +181,7 @@ const ArtisanSignUp = () =>{
                 <p>En créant un compte, vous acceptez nos conditions d'utilisations et notre politique de confidentialité</p>
 
                 <button type='submit'>Créer un compte</button>
-                <p>Vous avez déja un compte ? <a href='/admin/login' className='text_bold'>Se connecter</a></p>
+                <p>Vous avez déja un compte ? <a href='/artisan/login' className='text_bold'>Se connecter</a></p>
             </form>
         </main>
     )
