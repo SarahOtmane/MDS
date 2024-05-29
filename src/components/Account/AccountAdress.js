@@ -5,9 +5,11 @@ import '../../css/account.css';
 
 import AccountMenu from './AccountMenu';
 import Titre from "../Titre";
+import { useNavigate } from 'react-router-dom';
 
 
 const AccountAdress = () =>{
+    const navigate = useNavigate();
 
     const [user, setUser] = useState({});
     const [update, setUpdate] = useState(false);
@@ -40,7 +42,11 @@ const AccountAdress = () =>{
             await axiosInstance.put('users', user);
             setUpdate(true);
         } catch (error) {
-            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
+            if(error.response.status === 401) navigate('../Error401.js')
+            else if(error.response.status === 404) navigate('../Error404.js')
+            else if(error.response.status === 403) navigate('../Error403.js')
+            else if(error.response.status === 500) navigate('../Error500.js')
+            else console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
         }
     };
 
