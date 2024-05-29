@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { addToken} from '../../axiosConfig';
+import { addToken} from '../../../axiosConfig';
 
 import '../../../css/artisanSign.css';
 
 import Titre from '../../Titre';
 
 
-const SignIn = () =>{
+const ArtisanSignIn = () =>{
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -92,4 +92,4 @@ const SignIn = () =>{
     )
 }
 
-export default SignIn;
+export default ArtisanSignIn;
