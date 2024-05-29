@@ -111,7 +111,7 @@ const AccountDetails = () =>{
                     </p>}
                     <form className='details column' onSubmit={submitForm}>
                         <h2>Détails du compte</h2>
-
+                        <p className='pseudo'>{formData.lastname[0]}{formData.firstname[0]}</p>
                         <label className="text_bold">Nom</label>
                         <input 
                             type="text" 
