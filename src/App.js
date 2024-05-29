@@ -38,7 +38,7 @@ import Error403 from "./components/Error/Error403";
 import Error500 from "./components/Error/Error500";
 import Error401 from "./components/Error/Error401";
 
-import ArtisanSignUp from "./components/Artisan/Sign/SignUp";
+import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 
 
 
