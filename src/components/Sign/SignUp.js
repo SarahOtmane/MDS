@@ -98,7 +98,7 @@ const SignUp = () =>{
                     type="text" 
                     name='lastname'
                     placeholder="Cruz" 
-                    value={formData.lastname}
+                    defaultValue={formData.lastname}
                     onChange={updateChamps}
                     required
                 />
@@ -109,7 +109,7 @@ const SignUp = () =>{
                     type="text" 
                     name='firstname'
                     placeholder="Tom" 
-                    value={formData.firstname}
+                    defaultValue={formData.firstname}
                     onChange={updateChamps}
                     required
                 />
@@ -120,7 +120,7 @@ const SignUp = () =>{
                     type="email" 
                     name="email"
                     placeholder="email@gmail.com" 
-                    value={formData.email}
+                    defaultValue={formData.email}
                     onChange={updateChamps}
                     required
                 />
@@ -132,7 +132,7 @@ const SignUp = () =>{
                     type="password" 
                     name='password'
                     placeholder="Mot de passe" 
-                    value={formData.password}
+                    defaultValue={formData.password}
                     onChange={updateChamps}
                     required
                 />
@@ -144,7 +144,7 @@ const SignUp = () =>{
                     pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" 
                     name='mobile'
                     placeholder="06 36 46 79 12" 
-                    value={formData.mobile}
+                    defaultValue={formData.mobile}
                     onChange={updateChamps}
                     required
                 />

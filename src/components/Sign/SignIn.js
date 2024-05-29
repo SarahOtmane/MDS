@@ -56,7 +56,7 @@ const SignIn = () =>{
                     type="email" 
                     name="email"
                     placeholder="email@gmail.com" 
-                    value={formData.email}
+                    defaultValue={formData.email}
                     onChange={updateChamps}
                     required
                 />
@@ -65,7 +65,7 @@ const SignIn = () =>{
                 <input 
                     type="password" 
                     name='password'
-                    value={formData.password}
+                    defaultValue={formData.password}
                     onChange={updateChamps}
                     placeholder="Mot de passe" 
                     required
