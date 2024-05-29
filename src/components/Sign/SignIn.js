@@ -37,11 +37,23 @@ const SignIn = () =>{
 
             navigate('/user/my-account/order');
         } catch (error) {
-            if (error.response.status === 401 || error.response.status === 404) {
-                setError(true);
-            }else{
-                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
-            }
+            const status = error.response ? error.response.status : 500;
+            switch (status) {
+                case 401:
+                    setError(true);
+                    break;
+                case 403:
+                    navigate('../Error/Error403');
+                    break;
+                case 404:
+                    setError(true);
+                    break;
+                case 500:
+                    navigate('../Error/Error500');
+                    break;
+                default:
+                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+            }  
         }
     };
 
