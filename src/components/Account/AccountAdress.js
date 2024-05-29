@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../../axiosConfig';
+import axiosInstance from '../../axiosConfig';
 
 import '../../css/account.css';
 
@@ -15,7 +15,7 @@ const AccountAdress = () =>{
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = await axios.get('/users');
+                const response = await axiosInstance.get('/users');
                 setUser(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récupération des informations de l utilisateur:', error);
@@ -37,7 +37,7 @@ const AccountAdress = () =>{
         e.preventDefault();
 
         try {
-            await axios.put('users', user);
+            await axiosInstance.put('users', user);
             setUpdate(true);
         } catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
