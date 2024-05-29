@@ -5,6 +5,7 @@ import axios from 'axios';
 import '../../../css/artisanSign.css';
 
 import Titre from '../../Titre';
+import SelectJob from './SelectJob';
 
 
 const ArtisanSignUp = () =>{
@@ -19,7 +20,8 @@ const ArtisanSignUp = () =>{
         streetAdress: '',
         city: '',
         country: '',
-        postalCode: ''
+        postalCode: '',
+        job: 'Couture'
     });
 
     const [errors, setErrors] = useState({});
@@ -35,17 +37,6 @@ const ArtisanSignUp = () =>{
 
     const validate = () => {
         const newErrors = {};
-    
-        // Nom validation
-        if (!formData.lastname) {
-          newErrors.lastname = 'Nom est requis';
-        }
-    
-        // Prénom validation
-        if (!formData.firstname) {
-          newErrors.firstname = 'Prénom est requis';
-        }
-    
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email)) {
@@ -70,11 +61,45 @@ const ArtisanSignUp = () =>{
         return Object.keys(newErrors).length === 0;
     };
 
+    const submitForm = async (e) => {
+        e.preventDefault();
+    
+        if (!validate()) {
+          return;
+        }
+    
+        try {
+            await axios.post('http://localhost:3003/artisans/register', formData);
+            navigate('/user/login');
+        }catch (error) {
+            const status = error.response ? error.response.status : 500;
+            switch (status) {
+                case 401:
+                    navigate('/error401');
+                    break;
+                case 403:
+                    navigate('/error403');
+                    break;
+                case 404:
+                    navigate('/error404');
+                    break;
+                case 409:
+                    setEmailExist(true);
+                    break;
+                case 500:
+                    navigate('/error500');
+                    break;
+                default:
+                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+            }  
+        }
+    };
+
     return(
         <main className='artisan_signup'>
             <Titre titre="S'inscrire" lien="/artisan/register" classe="backGris" />
 
-            <form>
+            <form onSubmit={submitForm}>
                 <section className='row justifycontent_spbetween'>
                 <div className='column'>
                     <label className="text_bold">Nom</label>
@@ -86,7 +111,6 @@ const ArtisanSignUp = () =>{
                         onChange={updateChamps}
                         required
                     />
-                    {errors.lastname && <p style={{ color: 'red' }}>{errors.lastname}</p>}
 
                     <label className="text_bold">Email</label>
                     <input 
@@ -122,6 +146,8 @@ const ArtisanSignUp = () =>{
                         required
                     />
                     {errors.mobile && <p style={{ color: 'red' }}>{errors.mobile}</p>}
+
+                    <SelectJob />
                 </div>
                 <div className='column'>
                     <label className="text_bold">Prénom</label>
@@ -133,7 +159,6 @@ const ArtisanSignUp = () =>{
                         onChange={updateChamps}
                         required
                     />
-                    {errors.firstname && <p style={{ color: 'red' }}>{errors.firstname}</p>}
 
                     <label className="text_bold">Adresse</label>
                     <input 
