@@ -18,12 +18,28 @@ const AccountOrder = () =>{
                 const response = await axiosInstance.get('/commands/users');
                 setCommands(response.data);
             } catch (error) {
-                console.error('Erreur lors de la récupération des commandes:', error);
+                const status = error.response ? error.response.status : 500;
+                switch (status) {
+                    case 401:
+                        navigate('../Error/Error401');
+                        break;
+                    case 403:
+                        navigate('../Error/Error403');
+                        break;
+                    case 404:
+                        navigate('../Error/Error404');
+                        break;
+                    case 500:
+                        navigate('../Error/Error500');
+                        break;
+                    default:
+                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                }  
             }
         };
 
         getCommands();
-    }, []);
+    }, [navigate]);
 
     return(
         <main>
