@@ -15,4 +15,14 @@ instance.interceptors.request.use(config => {
     return Promise.reject(error);
 });
 
+export const addToken = (token) => {
+    localStorage.setItem('token', token); 
+    instance.defaults.headers.common['Authorization'] = `Bearer ${token}`; 
+};
+
+export const removeToken = () => {
+    localStorage.removeItem('token'); 
+    delete instance.defaults.headers.common['Authorization']; 
+};
+
 export default instance;
