@@ -81,7 +81,6 @@ const AccountPassword = () =>{
     
         try {
             await axiosInstance.put('users', data);
-            console.log('update')
             removeToken();
             navigate('/user/login');
         } catch (error) {
