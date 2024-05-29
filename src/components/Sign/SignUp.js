@@ -79,12 +79,27 @@ const SignUp = () =>{
         try {
             await axios.post('http://localhost:3003/users/register', formData);
             navigate('/user/login');
-        } catch (error) {
-            if (error.response.status === 409) {
-                setEmailExist(true);
-            }else{
-                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
-            }
+        }catch (error) {
+            const status = error.response ? error.response.status : 500;
+            switch (status) {
+                case 401:
+                    navigate('../Error/Error401');
+                    break;
+                case 403:
+                    navigate('../Error/Error403');
+                    break;
+                case 404:
+                    navigate('../Error/Error404');
+                    break;
+                case 409:
+                    setEmailExist(true);
+                    break;
+                case 500:
+                    navigate('../Error/Error500');
+                    break;
+                default:
+                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+            }  
         }
     };
 
