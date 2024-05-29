@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance, { removeToken }  from '../../axiosConfig';
 
@@ -11,8 +11,6 @@ import Titre from "../Titre";
 const AccountPassword = () =>{
     const navigate = useNavigate();
 
-    const [user, setUser] = useState({});
-
     const [formData, setFormData]=useState({
         oldPassword:'',
         confirmPassword:'',
@@ -20,19 +18,6 @@ const AccountPassword = () =>{
     });
 
     const [newErrors, setNewErrors] = useState({});
-
-    useEffect(() => {
-        const getUser = async () => {
-            try {
-                const response = await axiosInstance.get('/users');
-                setUser(response.data);
-            } catch (error) {
-                console.error('Erreur lors de la récupération des informations de l utilisateur:', error);
-            }
-        };
-
-        getUser();
-    }, []);
 
     const updateChamps = (e) => {
         const { name, value } = e.target;
@@ -74,13 +59,12 @@ const AccountPassword = () =>{
         }
 
         const data = {
-            ...user,
             password: formData.newPassword,
             oldPassword: formData.oldPassword
         }
     
         try {
-            await axiosInstance.put('users', data);
+            await axiosInstance.put('users/updatePassword', data);
             removeToken();
             navigate('/user/login');
         } catch (error) {
