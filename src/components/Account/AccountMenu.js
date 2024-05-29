@@ -1,8 +1,13 @@
-
-
+import { useNavigate } from 'react-router-dom';
+import { removeToken }  from '../../axiosConfig';
 
 const AccountMenu = ({selected}) =>{
+    const navigate = useNavigate();
 
+    const logout = () =>{
+        removeToken();
+        navigate('/');
+    }
 
     return(
         <ul className="menu">
@@ -37,7 +42,7 @@ const AccountMenu = ({selected}) =>{
                 <span className="text_bold">Détails du compte</span>
             </a></li>
 
-            <li><a className={`alignitem_center row ${(selected==='deco'? 'selected' : '')}`} href='/'>
+            <li><a className={`alignitem_center row ${(selected==='deco'? 'selected' : '')}`} href='/' onClick={logout}>
                 <svg width="45" height="40" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.858 16.4999V18.7856C14.858 19.0887 14.7376 19.3794 14.5232 19.5937C14.3089 19.808 14.0182 19.9284 13.7151 19.9284H5.71512C5.41201 19.9284 5.12133 19.808 4.907 19.5937C4.69267 19.3794 4.57227 19.0887 4.57227 18.7856V6.21415C4.57227 5.91104 4.69267 5.62035 4.907 5.40602C5.12133 5.1917 5.41201 5.07129 5.71512 5.07129H13.7151C14.0182 5.07129 14.3089 5.1917 14.5232 5.40602C14.7376 5.62035 14.858 5.91104 14.858 6.21415V8.49986M11.4294 12.4999H19.4294M19.4294 12.4999L17.1437 10.2141M19.4294 12.4999L17.1437 14.7856" stroke="#5C5F6A" strokeWidth="1.43" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
@@ -45,8 +50,8 @@ const AccountMenu = ({selected}) =>{
             </a></li>
 
             <li><a className={`alignitem_center row ${(selected==='deco'? 'selected' : '')}`} href='/'>
-                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 9.5L17.16 17.898C17.033 19.171 16.97 19.807 16.68 20.288C16.4257 20.7114 16.0516 21.05 15.605 21.261C15.098 21.5 14.46 21.5 13.18 21.5H10.82C9.541 21.5 8.902 21.5 8.395 21.26C7.94805 21.0491 7.57361 20.7106 7.319 20.287C7.031 19.807 6.967 19.171 6.839 17.898L6 9.5M13.5 16V11M10.5 16V11M4.5 7H9.115M9.115 7L9.501 4.328C9.613 3.842 10.017 3.5 10.481 3.5H13.519C13.983 3.5 14.386 3.842 14.499 4.328L14.885 7M9.115 7H14.885M14.885 7H19.5" stroke="#1E1E1E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg width="45" height="40" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 9.5L17.16 17.898C17.033 19.171 16.97 19.807 16.68 20.288C16.4257 20.7114 16.0516 21.05 15.605 21.261C15.098 21.5 14.46 21.5 13.18 21.5H10.82C9.541 21.5 8.902 21.5 8.395 21.26C7.94805 21.0491 7.57361 20.7106 7.319 20.287C7.031 19.807 6.967 19.171 6.839 17.898L6 9.5M13.5 16V11M10.5 16V11M4.5 7H9.115M9.115 7L9.501 4.328C9.613 3.842 10.017 3.5 10.481 3.5H13.519C13.983 3.5 14.386 3.842 14.499 4.328L14.885 7M9.115 7H14.885M14.885 7H19.5" stroke="#5C5F6A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span className="text_bold">Déconnexion</span>
             </a></li>
