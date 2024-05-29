@@ -556,14 +556,29 @@ img.picto{
 
 
 /* ----------- 10:= home ------------ */
-
 .home h2.newsletter{
     text-align: center;
     font-size: 2.7rem;
     padding: 3rem 0;
 }
 
+.home .elements{
+    padding: 6rem 15rem 11rem 15rem;
+}
 
+.home .elements article{
+    width: 24%;
+}
+
+.home .elements article h2{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.home .elements article p{
+    font-size: .9rem;
+    text-align: justify;
+}
 
 
 
@@ -596,10 +611,10 @@ img.picto{
         url('../assets/pictures/picto/pince.png');
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: 
-        50% 100%,
-        70% 0,
-        25% 0,
-        3% 100%,
+        37% 100%,
+        55% 0,
+        20% 0,
+        2% 100%,
         77% 100%;
 }
 
