@@ -39,6 +39,7 @@ import Error500 from "./components/Error/Error500";
 import Error401 from "./components/Error/Error401";
 
 import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
+import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
 
 
 
@@ -82,6 +83,7 @@ import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
             /couture-pics
     /artisan : 
         /register
+        /login
 */
 
 
@@ -140,6 +142,7 @@ const App = () => {
                     </Route>
                     <Route path="/artisan">
                         <Route path="register" element={<ArtisanSignUp />} />
+                        <Route path="login" element={<ArtisanSignIn />} />
                     </Route>
                 </Routes>
                 <Footer />
