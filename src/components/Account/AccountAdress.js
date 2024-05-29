@@ -18,7 +18,7 @@ const AccountAdress = () =>{
                 const response = await axios.get('/users');
                 setUser(response.data);
             } catch (error) {
-                console.error('Erreur lors de la récupération des commandes:', error);
+                console.error('Erreur lors de la récupération des informations de l utilisateur:', error);
             }
         };
 
