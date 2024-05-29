@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { addToken} from '../../axiosConfig';
 
-import '../../css/sign.css';
+import '../../../css/artisanSign.css';
 
-import Titre from '../Titre';
+import Titre from '../../Titre';
 
 
 const SignIn = () =>{
@@ -59,7 +59,7 @@ const SignIn = () =>{
 
     return(
         <main>
-            <Titre titre="Se connecter" lien="/user/login" classe="backGris" />
+            <Titre titre="Se connecter" lien="/artisan/login" classe="backGris" />
 
             <form className='formulaire column' onSubmit={submitForm}>
                 {error && <p style={{ color: 'red' }}>Email ou mot de passe incorrect.</p>}
@@ -86,7 +86,7 @@ const SignIn = () =>{
                 <a href='/resetMdp'> Mot de passe oublié ?</a>
 
                 <button type='submit'>Se connecter</button>
-                <p>Vous n'avez pas de compte ? <a href='/user/register' className='text_bold'>S'inscrire</a></p>
+                <p>Vous n'avez pas de compte ? <a href='/artisan/register' className='text_bold'>S'inscrire</a></p>
             </form>
         </main>
     )
