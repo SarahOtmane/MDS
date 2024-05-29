@@ -94,6 +94,16 @@ form.updateMdp, form.details, form.adress{
     margin-left: 10%;
 }
 
+form.details p{
+    color: #E4A2BE;
+    background-color: #FFDBE8;
+    font-family: 'montserratbold', sans-serif;
+    border-radius: 50%;
+    width: max-content;
+    padding: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
 
 
 
