@@ -228,9 +228,13 @@ header section{
     margin: 2rem 10rem;
 }
 
-header img{
+header a{
     width: 10%;
     height: 1rem;
+}
+
+header img{
+    width: 100%;
 }
 
 header nav{

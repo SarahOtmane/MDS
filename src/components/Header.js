@@ -6,7 +6,7 @@ const Header = () =>{
         <header>
             <p>Bonus Réparation. RenoWear labellisés Refashion.</p>
             <section className='row alignitem_center'>
-                <img src={logo} alt="RenoWear logo en noir" />
+                <a href='/'><img src={logo} alt="RenoWear logo en noir" /></a>
                 <nav>
                     <ul className='row'>
                         <li><a href="/concept">Le concept</a></li>
