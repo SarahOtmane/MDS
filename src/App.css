@@ -190,6 +190,20 @@ label{
     color: var(--pink_text) !important;
 }
 
+.messageGreen{
+    background-color: #D5E5D7;
+    color: #057234;
+    padding: 1rem 2rem; 
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 3rem;
+}
+
+.messageGreen svg{
+    margin-right: 1rem;
+}
 
 
 
