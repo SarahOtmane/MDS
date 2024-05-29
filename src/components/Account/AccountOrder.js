@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../../axiosConfig';
+import axiosInstance from '../../axiosConfig';
 import { useNavigate } from 'react-router-dom';
 
 import '../../css/account.css';
@@ -15,7 +15,7 @@ const AccountOrder = () =>{
     useEffect(() => {
         const getCommands = async () => {
             try {
-                const response = await axios.get('/commands/users');
+                const response = await axiosInstance.get('/commands/users');
                 setCommands(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récupération des commandes:', error);
