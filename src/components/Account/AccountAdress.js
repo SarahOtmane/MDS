@@ -37,13 +37,12 @@ const AccountAdress = () =>{
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:3003/users', user);
+            await axios.put('users', user);
+            setUpdate(true);
         } catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)
         }
     };
-
-    const userData = user;
 
     return(
         <main>
@@ -52,8 +51,13 @@ const AccountAdress = () =>{
             <div className='row account'>
                 <AccountMenu selected="adress" />
                 <section className='adress'>
-                    {update &&  <p style={{ color: '#BDDFB4' }}>Informations mises à jous avec succès</p>}
-                    <form className='adress column'>
+                    {update &&  <p className='messageGreen'>
+                        <svg width="30" height="30" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 6L9.3125 18L4 12.5455" stroke="#057234" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        Informations mises à jous avec succès
+                    </p>}
+                    <form className='adress column' onSubmit={submitForm}>
                         <h2>Adresse de livraison</h2>
 
                         <label className="text_bold">Numéro de la rue</label>
@@ -61,7 +65,7 @@ const AccountAdress = () =>{
                             type="text" 
                             name="streetAdress"
                             placeholder="4 Rue Solférino" 
-                            defaultValue={userData.streetAdress}
+                            defaultValue={user.streetAdress}
                             onChange={updateChamps}
                             required
                         />
@@ -71,7 +75,7 @@ const AccountAdress = () =>{
                             type="text" 
                             name='city'
                             placeholder="Boulogne-Billancourt" 
-                            defaultValue={userData.city}
+                            defaultValue={user.city}
                             onChange={updateChamps}
                             required
                         />
@@ -82,7 +86,7 @@ const AccountAdress = () =>{
                                 type="text" 
                                 name='postalCode'
                                 placeholder="92100" 
-                                defaultValue={userData.postalCode}
+                                defaultValue={user.postalCode}
                                 onChange={updateChamps}
                                 required
                             /></div>
@@ -92,7 +96,7 @@ const AccountAdress = () =>{
                                 type="text" 
                                 name='country'
                                 placeholder="France" 
-                                defaultValue={userData.country}
+                                defaultValue={user.country}
                                 onChange={updateChamps}
                                 required
                             />
