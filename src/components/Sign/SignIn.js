@@ -43,13 +43,13 @@ const SignIn = () =>{
                     setError(true);
                     break;
                 case 403:
-                    navigate('../Error/Error403');
+                    navigate('/error403');
                     break;
                 case 404:
                     setError(true);
                     break;
                 case 500:
-                    navigate('../Error/Error500');
+                    navigate('/error500');
                     break;
                 default:
                     console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
