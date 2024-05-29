@@ -528,8 +528,8 @@ img.picto{
 }
 
 .newsletter button{
-   padding-top: 0!important;
-   padding-bottom: 0!important;
+   height: 3.3rem;
+   margin-top: .3rem;
 }
 
 
@@ -612,7 +612,7 @@ img.picto{
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: 
         37% 100%,
-        55% 0,
+        60% 0,
         20% 0,
         2% 100%,
         77% 100%;
