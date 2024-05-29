@@ -47,12 +47,12 @@ const AccountPassword = () =>{
     
         // Password validation
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
-        if (!passwordRegex.test(formData.password)) {
+        if (!passwordRegex.test(formData.newPassword)) {
           newErrors.newPassword = 'Le mot de passe doit contenir au moins 8 caractères, dont une majuscule, une minuscule, un chiffre et un caractère spécial';
         }
 
         //Conformité des deux password
-        if(formData.oldPassword !== formData.newPassword){
+        if(formData.oldPassword !== formData.confirmPassword){
             newErrors.oldPassword = 'Les deux mot de passes ne sont pas conformes '
         }
 
@@ -73,15 +73,17 @@ const AccountPassword = () =>{
           return;
         }
 
-        setUser({
+        const data = {
             ...user,
             password: formData.newPassword,
-        })
+            oldPassword: formData.oldPassword
+        }
     
         try {
-            await axiosInstance.put('users', user);
+            await axiosInstance.put('users', data);
+            console.log('update')
             removeToken();
-            navigate('/use/login');
+            navigate('/user/login');
         } catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error)      
         }
