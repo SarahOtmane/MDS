@@ -60,7 +60,7 @@
 .commandes, section.updateMdp, section.details, section.adress{
     width: 65%;
     padding: 0 12rem 10rem 0;
-    border-left: 1px solid var(--input_border);
+    border-left: 1px solid #BDDEB4;
     font-size: 1.3rem;
 }
 
