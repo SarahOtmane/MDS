@@ -58,10 +58,10 @@ const SignIn = () =>{
     };
 
     return(
-        <main>
+        <main className='artisan_signin'>
             <Titre titre="Se connecter" lien="/artisan/login" classe="backGris" />
 
-            <form className='formulaire column' onSubmit={submitForm}>
+            <form className='column' onSubmit={submitForm}>
                 {error && <p style={{ color: 'red' }}>Email ou mot de passe incorrect.</p>}
                 <label className="text_bold">Email</label>
                 <input 
