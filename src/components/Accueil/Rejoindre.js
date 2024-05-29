@@ -14,7 +14,7 @@ const Rejoindre = () =>{
                     <p>
                         Avec  RenoWear rejoignez une communauté de plus de 500 talents qui vous ressemblent et profitez d’un service clé en main pour vous reconnecter à vos clients.
                     </p>
-                    <a href='/'>Rejoindre RenoWear</a>
+                    <a href='/artisan/register'>Rejoindre RenoWear</a>
                 </article>
                 
             </section>
