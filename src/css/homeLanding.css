@@ -591,13 +591,88 @@ img.picto{
 
 
 
-/* ----------- 10:= home ------------ */
+/* ----------- 11:= home ------------ */
 
 .home h2.newsletter{
     text-align: center;
     font-size: 2.7rem;
     padding: 3rem 0;
 }
+
+
+
+
+
+
+
+
+/* ----------- 12:= slider ------------ */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    overflow: hidden;
+}
+
+.slider article {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15rem;
+    transition: transform 1s ease-in-out, opacity 0 ease-in-out;
+    opacity: 0;
+    background-image: 
+        url('../assets/pictures/picto/aiguilles.png'),
+        url('../assets/pictures/picto/bobine.png'),
+        url('../assets/pictures/picto/pelote.png'),
+        url('../assets/pictures/picto/ciseaux.png'),
+        url('../assets/pictures/picto/pince.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        50% 100%,
+        70% 0,
+        25% 0,
+        3% 100%,
+        77% 100%;
+}
+
+.slider .black {
+    background-color: var(--black);
+    color: white;
+}
+
+.slide.active {
+    transform: translateX(-100%);
+    opacity: 1;
+}
+
+.slide.next {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-exit {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slider p {
+    margin: 2rem 0;
+}
+
+.slider .black button {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.slider svg {
+    margin-left: 1rem;
+}
+
+
 
 
 
