@@ -15,6 +15,10 @@
     5:= presentation
     6:= description
 
+        Artisans
+    7:= renowear
+    8:= recherche
+
 
 
 
@@ -238,6 +242,79 @@
         11% 65%,
         100% 100%,
         0 100%;
+}
+
+
+
+
+
+
+
+/* ----------- 6:= renowear ------------ */
+.renowear{
+    background-image: 
+        url('../assets/pictures/artisans/back1.png'),
+        url('../assets/pictures/artisans/back2.png'),
+        url('../assets/pictures/artisans/back4.png'),
+        url('../assets/pictures/artisans/back3.png'),
+        url('../assets/pictures/artisans/back5.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        10% 30%,
+        35% 20%,
+        73% 68%,
+        60% 10%,
+        90% 0;
+    height: 40vh;
+}
+
+.renowear article{
+    width: max-content;
+    padding-left: 40%;
+    padding-top: 10%;
+}
+
+.renowear h2{
+    width: max-content;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 7:= recherche ------------ */
+.recherche form{
+    width: 70%;
+    margin: auto;
+}
+
+.recherche input{
+    border: 1px solid black;
+    padding: 2rem 1rem;
+}
+
+.recherche input:first-child{
+    width: 50%;
+}
+
+.recherche input:last-child{
+    width: 35%;
+}
+
+.recherche button{
+    width: 20%;
+    height: max-content;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
 }
 
 
