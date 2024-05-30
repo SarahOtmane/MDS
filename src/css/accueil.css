@@ -19,6 +19,8 @@
     7:= renowear
     8:= recherche
 
+        artisanService
+    9:= artisanService
 
 
 
@@ -316,6 +318,45 @@
     padding: 1rem 1.5rem;
     margin-top: 1rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 9:= artisanService ------------ */
+.artisanService h2{
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #2F3137;
+    margin-bottom: 1.5rem;
+}
+
+.artisanService h2 span{
+    font-family: 'montserratbold', sans-serif;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+}
+
+.artisanService article{
+    width: 30%;
+}
+
+.artisanService article.right{
+    text-align: right;
+}
+
+
+
+
+
 
 
 
