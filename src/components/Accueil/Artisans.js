@@ -6,10 +6,12 @@ import '../../css/accueil.css';
 import Titre from "../Titre";
 import Newsletter from "../sections/Newsletter";
 import ArtisanService from '../sections/ArtisanService';
+import AllArtisan from '../sections/AllArtisan';
 
 
 const Artisans = () =>{
     const [recherche, setRecherche] = useState(false);
+    const [artisan, setArtisan] = useState([]);
     const [formData, setFormData] =useState({
         job: '',
         postalCode: ''
@@ -45,8 +47,9 @@ const Artisans = () =>{
             if(formData.postalCode === '') data.postalCode = '-1';
 
             const artisans = await axios.get(`http://localhost:3003/artisans/${data.job}/${data.postalCode}`);
-
-            console.log(artisans.data);
+            setArtisan(artisans);
+            setRecherche(true);
+            
         }catch (error) {
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
         }
@@ -84,7 +87,7 @@ const Artisans = () =>{
                     </button>
                 </form>
             </section>
-            {recherche && <></>}
+            {recherche && <AllArtisan artisan={artisan} />}
             {!recherche && <ArtisanService />}
             <Newsletter />
         </main>
