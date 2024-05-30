@@ -1,5 +1,5 @@
-
 import { useState } from 'react';
+import axios from 'axios';
 
 import '../../css/accueil.css';
 
@@ -10,6 +10,47 @@ import ArtisanService from '../sections/ArtisanService';
 
 const Artisans = () =>{
     const [recherche, setRecherche] = useState(false);
+    const [formData, setFormData] =useState({
+        job: '',
+        postalCode: ''
+    });
+
+    const updateChamps = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value.trim()
+        });
+    };
+
+    const submitForm = async (e) => {
+        e.preventDefault();
+
+        if((formData.job === '') && (formData.postalCode === '')){
+            return 
+        }
+    
+        try {
+            let data ={ job: formData.job,  postalCode: formData.postalCode}
+            if(formData.job === ''){
+                data.job = '-1';
+            }else{
+                if(formData.job === 'broderie'){
+                    data.job = 'couture';
+                }
+                const job = await axios.get(`http://localhost:3003/jobs/${data.job}`);
+                data.job = job.data.id
+            }
+
+            if(formData.postalCode === '') data.postalCode = '-1';
+
+            const artisans = await axios.get(`http://localhost:3003/artisans/${data.job}/${data.postalCode}`);
+
+            console.log(artisans.data);
+        }catch (error) {
+            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+        }
+    };
 
     return(
         <main className="artisans backGris">
@@ -21,16 +62,18 @@ const Artisans = () =>{
                 </article>
             </section>
             <section className='recherche'>
-                <form className='row justifycontent_spbetween'>
+                <form className='row justifycontent_spbetween' onSubmit={submitForm}>
                     <input
                         name='job'
                         placeholder='Domaine, Spécialités ...'
-                        required
+                        defaultValue={formData.job}
+                        onChange={updateChamps}
                     />
                     <input 
                         name='postalCode'
                         placeholder='Où ?'
-                        required
+                        defaultValue={formData.postalCode}
+                        onChange={updateChamps}
                     />
                     <button type='submit'>
                         Rechercher 
