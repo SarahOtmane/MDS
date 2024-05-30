@@ -3,32 +3,32 @@
 
         
         artisan_signup
-    1:= details
-    2:= metier
+    1:= detailsArtisan
+    2:= jobArtisan
     2:= artisan_signin
 
 */
 
 /* ----------- 1:= artisan_signup ------------ */
-.artisan_signup form.details{
+.artisan_signup form.detailsArtisan{
     width: 50%;
     margin: auto;
 }
 
-.artisan_signup form.details section{
+.artisan_signup form.detailsArtisan section{
     width: 100%;
 }
 
-.artisan_signup form.details div{
+.artisan_signup form.detailsArtisan div{
     width: 45%;
 }
 
-.artisan_signup .details p, .artisan_signup .details button{
+.artisan_signup .detailsArtisan p, .artisan_signup .detailsArtisan button{
     width: 40%;
     margin: 2rem auto;
 }
 
-.artisan_signup .details button{
+.artisan_signup .detailsArtisan button{
     margin: 0;
     margin-left: 30%;
 }
@@ -41,9 +41,32 @@
 
 
 
-/* ----------- 2:= metier ------------ */
+/* ----------- 2:= jobArtisan ------------ */
+.artisan_signup .jobArtisan{
+    width: 25%;
+    margin-left: 30%;
+    border-left: 1px solid var(--green_background_2);
+    margin-top: 5rem;
+    padding: 1rem 0 6rem 4rem;
+}
 
+.artisan_signup .job_selection{
+    margin-top: 4rem;
+    font-size: 1.3rem;
+}
 
+.artisan_signup .job_selection span{
+    border: 1px solid #E6E7E8;
+    width: max-content;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.artisan_signup .job_selection span.selected{
+    border: 1px solid #E4A2BE;
+}
 
 
 
