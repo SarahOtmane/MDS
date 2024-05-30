@@ -1,33 +1,34 @@
 /* 
                 Sommaire
 
-        sign
-
-    1:= artisan_signup
+        
+        artisan_signup
+    1:= details
+    2:= metier
     2:= artisan_signin
 
 */
 
 /* ----------- 1:= artisan_signup ------------ */
-.artisan_signup form{
+.artisan_signup form.details{
     width: 50%;
     margin: auto;
 }
 
-.artisan_signup form section{
+.artisan_signup form.details section{
     width: 100%;
 }
 
-.artisan_signup form div{
+.artisan_signup form.details div{
     width: 45%;
 }
 
-.artisan_signup p, .artisan_signup button{
+.artisan_signup .details p, .artisan_signup .details button{
     width: 40%;
     margin: 2rem auto;
 }
 
-.artisan_signup button{
+.artisan_signup .details button{
     margin: 0;
     margin-left: 30%;
 }
@@ -39,7 +40,20 @@
 
 
 
-/* ----------- 1:= artisan_signup ------------ */
+
+/* ----------- 2:= metier ------------ */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 3:= artisan_signup ------------ */
 .artisan_signin form{
     width: 25%;
     margin: auto;
