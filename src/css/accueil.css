@@ -332,6 +332,22 @@
 
 
 /* ----------- 9:= artisanService ------------ */
+.artisanService section{
+    padding: 3rem 15rem 4rem 15rem;
+}
+
+.artisanService article{
+    width: 45%;
+}
+
+.artisanService p{
+    width: 80%;
+}
+
+.artisanService article.right{
+    text-align: right;
+}
+
 .artisanService h2{
     font-size: 2rem;
     line-height: 4rem;
@@ -345,14 +361,33 @@
     padding: .5rem 1rem;
 }
 
-.artisanService article{
+.artisanService article.right p{
+    margin-left: 20%;
+}
+
+.artisanService div{
     width: 30%;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
 }
 
-.artisanService article.right{
-    text-align: right;
+.artisanService section:first-child div{
+    background-image: url('../assets/pictures/artisans/pic1.png');
 }
 
+.artisanService section:nth-child(2) div{
+    background-image: url('../assets/pictures/artisans/pic2.png');
+}
+
+.artisanService section:nth-child(3) div{
+    background-image: url('../assets/pictures/artisans/pic3.png');
+}
+
+.artisanService section:last-child div{
+    background-image: url('../assets/pictures/artisans/pic4.png');
+}
 
 
 
