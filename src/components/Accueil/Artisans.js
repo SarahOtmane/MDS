@@ -37,9 +37,6 @@ const Artisans = () =>{
             if(formData.job === ''){
                 data.job = '-1';
             }else{
-                if(formData.job === 'broderie'){
-                    data.job = 'couture';
-                }
                 const job = await axios.get(`http://localhost:3003/jobs/${data.job}`);
                 data.job = job.data.id
             }
