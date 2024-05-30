@@ -20,7 +20,7 @@ const ArtisanService = () =>{
             </section>
             <section className="row">
                 <div></div>
-                <article>
+                <article className="right">
                     <h2>
                         services <span>maroquinnerie</span> 
                         <br></br>
@@ -45,7 +45,7 @@ const ArtisanService = () =>{
                 <div></div>
             </section>
             <section className="row">
-                <article>
+                <article className="right">
                     <h2>
                         services <span>cordonnerie</span> 
                         <br></br>
