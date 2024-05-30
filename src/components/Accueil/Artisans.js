@@ -1,6 +1,5 @@
 
 import Titre from "../Titre";
-import Section1NosArtisans from "../sections/Section1NosArtisans";
 
 
 
@@ -8,7 +7,9 @@ const Artisans = () =>{
     return(
         <main className="artisans">
             <Titre titre="Nos artisans" lien="/artisans" classe="backGris" />
-            <Section1NosArtisans />
+            <section className="backGris" >
+            <h2>RenoWear & ses artisans</h2>
+        </section>
         </main>
     )
 }
