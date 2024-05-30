@@ -1,11 +1,20 @@
 
 
 
-const AllArtisan = () =>{
-    return(
-        <section className="allArtisan" >
+const AllArtisan = ({artisan}) =>{
+    let noArtisan = true;
 
-        </section>
+    if(artisan.length > 0)  noArtisan = false;
+    return(
+        <>
+            {noArtisan && <></>}
+            {!noArtisan && 
+                <section className="allArtisan">
+                    <div>
+                    </div>
+                </section>
+            }
+        </>
     )
 }
 
