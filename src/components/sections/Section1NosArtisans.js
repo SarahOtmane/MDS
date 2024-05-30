@@ -1,8 +1,8 @@
 
 const Section1NosArtisans = () =>{
     return(
-        <section>
-
+        <section className="backGris" >
+            <h2>RenoWear & ses artisans</h2>
         </section>
     )
 }
