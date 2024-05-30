@@ -1,10 +1,9 @@
 
 
-
 const ArtisanService = () =>{
     return(
         <section className="artisanService">
-            <section className="row">
+            <section className="row justifycontent_spbetween">
                 <article>
                     <h2 className="text_uppercase">
                         services <span className="backRose2">couture</span> 
@@ -18,7 +17,7 @@ const ArtisanService = () =>{
                 </article>
                 <div></div>
             </section>
-            <section className="row">
+            <section className="row justifycontent_spbetween">
                 <div></div>
                 <article className="right">
                     <h2 className="text_uppercase">
@@ -31,7 +30,7 @@ const ArtisanService = () =>{
                     </p>
                 </article>
             </section>
-            <section className="row">
+            <section className="row justifycontent_spbetween">
                 <article>
                     <h2 className="text_uppercase">
                         services <span className="backRose2">broderie</span> 
@@ -44,7 +43,8 @@ const ArtisanService = () =>{
                 </article>
                 <div></div>
             </section>
-            <section className="row">
+            <section className="row justifycontent_spbetween">
+                <div></div>
                 <article className="right">
                     <h2 className="text_uppercase">
                         services <span className="backRose2">cordonnerie</span> 
@@ -55,7 +55,6 @@ const ArtisanService = () =>{
                         Notre équipe d'artisans cordonniers compétents est heureuse de vous aider dans toutes vos requêtes de soins, de réparations et de recoloration de vos chaussures. Chez RenoWear, nous valorisons l'art de renouveler ce que vous possédez déjà, afin de lui donner une nouvelle vie, de prolonger son usage et de le transformer, si vous le souhaitez, en quelque chose d'unique.
                     </p>
                 </article>
-                <div></div>
             </section>
         </section>
     )
