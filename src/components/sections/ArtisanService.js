@@ -9,4 +9,4 @@ const ArtisanService = () =>{
     )
 }
 
-export default ArtisanService
+export default ArtisanService;
