@@ -6,7 +6,7 @@ const ArtisanService = () =>{
         <section className="artisanService">
             <section className="row">
                 <article>
-                    <h2>
+                    <h2 className="text_uppercase">
                         services <span>couture</span> 
                         <br></br>
                         ajuste, répare & réinvente
@@ -21,7 +21,7 @@ const ArtisanService = () =>{
             <section className="row">
                 <div></div>
                 <article className="right">
-                    <h2>
+                    <h2 className="text_uppercase">
                         services <span>maroquinnerie</span> 
                         <br></br>
                         entretien, répare & sublime
@@ -33,7 +33,7 @@ const ArtisanService = () =>{
             </section>
             <section className="row">
                 <article>
-                    <h2>
+                    <h2 className="text_uppercase">
                         services <span>broderie</span> 
                         <br></br>
                         personnalise & customise
@@ -46,7 +46,7 @@ const ArtisanService = () =>{
             </section>
             <section className="row">
                 <article className="right">
-                    <h2>
+                    <h2 className="text_uppercase">
                         services <span>cordonnerie</span> 
                         <br></br>
                         sublime, répare & réinvente
