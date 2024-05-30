@@ -10,6 +10,7 @@ import Concept from "./components/Accueil/Concept";
 import Aide from "./components/Accueil/Aide";
 import Repare from "./components/Accueil/Repare";
 import Rejoindre from "./components/Accueil/Rejoindre";
+import Artisans from "./components/Accueil/Artisans";
 
 import SignUp from "./components/Sign/SignUp";
 import SignIn from "./components/Sign/SignIn";
@@ -98,6 +99,7 @@ const App = () => {
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare />} />
+                    <Route path="/artisans" element={<Artisans />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/error401" element={<Error401 />} />
                     <Route path="/error404" element={<Error404 />} />
