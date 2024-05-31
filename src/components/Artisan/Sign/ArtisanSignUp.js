@@ -294,8 +294,8 @@ const ArtisanSignUp = () =>{
 
             {(suite.metier && suite.reparation) && (
                 <form onSubmit={(e) => suiteForm(e, 'reparation')} className='jobArtisan'>
-                    <h2>Métier</h2>
-                    <p>Choisissez votre, ou vos domaines d’expertises et rejoignez une communauté</p>
+                    <h2>Pour quelles expertises souhaitez-vous proposez vos services ?</h2>
+                    <p>Choisissez-en autant que vous voulez</p>
                     <article className='job_selection column'>
                         {jobs.map((job, index) =>(
                             <span 

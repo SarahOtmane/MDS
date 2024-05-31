@@ -216,7 +216,6 @@ button.black.notAble, button.black.notAble:hover{
 button.black:hover{
     color: var(--black);
     border-color: var(--black);
-    cursor: not-allowed;
     background-color: var(--white);
 }
 
@@ -229,7 +228,6 @@ button.white.notAble, button.white.notAble:hover{
 
 button.white:hover{
     color: var(--white);
-    cursor: not-allowed;
     background-color: var(--black);
 }
 
