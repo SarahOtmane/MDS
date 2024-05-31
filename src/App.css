@@ -206,7 +206,7 @@ label{
     margin-right: 1rem;
 }
 
-button.black.notAble{
+button.black.notAble, button.black.notAble:hover{
     color: #999999;
     border-color: #999999;
     cursor: not-allowed;
@@ -220,7 +220,7 @@ button.black:hover{
     background-color: var(--white);
 }
 
-button.white.notAble{
+button.white.notAble, button.white.notAble:hover{
     color: #999999;
     border-color: #F2F2F2;
     cursor: not-allowed;
@@ -232,7 +232,6 @@ button.white:hover{
     cursor: not-allowed;
     background-color: var(--black);
 }
-
 
 
 
