@@ -10,6 +10,8 @@ import Titre from '../../Titre';
 const ArtisanSignUp = () =>{
     const navigate = useNavigate();
     const [jobs, setJobs] = useState('');
+    const [buttonAble, setButtonAble] = useState(false);
+
     useEffect(() => {
         const getJob = async () => {
             try {
@@ -52,6 +54,10 @@ const ArtisanSignUp = () =>{
             ...formData,
             [name]: value.trim()
         });
+
+        if(name === 'job'){
+            setButtonAble(true);
+        }
     };
 
     const validate = () => {
@@ -116,6 +122,10 @@ const ArtisanSignUp = () =>{
 
     const suiteForm = (e, name) =>{
         e.preventDefault();
+        if(!buttonAble && suite.metier){
+            return;
+        }
+        setButtonAble(false);
         setSuite({
             ...suite,
             [name]: true
@@ -257,7 +267,7 @@ const ArtisanSignUp = () =>{
             )}
 
             {(suite.metier && !suite.reparation) && (
-                <form onSubmit={(e) => submitForm(e, 'reparation')} className='jobArtisan'>
+                <form onSubmit={(e) => suiteForm(e, 'reparation')} className='jobArtisan'>
                     <h2>Métier</h2>
                     <p>Choisissez votre, ou vos domaines d’expertises et rejoignez une communauté</p>
                     <article className='job_selection column'>
@@ -272,6 +282,13 @@ const ArtisanSignUp = () =>{
                             </span>
                         ))}
                     </article>
+                    <button className={`row alignitem_center black ${buttonAble ? '' : 'notAble'} `}>
+                        Suivant 
+                        <svg width="24" height="24" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fillRule="evenodd" clipRule="evenodd" d="M18.2896 11.4958C18.5701 11.7743 18.5701 12.2257 18.2896 12.5042L12.7541 18L11.7384 16.9916L16.766 12L11.7384 7.00845L12.7541 6L18.2896 11.4958Z" fill="#999999"/>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M17.9972 12.7131H5.5V11.2869H17.9972V12.7131Z" fill="#999999"/>
+                        </svg>
+                    </button>
                 </form>
             )}
 
