@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import './App.css';
 
@@ -41,6 +41,8 @@ import Error401 from "./components/Error/Error401";
 
 import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
+
+import AdminSignIn from "./components/Admin/AdminSignIn";
 
 
 
@@ -88,11 +90,13 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
 */
 
 
-const App = () => {
-    return (
-        <BrowserRouter>
-            <>  
-                <Header />
+const AppRoutes = () =>{
+    const location = useLocation();
+    const hideHeaderFooter = location.pathname.startsWith('/admin');
+
+    return(
+        <>  
+                {!hideHeaderFooter && <Header />}
                 <Routes>
                     {/* <Route path="/" element={<LandingPage />} /> */}
                     <Route path="/" element={<Home />} />
@@ -146,9 +150,21 @@ const App = () => {
                         <Route path="register" element={<ArtisanSignUp />} />
                         <Route path="login" element={<ArtisanSignIn />} />
                     </Route>
+
+                    <Route path="/admin">
+                        <Route path="login" element={<AdminSignIn />} />
+                    </Route>
                 </Routes>
-                <Footer />
+                {!hideHeaderFooter && <Footer />}
             </>
+    )
+}
+
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <AppRoutes />
         </BrowserRouter>
     )
 }
