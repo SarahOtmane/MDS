@@ -206,6 +206,33 @@ label{
     margin-right: 1rem;
 }
 
+button.black.notAble{
+    color: #999999;
+    border-color: #999999;
+    cursor: not-allowed;
+    background-color: #F0F0F0;
+}
+
+button.black:hover{
+    color: var(--black);
+    border-color: var(--black);
+    cursor: not-allowed;
+    background-color: var(--white);
+}
+
+button.white.notAble{
+    color: #999999;
+    border-color: #F2F2F2;
+    cursor: not-allowed;
+    background-color: var(--white);
+}
+
+button.white:hover{
+    color: var(--white);
+    cursor: not-allowed;
+    background-color: var(--black);
+}
+
 
 
 
