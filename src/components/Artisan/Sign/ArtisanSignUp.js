@@ -8,8 +8,29 @@ import Titre from '../../Titre';
 
 
 const ArtisanSignUp = () =>{
+    //fonctionnement du formulaire : 3 etapes
+        //1. recupérer les détails de l'artisan (quand : !suite.metier && !suite.reparation)
+        //2. récupérer le metier d expertises (quand : suite.metier && !suite.reparation)
+        //3. récupérer les prestations (quand : suite.metier && suite.reparation)
+    //les useState :
+        //1. jobs : au chargement de la page on recup tous les jobs en bdd 
+        //2. prestations : on recup toutes les prestations en bdd en relation avec le job choisis par l artisan
+        //3. formData : on recup les informations de l artisan
+        //4. suite : on recup l etape du formulaire
+        //5. errors, emailExist: gestion des erreurs
+        //6. buttonAble : able and desable le bouton suivant
+    //les fonction :
+        //1. suiteForm : passer d'une etape du formulaire a la suivante
+        //2. submitForm : envoyer les données de l artisan a la bdd
+        //3. validate : valider les champs
+        //4. updateChamps : update les champs
+    
+
+
+
     const navigate = useNavigate();
-    const [jobs, setJobs] = useState('');
+    const [jobs, setJobs] = useState([]);
+    const [prestations, setPrestations] = useState([]);
     const [buttonAble, setButtonAble] = useState(false);
 
     useEffect(() => {
@@ -18,7 +39,7 @@ const ArtisanSignUp = () =>{
                 const response = await axios.get('http://localhost:3003/jobs');
                 setJobs(response.data);
             } catch (error) {
-                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error); 
+                console.error('Erreur lors de la récup de la liste des jobs:', error); 
             }
         };
 
@@ -42,7 +63,8 @@ const ArtisanSignUp = () =>{
         postalCode: '',
         job: '',
         numeroTVA: '',
-        siret: ''
+        siret: '',
+        prestations: [],
     });
 
     const [errors, setErrors] = useState({});
@@ -92,40 +114,52 @@ const ArtisanSignUp = () =>{
         if (!validate()) {
           return;
         }
+
+        console.log(formData);
     
-        try {
-            await axios.post('http://localhost:3003/artisans/register', formData);
-            navigate('/user/login');
-        }catch (error) {
-            const status = error.response ? error.response.status : 500;
-            switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
-                case 404:
-                    navigate('/error404');
-                    break;
-                case 409:
-                    setEmailExist(true);
-                    break;
-                case 500:
-                    navigate('/error500');
-                    break;
-                default:
-                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-            }  
-        }
+        // try {
+        //     await axios.post('http://localhost:3003/artisans/register', formData);
+        //     navigate('/user/login');
+        // }catch (error) {
+        //     const status = error.response ? error.response.status : 500;
+        //     switch (status) {
+        //         case 401:
+        //             navigate('/error401');
+        //             break;
+        //         case 403:
+        //             navigate('/error403');
+        //             break;
+        //         case 404:
+        //             navigate('/error404');
+        //             break;
+        //         case 409:
+        //             setEmailExist(true);
+        //             break;
+        //         case 500:
+        //             navigate('/error500');
+        //             break;
+        //         default:
+        //             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+        //     }  
+        // }
     };
 
-    const suiteForm = (e, name) =>{
+    const suiteForm = async(e, name) =>{
         e.preventDefault();
         if(!buttonAble && suite.metier){
             return;
         }
         setButtonAble(false);
+        if(name === 'job'){
+            let job = jobs.find(job => job.name === formData.job);
+            let id_job = job.id;
+            try {
+                const response = await axios.get(`http://localhost:3003/prestations/job/${id_job}`);
+                setPrestations(response.data);
+            } catch (error) {
+                console.error('Erreur lors de la récup des prestations:', error); 
+            }
+        }
         setSuite({
             ...suite,
             [name]: true
@@ -278,7 +312,6 @@ const ArtisanSignUp = () =>{
                                 onClick={() => updateChamps({target: {name: 'job', value: job.name}})}
                             >
                                 {job.name}
-                                {console.log(jobs)}
                             </span>
                         ))}
                     </article>
@@ -293,18 +326,22 @@ const ArtisanSignUp = () =>{
             )}
 
             {(suite.metier && suite.reparation) && (
-                <form onSubmit={(e) => suiteForm(e, 'reparation')} className='jobArtisan'>
+                <form className='jobArtisan' onSubmit={submitForm}>
                     <h2>Pour quelles expertises souhaitez-vous proposez vos services ?</h2>
-                    <p>Choisissez-en autant que vous voulez</p>
+                    <p>Choisissez-en autant que vous voulez !</p>
                     <article className='job_selection column'>
-                        {jobs.map((job, index) =>(
+                        {prestations.map((prestation, index) =>(
                             <span 
                                 key={index}
-                                className={`job_card ${formData.job === job.name ? 'selected' : ''}`}
-                                onClick={() => updateChamps({target: {name: 'job', value: job.name}})}
+                                className={`job_card ${formData.prestations.includes(prestation.reparationType) ? 'selected' : ''}`}
+                                onClick={() => {
+                                    let newPrestations = formData.prestations.includes(prestation.reparationType) 
+                                        ? formData.prestations.filter(p => p !== prestation.reparationType) 
+                                        : [...formData.prestations, prestation.reparationType];
+                                    setFormData({ ...formData, prestations: newPrestations });
+                                }}
                             >
-                                {job.name}
-                                {console.log(jobs)}
+                                {prestation.reparationType}
                             </span>
                         ))}
                     </article>
