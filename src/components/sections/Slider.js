@@ -32,7 +32,7 @@ const Slider = () => {
                 setNextIndex((newIndex + 1) % slides.length);
                 return newIndex;
             });
-        }, 3000); // Change slide every 3 seconds
+        }, 2000); 
 
         return () => clearTimeout(timeout);
     }, [currentIndex, slides.length]);
