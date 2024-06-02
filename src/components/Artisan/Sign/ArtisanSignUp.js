@@ -117,31 +117,12 @@ const ArtisanSignUp = () =>{
 
         console.log(formData);
     
-        // try {
-        //     await axios.post('http://localhost:3003/artisans/register', formData);
-        //     navigate('/user/login');
-        // }catch (error) {
-        //     const status = error.response ? error.response.status : 500;
-        //     switch (status) {
-        //         case 401:
-        //             navigate('/error401');
-        //             break;
-        //         case 403:
-        //             navigate('/error403');
-        //             break;
-        //         case 404:
-        //             navigate('/error404');
-        //             break;
-        //         case 409:
-        //             setEmailExist(true);
-        //             break;
-        //         case 500:
-        //             navigate('/error500');
-        //             break;
-        //         default:
-        //             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-        //     }  
-        // }
+        try {
+            await axios.post('http://localhost:3003/artisans/register', formData);
+            navigate('/user/login');
+        }catch (error) {
+            console.log(error);
+        }
     };
 
     const suiteForm = async(e, name) =>{
@@ -150,8 +131,9 @@ const ArtisanSignUp = () =>{
             return;
         }
         setButtonAble(false);
-        if(name === 'job'){
+        if(name === 'reparation'){
             let job = jobs.find(job => job.name === formData.job);
+            console.log(job.id);
             let id_job = job.id;
             try {
                 const response = await axios.get(`http://localhost:3003/prestations/job/${id_job}`);
@@ -326,7 +308,7 @@ const ArtisanSignUp = () =>{
             )}
 
             {(suite.metier && suite.reparation) && (
-                <form className='jobArtisan' onSubmit={submitForm}>
+                <form className='jobArtisan reparationArtisan' onSubmit={submitForm}>
                     <h2>Pour quelles expertises souhaitez-vous proposez vos services ?</h2>
                     <p>Choisissez-en autant que vous voulez !</p>
                     <article className='job_selection column'>
@@ -338,6 +320,7 @@ const ArtisanSignUp = () =>{
                                     let newPrestations = formData.prestations.includes(prestation.reparationType) 
                                         ? formData.prestations.filter(p => p !== prestation.reparationType) 
                                         : [...formData.prestations, prestation.reparationType];
+                                    setButtonAble(true);
                                     setFormData({ ...formData, prestations: newPrestations });
                                 }}
                             >
