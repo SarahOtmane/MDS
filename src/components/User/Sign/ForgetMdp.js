@@ -1,5 +1,5 @@
-import '../../css/sign.css';
-import Titre from "../Titre.js";
+import '../../../css/sign.css';
+import Titre from "../../Titre.js";
 
 const ForgetMdp = () =>{
     return(
