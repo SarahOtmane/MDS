@@ -1,10 +1,10 @@
 import React, { useEffect, useState} from 'react';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../../axiosConfig';
 
-import '../../css/account.css';
+import '../../../css/account.css';
 
 import AccountMenu from './AccountMenu';
-import Titre from "../Titre";
+import Titre from "../../Titre";
 import { useNavigate } from 'react-router-dom';
 
 

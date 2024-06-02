@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import axiosInstance, { removeToken }  from '../../axiosConfig';
+import axiosInstance, { removeToken }  from '../../../axiosConfig';
 
-import '../../css/account.css';
+import '../../../css/account.css';
 
 import AccountMenu from './AccountMenu';
-import Titre from "../Titre";
+import Titre from "../../Titre";
 
 
 const AccountPassword = () =>{

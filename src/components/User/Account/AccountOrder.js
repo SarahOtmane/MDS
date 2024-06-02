@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../../axiosConfig';
 import { useNavigate } from 'react-router-dom';
 
-import '../../css/account.css';
+import '../../../css/account.css';
 
 import AccountMenu from './AccountMenu';
-import Titre from "../Titre";
+import Titre from "../../Titre";
 
 
 const AccountOrder = () =>{
