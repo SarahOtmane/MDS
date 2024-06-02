@@ -114,13 +114,10 @@ const ArtisanSignUp = () =>{
         if (!validate()) {
           return;
         }
-
-        console.log(formData);
     
         try {
             await axios.post('http://localhost:3003/artisans/register', formData);
-
-            navigate('/user/login');
+            navigate('/artisan/login');
         }catch (error) {
             const status = error.response ? error.response.status : 500;
             switch (status) {
