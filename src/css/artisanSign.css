@@ -5,7 +5,8 @@
         artisan_signup
     1:= detailsArtisan
     2:= jobArtisan
-    2:= artisan_signin
+    3:= reparationArtisan
+    4:= artisan_signin
 
 */
 
@@ -85,7 +86,34 @@
 
 
 
-/* ----------- 3:= artisan_signup ------------ */
+
+
+/* ----------- 3:= reparationArtisan ------------ */
+.artisan_signup .reparationArtisan{
+    width: 50%;
+    font-size: 1rem;
+    margin-left: 30%;
+}
+
+.artisan_signup .reparationArtisan .job_selection{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.artisan_signup .reparationArtisan span{
+    margin-right: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 4:= artisan_signup ------------ */
 .artisan_signin form{
     width: 25%;
     margin: auto;
