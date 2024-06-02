@@ -83,7 +83,7 @@ const SignIn = () =>{
                     required
                 />
 
-                <a href='/resetMdp'> Mot de passe oublié ?</a>
+                <a href='/user/password/forget'> Mot de passe oublié ?</a>
 
                 <button type='submit'>Se connecter</button>
                 <p>Vous n'avez pas de compte ? <a href='/user/register' className='text_bold'>S'inscrire</a></p>
