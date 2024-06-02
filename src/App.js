@@ -12,10 +12,10 @@ import Repare from "./components/Accueil/Repare";
 import Rejoindre from "./components/Accueil/Rejoindre";
 import Artisans from "./components/Accueil/Artisans";
 
-import SignUp from "./components/Sign/SignUp";
-import SignIn from "./components/Sign/SignIn";
-import ForgetMdp from "./components/Sign/ForgetMdp";
-import ResetMdp from "./components/Sign/ResetMdp";
+import SignUp from "./components/User/Sign/SignUp";
+import SignIn from "./components/User/Sign/SignIn";
+import ForgetMdp from "./components/User/Sign/ForgetMdp";
+import ResetMdp from "./components/User/Sign/ResetMdp";
 
 import CheckCart from "./components/Cart/CheckCart";
 
