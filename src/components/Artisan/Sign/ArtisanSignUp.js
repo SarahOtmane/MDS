@@ -119,9 +119,17 @@ const ArtisanSignUp = () =>{
     
         try {
             await axios.post('http://localhost:3003/artisans/register', formData);
+
             navigate('/user/login');
         }catch (error) {
-            console.log(error);
+            const status = error.response ? error.response.status : 500;
+            switch (status) {
+                case 409:
+                    setEmailExist(true);
+                    break;
+                default:
+                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+            }  
         }
     };
 
