@@ -5,7 +5,7 @@ import { addToken} from '../../axiosConfig';
 
 import '../../css/sign.css';
 
-import Titre from '../Titre';
+import Titre from '../../Titre';
 
 
 const SignIn = () =>{
