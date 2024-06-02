@@ -68,7 +68,7 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
         /login
         /password :
             /forget
-            /reset
+            /reset/:token
         /cart :
             /check
         /order : 
@@ -117,7 +117,7 @@ const App = () => {
 
                         <Route path="password">
                             <Route path="forget" element={<ForgetMdp />} />
-                            <Route path="reset" element={<ResetMdp />} />
+                            <Route path="reset/:token" element={<ResetMdp />} />
                         </Route>
 
                         <Route path="cart">
