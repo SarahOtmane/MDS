@@ -5,7 +5,7 @@ const Footer = () =>{
         <footer>
             <div className={`row alignitem_center footer justifycontent_spbetween`}>
             <article>
-                <img src={logo} alt='logo RenoWear' />
+                <img src={logo} alt='logo RenoWear' className='logo' />
                 <p>L'art du renouveau pour une mode durable.</p>
                 <ul className='row alignitem_center'>
                     <li><a href="https://www.tiktok.com/@renowear">
@@ -25,7 +25,7 @@ const Footer = () =>{
                     </a></li>
                 </ul>
             </article>
-            <article className='row'>
+            <article className='row justifycontent_spbetween'>
                 <div>
                     <span className='text_uppercase'>support</span>
                     <ul>
