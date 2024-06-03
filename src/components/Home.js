@@ -55,6 +55,7 @@ const Home = () =>{
                     controls
                     width="100%"
                     className='video'
+                    height='30rem'
                 />
                 </div>
             </section>
