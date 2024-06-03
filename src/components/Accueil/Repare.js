@@ -29,6 +29,11 @@ const Repare = ({command, setCommand}) =>{
                     </article>
                 </form>
             </section>
+            <section className='tuto'>
+                <h2>Comment réparer avec RenoWear ?</h2>
+                <p>Inutile de nous suivre jusqu'au bout du monde. Suivez juste ce tuto.</p>
+                
+            </section>
             <Newsletter />
         </main>
     )
