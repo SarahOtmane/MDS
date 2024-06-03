@@ -1,0 +1,150 @@
+/* 
+                Sommaire
+
+        Input
+    1:= input
+
+        Couture
+    2:= loading
+    3:= couture__contenu
+
+        CouturePics
+    4:= inputPics
+
+*/
+
+/* ----------- 1:= input ------------ */
+.input{
+    margin: 1.5rem 0 3rem;
+}
+
+
+
+
+
+/* ----------- 2:= couture__contenu ------------ */
+.loading, .couture__contenu{
+    padding: 2rem 10rem;
+}
+
+.loading{
+    margin-top: 3rem;
+    align-items: self-end;
+}
+
+.progress-bar {
+    width: 55%;
+    background-color: #C4C4C4; 
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.progress-bar .green {
+    width: 30%; 
+    height: 3px;
+    background-color: var(--green_background_2); 
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.progress-bar .black {
+    width: 70%; 
+    height: 1px;
+    background-color: #C4C4C4; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 1px;
+}
+
+.repa2 .green{
+    width: 60%;
+}
+
+.repa .black{
+    width: 40%;
+}
+
+
+
+
+
+
+
+/* ----------- 3:= couture__contenu ------------ */
+.couture__contenu img.repa{
+    width: 35%;
+    height: 20rem;
+    margin-top: 11rem;
+}
+
+.couture__contenu form{
+    width: 50%;
+    padding: 0;
+}
+
+.couture__contenu textarea{
+    width: 98%;
+    border-color: var(--black);
+    border-radius: .3rem;
+    padding: 1rem 0 0 1rem;
+    margin: 1rem 0 2rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.couture__contenu textarea:focus{
+    border-color: var(--green_background_2);
+}
+
+.couture__contenu label{
+    color: var(--black) !important;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.couture__contenu svg{
+    margin-left: .5rem;
+}
+
+.couture__contenu button{
+    width: max-content;
+    align-self: flex-end;
+    margin: 4rem 0 6rem;
+}
+
+
+
+
+
+
+
+
+
+/* ----------- 4:= inputPics ------------ */
+.inputPics{
+    border: 1px solid var(--black);
+    height: 30rem;
+    margin-top: 2rem;
+    border-radius: .5rem;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid var(--input_border);
+    border-radius: 5px;
+    color: var(--input_border);
+    background-color: white;
+    text-align: center;
+    transition: all 0.3s;
+    margin: 12rem 35%;
+    width: max-content;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--input_border);
+    color: white;
+}

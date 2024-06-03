@@ -42,7 +42,7 @@
 }
 
 .menu a.selected{
-    background-color: var(--gris_background);
+    background-color: var(--pink_background_2);
     border-radius: .5rem;
 }
 
@@ -60,7 +60,7 @@
 .commandes, section.updateMdp, section.details, section.adress{
     width: 65%;
     padding: 0 12rem 10rem 0;
-    border-left: 1px solid var(--input_border);
+    border-left: 1px solid #BDDEB4;
     font-size: 1.3rem;
 }
 
@@ -94,6 +94,16 @@ form.updateMdp, form.details, form.adress{
     margin-left: 10%;
 }
 
+form.details p{
+    color: #E4A2BE;
+    background-color: #FFDBE8;
+    font-family: 'montserratbold', sans-serif;
+    border-radius: 50%;
+    width: max-content;
+    padding: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
 
 
 

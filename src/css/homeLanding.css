@@ -1,0 +1,1150 @@
+/* 
+                Sommaire
+
+        Section1Landing
+    1:= section1Landing
+
+        Service
+    2:= service
+
+        Fonctionnement
+    3:= fonctionnement
+
+        UserArtisan
+    4:= userArtisan
+
+        Avis
+    5:= avis
+
+        LandingPage
+    6:= section5
+    7:= Section7
+    8:= Section8
+
+        Newsletter
+    9:= newsletter
+
+        Home
+    10:= home
+
+        Slider
+    11:= slider
+
+        AssurancesSlider
+    12:= assurancesSlider
+
+
+*/
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+.landing h2, .home h2{
+    font-size: 3.5rem;
+}
+
+img.picto{
+    position: absolute;
+}
+
+
+/* ----------- 1:= section1Landing ------------ */
+.section1Landing article{
+    width: 60%;
+    padding: 5rem 10rem 0 10rem;
+    background-image: 
+        url('../assets/pictures/picto/button.png'),
+        url('../assets/pictures/picto/deco1.png'),
+        url('../assets/pictures/picto/deco2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 100% 100%, 0 100%, 100% 0;
+}
+
+.section1Landing h1{
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+.section1Landing img{
+    width: 40%;
+    z-index: 3;
+}
+
+.section1Landing article{
+    padding-bottom: 7rem;
+}
+
+.section1Landing article > p + p{
+    margin-top: 1rem;
+    text-align: start;
+}
+
+.section1Landing button{
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    margin: 2rem 2rem 0 0;
+    width: 30%;
+}
+
+.section1Landing button img{
+    width: 20%;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+
+.section1Landing button p:first-child{
+    font-size: .9rem;
+    width: max-content;
+}
+
+.section1Landing .picto{
+    width: 22%;
+}
+
+
+
+
+
+
+
+
+
+/* ----------- 2:= service ------------ */
+.service{
+    background-image: 
+        url('../assets/pictures/picto/aiguilles.png'),
+        url('../assets/pictures/picto/bobine.png'),
+        url('../assets/pictures/picto/pelote.png'),
+        url('../assets/pictures/picto/ciseaux.png'),
+        url('../assets/pictures/picto/pince.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        50% 100%,
+        70% 0,
+        25% 0,
+        0 100%,
+        100% 100%;
+}
+
+.service h2, .service h2 + div{
+    margin-top: 2rem;
+}
+
+.service h2{
+    width: 30%;
+    padding: 0 0 0 8rem;
+    margin-top: 5rem;
+}
+
+.service h2 + div{
+    width: 70%;
+}
+
+.service .card{
+    width: 30%;
+    margin: 5rem 5% 0 0;
+}
+
+.service h3{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.service a,
+.fonctionnement a,
+.landing .section7 a{
+    width: 30%;
+    margin: 2.5rem 5% 5rem 0;
+}
+
+.service a img,
+.fonctionnement a img,
+.landing .section7 a img{
+    height: 8px;
+    margin-left: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 3:= fonctionnement ------------ */
+.fonctionnement{
+    margin: 6rem 0 ;
+    background-image: 
+        url('../assets/pictures/picto/ceintre.png'),
+        url('../assets/pictures/picto/machine.png'),
+        url('../assets/pictures/picto/picto_section4.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 
+        100% -5%,
+        33% 0,
+        52% 100%;
+}
+
+.fonctionnement article{
+    width: 40%;
+    padding: 5rem 0 0 10rem;
+}
+
+.fonctionnement h2,
+.userArtisan h2,
+.avis h2,
+.landing .section7 h2{
+    margin: 1rem 0 2.5rem;
+}
+
+.fonctionnement p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.fonctionnement span, .fonctionnement p img,
+.userArtisan span, .userArtisan p,
+.avis span,
+.landing .section7 span{
+    color: var(--gris_liens);
+    fill: var(--gris_liens);
+    font-size: 1.6rem;
+    margin-right: .5rem;
+}
+
+.fonctionnement .twoImages{
+    width: 15%;
+    z-index: 10;
+}
+
+.fonctionnement .twoImages img:first-child{
+    margin-bottom: 2.5rem;
+}
+
+.fonctionnement figure:last-child img{
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83); 
+    box-shadow: 0px 10px 13px -7px #000000, 21px 24px 45px 13px rgba(196,196,196,0.83);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin-top: 3rem;
+}
+
+.fonctionnement #image4{
+    right: 14%;
+    margin-top: -51rem;
+}
+
+.fonctionnement #ceintre{
+    right: 0;
+    margin-top: -46rem;
+}
+
+.fonctionnement #machine{
+    left: 30%;
+    margin-top: -40rem;
+}
+
+.fonctionnement #picto_Section4{
+    left: 49%;
+    margin-top: 48rem;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 4:= userArtisan ------------ */
+.userArtisan{
+    background-image: 
+        url('../assets/pictures/picto/deco3.png'),
+        url('../assets/pictures/picto/deco4.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 
+        0% 0%,
+        100% 100%;
+}
+
+.userArtisan section{
+    text-align: center;
+    padding: 3rem 17rem 8rem;
+}
+
+.userArtisan figure{
+    width: 45%;
+    margin-top: 3rem;
+}
+
+.userArtisan p{
+    position: absolute;
+    text-align: start;
+    color: var(--white);
+    margin-top: -22rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.userArtisan #deco3{
+    left: 0;
+    width: 25%;
+    margin-top: -8rem;
+}
+
+.userArtisan #deco4{
+    right: 0;
+    width: 25%;
+    margin-top: 40rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 5:= avis ------------ */
+.avis{
+    text-align: center;
+}
+
+.avis div.button{
+    background-color: var(--green_text);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: max-content;
+    margin: auto;
+}
+
+.avis div.button button{
+    background-color: var(--green_text);
+    border: none;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.avis div.button button.selected{
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.avis div.product{
+    margin-top: 6rem;
+}
+
+.avis article{
+    width: 24%;
+    margin-left: 1.33rem;
+}
+
+.avis article:first-child{
+    margin-left: 0;
+}
+
+.avis article img{
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.avis article p, .avis article figure{
+    padding: .5rem 5%;
+    width: 90%;
+    text-align: start;
+}
+
+.avis article figure{
+    width: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= section 5 ------------ */
+.landing .section5, .avis,
+.home .section5{
+    margin: 6rem 8rem 5rem;
+}
+
+.landing .section5 p{
+    font-size: 2.5rem;
+}
+
+.landing .section5 p + p{
+    color: var(--gris_liens);
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+
+/* ----------- 7:= section 7 ------------ */
+.landing .section7 article:first-child{
+    width: 40%;
+}
+
+.landing .section7 article:last-child{
+    width: 45%;
+    padding-right: 8rem;
+}
+
+.landing .section7 article .haut{
+    width: 70%;
+    height: 3rem;
+    border-top-right-radius: 2rem;
+}
+
+.landing .section7 article .droit{
+    width: 4rem;
+    margin: 30% 0 8%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.landing .section7 p{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 8:= section 8 ------------ */
+.landing .section8{
+    padding: 2rem 10rem;
+    margin-top: 10rem;
+}
+
+.landing .section8 figure{
+    width: 30%;
+}
+
+.landing .section8 article{
+    width: 60%;
+}
+
+.landing .section8 h2 + p{
+   font-size: 1.3rem;
+   margin: 2rem 0;
+}
+
+.landing .section8 button{
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 1.4rem;
+    border: none;
+    margin: 2rem 2rem 0 0;
+    width: 35%;
+    border-radius: 1rem;
+}
+
+.landing .section8 button img{
+    width: 20%;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+
+.landing .section8 button .apple{
+    fill: var(--white);
+}
+
+.landing .section8 button p:first-child{
+    font-size: .8rem;
+    width: max-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 9:= newsletter ------------ */
+.newsletter article{
+    padding: 3rem 10rem;
+}
+
+.newsletter div, .newsletter form{
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter form{
+    width: 40%;
+}
+
+.newsletter h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter span{
+    color: #999999;
+    font-size: .9rem;
+}
+
+.newsletter input{
+    width: 75%;
+    margin-right: 5%;
+    border: 1px solid var(--black);
+}
+
+.newsletter button{
+   height: 3.3rem;
+   margin-top: .3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 10:= home ------------ */
+.home h2.newsletter{
+    text-align: center;
+    font-size: 2.7rem;
+    padding: 3rem 0;
+}
+
+.home .elements{
+    padding: 6rem 15rem 11rem 15rem;
+}
+
+.home .elements article{
+    width: 24%;
+}
+
+.home .elements article h2{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.home .elements article p{
+    font-size: .9rem;
+    text-align: justify;
+}
+
+.home .tuto{
+    padding: 3rem 15rem;
+    font-size: 1.3rem;
+}
+
+.home .tuto div{
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+/* ----------- 11:= slider ------------ */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    overflow: hidden;
+}
+
+.slider article {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15rem;
+    transition: transform 1s ease-in-out, opacity 0 ease-in-out;
+    opacity: 0;
+    background-image: 
+        url('../assets/pictures/picto/aiguilles.png'),
+        url('../assets/pictures/picto/bobine.png'),
+        url('../assets/pictures/picto/pelote.png'),
+        url('../assets/pictures/picto/ciseaux.png'),
+        url('../assets/pictures/picto/pince.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        37% 100%,
+        60% 0,
+        20% 0,
+        2% 100%,
+        77% 100%;
+}
+
+.slider .black {
+    background-color: var(--black);
+    color: white;
+}
+
+.slide.active {
+    transform: translateX(-100%);
+    opacity: 1;
+}
+
+.slide.next {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-exit {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slider p {
+    margin: 2rem 0;
+}
+
+.slider .black button {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.slider svg {
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 12:= assurancesSlider ------------ */
+.assurancesSlider{
+    padding: 3rem 1.5rem;
+}
+
+.assurancesSlider h2, .assurancesSlider p{
+    font-size: 1.3rem;
+    margin-left: 10rem;
+    font-family: "montserratlight", sans-serif;
+    font-weight: bolder;
+}
+
+.assurancesSlider p{
+    margin: 1rem 0 4rem 10rem;
+}
+
+.slick-dots{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 9:= Desktop ------------ */
+@media screen and (max-width: 1682px) {
+    .section1Landing button{
+        width: 35%;
+    }
+
+    .section1Landing h1{
+        font-size: 2.7rem;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 35rem;
+    }
+}
+
+@media screen and (max-width: 1570px) {
+    .section1Landing button{
+        width: 40%;
+    }
+    
+    .fonctionnement #image4{
+        margin-top: -48rem;
+    }
+
+    .userArtisan #deco3{
+        margin-top: -7rem;
+    }
+
+    .landing .section8 button{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    .fonctionnement #image{
+        margin-top: -45rem;
+    }
+}
+
+@media screen and (max-width: 1470px) {
+    .section1Landing button img{
+        margin-right: 1rem;
+        margin-left: 0;
+    }
+
+    .fonctionnement #image4{
+        margin-top: -42rem;
+    }
+
+    .fonctionnement #picto_Section4{
+        margin-top: 40rem;
+        left: 43%;
+    }
+
+    .fonctionnement #ceintre{
+        margin-top: -36rem;
+    }
+
+    .fonctionnement span, .fonctionnement p img,
+    .userArtisan span, .userArtisan p,
+    .avis span,
+    .landing .section7 span{
+        font-size: 1.3rem;
+    }
+
+    .fonctionnement article{
+        padding: 0 0 0 5rem;
+    }
+
+    .fonctionnement figure:last-child img{
+        width: 90%;
+        align-self: flex-end;
+    }
+
+    .landing .section8 button{
+        width: 40%;
+    }
+
+    .home h2.newsletter{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1415px){
+    .userArtisan #deco4{
+        margin-top: 33rem;
+    }
+}
+
+@media screen and (max-width: 1345px) {
+    .landing h2,
+    .home h2{
+        font-size: 3rem;
+    }
+
+    .section1Landing article{
+        padding: 5rem 8rem 5rem 7rem;
+    }
+
+    .service h2{
+        width: 25%;
+        padding: 0 1rem 0 5rem;
+    }
+
+    .userArtisan{
+        padding: 3rem 14rem 7rem;
+    }
+
+    .landing .section5, .avis{
+        margin: 6rem 6rem 5rem;
+    }
+
+    .landing .section5 p{
+        font-size: 2.3rem;
+    }
+
+    .landing .section5 p + p{
+        font-size: 1.5rem;
+    }
+
+    .landing .section8{
+        padding: 2rem 6rem;
+        margin-top: 10rem;
+    }
+
+    .home h2.newsletter{
+        font-size: 2.2rem;
+    }
+}
+
+
+@media screen and (max-width: 1210px) {
+    .section1Landing article{
+        padding: 5rem 4rem 5rem 6rem;
+    }
+
+    .section1Landing button{
+        width: 50%;
+    }
+
+    .landing h2,
+    .home h2{
+        font-size: 2.3rem;
+    }
+
+    .service h2{
+        width: 25%;
+        padding: 0 0 0 6rem;
+    }
+
+    .service h3{
+        font-size: 1.4rem;
+    }
+
+    .service a,
+    .fonctionnement a,
+    .landing .section7 a{
+        width: 30%;
+        margin: 1.5rem 5% 5rem 0;
+    }
+
+    .fonctionnement a,
+    .landing .section7 a{
+        width: 30%;
+        margin: 1.5rem 5% 5rem 0;
+    }
+
+    .fonctionnement article{
+        padding-right: 2rem;
+    }
+
+    .fonctionnement a{
+        width: 50%;
+    }
+
+    .fonctionnement figure:last-child img{
+        margin-top: 7rem;
+    }
+
+    .fonctionnement #image4,
+    .fonctionnement #machine{
+        margin-top: -35rem;
+    }
+    
+    .fonctionnement #ceintre{
+        margin-top: -30rem;
+    }
+
+    .fonctionnement #picto_Section4{
+        left: 42%;
+        margin-top: 34rem;
+    }
+
+    .userArtisan #deco3{
+        margin-top: -6rem;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 28rem;
+    }
+
+    .userArtisan figure{
+        margin-top: 2rem;
+    }
+
+    .landing .section8 button{
+        width: 45%;
+        font-size: 1.2rem;
+    }
+
+    .landing .section8 button img{
+        margin-right: 1rem;
+    }
+
+    .newsletter article{
+        padding: 3rem 6rem;
+    }
+
+    .etape{
+        margin: 0 6rem;
+    }
+}
+
+@media screen and (max-width: 1142px){
+    .fonctionnement #image4{
+        width: 18%;
+        right: 17%;
+    }
+
+    .fonctionnement .picto{
+        width: 8%;
+    }
+
+    .userArtisan p{
+        margin-top: -15rem;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 26rem;
+    }
+
+    .newsletter div, .newsletter form{
+        width: 45%;
+    }
+
+    .newsletter form{
+        margin-left: 5%;
+    }
+
+    .newsletter h3{
+        font-size: 1.3rem;
+    }
+
+    .home h2.newsletter{
+        font-size: 1.8rem;
+    }
+}
+
+
+@media screen and (max-width: 1020px) {
+    .section1Landing article{
+        padding-top: 2rem;
+    }
+
+    .section1Landing h1{
+        font-size: 2rem;
+    }
+
+    .section1Landing div{
+        flex-wrap: wrap!important;
+    }
+
+    .section1Landing button:last-child{
+        margin-top: 1rem;
+    }
+
+    .service{
+        flex-wrap: wrap !important;
+    }
+
+    .service h2, .service h2 + div{
+        width: 100%;
+        padding: 0 0 0 6rem;
+    }
+
+    .service .card{
+        margin-top: 2rem;
+    }
+
+    .userArtisan{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 24rem;
+    }
+
+    .landing .section5{
+        margin: 5rem;
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section5 h2{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .landing .section5 p{
+        font-size: 2rem;
+    }
+    
+    .landing .section5 p + p{
+        color: var(--gris_liens);
+        font-size: 1.1rem;
+    }
+
+    .landing .section8 article{
+        width: 65%;
+    }
+
+    .landing .section8 button{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 992px){
+
+    .landing .section8{
+        padding: 2rem 5rem;
+    }
+
+    .landing .section8 button{
+        font-size: 1rem;
+    }
+    
+    .landing .section8 button div{
+        text-align: start;
+    }
+
+    .etape h4{
+        font-size: 1rem;
+    }
+
+    .etape p{
+        font-size: .6rem;
+    }
+
+    .newsletter article{
+        flex-direction: column !important;
+        padding-top: 0;
+    }
+
+    .home h2.newsletter{
+        font-size: 1.5rem;
+    }
+
+    .newsletter div, .newsletter form{
+        width: 70%;
+    }
+
+    .newsletter form{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .section1Landing button{
+        width: 60%;
+    }
+
+    .fonctionnement a{
+        width: 70%;
+    }
+
+    .userArtisan{
+        padding: 3rem 8rem;
+    }
+
+    .landing .section7 article:first-child{
+        width: 45%;
+    }    
+
+    .landing .section7 article:last-child{
+        width: 50%;
+        padding: 3rem 1rem 0 0;
+    }
+
+    .landing .section7 p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 880px){
+    .landing .section8{
+        padding: 2rem 4rem;
+        margin-top: 4rem;
+    }
+
+    .landing .section8 figure{
+        width: 37%;
+    }
+
+    .landing .section8 article{
+        width: 56%;
+    }    
+
+    .landing .section8 div{
+        flex-wrap: wrap !important;
+    }
+
+    .landing .section8 button{
+        width: 55%;
+    }
+
+    .landing .section8 button:first-child{
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 868px){
+    .userArtisan #deco4{
+        margin-top: 23rem;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .section1Landing button{
+        width: 70%;
+    }
+
+    .userArtisan #deco4{
+        margin-top: 22rem;
+    }
+}

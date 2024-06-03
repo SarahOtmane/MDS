@@ -1,31 +1,7 @@
 /* 
                 Sommaire
 
-        - App.css
-    1:= Fonts
-    2:= Constantes
-    3:= Global css
-    4:= Header
-    5:= Footer
-
-        - landingPage.css
-    1:= Section1
-    2:= Section2
-    3:= Section3
-    4:= Section4
-    5:= Section5
-    6:= Section6
-    7:= Section7
-    8:= Section8
-    9:= responsive version desktop
-    10:= version mobile
-
-        - sign.css =>  SignUp.js, SignIn.js, ForgetMdp.js, ResetMdp.js
-    1:= titre
-    2:= formulaire
-    3:= responsive version desktop
-    4:= version mobile
-    
+        
     
 
 
@@ -84,6 +60,7 @@
     --pink_background : #FFAEAE;
     --pink_background_2: #FFDBE8;
     --green_background: #D5E5D7;
+    --green_background_2: #BDDFB4;
     --green_text: #BDDEB4;
     --pink_text: #E4A2BE;
 }
@@ -119,6 +96,7 @@ button{
     color: var(--white);
     border: 1px solid var(--black);
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 a{
@@ -195,6 +173,16 @@ label{
     background-color: var(--green_background);
 }
 
+.backVert2{
+    background-color: var(--green_background_2);
+}
+
+.backImg{
+    background-image: url('./assets/pictures/backgroundPink.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .textGreen{
     color: var(--green_text) !important;
 }
@@ -203,7 +191,45 @@ label{
     color: var(--pink_text) !important;
 }
 
+.messageGreen{
+    background-color: #D5E5D7;
+    color: #057234;
+    padding: 1rem 2rem; 
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 3rem;
+}
 
+.messageGreen svg{
+    margin-right: 1rem;
+}
+
+button.black.notAble, button.black.notAble:hover{
+    color: #999999;
+    border-color: #999999;
+    cursor: not-allowed;
+    background-color: #F0F0F0;
+}
+
+button.black:hover{
+    color: var(--black);
+    border-color: var(--black);
+    background-color: var(--white);
+}
+
+button.white.notAble, button.white.notAble:hover{
+    color: #999999;
+    border-color: #F2F2F2;
+    cursor: not-allowed;
+    background-color: var(--white);
+}
+
+button.white:hover{
+    color: var(--white);
+    background-color: var(--black);
+}
 
 
 
@@ -216,28 +242,91 @@ label{
 
 
 /* ----------- 4:= Header ------------ */
-header{
-    padding: 2rem 5rem 3rem 12rem;
-    font-size: 1.2rem;
+header p{
+    background-color: #0E1422;
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
 }
 
 header section{
-    width: 80%;
+    margin: 2rem 10rem;
+}
+
+header a{
+    width: 10%;
+    height: 1rem;
 }
 
 header img{
-    width: 15%;
-    height: 15px;
+    width: 100%;
 }
 
-header li{
-    margin-left: 3rem;
+header nav{
+    width: 80%;
 }
+
+header nav ul{
+    width: 70%;
+    margin: auto;
+    justify-content: space-around;
+}
+
+header nav + ul{
+    width: 10%;
+    justify-content: space-around;
+}
+
 
 
 
 
 /* ----------- 6:= Footer ------------ */
+footer{
+    padding: 6rem 10rem 4rem;
+    color: black;
+    font-weight: bold;
+}
+
+footer .footer{
+    width: 100%;
+}
+
+footer article:first-child{
+    width: 21%;
+}
+
+footer .logo{
+    width: 4rem;
+    margin-bottom: 1rem;
+}
+
+footer article:first-child li{
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+footer article:last-child{
+    width: 70%;
+}
+
+footer article:last-child ul{
+    margin-top: 2rem;
+}
+
+footer article:last-child li{
+    margin-bottom: 1rem;
+}
+
+
+
+footer .copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    color: #999999;
+    border-top: 1px solid #F6F6F6;
+}
 
 
 
@@ -247,4 +336,113 @@ header li{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= headerLanding ------------ */
+
+.headerLanding{
+    padding: 2rem 5rem 3rem 12rem;
+    font-size: 1.2rem;
+}
+
+.headerLanding section{
+    width: 80%;
+}
+
+.headerLanding img{
+    width: 15%;
+    height: 15px;
+}
+
+.headerLanding li{
+    margin-left: 3rem;
+}
+
+
+@media screen and (max-width: 1470px) {
+    .headerLanding{
+        padding-left: 10rem;
+    }
+
+    .headerLanding section{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    .headerLanding{
+        font-size: 1rem;
+        padding-left: 8rem;
+    }
+
+    .headerLanding button{
+        padding: 1rem 1rem;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .headerLanding{
+        padding-left: 5rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .headerLanding{
+        padding: 2rem;
+    }
+
+    .headerLanding section{
+        width: 80%;
+    }
+
+    .headerLanding button{
+        margin-left: 1rem;
+        padding: .5rem;
+    }
+}
 

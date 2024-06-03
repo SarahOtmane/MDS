@@ -1,0 +1,542 @@
+/* 
+                Sommaire
+
+        Concept
+    1:= presentation
+    2:= description
+
+        Aide
+    3:= section
+
+        Repare
+    4:= repare
+
+        Rejoindre
+    5:= presentation
+    6:= description
+
+        Artisans
+    7:= renowear
+    8:= recherche
+
+        artisanService
+    9:= artisanService
+
+        Etape
+    10:= etape
+
+
+
+
+    10:= version desktop
+
+*/
+
+
+
+/* ----------- 1:= presentation ------------ */
+.concept .presentation, .concept .presentation > *{
+    z-index: 99;
+}
+
+.concept .presentation article,
+.description div{
+    width: 35%;
+    margin: auto;
+    padding: 5rem 0 7rem;
+}
+
+.concept .presentation h2,
+.description h3{
+    font-size: 3.3rem;
+    margin-bottom: 2rem;
+}
+
+.concept .presentation p,
+.description p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 2:= description ------------ */
+.description div{
+    padding: 7rem 0;
+}
+
+.description figure{
+    padding: 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.description p{
+    margin-top: 3rem;
+}
+
+.description figure img{
+    width: 25%;
+    height: 2rem;
+}
+
+.description figure img:nth-child(2){
+    width: 11%;
+    height: 3rem;
+}
+
+.description hr{
+    border: 1px solid #DFE1E7;
+    margin: 7rem auto;
+}
+
+.description{
+    background-image: 
+        url('../assets/pictures/acceuil/deco3.png'),
+        url('../assets/pictures/acceuil/boutton.png'),
+        url('../assets/pictures/acceuil/ceintre.png'),
+        url('../assets/pictures/acceuil/pelote.png'),
+        url('../assets/pictures/acceuil/ciseaux.png'),
+        url('../assets/pictures/acceuil/aiguilles.png'),
+        url('../assets/pictures/acceuil/deco1.png'),
+        url('../assets/pictures/acceuil/deco2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        0 0,
+        100% -3%,
+        0 33%,
+        93% 23%,
+        100% 57%,
+        11% 71%,
+        100% 100%,
+        0 100%;
+}
+
+
+
+/* ----------- 3:= section ------------ */
+.aide .section{
+    padding: 10rem;
+}
+.aide .section h2{
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.aide .section h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aide .accordion{
+    background-color: transparent;
+    width: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+/* ----------- 4:= repare ------------ */
+.repare h2.etape, 
+.repare .repareService h2, 
+.repare .tuto h2{
+    font-size: 2rem;
+}
+
+.repare .repareService,
+.repare .tuto{
+    padding: 4rem 10rem;
+}
+
+.repare .repareService h2 + p,
+.repare .tuto h2 + p{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.repare .repareService article{
+   width: 30%;
+   text-align: center;
+}
+
+.repare .repareService article div{
+    width: 100%;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .7rem;
+}
+
+.repare .repareService article:first-child div{
+    background-image: url('../assets/pictures/artisans/pic1.png');
+}
+
+.repare .repareService article:nth-child(2) div{
+    background-image: url('../assets/pictures/artisans/pic2.png');
+}
+
+.repare .repareService article:last-child div{
+    background-image: url('../assets/pictures/artisans/pic4.png');
+}
+
+.repare .repareService article p{
+    width: max-content;
+    margin-top: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    font-family: 'montserratbold', sans-serif;
+    font-size: 1.3rem;
+} 
+
+.repare .tuto div{
+    width: 50%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 5:= presentation ------------ */
+.rejoindre .presentation{
+    background-image: url('../assets/pictures/BackgroundRejoindre.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.rejoindre .presentation p{
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rejoindre .presentation a, .rejoindre .description a{
+    color: var(--white);
+    background-color: var(--black);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= description ------------ */
+.rejoindre .description{
+    padding-bottom: 0;
+}
+
+.rejoindre .description h3:not(.first){
+    margin-top: 10rem;
+}
+
+.rejoindre .description li{
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.rejoindre .description li span{
+    font-weight: bolder;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.rejoindre .description p.rejoindre{
+    margin-bottom: 4rem;
+}
+
+.rejoindre .description a{
+    margin-left: 35%;
+}
+
+.rejoindre .description{
+    background-image: 
+        url('../assets/pictures/acceuil/deco3.png'),
+        url('../assets/pictures/acceuil/boutton.png'),
+        url('../assets/pictures/acceuil/ceintre.png'),
+        url('../assets/pictures/acceuil/pelote.png'),
+        url('../assets/pictures/acceuil/ciseaux.png'),
+        url('../assets/pictures/acceuil/aiguilles.png'),
+        url('../assets/pictures/acceuil/deco1.png'),
+        url('../assets/pictures/acceuil/deco2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        0 8%,
+        100% -2%,
+        0 32%,
+        93% 26%,
+        100% 55%,
+        11% 65%,
+        100% 100%,
+        0 100%;
+}
+
+
+
+
+
+
+
+/* ----------- 6:= renowear ------------ */
+.renowear{
+    background-image: 
+        url('../assets/pictures/artisans/back1.png'),
+        url('../assets/pictures/artisans/back2.png'),
+        url('../assets/pictures/artisans/back4.png'),
+        url('../assets/pictures/artisans/back3.png'),
+        url('../assets/pictures/artisans/back5.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 
+        10% 30%,
+        35% 20%,
+        73% 68%,
+        60% 10%,
+        90% 0;
+    height: 40vh;
+}
+
+.renowear article{
+    width: max-content;
+    padding-left: 40%;
+    padding-top: 10%;
+}
+
+.renowear h2{
+    width: max-content;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 7:= recherche ------------ */
+.recherche form{
+    width: 70%;
+    margin: auto;
+}
+
+.recherche input{
+    border: 1px solid black;
+    padding: 2rem 1rem;
+}
+
+.recherche input:first-child{
+    width: 50%;
+}
+
+.recherche input:last-child{
+    width: 35%;
+}
+
+.recherche button{
+    width: 20%;
+    height: max-content;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 9:= artisanService ------------ */
+.artisanService section{
+    padding: 3rem 15rem 4rem 15rem;
+}
+
+.artisanService article{
+    width: 45%;
+}
+
+.artisanService p{
+    width: 80%;
+}
+
+.artisanService article.right{
+    text-align: right;
+}
+
+.artisanService h2{
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #2F3137;
+    margin-bottom: 1.5rem;
+}
+
+.artisanService h2 span{
+    font-family: 'montserratbold', sans-serif;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+}
+
+.artisanService article.right p{
+    margin-left: 20%;
+}
+
+.artisanService div{
+    width: 30%;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.artisanService section:first-child div{
+    background-image: url('../assets/pictures/artisans/pic1.png');
+}
+
+.artisanService section:nth-child(2) div{
+    background-image: url('../assets/pictures/artisans/pic2.png');
+}
+
+.artisanService section:nth-child(3) div{
+    background-image: url('../assets/pictures/artisans/pic3.png');
+}
+
+.artisanService section:last-child div{
+    background-image: url('../assets/pictures/artisans/pic4.png');
+}
+
+
+
+/* ----------- 10:= etape ------------ */
+.etape{
+    margin: 0 10rem;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+}
+
+.etape h3{
+    margin-bottom: 1rem;
+}
+
+.etape .container{
+    margin-top: 2.5rem;
+}
+
+.etape article{
+    width: 30%;
+}
+
+.etape h4{
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+}
+
+.etape p{
+    font-size: .8rem;
+}
+
+.etape img{
+    width: 72px;
+    height: 73px;
+    margin: auto;
+    margin-right: .7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 10:= Desktop ------------ */
+@media screen and (max-width: 1180px) {
+    .concept .presentation article,
+    .description div{
+        width: 45%;
+    }
+
+    .concept .picto{
+        width: 30% !important;
+    }
+    .aide .accordion{
+        width: 60%;
+        font-size: 1.1rem;
+    }
+
+    .aide .section h2{
+        font-size: 2.2rem;
+    }
+
+    .aide .section h3{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 998px){
+    .aide .section{
+        padding: 7rem 5rem;
+    }
+
+    .aide .accordion{
+        width: 70%;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 920px){
+    .concept .presentation article,
+    .description div{
+        width: 55%;
+    }
+}
