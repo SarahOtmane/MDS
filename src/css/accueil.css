@@ -234,13 +234,6 @@
     text-align: center;
 }
 
-.rejoindre .presentation a, .rejoindre .description a{
-    color: var(--white);
-    background-color: var(--black);
-    padding: 1rem 1.5rem;
-    border-radius: .5rem;
-}
-
 
 
 
