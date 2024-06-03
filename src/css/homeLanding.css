@@ -580,6 +580,17 @@ img.picto{
     text-align: justify;
 }
 
+.home .tuto{
+    padding: 3rem 15rem;
+    font-size: 1.3rem;
+}
+
+.home .tuto div{
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
 
 
 
