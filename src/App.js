@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 import './App.css';
 
@@ -41,7 +42,6 @@ import Error401 from "./components/Error/Error401";
 
 import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
-import { useState } from "react";
 
 
 
