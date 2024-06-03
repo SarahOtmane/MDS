@@ -1,3 +1,5 @@
+import ReactPlayer from 'react-player';
+
 import '../css/homeLanding.css';
 
 import Service from './sections/Service';
@@ -41,6 +43,21 @@ const Home = () =>{
             </section>
             <Service />
             <Fonctionnement />
+            <section className='tuto'>
+                <p>
+                    Réparer avec Renowear .  <br></br>
+                    Inutile de nous suivre jusqu'au bout du monde. Suivez juste ce tuto.
+                </p>
+
+                <div>
+                <ReactPlayer
+                    url='https://www.youtube.com/watch?v=NZFNKqtfLT0' 
+                    controls
+                    width="100%"
+                    className='video'
+                />
+                </div>
+            </section>
             <Avis />
             <h2 className="text_uppercase newsletter backGris">construisez une relation durables avec vos articles</h2>
             <Newsletter />
