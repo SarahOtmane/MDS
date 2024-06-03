@@ -28,8 +28,10 @@
     10:= home
 
         Slider
-    10:= slider
+    11:= slider
 
+        AssurancesSlider
+    12:= assurancesSlider
 
 
 */
@@ -600,6 +602,9 @@ img.picto{
 
 
 
+
+
+
 /* ----------- 11:= slider ------------ */
 .slider {
     position: relative;
@@ -670,6 +675,27 @@ img.picto{
 
 
 
+
+
+
+
+
+
+/* ----------- 12:= assurancesSlider ------------ */
+.assurancesSlider{
+    padding: 3rem 1.5rem;
+}
+
+.assurancesSlider h2, .assurancesSlider p{
+    font-size: 1.3rem;
+    margin-left: 10rem;
+    font-family: "montserratlight", sans-serif;
+    font-weight: bolder;
+}
+
+.assurancesSlider p{
+    margin: 1rem 0 4rem 10rem;
+}
 
 
 
