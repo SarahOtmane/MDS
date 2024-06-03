@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import '../../css/accueil.css';
 
 import Titre from '../Titre';
@@ -5,6 +6,12 @@ import Newsletter from '../sections/Newsletter';
 
 
 const Rejoindre = () =>{
+    const navigate = useNavigate();
+
+    const navigat = () =>{
+        navigate('/artisan/register');
+    }
+
     return(
         <main className="concept rejoindre">
             <Titre titre="Nous rejoindre" lien="/rejoindre" classe="backGris"  />
@@ -14,7 +21,7 @@ const Rejoindre = () =>{
                     <p>
                         Avec  RenoWear rejoignez une communauté de plus de 500 talents qui vous ressemblent et profitez d’un service clé en main pour vous reconnecter à vos clients.
                     </p>
-                    <a href='/artisan/register'>Rejoindre RenoWear</a>
+                    <button className='black' onClick={navigat}>Rejoindre RenoWear</button>
                 </article>
                 
             </section>
@@ -69,7 +76,12 @@ const Rejoindre = () =>{
                         <p className='rejoindre'>
                             Nous sélectionnons avec soin chacun d’entre vous et vous accompagnons dans les démarches nécessaires pour nous rejoindre rapidement.
                         </p>
-                        <a href='/'>Rejoindre RenoWear</a>
+                        <div>
+                            <h2>Frais d’adhésion</h2>
+                            <span>24,99 € *</span>
+                            <p>* Montant unique pour l'inscription initiale qui peut couvrir les coûts administratifs, la création de profil, et l'accès aux outils de base du site.</p>
+                            <button className='black' onClick={navigat}>Rejoindre RenoWear</button>
+                        </div>
                     </article>
                 </div>
             </section>
