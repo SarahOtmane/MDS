@@ -5,7 +5,7 @@ import Etape from '../sections/Etape';
 import Newsletter from '../sections/Newsletter';
 
 
-const Repare = () =>{
+const Repare = ({command, setCommand}) =>{
     return(
         <main className="repare">
             <Titre titre="Je répare" lien="/repare" classe="backGris"  />
