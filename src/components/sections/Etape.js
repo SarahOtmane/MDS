@@ -1,7 +1,7 @@
 ///import image
-import devis from '../../assets/pictures/home/devis.png';
-import depot from '../../assets/pictures/home/depot.png';
-import recu from '../../assets/pictures/home/recu.png';
+import devis from '../../assets/pictures/acceuil/devis.svg';
+import depot from '../../assets/pictures/acceuil/depot.svg';
+import recu from '../../assets/pictures/acceuil/recu.svg';
 
 
 
