@@ -76,8 +76,8 @@ const Rejoindre = () =>{
                         <p className='rejoindre'>
                             Nous sélectionnons avec soin chacun d’entre vous et vous accompagnons dans les démarches nécessaires pour nous rejoindre rapidement.
                         </p>
-                        <div>
-                            <h2>Frais d’adhésion</h2>
+                        <div className='adhesion'>
+                            <h4>Frais d’adhésion</h4>
                             <span>24,99 € *</span>
                             <p>* Montant unique pour l'inscription initiale qui peut couvrir les coûts administratifs, la création de profil, et l'accès aux outils de base du site.</p>
                             <button className='black' onClick={navigat}>Rejoindre RenoWear</button>
