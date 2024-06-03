@@ -201,6 +201,12 @@
     border-radius: 2rem;
     font-family: 'montserratbold', sans-serif;
     font-size: 1.3rem;
+} 
+
+.repare .tuto div{
+    width: 50%;
+    margin: auto;
+    margin-top: 4rem;
 }
 
 
