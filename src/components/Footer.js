@@ -44,7 +44,7 @@ const Footer = () =>{
                 <div>
                     <span className='text_uppercase'>Aide</span>
                     <ul>
-                        <li><a href='/legal/mentions'>Mon compte</a></li>
+                        <li><a href='/user/my-account/account'>Mon compte</a></li>
                         <li><a href='/repare'>Je répare</a></li>
                         <li><a href='/aide'>Aide</a></li>
                     </ul>
