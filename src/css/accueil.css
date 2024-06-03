@@ -152,10 +152,52 @@
 
 
 /* ----------- 4:= repare ------------ */
-.repare h2.etape{
+.repare h2.etape, .repare .repareService h2{
     font-size: 2rem;
 }
 
+.repare .repareService{
+    padding: 4rem 10rem;
+}
+
+.repare .repareService h2 + p{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.repare .repareService article{
+   width: 30%;
+   text-align: center;
+}
+
+.repare .repareService article div{
+    width: 100%;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .7rem;
+}
+
+.repare .repareService article:first-child div{
+    background-image: url('../assets/pictures/artisans/pic1.png');
+}
+
+.repare .repareService article:nth-child(2) div{
+    background-image: url('../assets/pictures/artisans/pic2.png');
+}
+
+.repare .repareService article:last-child div{
+    background-image: url('../assets/pictures/artisans/pic4.png');
+}
+
+.repare .repareService article p{
+    width: max-content;
+    margin-top: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    font-family: 'montserratbold', sans-serif;
+    font-size: 1.3rem;
+}
 
 
 
