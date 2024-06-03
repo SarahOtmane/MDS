@@ -41,6 +41,7 @@ import Error401 from "./components/Error/Error401";
 
 import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
+import { useState } from "react";
 
 
 
@@ -89,6 +90,17 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
 
 
 const App = () => {
+    const [command, setCommand] = useState({
+        name: '',
+        picture: '',
+        user_email: '',
+        artisan_email: '',
+        reparationType: '',
+        clothType: '',
+        categorie: '',
+        job: '',
+    });
+
     return (
         <BrowserRouter>
                 <Header />
@@ -97,7 +109,10 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
-                    <Route path="/repare" element={<Repare />} />
+                    <Route path="/repare" element={<Repare 
+                        command={command} 
+                        setCommand={setCommand} 
+                    />} />
                     <Route path="/artisans" element={<Artisans />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/error401" element={<Error401 />} />
