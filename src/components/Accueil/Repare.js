@@ -1,3 +1,4 @@
+import ReactPlayer from 'react-player';
 import '../../css/accueil.css';
 
 import Titre from '../Titre';
@@ -32,7 +33,15 @@ const Repare = ({command, setCommand}) =>{
             <section className='tuto'>
                 <h2>Comment réparer avec RenoWear ?</h2>
                 <p>Inutile de nous suivre jusqu'au bout du monde. Suivez juste ce tuto.</p>
-                
+
+                <div>
+                <ReactPlayer 
+                    url='https://www.youtube.com/watch?v=NZFNKqtfLT0' 
+                    controls
+                    width="100%"
+                    className='video'
+                />
+                </div>
             </section>
             <Newsletter />
         </main>
