@@ -22,6 +22,7 @@ import AccountOrder from "./components/User/Account/AccountOrder";
 import AccountPassword from "./components/User/Account/AccountPassword";
 import AccountDetails from "./components/User/Account/AccountDetails";
 import AccountAdress from "./components/User/Account/AccountAdress";
+import Account from "./components/User/Account";
 
 import CheckCart from "./components/Cart/CheckCart";
 
@@ -145,6 +146,7 @@ const App = () => {
                         </Route>
 
                         <Route path="my-account">
+                            <Route path="account" element={<Account />} />
                             <Route path="order" element={<AccountOrder />} />
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
