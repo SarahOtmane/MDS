@@ -282,9 +282,51 @@ header nav + ul{
 
 
 /* ----------- 6:= Footer ------------ */
+footer{
+    padding: 6rem 10rem 4rem;
+    color: black;
+    font-weight: bold;
+}
+
+footer .footer{
+    width: 100%;
+}
+
+footer article:first-child{
+    width: 21%;
+}
+
+footer .logo{
+    width: 4rem;
+    margin-bottom: 1rem;
+}
+
+footer article:first-child li{
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+footer article:last-child{
+    width: 70%;
+}
+
+footer article:last-child ul{
+    margin-top: 2rem;
+}
+
+footer article:last-child li{
+    margin-bottom: 1rem;
+}
 
 
 
+footer .copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    color: #999999;
+    border-top: 1px solid #F6F6F6;
+}
 
 
 
