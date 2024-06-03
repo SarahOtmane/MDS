@@ -152,15 +152,19 @@
 
 
 /* ----------- 4:= repare ------------ */
-.repare h2.etape, .repare .repareService h2{
+.repare h2.etape, 
+.repare .repareService h2, 
+.repare .tuto h2{
     font-size: 2rem;
 }
 
-.repare .repareService{
+.repare .repareService,
+.repare .tuto{
     padding: 4rem 10rem;
 }
 
-.repare .repareService h2 + p{
+.repare .repareService h2 + p,
+.repare .tuto h2 + p{
     font-size: 1.3rem;
     margin-top: 1rem;
 }
