@@ -34,6 +34,10 @@
 
 */
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
 
 .landing h2, .home h2{
     font-size: 3.5rem;
