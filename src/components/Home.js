@@ -7,6 +7,7 @@ import Fonctionnement from './sections/Fonctionnement';
 import Avis from './sections/Avis';
 import Newsletter from './sections/Newsletter';
 import Slider from './sections/Slider';
+import AssurancesSlider from './sections/AssurancesSlider';
 
 import satisfaction from '../assets/pictures/home/satisfaction.svg';
 import paiement from '../assets/pictures/home/paiement.svg';
@@ -61,6 +62,7 @@ const Home = () =>{
             </section>
             <Avis />
             <h2 className="text_uppercase newsletter backGris">construisez une relation durables avec vos articles</h2>
+            <AssurancesSlider />
             <Newsletter />
         </main>
     )
