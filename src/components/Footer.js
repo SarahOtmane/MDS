@@ -1,8 +1,9 @@
 import logo from '../assets/pictures/logo_short.svg';
 
-const Footer = ({className}) =>{
+const Footer = () =>{
     return(
-        <footer className={`row alignitem_center ${className}`}>
+        <footer>
+            <div className={`row alignitem_center footer justifycontent_spbetween`}>
             <article>
                 <img src={logo} alt='logo RenoWear' />
                 <p>L'art du renouveau pour une mode durable.</p>
@@ -51,6 +52,8 @@ const Footer = ({className}) =>{
                     </ul>
                 </div>
             </article>
+            </div>
+            <p>	&copy; 2024 RenoWear. Tous droits réservés</p>
         </footer>
     )
 }
