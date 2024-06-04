@@ -25,6 +25,10 @@
         Etape
     10:= etape
 
+        AllArtisan
+    11:= noArtisan
+    12:= allArtisan
+
 
 
 
@@ -117,6 +121,16 @@
         100% 100%,
         0 100%;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -457,6 +471,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- 10:= etape ------------ */
 .etape{
     margin: 0 10rem;
@@ -493,6 +518,42 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 11:= noArtisan ------------ */
+.noArtisan{
+    background-image: 
+        url('../assets/pictures/acceuil/deco6.svg'),
+        url('../assets/pictures/acceuil/deco5.svg'),
+        url('../assets/pictures/acceuil/deco7.svg')
+    ;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: var(--white);
+    background-position: 
+        5% 50%,
+        0 -24rem,
+        0 100%;
+}
+
+.noArtisan h2, .noArtisan p{
+    margin-left: 45%;
+    padding-bottom: 15rem;
+    width: 50%;
+}
+
+.noArtisan h2{
+    font-size: 3rem;
+    padding: 15rem 1rem 3rem 0;
+}
 
 
 
