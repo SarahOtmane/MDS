@@ -6,7 +6,7 @@ import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
 
-const Couture = () =>{
+const Reparation = () =>{
     return(
         <main className="couture">
             <Titre titre="Couture" lien="/reparation/couture" />
@@ -53,4 +53,4 @@ const Couture = () =>{
     )
 }
 
-export default Couture;
+export default Reparation;

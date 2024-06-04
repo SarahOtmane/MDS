@@ -7,7 +7,7 @@ import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
 
-const CouturePics = () =>{
+const ReparationPic = () =>{
     const [fileName, setFileName] = useState('');
 
     const handleFileChange = (e) => {
@@ -56,4 +56,4 @@ const CouturePics = () =>{
     )
 }
 
-export default CouturePics;
+export default ReparationPic;
