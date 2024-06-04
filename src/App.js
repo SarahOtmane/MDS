@@ -114,7 +114,6 @@ const App = () => {
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare 
-                        command={command} 
                         setCommand={setCommand} 
                     />} />
                     <Route path="/artisans" element={<Artisans />} />
