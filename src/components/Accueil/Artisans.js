@@ -11,7 +11,7 @@ import AllArtisan from '../sections/AllArtisan';
 
 const Artisans = () =>{
     const [recherche, setRecherche] = useState(false);
-    const [artisan, setArtisan] = useState([]);
+    const [artisans, setArtisans] = useState([]);
     const [formData, setFormData] =useState({
         job: '',
         postalCode: ''
@@ -47,7 +47,7 @@ const Artisans = () =>{
             if(formData.postalCode === '') data.postalCode = '-1';
 
             const artisans = await axios.get(`http://localhost:3003/artisans/${data.job}/${data.postalCode}`);
-            setArtisan(artisans);
+            setArtisans(artisans);
             setRecherche(true);
             
         }catch (error) {
@@ -87,7 +87,7 @@ const Artisans = () =>{
                     </button>
                 </form>
             </section>
-            {recherche && <AllArtisan artisan={artisan} />}
+            {recherche && <AllArtisan artisans={artisans} />}
             {!recherche && <ArtisanService />}
             <Newsletter />
         </main>
