@@ -18,15 +18,15 @@ const Repare = ({command, setCommand}) =>{
                 <form className='row justifycontent_spbetween'>
                     <article>
                         <div></div>
-                        <p className='text_uppercase backVert2'>Services couture</p>
+                        <button className='text_uppercase backVert2'>Services couture</button>
                     </article>
                     <article>
                         <div></div>
-                        <p className='text_uppercase backVert2'>Services couture</p>
+                        <button className='text_uppercase backVert2'>Services maroquinnerie</button>
                     </article>
                     <article>
                         <div></div>
-                        <p className='text_uppercase backVert2'>Services couture</p>
+                        <button className='text_uppercase backVert2'>Services cordonnerie</button>
                     </article>
                 </form>
             </section>
