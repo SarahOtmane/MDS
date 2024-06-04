@@ -34,8 +34,8 @@ import Mentions from "./components/Legal/Mentions";
 import Conditions from "./components/Legal/Conditions";
 import Politique from "./components/Legal/Politique";
 
-import Couture from "./components/Reparation/Couture";
-import CouturePics from "./components/Reparation/CouturePics";
+import Reparation from "./components/Reparation/Reparation";
+import ReparationPic from "./components/Reparation/ReparationPic";
 
 import Error404 from "./components/Error/Error404";
 import Error403 from "./components/Error/Error403";
@@ -157,8 +157,11 @@ const App = () => {
                         </Route>
 
                         <Route path="reparation">
-                            <Route path="couture" element={<Couture />} />
-                            <Route path="couturepics" element={<CouturePics />} />
+                            <Route path="details" element={<Reparation 
+                                command={command} 
+                                setCommand={setCommand}
+                            />} />
+                            <Route path="image" element={<ReparationPic />} />
                         </Route>
                     </Route>
                     <Route path="/artisan">
