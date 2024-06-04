@@ -24,7 +24,7 @@ const Repare = ({setCommand}) =>{
             job: name,
         });
         
-        navigate('/reparation/couture');
+        navigate('/reparation/details');
     }
 
     return(
