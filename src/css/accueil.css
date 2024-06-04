@@ -229,6 +229,22 @@
 }
 
 
+.repare .tuto + section{
+    margin: 3rem 10rem 6rem 10rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.repare .tuto + section article{
+    width: 25%;
+    padding: 0 .5rem;
+}
+
+.repare .tuto + section article p {
+    padding-left: 1rem;
+}
+
+
 
 
 
