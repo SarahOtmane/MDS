@@ -1,4 +1,6 @@
 import ReactPlayer from 'react-player';
+import { useNavigate } from 'react-router-dom';
+
 import '../../css/accueil.css';
 
 import Titre from '../Titre';
@@ -6,7 +8,25 @@ import Etape from '../sections/Etape';
 import Newsletter from '../sections/Newsletter';
 
 
-const Repare = ({command, setCommand}) =>{
+
+const Repare = ({setCommand}) =>{
+    const navigate = useNavigate();
+
+    const chooseService = (name) =>{
+        setCommand({
+            name: '',
+            picture: '',
+            user_email: '',
+            artisan_email: '',
+            reparationType: '',
+            clothType: '',
+            categorie: '',
+            job: name,
+        });
+        
+        navigate('/reparation/couture');
+    }
+
     return(
         <main className="repare">
             <Titre titre="Je répare" lien="/repare" classe="backGris"  />
@@ -18,15 +38,15 @@ const Repare = ({command, setCommand}) =>{
                 <form className='row justifycontent_spbetween'>
                     <article>
                         <div></div>
-                        <button className='text_uppercase backVert2'>Services couture</button>
+                        <button className='text_uppercase backVert2' onClick={() => chooseService('couture')}>Services couture</button>
                     </article>
                     <article>
                         <div></div>
-                        <button className='text_uppercase backVert2'>Services maroquinnerie</button>
+                        <button className='text_uppercase backVert2' onClick={() => chooseService('maroquinnerie')}>Services maroquinnerie</button>
                     </article>
                     <article>
                         <div></div>
-                        <button className='text_uppercase backVert2'>Services cordonnerie</button>
+                        <button className='text_uppercase backVert2' onClick={() => chooseService('cordonnerie')}>Services cordonnerie</button>
                     </article>
                 </form>
             </section>
@@ -43,18 +63,18 @@ const Repare = ({command, setCommand}) =>{
                 />
                 </div>
             </section>
-            <section className='row alignitem_center backGris'>
+            <section className='row backGris'>
                 <article className='row alignitem_center'>
-                    <svg width="33" height="48" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="50" height="50" viewBox="5 15 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.5 15.5H10.8832L12.0885 27.4769C12.1386 27.8071 12.3064 28.108 12.561 28.3243C12.8156 28.5406 13.1398 28.6576 13.474 28.6538H22.2021C22.5042 28.6696 22.8032 28.5861 23.0534 28.4161C23.3035 28.2461 23.4912 27.9989 23.5875 27.7123L25.4302 22.1738C25.499 21.9656 25.5173 21.7441 25.4836 21.5274C25.4498 21.3107 25.365 21.1052 25.2362 20.9277C25.1021 20.7389 24.9227 20.5868 24.7146 20.4852C24.5065 20.3836 24.2761 20.3358 24.0447 20.3462H11.3681M16.0619 23.1154V25.8846M20.2182 23.1154V25.8846M21.9666 33.5C21.7829 33.5 21.6067 33.4271 21.4768 33.2972C21.3469 33.1674 21.2739 32.9913 21.2739 32.8077C21.2739 32.6241 21.3469 32.448 21.4768 32.3182C21.6067 32.1883 21.7829 32.1154 21.9666 32.1154C22.1503 32.1154 22.3265 32.1883 22.4564 32.3182C22.5863 32.448 22.6593 32.6241 22.6593 32.8077C22.6593 32.9913 22.5863 33.1674 22.4564 33.2972C22.3265 33.4271 22.1503 33.5 21.9666 33.5ZM12.9613 33.5C12.7776 33.5 12.6014 33.4271 12.4715 33.2972C12.3416 33.1674 12.2686 32.9913 12.2686 32.8077C12.2686 32.6241 12.3416 32.448 12.4715 32.3182C12.6014 32.1883 12.7776 32.1154 12.9613 32.1154C13.1451 32.1154 13.3213 32.1883 13.4512 32.3182C13.5811 32.448 13.6541 32.6241 13.6541 32.8077C13.6541 32.9913 13.5811 33.1674 13.4512 33.2972C13.3213 33.4271 13.1451 33.5 12.9613 33.5Z" stroke="#E4A2BE" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <p>1. Faites un devis pour obtenir une estimation de vos réparations</p>
                 </article>
                 <article className='row alignitem_center'>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="38" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 6L9.3125 18L4 12.5455" stroke="#E4A2BE" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <p>2. Préparez vos vêtements/accessoires avant l'envoi</p>
+                    <p>2. Préparez vos vêtements / accessoires avant l'envoi</p>
                 </article>
                 <article className='row alignitem_center'>
                     <svg width="38" height="48" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,8 +83,8 @@ const Repare = ({command, setCommand}) =>{
                     <p>3. Déposez le sous 21 jours</p>
                 </article>
                 <article className='row alignitem_center'>
-                    <svg width="33" height="48" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.5 15.5H10.8832L12.0885 27.4769C12.1386 27.8071 12.3064 28.108 12.561 28.3243C12.8156 28.5406 13.1398 28.6576 13.474 28.6538H22.2021C22.5042 28.6696 22.8032 28.5861 23.0534 28.4161C23.3035 28.2461 23.4912 27.9989 23.5875 27.7123L25.4302 22.1738C25.499 21.9656 25.5173 21.7441 25.4836 21.5274C25.4498 21.3107 25.365 21.1052 25.2362 20.9277C25.1021 20.7389 24.9227 20.5868 24.7146 20.4852C24.5065 20.3836 24.2761 20.3358 24.0447 20.3462H11.3681M16.0619 23.1154V25.8846M20.2182 23.1154V25.8846M21.9666 33.5C21.7829 33.5 21.6067 33.4271 21.4768 33.2972C21.3469 33.1674 21.2739 32.9913 21.2739 32.8077C21.2739 32.6241 21.3469 32.448 21.4768 32.3182C21.6067 32.1883 21.7829 32.1154 21.9666 32.1154C22.1503 32.1154 22.3265 32.1883 22.4564 32.3182C22.5863 32.448 22.6593 32.6241 22.6593 32.8077C22.6593 32.9913 22.5863 33.1674 22.4564 33.2972C22.3265 33.4271 22.1503 33.5 21.9666 33.5ZM12.9613 33.5C12.7776 33.5 12.6014 33.4271 12.4715 33.2972C12.3416 33.1674 12.2686 32.9913 12.2686 32.8077C12.2686 32.6241 12.3416 32.448 12.4715 32.3182C12.6014 32.1883 12.7776 32.1154 12.9613 32.1154C13.1451 32.1154 13.3213 32.1883 13.4512 32.3182C13.5811 32.448 13.6541 32.6241 13.6541 32.8077C13.6541 32.9913 13.5811 33.1674 13.4512 33.2972C13.3213 33.4271 13.1451 33.5 12.9613 33.5Z" stroke="#E4A2BE" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg width="35" height="48" viewBox="0 0 35 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.7272 19.279L16.7633 24.8604L14.2813 22.9999M18.443 30.9176C18.1579 31.0275 17.842 31.0275 17.5569 30.9176C15.332 30.0638 13.4186 28.5557 12.0693 26.5921C10.7201 24.6287 9.99856 22.3024 10 19.9204V16.2301C10 15.9039 10.1297 15.591 10.3605 15.3603C10.5913 15.1296 10.9044 15 11.2308 15H24.7692C25.0956 15 25.4087 15.1296 25.6395 15.3603C25.8703 15.591 26 15.9039 26 16.2301V19.9204C26.0014 22.3024 25.2799 24.6287 23.9307 26.5921C22.5814 28.5557 20.6679 30.0638 18.443 30.9176Z" stroke="#E4A2BE" stroke-width="1.43" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <p>4. Recevez vos articles sous 5 à 10 jours</p>
                 </article>
