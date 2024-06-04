@@ -1,10 +1,11 @@
 
 
 
-const AllArtisan = ({artisan}) =>{
+const AllArtisan = ({artisans}) =>{
     let noArtisan = true;
 
-    if(artisan.length > 0)  noArtisan = false;
+    if(artisans.length > 0)  noArtisan = false;
+
     return(
         <>
             {noArtisan && 
@@ -15,8 +16,10 @@ const AllArtisan = ({artisan}) =>{
             }
             {!noArtisan && 
                 <section className="allArtisan">
-                    <div>
-                    </div>
+                    {artisans.map(artisan => (
+                        <article key={artisan.id}>
+                        </article>
+                    ))}  
                 </section>
             }
         </>
