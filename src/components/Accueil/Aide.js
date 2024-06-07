@@ -22,7 +22,7 @@ const Aide = () =>{
                             Quels sont les délais de livraison ?
                         </AccordionSummary>
                         <AccordionDetails>
-                            Nous réparons vos textiles et vos accessoires en cuir (sacs et chaussures) sous 7 à 15 jours, à compter de la réception de votre colis dans nos ateliers. Vous recevrez ensuite vos pièces sous un délai de 2 à 3 jours ouvrés (en fonction du mode de livraison choisi).
+                            Nous réparons vos textiles et vos accessoires en cuir (sacs et chaussures) sous 7 à 15 jours, à compter de la réception de votre colis chez nos artisans. Vous pourrez ensuite récupérez vos pièces sous un délai de 2 à 3 jours ouvrés.
                         </AccordionDetails>
                     </Accordion>
                     <Accordion className='accordion'>
@@ -33,7 +33,8 @@ const Aide = () =>{
                             Comment contacter RenoWear ?
                         </AccordionSummary>
                         <AccordionDetails>
-                            N’hésitez pas à contacter notre service après-vente à l’adresse suivante : contact@tilli.fr. ou par téléphone au 06 90 56 43 12. 
+                            N’hésitez pas à contacter notre service après-vente à l’adresse suivante : contact@RenoWear.fr ou par téléphone au 06 90 56 43 12. 
+                            <br></br>
                             Si vous n’êtes pas satisfait de vos retouches / réparations.
                         </AccordionDetails>
                     </Accordion>
@@ -45,7 +46,7 @@ const Aide = () =>{
                             Et si j’ai un problème une fois mes pièces reçues ?
                         </AccordionSummary>
                         <AccordionDetails>
-                            Un rendez-vous de réajustement est prévu si vous n’êtes pas satisfait de vos retouches. Et si le problème n‘est pas récupérable, ce qui serait très surprenant, nous travaillons avec AXA assurance afin d'assurer toutes vos pièces.
+                            Un rendez-vous de réajustement est prévu si vous n’êtes pas satisfait de vos retouches. Et si le problème n'est pas récupérable, ce qui serait très surprenant, nous travaillons avec AXA assurance afin d'assurer toutes vos pièces.
                         </AccordionDetails>
                     </Accordion>
                 </div>
