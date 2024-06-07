@@ -9,7 +9,7 @@ import reparation from '../../assets/pictures/reparation.png';
 const Reparation = () =>{
     return(
         <main className="couture">
-            <Titre titre="Couture" lien="/reparation/couture" />
+            <Titre titre="Couture" lien="/user/reparation/details" />
             <section className='loading column'>
                 <p>1/3 Votre réparation</p>
                 <div class="progress-bar">
@@ -20,9 +20,6 @@ const Reparation = () =>{
             <section className="couture__contenu row justifycontent_spbetween">
                 <img className='repa' src={reparation} alt='' />
                 <form className='column'>
-                    <label>Quelle est la catégorie ?</label>
-                    <Input name="categorie" />
-
                     <label>Quel est le type de vêtements ?</label>
                     <Input name="clotheType" />
 
