@@ -839,6 +839,10 @@ img.picto{
     .home h2.newsletter{
         font-size: 2.2rem;
     }
+
+    .home .elements{
+        padding: 6rem 10rem 6rem 10rem;
+    }
 }
 
 
@@ -967,6 +971,10 @@ img.picto{
     .home h2.newsletter{
         font-size: 1.8rem;
     }
+
+    .home .elements article{
+        width: 26%;
+    }
 }
 
 
@@ -1035,6 +1043,10 @@ img.picto{
     .landing .section8 button{
         width: 45%;
     }
+
+    .home .elements{
+        padding: 4rem 7rem;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -1102,6 +1114,10 @@ img.picto{
 
     .landing .section7 p{
         font-size: 1rem;
+    }
+
+    .home .elements{
+        padding: 2rem 5rem;
     }
 }
 
