@@ -296,18 +296,6 @@ img.picto{
     font-family: 'montserratbold', sans-serif;
 }
 
-.userArtisan #deco3{
-    left: 0;
-    width: 25%;
-    margin-top: -8rem;
-}
-
-.userArtisan #deco4{
-    right: 0;
-    width: 25%;
-    margin-top: 40rem;
-}
-
 
 
 
@@ -592,7 +580,7 @@ img.picto{
 }
 
 .home .tuto div{
-    width: 70%;
+    width: 80%;
     margin: auto;
     margin-top: 3rem;
 }
@@ -720,10 +708,6 @@ img.picto{
     .section1Landing h1{
         font-size: 2.7rem;
     }
-
-    .userArtisan #deco4{
-        margin-top: 35rem;
-    }
 }
 
 @media screen and (max-width: 1570px) {
@@ -733,10 +717,6 @@ img.picto{
     
     .fonctionnement #image4{
         margin-top: -48rem;
-    }
-
-    .userArtisan #deco3{
-        margin-top: -7rem;
     }
 
     .landing .section8 button{
@@ -795,8 +775,8 @@ img.picto{
 }
 
 @media screen and (max-width: 1415px){
-    .userArtisan #deco4{
-        margin-top: 33rem;
+    .home .tuto div{
+        width: 90%;
     }
 }
 
@@ -908,14 +888,6 @@ img.picto{
         margin-top: 34rem;
     }
 
-    .userArtisan #deco3{
-        margin-top: -6rem;
-    }
-
-    .userArtisan #deco4{
-        margin-top: 28rem;
-    }
-
     .userArtisan figure{
         margin-top: 2rem;
     }
@@ -951,11 +923,6 @@ img.picto{
     .userArtisan p{
         margin-top: -15rem;
     }
-
-    .userArtisan #deco4{
-        margin-top: 26rem;
-    }
-
     .newsletter div, .newsletter form{
         width: 45%;
     }
@@ -1011,10 +978,6 @@ img.picto{
     .userArtisan{
         padding-left: 10rem;
         padding-right: 10rem;
-    }
-
-    .userArtisan #deco4{
-        margin-top: 24rem;
     }
 
     .landing .section5{
@@ -1149,18 +1112,8 @@ img.picto{
 
 }
 
-@media screen and (max-width: 868px){
-    .userArtisan #deco4{
-        margin-top: 23rem;
-    }
-}
-
 @media screen and (max-width: 790px){
     .section1Landing button{
         width: 70%;
-    }
-
-    .userArtisan #deco4{
-        margin-top: 22rem;
     }
 }
