@@ -823,6 +823,10 @@ img.picto{
     .home .elements{
         padding: 6rem 10rem 6rem 10rem;
     }
+
+    .home .tuto{
+        padding: 3rem 10rem;
+    }
 }
 
 
@@ -942,6 +946,10 @@ img.picto{
     .home .elements article{
         width: 26%;
     }
+
+    .home .tuto{
+        padding: 3rem 6rem;
+    }
 }
 
 
@@ -1050,6 +1058,10 @@ img.picto{
     .newsletter form{
         margin-top: 2rem;
         margin-left: 0;
+    }
+
+    .home .tuto{
+        padding: 3rem 4rem;
     }
 }
 
