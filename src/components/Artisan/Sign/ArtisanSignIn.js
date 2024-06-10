@@ -30,12 +30,12 @@ const ArtisanSignIn = () =>{
         e.preventDefault();
     
         try {
-            const response = await axios.post('http://localhost:3003/artisan/login', formData);
+            const response = await axios.post('http://localhost:3003/artisans/login', formData);
             
             const token = response.data.token;
             addToken(token);
 
-            navigate('/artisan/my-account/detail');
+            navigate('/artisan/my-account/details');
         } catch (error) {
             const status = error.response ? error.response.status : 500;
             switch (status) {
