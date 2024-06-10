@@ -85,8 +85,8 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
             /details
             /adress
         /reparation :
-            /couture
-            /couture-pics
+            /details
+            /image
     /artisan : 
         /register
         /login
@@ -105,11 +105,10 @@ const App = () => {
         job: '',
     });
 
-    const pagesBackGris = [
-        "/artisan/register", "/artisan/login",
-        "/legal/mentions", "/legal/politique", "/legal/condition",
-        "/assurance", "/error401", "/error404", "/error403", "error500"
-    ];
+    const pagesBackWhite = [
+        "/", "/concept", "/aide", "/repare", "/artisans", "/rejoindre",
+        "/user/reparation/details", "/user/reparation/image"
+    ]
 
     return (
         <BrowserRouter>
@@ -176,7 +175,7 @@ const App = () => {
                     </Route>
 
                 </Routes>
-                <Footer pagesBackGris={pagesBackGris} />
+                <Footer pagesBackWhite={pagesBackWhite} />
         </BrowserRouter>
     )
 }
