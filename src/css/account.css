@@ -125,9 +125,101 @@ form.adress{
 
 
 /* ----------- 5:= artisanJobs ------------ */
+.artisanJobs{
+    width: 70%;
+    border-left: 1px solid #BDDEB4;
+    padding-left: 3rem;
+}
 
+.artisanJobs h2{
+    margin-bottom: 2rem;
+}
 
+.artisanJobs p+p{
+    margin: 1rem 0 3rem 0;
+}
 
+.artisanJobs span{
+    border: 2px solid #E4A2BE;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.artisanJobs div{
+    border: 2px solid #E9E9EB;
+    border-radius: .5rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
+
+.artisanJobs div h2{
+    margin: 3rem 0 3rem 2rem;
+}
+
+.artisanJobs div table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.artisanJobs div thead{
+    border-top: 1px solid #BDDEB4;
+    border-bottom: 1px solid #BDDEB4;
+}
+
+.artisanJobs div thead th{
+    padding: 2rem 0;
+}
+
+.artisanJobs div .checkbox {
+    display: none;
+}
+
+.artisanJobs div .custom-checkbox {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #F6F6F6;
+    border: 1px solid #F6F6F6;
+    position: relative;
+    cursor: pointer;
+}
+
+.artisanJobs div .custom-checkbox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+}
+
+.artisanJobs div .custom-checkbox:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 0.4rem;
+    top: 0.2rem;
+    width: 0.3rem;
+    height: 0.7rem;
+    border: solid white;
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+}
+
+.artisanJobs div .checkbox:checked + .custom-checkbox {
+    background-color: #FFDBE8;
+}
+
+.artisanJobs div .checkbox:checked + .custom-checkbox:after {
+    display: block;
+}
+
+.artisanJobs div .custom-checkbox:hover {
+    background-color: white;
+    border: 1px solid black;
+}
 
 
 
