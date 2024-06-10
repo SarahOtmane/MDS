@@ -11,7 +11,7 @@ const ArtisanAccountMenu = ({selected}) =>{
 
     return(
         <ul className="menu">
-            <li><a className={`alignitem_center row ${(selected==='commandes'? 'selected' : '')}`} href='/artisan/my-account/metier'>
+            <li><a className={`alignitem_center row ${(selected==='job'? 'selected' : '')}`} href='/artisan/my-account/metier'>
                 <svg width="45" height="40" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.9231 11.9231H14.3077C13.9891 11.9231 13.7308 12.1814 13.7308 12.5V19.4231C13.7308 19.7417 13.9891 20 14.3077 20H18.9231C19.2417 20 19.5 19.7417 19.5 19.4231V12.5C19.5 12.1814 19.2417 11.9231 18.9231 11.9231Z" stroke="#0E1422" strokeWidth="1.43" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M18.9231 5H14.3077C13.9891 5 13.7308 5.2583 13.7308 5.57692V7.89615C13.7308 8.21478 13.9891 8.47308 14.3077 8.47308H18.9231C19.2417 8.47308 19.5 8.21478 19.5 7.89615V5.57692C19.5 5.2583 19.2417 5 18.9231 5Z" stroke="#0E1422" strokeWidth="1.43" strokeLinecap="round" strokeLinejoin="round"/>
@@ -63,7 +63,7 @@ const ArtisanAccountMenu = ({selected}) =>{
                 <svg width="45" height="40" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 9.5L17.16 17.898C17.033 19.171 16.97 19.807 16.68 20.288C16.4257 20.7114 16.0516 21.05 15.605 21.261C15.098 21.5 14.46 21.5 13.18 21.5H10.82C9.541 21.5 8.902 21.5 8.395 21.26C7.94805 21.0491 7.57361 20.7106 7.319 20.287C7.031 19.807 6.967 19.171 6.839 17.898L6 9.5M13.5 16V11M10.5 16V11M4.5 7H9.115M9.115 7L9.501 4.328C9.613 3.842 10.017 3.5 10.481 3.5H13.519C13.983 3.5 14.386 3.842 14.499 4.328L14.885 7M9.115 7H14.885M14.885 7H19.5" stroke="#5C5F6A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <span className="text_bold">Déconnexion</span>
+                <span className="text_bold">Suppression</span>
             </a></li>
         </ul>
     )
