@@ -45,6 +45,8 @@ import Error401 from "./components/Error/Error401";
 import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
 
+import ArtisanAccountDetails from "./components/Artisan/Account/ArtisanAccountDetails";
+
 
 
 
@@ -90,6 +92,8 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
     /artisan : 
         /register
         /login
+        /my-account : 
+            /details
 */
 
 
@@ -172,6 +176,10 @@ const App = () => {
                     <Route path="/artisan">
                         <Route path="register" element={<ArtisanSignUp />} />
                         <Route path="login" element={<ArtisanSignIn />} />
+
+                        <Route path="my-account">
+                            <Route path="details" element={<ArtisanAccountDetails />} />
+                        </Route>
                     </Route>
 
                 </Routes>
