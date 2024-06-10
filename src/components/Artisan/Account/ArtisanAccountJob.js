@@ -7,9 +7,6 @@ import '../../../css/account.css';
 import ArtisanAccountMenu from './ArtisanAccountMenu';
 import Titre from "../../Titre";
 
-
-
-
 const ArtisanAccountJob = () =>{
     const navigate = useNavigate();
     const [data, setData] = useState({
@@ -21,23 +18,18 @@ const ArtisanAccountJob = () =>{
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Obtenir le job_id de l'artisan
                 const artisanResponse = await axiosInstance.get('/artisans');
                 const id_job = artisanResponse.data.id_job;
 
-                // Obtenir le nom du job
                 const jobResponse = await axiosInstance.get(`/jobs/id/${id_job}`);
                 const jobName = jobResponse.data.name;
 
-                // Obtenir les prestations lié au job
                 const prestationsResponse = await axiosInstance.get(`/prestations/job/${id_job}`);
                 const prestations = prestationsResponse.data;
 
-                // Obtenir les vêtements lié au job
                 const clothesResponse = await axiosInstance.get(`/clothes/job/${id_job}`);
                 const clothes = clothesResponse.data;
 
-                // Mettre à jour l'état
                 setData({
                     job: jobName,
                     prestations: prestations,
@@ -77,6 +69,39 @@ const ArtisanAccountJob = () =>{
                     <p>Vous avez choisi votre domaine d’expertise.</p>
                     <p>Sélectionnez vos compétences</p>
                     <span className='text_capitalize'>{data.job}</span>
+                    <div>
+                        <h2>Expertises</h2>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Catégories</th>
+                                    <th>Pièces</th>
+                                    <th>Réparations</th>
+                                    <th>Prix admin</th>
+                                    <th>Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {data.clothes.map((cloth) => (
+                                    data.prestations.map((presta, prestaIndex) => (
+                                        <tr key={`${cloth.id}-${prestaIndex}`}>
+                                            <td>
+                                                <input type="checkbox" id={`checkbox-${cloth.id}-${prestaIndex}`} className="checkbox" />
+                                                <label htmlFor={`checkbox-${cloth.id}-${prestaIndex}`} className="custom-checkbox"></label>
+                                            </td>
+                                            <th>{cloth.categorie}</th>
+                                            <th>{cloth.clothType}</th>
+                                            <th>{presta.reparationType}</th>
+                                            <th>{presta.priceSuggested}</th>
+                                            <th>Prix</th>
+                                        </tr>
+                                    ))
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
             </div>
         </main>
