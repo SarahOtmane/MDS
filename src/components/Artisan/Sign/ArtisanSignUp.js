@@ -151,7 +151,6 @@ const ArtisanSignUp = () =>{
         setButtonAble(false);
         if(name === 'reparation'){
             let job = jobs.find(job => job.name === formData.job);
-            console.log(job.id);
             let id_job = job.id;
             try {
                 const response = await axios.get(`http://localhost:3003/prestations/job/${id_job}`);
