@@ -171,6 +171,16 @@ const ArtisanSignUp = () =>{
                             required
                         />
 
+                        <label className="text_bold">Prénom</label>
+                        <input 
+                            type="text" 
+                            name='firstname'
+                            placeholder="Tom" 
+                            defaultValue={formData.firstname}
+                            onChange={updateChamps}
+                            required
+                        />
+
                         <label className="text_bold">Email</label>
                         <input 
                             type="email" 
@@ -182,17 +192,6 @@ const ArtisanSignUp = () =>{
                         />
                         {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
                         {emailExist && <p style={{ color: 'red' }}>Cet email est associé à un compte existant.</p>}
-
-                        <label className="text_bold">Mot de passe</label>
-                        <input 
-                            type="password" 
-                            name='password'
-                            placeholder="Mot de passe" 
-                            defaultValue={formData.password}
-                            onChange={updateChamps}
-                            required
-                        />
-                        {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
 
                         <label className="text_bold">Téléphone</label>
                         <input 
@@ -206,37 +205,30 @@ const ArtisanSignUp = () =>{
                         />
                         {errors.mobile && <p style={{ color: 'red' }}>{errors.mobile}</p>}
 
-                        <label className="text_bold">Numéro TVA</label>
+                        <label className="text_bold">Mot de passe</label>
                         <input 
-                            type="text" 
-                            name='numeroTVA'
-                            placeholder="FR 93 602 036 444" 
-                            defaultValue={formData.numeroTVA}
+                            type="password" 
+                            name='password'
+                            placeholder="Mot de passe" 
+                            defaultValue={formData.password}
+                            onChange={updateChamps}
+                            required
+                        />
+                        {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
+
+                        <label className="text_bold">Confirmer votre mot de passe</label>
+                        <input 
+                            type="password" 
+                            name='password'
+                            placeholder="Mot de passe" 
+                            defaultValue={formData.password}
                             onChange={updateChamps}
                             required
                         />
 
-                        <label className="text_bold">SIRET</label>
-                        <input 
-                            type="text" 
-                            name='siret'
-                            placeholder="602 036 444 04227" 
-                            defaultValue={formData.siret}
-                            onChange={updateChamps}
-                            required
-                        />
+                        
                     </div>
                     <div className='column'>
-                        <label className="text_bold">Prénom</label>
-                        <input 
-                            type="text" 
-                            name='firstname'
-                            placeholder="Tom" 
-                            defaultValue={formData.firstname}
-                            onChange={updateChamps}
-                            required
-                        />
-
                         <label className="text_bold">Adresse</label>
                         <input 
                             type="text" 
@@ -276,13 +268,31 @@ const ArtisanSignUp = () =>{
                             onChange={updateChamps}
                             required
                         />
+                        <label className="text_bold">Numéro TVA</label>
+                        <input 
+                            type="text" 
+                            name='numeroTVA'
+                            placeholder="FR 93 602 036 444" 
+                            defaultValue={formData.numeroTVA}
+                            onChange={updateChamps}
+                            required
+                        />
 
+                        <label className="text_bold">SIRET</label>
+                        <input 
+                            type="text" 
+                            name='siret'
+                            placeholder="602 036 444 04227" 
+                            defaultValue={formData.siret}
+                            onChange={updateChamps}
+                            required
+                        />
                     </div>
                     </section>
 
                     <p>En créant un compte, vous acceptez nos conditions d'utilisations et notre politique de confidentialité</p>
 
-                    <button type='submit'>Créer un compte</button>
+                    <button type='submit' className='black'>Créer un compte</button>
                     <p>Vous avez déja un compte ? <a href='/artisan/login' className='text_bold'>Se connecter</a></p>
                 </form>
             )}
