@@ -76,6 +76,7 @@ const ArtisanAccountJob = () =>{
                     <h2>Métier</h2>
                     <p>Vous avez choisi votre domaine d’expertise.</p>
                     <p>Sélectionnez vos compétences</p>
+                    <span className='text_capitalize'>{data.job}</span>
                 </section>
             </div>
         </main>
