@@ -81,7 +81,7 @@ const ArtisanAccountAdress = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte" lien="/user/my-account/adress" classe="backGris" />
+            <Titre titre="Mon compte" lien="/artisan/my-account/adress" classe="backGris" />
             
             <div className='row account'>
                 <ArtisanAccountMenu selected="adress" />
