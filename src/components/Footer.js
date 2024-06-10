@@ -7,7 +7,7 @@ const Footer = ({pagesBackWhite}) =>{
     const isBackWhite = pagesBackWhite.includes(location.pathname);
 
     return(
-        <footer className={isBackWhite? 'backWhite' : ''}>
+        <footer className={isBackWhite? 'backWhite' : 'backGris'}>
             <div className={`row alignitem_center footer justifycontent_spbetween`}>
             <article>
                 <a href='/'><img src={logo} alt='logo RenoWear' className='logo' /></a>
