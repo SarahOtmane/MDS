@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ArtisanAccountDetails = () =>{
     const navigate = useNavigate();
-    const [user, setUser] = useState({});
+    const [artisan, setArtisan] = useState({});
     const [update, setUpdate] = useState(false);
 
     const [formData, setFormData]=useState({
@@ -20,10 +20,10 @@ const ArtisanAccountDetails = () =>{
     });
 
     useEffect(() => {
-        const getUser = async () => {
+        const getArtisan = async () => {
             try {
-                const response = await axiosInstance.get('/users');
-                setUser(response.data);
+                const response = await axiosInstance.get('/artisans');
+                setArtisan(response.data);
                 setFormData({
                     lastname: response.data.lastname,
                     firstname: response.data.firstname,
@@ -50,7 +50,7 @@ const ArtisanAccountDetails = () =>{
             }
         };
 
-        getUser();
+        getArtisan();
     }, [navigate]);
 
     const updateChamps = (e) => {
@@ -65,14 +65,14 @@ const ArtisanAccountDetails = () =>{
         e.preventDefault();
 
         const data = {
-            ...user,
+            ...artisan,
             lastname: formData.lastname,
             firstname: formData.firstname,
             mobile: formData.mobile,
         }
     
         try {
-            await axiosInstance.put('users', data);
+            await axiosInstance.put('artisans', data);
             setUpdate(true);
         } catch (error) {
             const status = error.response ? error.response.status : 500;
@@ -90,7 +90,7 @@ const ArtisanAccountDetails = () =>{
                     navigate('/error500');
                     break;
                 default:
-                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                    console.error('Erreur lors de l\'enregistrement de l\'artisan:', error);
             }  
         }
     };
@@ -98,7 +98,7 @@ const ArtisanAccountDetails = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte" lien="/user/my-account/details" classe="backGris" />
+            <Titre titre="Mon compte" lien="/artisan/my-account/details" classe="backGris" />
             
             <div className='row account'>
                 <ArtisanAccountMenu selected="details" />
