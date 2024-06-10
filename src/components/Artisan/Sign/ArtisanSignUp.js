@@ -8,6 +8,7 @@ import Titre from '../../Titre';
 import DetailForm from './DetailForm';
 import JobForm from './JobForm';
 import ReparationFom from './ReparationForm';
+import AbonnementForm from './AbonnementForm';
 
 
 const ArtisanSignUp = () =>{
@@ -190,9 +191,10 @@ const ArtisanSignUp = () =>{
                 />
             )}
 
-            {/* {(suite.metier && suite.reparation && suite.abonnement) && (
-
-            )} */}
+            {(suite.metier && suite.reparation && suite.abonnement) && (
+                <AbonnementForm 
+                />
+            )}
 
         </main>
     )
