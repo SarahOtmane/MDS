@@ -1,7 +1,6 @@
 import '../../css/accueil.css';
 
 import Titre from '../Titre';
-import Newsletter from '../sections/Newsletter';
 
 import axa from '../../assets/pictures/assurances/axa.svg';
 
@@ -105,7 +104,6 @@ const Assurance = () =>{
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9972 6.71308H0.5V5.28692H12.9972V6.71308Z" fill="white"/>
                     </svg></button>
             </section>
-            <Newsletter />
         </main>
     )
 }
