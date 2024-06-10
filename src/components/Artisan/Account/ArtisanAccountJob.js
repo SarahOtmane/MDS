@@ -110,7 +110,7 @@ const ArtisanAccountJob = () =>{
                                         </td>
                                         <th>{presta.reparationType}</th>
                                         <th>{presta.priceSuggested}</th>
-                                        <th>
+                                        <th className='price'>
                                             {checkedItems[presta.id] ? (
                                                 <input
                                                     type="number"
