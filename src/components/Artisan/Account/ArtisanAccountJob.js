@@ -56,6 +56,23 @@ const ArtisanAccountJob = () =>{
         fetchData();
     }, [navigate]);
 
+    const checkboxChange = (prestaId) => {
+        setCheckedItems(prevState => {
+            const newState = { ...prevState };
+            newState[prestaId] = !newState[prestaId];
+            return newState;
+        });
+    };
+
+    const InputChange = (e, prestaId) => {
+        const { value } = e.target;
+        setCheckedItems(prevState => {
+            const newState = { ...prevState };
+            newState[`${prestaId}-price`] = value;
+            return newState;
+        });
+    };
+
     return(
         <main>
             <Titre titre="Mon compte" lien="/user/my-account/adress" classe="backGris" />
@@ -82,17 +99,33 @@ const ArtisanAccountJob = () =>{
                                 {data.prestations.map((presta) => (
                                     <tr key={`${presta.id}`}>
                                         <td>
-                                            <input type="checkbox" id={`checkbox-${presta.id}`} className="checkbox" />
+                                            <input
+                                                type="checkbox"
+                                                id={`checkbox-${presta.id}`}
+                                                className="checkbox"
+                                                checked={checkedItems[presta.id] || false}
+                                                onChange={() => checkboxChange(presta.id)}
+                                            />
                                             <label htmlFor={`checkbox-${presta.id}`} className="custom-checkbox"></label>
                                         </td>
                                         <th>{presta.reparationType}</th>
                                         <th>{presta.priceSuggested}</th>
-                                        <th>Prix</th>
+                                        <th>
+                                            {checkedItems[presta.id] ? (
+                                                <input
+                                                    type="number"
+                                                    value={checkedItems[`${presta.id}-price`] || ''}
+                                                    onChange={(e) => InputChange(e, presta.id)}
+                                                />
+                                            ) : presta.priceSuggested}
+                                        </th>
+
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                     </div>
+                    <button className='blakc'> Valider </button>
                 </section>
             </div>
         </main>
