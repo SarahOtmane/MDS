@@ -29,6 +29,8 @@
     11:= noArtisan
     12:= allArtisan
 
+        Assurance
+    13:= assuranceDescription
 
 
 
@@ -562,6 +564,88 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 11:= allArtisan ------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 13:= assuranceDescription ------------ */
+.assuranceDescription h3.titre{
+    width: max-content;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.assuranceDescription img{
+    margin-left: 45%;
+    margin-top: 2rem;
+}
+
+
+.assuranceDescription article{
+    width: 80%;
+    margin: 4rem auto;
+    text-align: justify;
+}
+
+.assuranceDescription ul{
+    list-style: disc;
+}
+
+.assuranceDescription ul, .assuranceDescription ol{
+    padding-left: 2rem;
+}
+
+.assuranceDescription ul ul{
+    padding-left: 3rem;
+}
+
+.assuranceDescription li, .assuranceDescription p{
+    margin-top: 1rem;
+}
+
+.assuranceDescription table{
+    margin: 4rem auto;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #c4c2c2;
+}
+
+.assuranceDescription thead{
+    background-color: #d8d8d8;
+}
+
+.assuranceDescription thead th, .assuranceDescription tbody td, .assuranceDescription tbody th{
+    padding: 1rem;
+    border: 1px solid #c4c2c2;
+}
+
+.assuranceDescription tbody td, .assuranceDescription tbody th{
+    padding-right: 5rem;
+}
 
 
 
