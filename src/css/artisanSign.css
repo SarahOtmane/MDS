@@ -123,24 +123,54 @@
 
 
 /* ----------- 3:= reparationArtisan ------------ */
+.artisan_signup .abonnement{
+    padding-bottom: 17rem;
+}
+
 .artisan_signup .abonnement div{
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     background-color: var(--green_background_2);
     background-image: 
         url('../assets/pictures/acceuil/pelote.png'),
         url('../assets/pictures/acceuil/aiguilles.png'),
-        url('../assets/pictures/acceuil/boutton.png');
-    background-size: 8rem, 8rem, 8rem;
+        url('../assets/pictures/picto/boutton_complet.png');
+    background-size: 12rem, 12rem, 12rem;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 
     0 90%,
-    80% 20%,
-    30% 10%;
+    85% 10%,
+    30% 7%;
     position: relative;
 }
 
+.artisan_signup .adhesion{
+    background-color: var(--white);
+    width: 40%;
+    border: 2px solid #E4A2BE;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 8rem 0;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
 
+.artisan_signup .adhesion h4{
+    font-size: 2.7rem;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+}
+
+.artisan_signup .adhesion span{
+    font-size: 5.5rem;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.artisan_signup .adhesion p{
+    width: 60%;
+    margin: 3rem auto 5rem;
+}
 
 
 
