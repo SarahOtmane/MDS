@@ -2,23 +2,25 @@
                 Sommaire
 
     
-        AccountMenu.js
+        AccountMenu.js / ArtisanAccountMenu.js
     1:= menu
         
-        AccountOrder.js
+        AccountOrder.js / ArtisanAccountOrder.js
     2:= commandes
 
-        PasswordUpdate.js
+        AccountPassword.js / ArtisanAccountMdp.js
     3:= updateMdp
 
-        AccountDetails.js
+        AccountDetails.js / ArtisanAccountDetails.js
     4:= details
 
-        AccountAdress.js
+        AccountAdress.js / ArtisanAccountAdress.js
     5:= adress
 
-    6:= responsive version desktop
-    7:= version mobile
+        ArtisanAccountJob
+    6:= artisanJobs
+
+    7:= responsive version desktop
 
 */
 
@@ -122,13 +124,23 @@ form.adress{
 
 
 
+/* ----------- 5:= artisanJobs ------------ */
 
 
 
 
 
 
-/* ----------- 6:= Desktop ------------ */
+
+
+
+
+
+
+
+
+
+/* ----------- 7:= Desktop ------------ */
 @media screen and (max-width: 1400px){
     .menu{
         padding-left: 8rem;
