@@ -102,7 +102,7 @@ button{
 
 /* ----------- 3:= success ------------ */
 .success{
-    width: 25%;
+    width: 40%;
     margin: auto;
     text-align: center;
     padding-top: 8rem;
@@ -115,6 +115,28 @@ button{
 
 .success button svg{
     margin-left: .5rem;
+}
+
+.success article{
+    text-align: left;
+    border: 1px solid var(--pink_text);
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.success article p{
+    font-weight: bolder;
+}
+
+.success ul{
+    margin-top: 2rem;
+    padding-left: 2rem;
+    list-style-image: url('../assets/pictures/order/check.svg');
+}
+
+.success li{
+    margin-top: 1.5rem;
+    padding-left: 1rem;
 }
 
 
