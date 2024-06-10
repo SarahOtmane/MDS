@@ -99,6 +99,8 @@ const Assurance = () =>{
                             </ul>
                     </ul>
                 </article>
+
+                <button className='black'>Un sinistre ? Je déclare </button>
             </section>
             <Newsletter />
         </main>
