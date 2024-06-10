@@ -2,7 +2,7 @@
 
 
 
-const AbonnementForm = () =>{
+const AbonnementForm = ({submitForm}) =>{
     return(
         <section className="abonnement">
             <div></div>
@@ -10,7 +10,7 @@ const AbonnementForm = () =>{
                 <h4>Frais d’adhésion</h4>
                 <span>24,99 € *</span>
                 <p>* Montant unique pour l'inscription initiale qui peut couvrir les coûts administratifs, la création de profil, et l'accès aux outils de base du site.</p>
-                <button className='black'>Je m'inscris</button>
+                <button className='black' onClick={submitForm}>Je m'inscris</button>
             </article>
         </section>
     )
