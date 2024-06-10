@@ -32,12 +32,12 @@
 
 /* ----------- 1:= menu ------------ */
 .menu{
-    width: 35%;
+    width: 25%;
     padding: 3rem 0 0 12rem;
 }
 
 .menu a{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 2rem;
     padding: 1rem;
     margin-right: 20%;
