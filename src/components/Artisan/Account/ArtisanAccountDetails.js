@@ -72,6 +72,7 @@ const ArtisanAccountDetails = () =>{
         }
     
         try {
+            console.log(data);
             await axiosInstance.put('artisans', data);
             setUpdate(true);
         } catch (error) {
