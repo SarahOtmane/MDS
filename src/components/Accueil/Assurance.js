@@ -21,7 +21,7 @@ const Assurance = () =>{
             </section>
 
             <section className='assuranceDescription'>
-                <h3>NOTRE PARTENAIRE AXA<br></br>Une assurance incluse à chaque commande</h3>
+                <h3 className='titre'>NOTRE PARTENAIRE AXA<br></br>Une assurance incluse à chaque commande</h3>
                 <img src={axa} alt='' />
 
                 <article>
