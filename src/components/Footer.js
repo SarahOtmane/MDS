@@ -1,8 +1,13 @@
+import { useLocation } from "react-router-dom";
+
 import logo from '../assets/pictures/logo_short.svg';
 
-const Footer = () =>{
+const Footer = ({pagesBackGris}) =>{
+    const location = useLocation();
+    const isBackGris = pagesBackGris.includes(location.pathname);
+
     return(
-        <footer>
+        <footer className={isBackGris? 'backGris' : ''}>
             <div className={`row alignitem_center footer justifycontent_spbetween`}>
             <article>
                 <a href='/'><img src={logo} alt='logo RenoWear' className='logo' /></a>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { useState } from "react";
 
 import './App.css';
@@ -105,6 +105,12 @@ const App = () => {
         job: '',
     });
 
+    const pagesBackGris = [
+        "/artisan/register", "/artisan/login",
+        "/legal/mentions", "/legal/politique", "/legal/condition",
+        "/assurance", "/error401", "/error404", "/error403", "error500"
+    ];
+
     return (
         <BrowserRouter>
                 <Header />
@@ -170,7 +176,7 @@ const App = () => {
                     </Route>
 
                 </Routes>
-                <Footer />
+                <Footer pagesBackGris={pagesBackGris} />
         </BrowserRouter>
     )
 }
