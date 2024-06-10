@@ -11,7 +11,14 @@ const SuccefullOrder = () =>{
             <section className='success'>
                 <img src={success} alt='' />
                 <h2>Merci, à bientôt !</h2>
-                <p>Votre commande a été passée avec succès et est maintenant en cours de traitement.</p>
+                <article>
+                    <p>Votre envoie</p>
+                    <ul>
+                        <li>Étape 1 : Préparez votre commande avant le dépôt dans le délais imparti</li>
+                        <li>Étape 2 : Déposez votre article chez l’artisan sélectionné</li>
+                        <li>Étape 3 : Récupérez-le transformé et revitalisé</li>
+                    </ul>
+                </article>
                 <button>
                     Accéder à mon Compte 
                     <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
