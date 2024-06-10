@@ -192,8 +192,7 @@ const ArtisanSignUp = () =>{
             )}
 
             {(suite.metier && suite.reparation && suite.abonnement) && (
-                <AbonnementForm 
-                />
+                <AbonnementForm submitForm={submitForm} />
             )}
 
         </main>
