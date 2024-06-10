@@ -157,6 +157,10 @@ label{
     font-weight: 900;
 }
 
+.backWhite{
+    background-color: var(--white);
+}
+
 .backGris{
     background-color: var(--gris_background);
 }
