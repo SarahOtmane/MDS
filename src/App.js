@@ -48,6 +48,8 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
 import ArtisanAccountDetails from "./components/Artisan/Account/ArtisanAccountDetails";
 import ArtisanAccountJob from "./components/Artisan/Account/ArtisanAccountJob";
 import ArtisanAccountAdress from "./components/Artisan/Account/ArtisanAccountAdress";
+import ArtisanAccountOrder from "./components/User/Account/ArtisanAccountOrder";
+import ArtisanAccountMdp from "./components/User/Account/ArtisanAccoutnMdp";
 
 
 
@@ -98,6 +100,8 @@ import ArtisanAccountAdress from "./components/Artisan/Account/ArtisanAccountAdr
             /details
             /metier
             /adress
+            /order
+            /update-password
 */
 
 
@@ -185,6 +189,8 @@ const App = () => {
                             <Route path="details" element={<ArtisanAccountDetails />} />
                             <Route path="metier" element={<ArtisanAccountJob />} />
                             <Route path="adress" element={<ArtisanAccountAdress />} />
+                            <Route path="order" element={<ArtisanAccountOrder />} />
+                            <Route path="update-password" element={<ArtisanAccountMdp />} />
                         </Route>
                     </Route>
 
