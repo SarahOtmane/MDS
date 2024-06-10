@@ -46,6 +46,7 @@ import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
 
 import ArtisanAccountDetails from "./components/Artisan/Account/ArtisanAccountDetails";
+import ArtisanAccountJob from "./components/Artisan/Account/ArtisanAccountJob";
 
 
 
@@ -94,6 +95,7 @@ import ArtisanAccountDetails from "./components/Artisan/Account/ArtisanAccountDe
         /login
         /my-account : 
             /details
+            /metier
 */
 
 
@@ -179,6 +181,7 @@ const App = () => {
 
                         <Route path="my-account">
                             <Route path="details" element={<ArtisanAccountDetails />} />
+                            <Route path="metier" element={<ArtisanAccountJob />} />
                         </Route>
                     </Route>
 
