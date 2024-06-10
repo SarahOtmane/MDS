@@ -12,8 +12,9 @@ const ArtisanAccountJob = () =>{
     const [data, setData] = useState({
         job: '',
         prestations: [],
-        clothes: []
     });
+
+    const [checkedItems, setCheckedItems] = useState({});
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,13 +28,9 @@ const ArtisanAccountJob = () =>{
                 const prestationsResponse = await axiosInstance.get(`/prestations/job/${id_job}`);
                 const prestations = prestationsResponse.data;
 
-                const clothesResponse = await axiosInstance.get(`/clothes/job/${id_job}`);
-                const clothes = clothesResponse.data;
-
                 setData({
                     job: jobName,
                     prestations: prestations,
-                    clothes: clothes
                 });
             } catch (error) {
                 const status = error.response ? error.response.status : 500;
@@ -77,27 +74,21 @@ const ArtisanAccountJob = () =>{
                                 <tr>
                                     <th></th>
                                     <th>Catégories</th>
-                                    <th>Pièces</th>
-                                    <th>Réparations</th>
                                     <th>Prix admin</th>
                                     <th>Prix</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.clothes.map((cloth) => (
-                                    data.prestations.map((presta, prestaIndex) => (
-                                        <tr key={`${cloth.id}-${prestaIndex}`}>
-                                            <td>
-                                                <input type="checkbox" id={`checkbox-${cloth.id}-${prestaIndex}`} className="checkbox" />
-                                                <label htmlFor={`checkbox-${cloth.id}-${prestaIndex}`} className="custom-checkbox"></label>
-                                            </td>
-                                            <th>{cloth.categorie}</th>
-                                            <th>{cloth.clothType}</th>
-                                            <th>{presta.reparationType}</th>
-                                            <th>{presta.priceSuggested}</th>
-                                            <th>Prix</th>
-                                        </tr>
-                                    ))
+                                {data.prestations.map((presta) => (
+                                    <tr key={`${presta.id}`}>
+                                        <td>
+                                            <input type="checkbox" id={`checkbox-${presta.id}`} className="checkbox" />
+                                            <label htmlFor={`checkbox-${presta.id}`} className="custom-checkbox"></label>
+                                        </td>
+                                        <th>{presta.reparationType}</th>
+                                        <th>{presta.priceSuggested}</th>
+                                        <th>Prix</th>
+                                    </tr>
                                 ))}
                             </tbody>
                         </table>
