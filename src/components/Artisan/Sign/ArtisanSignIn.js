@@ -34,6 +34,7 @@ const ArtisanSignIn = () =>{
             
             const token = response.data.token;
             addToken(token);
+            localStorage.setItem('role', 'artisan');
 
             navigate('/artisan/my-account/details');
         } catch (error) {
