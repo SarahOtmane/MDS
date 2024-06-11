@@ -6,6 +6,7 @@ const ArtisanAccountMenu = ({selected}) =>{
 
     const logout = () =>{
         removeToken();
+        localStorage.removeItem('role');
         navigate('/');
     }
 
