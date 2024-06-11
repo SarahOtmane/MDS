@@ -12,6 +12,7 @@ import Aide from "./components/Accueil/Aide";
 import Repare from "./components/Accueil/Repare";
 import Rejoindre from "./components/Accueil/Rejoindre";
 import Artisans from "./components/Accueil/Artisans";
+import Account from "./components/Accueil/Account";
 import Assurance from "./components/Accueil/Assurance";
 
 import SignUp from "./components/User/Sign/SignUp";
@@ -23,7 +24,6 @@ import AccountOrder from "./components/User/Account/AccountOrder";
 import AccountPassword from "./components/User/Account/AccountPassword";
 import AccountDetails from "./components/User/Account/AccountDetails";
 import AccountAdress from "./components/User/Account/AccountAdress";
-import Account from "./components/User/Account";
 
 import CheckCart from "./components/Cart/CheckCart";
 
@@ -65,6 +65,7 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
     /repare
     /rejoindre
     /artisans
+    /account
     /assurance
     /erreur401
     /erreur404
@@ -135,6 +136,7 @@ const App = () => {
                     />} />
                     <Route path="/artisans" element={<Artisans />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
+                    <Route path="account" element={<Account />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
                     <Route path="/error404" element={<Error404 />} />
@@ -166,7 +168,6 @@ const App = () => {
                         </Route>
 
                         <Route path="my-account">
-                            <Route path="account" element={<Account />} />
                             <Route path="order" element={<AccountOrder />} />
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
