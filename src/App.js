@@ -12,7 +12,6 @@ import Aide from "./components/Accueil/Aide";
 import Repare from "./components/Accueil/Repare";
 import Rejoindre from "./components/Accueil/Rejoindre";
 import Artisans from "./components/Accueil/Artisans";
-import Account from "./components/Accueil/Account";
 import Assurance from "./components/Accueil/Assurance";
 
 import SignUp from "./components/User/Sign/SignUp";
@@ -65,7 +64,6 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
     /repare
     /rejoindre
     /artisans
-    /account
     /assurance
     /erreur401
     /erreur404
@@ -136,7 +134,6 @@ const App = () => {
                     />} />
                     <Route path="/artisans" element={<Artisans />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
-                    <Route path="/account" element={<Account />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
                     <Route path="/error404" element={<Error404 />} />
