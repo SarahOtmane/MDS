@@ -52,7 +52,7 @@ const Header = () =>{
                 </ul>
             </section>
             {openPopup && <div className="popup-background">
-                    <Account />
+                    <Account setOpenPopup={setOpenPopup} />
                 </div>}
         </header>
     )
