@@ -136,7 +136,7 @@ const App = () => {
                     />} />
                     <Route path="/artisans" element={<Artisans />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
-                    <Route path="account" element={<Account />} />
+                    <Route path="/account" element={<Account />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
                     <Route path="/error404" element={<Error404 />} />
