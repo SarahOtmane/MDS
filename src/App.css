@@ -305,6 +305,18 @@ header nav + ul{
     margin-top: 1.5rem;
 }
 
+.popup div{
+    padding: 2rem 4rem;
+}
+
+.popup button{
+    width: 40%;
+}
+
+.popup span{
+    margin-right: .5rem;
+}
+
 .popup-background {
     position: fixed;
     top: 0;
