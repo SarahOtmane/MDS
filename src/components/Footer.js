@@ -1,10 +1,25 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import logo from '../assets/pictures/logo_short.svg';
+
+import Account from "./Accueil/Account";
+
 
 const Footer = ({pagesBackWhite}) =>{
     const location = useLocation();
     const isBackWhite = pagesBackWhite.includes(location.pathname);
+
+    const navigate = useNavigate();
+    const [openPopup, setOpenPopup] = useState(false);
+
+    const account = () =>{
+        const token = localStorage.getItem('token');
+        const role = localStorage.getItem('role');
+        if(!token) setOpenPopup(true);
+        if(role === 'user') navigate('/user/my-account/order');
+        else if(role === 'artisan') navigate('artisan/my-account/order');
+    }
 
     return(
         <footer className={isBackWhite? 'backWhite' : 'backGris'}>
@@ -51,7 +66,7 @@ const Footer = ({pagesBackWhite}) =>{
                 <div>
                     <span className='text_uppercase'>Aide</span>
                     <ul>
-                        <li><a href='/user/my-account/account'>Mon compte</a></li>
+                        <li onClick={account}>Mon compte</li>
                         <li><a href='/repare'>Je répare</a></li>
                         <li><a href='/aide'>Aide</a></li>
                     </ul>
@@ -59,6 +74,9 @@ const Footer = ({pagesBackWhite}) =>{
             </article>
             </div>
             <p className='copyright'>&copy; 2024 RenoWear. Tous droits réservés</p>
+            {openPopup && <div className="popup-background">
+                    <Account setOpenPopup={setOpenPopup} />
+                </div>}
         </footer>
     )
 }
