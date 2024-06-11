@@ -9,8 +9,10 @@ const Account = () =>{
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-        if (!token)  navigate('/user/login')
-        else navigate('/user/my-account/order');
+        const role = localStorage.getItem('role');
+        if (!token)  navigate('/user/login');
+        else if(role === 'user') navigate('/user/my-account/order');
+        else if(role === 'artisan') navigate('artisan/my-account/order');
     }, [navigate]);
 
 
