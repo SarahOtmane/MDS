@@ -6,6 +6,7 @@ const AccountMenu = ({selected}) =>{
 
     const logout = () =>{
         removeToken();
+        localStorage.removeItem('role'); 
         navigate('/');
     }
 
