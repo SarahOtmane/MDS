@@ -6,7 +6,7 @@ const Account = () =>{
             <h2>Connexion</h2>
             <p>Souhaitez-vous vous connecter en tant qu'artisan ou particulier ?</p>
             <p>Merci de choisir votre mode de connexion :</p>
-            <div>
+            <div className="row justifycontent_spbetween">
                 <button>
                     Particulier
                     <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
