@@ -1,27 +1,37 @@
+import { useEffect, useState } from "react";
+import axiosInstance from '../../axiosConfig';
 
+const ArtisanCard = ({ artisan, jobs }) => {
+    const [note, setNote] = useState(0);
 
+    useEffect(() => {
+        const getNote = async (id) => {
+            try {
+                const testimonialResponse = await axiosInstance.get(`/testimonials/artisan/${id}`);
+                const testimonials = testimonialResponse.data;
+                let somme = 0;
 
-const ArtisanCard = ({artisan, jobs}) =>{
-    const getNote = async (id) => {
-        try {
-            const testimonialResponse = await axiosInstance.get(`/testimonials/artisan/${id}`);
-            const testimonials = testimonialResponse.data;
-            let somme = 0;
-
-            if (testimonials.length > 0) {
-                for (const testimonial of testimonials) {
-                    somme += parseInt(testimonial.stars);
+                if (testimonials.length > 0) {
+                    for (const testimonial of testimonials) {
+                        somme += parseInt(testimonial.stars);
+                    }
                 }
-            }
 
-            return somme / testimonials.length || 0;
-        } catch (error) {
-            return 0;
-        }
-    };
+                return somme / testimonials.length || 0;
+            } catch (error) {
+                return 0;
+            }
+        };
+
+        const fetchNote = async () => {
+            const noteValue = await getNote(artisan.id);
+            setNote(noteValue);
+        };
+
+        fetchNote();
+    }, [artisan.id]);
 
     const job = jobs.find(job => job.id === artisan.id_job);
-    const note = await getNote(artisan.id);
 
     return (
         <article key={artisan.id} className="row">
@@ -53,6 +63,5 @@ const ArtisanCard = ({artisan, jobs}) =>{
         </article>
     );
 }
-
 
 export default ArtisanCard;
