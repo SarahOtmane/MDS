@@ -2,9 +2,7 @@
 
 
 const AllArtisan = ({artisans}) =>{
-    let noArtisan = true;
-
-    if(artisans.length > 0)  noArtisan = false;
+    let noArtisan = artisans.length === 0;
 
     return(
         <>
