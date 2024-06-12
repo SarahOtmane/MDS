@@ -584,10 +584,14 @@
 
 .allArtisan article{
     width: 48%;
-    border: 1px solid #c4c2c2;
+    border: 2px solid #c4c2c2;
     margin-bottom: 2rem;
     border-radius: .5rem;
     padding: 1.5rem 0;
+}
+
+.allArtisan article:hover{
+    border: 2px solid #E4A2BE;
 }
 
 .allArtisan .pseudo{
