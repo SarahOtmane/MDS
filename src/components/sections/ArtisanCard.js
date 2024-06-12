@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axiosInstance from '../../axiosConfig';
 
 const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
+    const navigate = useNavigate();
     const [note, setNote] = useState(0);
 
     useEffect(() => {
@@ -39,7 +41,7 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
             id_artisan: artisan.id
         }
         setCommand(update);
-        console.log(update);
+        navigate('/user/reparation/details');
     }
 
     return (
