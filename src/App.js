@@ -134,7 +134,9 @@ const App = () => {
                     <Route path="/repare" element={<Repare 
                         setService={setService} 
                     />} />
-                    <Route path="/artisans" element={<Artisans service={service} />} />
+                    <Route path="/artisans" element={<Artisans 
+                        service={service}  setService={setService}
+                    />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
