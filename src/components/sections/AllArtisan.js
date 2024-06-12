@@ -5,7 +5,7 @@ import axiosInstance from '../../axiosConfig';
 
 import ArtisanCard from "./ArtisanCard";
 
-const AllArtisan = ({ artisans, notFound }) => {
+const AllArtisan = ({ artisans, notFound, setCommand, command }) => {
     const navigate = useNavigate();
     const [jobs, setJobs] = useState([]);
 
@@ -37,6 +37,14 @@ const AllArtisan = ({ artisans, notFound }) => {
         getJobs();
     }, [navigate]);
 
+    const updateCommand = (id) =>{
+        setCommand({
+            ...command,
+            id_artisan: id
+        });
+        console.log(command);
+    }
+
 
     return (
         <>
@@ -48,7 +56,7 @@ const AllArtisan = ({ artisans, notFound }) => {
             ) : (
                 <section className="allArtisan row justifycontent_spbetween">
                     {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} onclick={() => updateCommand(artisan.id)} />
                     ))}
                     {artisans.map(artisan => (
                         <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
