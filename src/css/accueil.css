@@ -180,6 +180,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: .7rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .repare .repareService article:first-child div{
@@ -194,19 +196,41 @@
     background-image: url('../assets/pictures/artisans/pic4.png');
 }
 
-.repare .repareService form button{
+.repare .repareService form p{
     margin-top: 1.5rem;
     border-radius: 2rem;
     font-family: 'montserratbold', sans-serif;
     font-size: 1.3rem;
     color: var(--black);
     border: none;
+    width: max-content;
+    padding: .5rem 1rem;
 }
 
-.repare .repareService form button:hover{
-    color: var(--green_background_2);
-    background-color: var(--black);
-} 
+.repare .repareService form button{
+    position: relative;
+    top: 87%;
+    height: 13%;
+    width: 100%;
+    border-radius: 0;
+    display: none;
+    z-index: 2;
+}
+
+.repare .repareService article div:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(246, 246, 246, 0.5); 
+    z-index: 1;
+}
+
+.repare .repareService form div:hover button{
+    display: block;
+}
 
 .repare .tuto div{
     width: 50%;
