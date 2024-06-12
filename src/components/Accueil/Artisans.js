@@ -9,7 +9,7 @@ import Newsletter from "../sections/Newsletter";
 import ArtisanService from '../sections/ArtisanService';
 import AllArtisan from '../sections/AllArtisan';
 
-const Artisans = ({ service, setService, setServiceEnvoyeParRepare, serviceEnvoyeParRepare }) => {
+const Artisans = ({setCommand, command, service, setService, setServiceEnvoyeParRepare, serviceEnvoyeParRepare }) => {
     const navigate = useNavigate();
     const [recherche, setRecherche] = useState(false);
     const [notFound, setNotFound] = useState(false);
@@ -114,7 +114,7 @@ const Artisans = ({ service, setService, setServiceEnvoyeParRepare, serviceEnvoy
                     </button>
                 </form>
             </section>
-            {recherche && <AllArtisan artisans={artisans} notFound={notFound} />}
+            {recherche && <AllArtisan artisans={artisans} notFound={notFound} setCommand={setCommand} command={command} />}
             {!recherche && <ArtisanService />}
             <Newsletter />
         </main>
