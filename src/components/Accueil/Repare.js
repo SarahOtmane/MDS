@@ -9,22 +9,12 @@ import Newsletter from '../sections/Newsletter';
 
 
 
-const Repare = ({setCommand}) =>{
+const Repare = ({setService}) =>{
     const navigate = useNavigate();
 
     const chooseService = (name) =>{
-        setCommand({
-            name: '',
-            picture: '',
-            user_email: '',
-            artisan_email: '',
-            reparationType: '',
-            clothType: '',
-            categorie: '',
-            job: name,
-        });
-        
-        navigate('/user/reparation/details');
+        setService(name);
+        navigate('/liste-artisan');
     }
 
     return(
