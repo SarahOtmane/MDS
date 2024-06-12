@@ -76,7 +76,7 @@ const Artisans = () => {
 
     return (
         <main className="artisans">
-            <Titre titre="Nos artisans" lien="/artisans" />
+            <Titre titre="Nos artisans" lien="/artisans" classe={'backGris'} />
             <section className="renowear backGris">
                 <article>
                     <h2 className="backVert2">RenoWear</h2>
