@@ -93,7 +93,7 @@ const ArtisanAccountMdp = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte" lien="/artisan/my-account/update-password" classe="backGris" />
+            <Titre titre="Mon compte artisan" lien="/artisan/my-account/update-password" classe="backGris" />
             
             <div className='row account'>
                 <ArtisanAccountMenu selected="motdepasse" />
