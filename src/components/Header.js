@@ -4,6 +4,7 @@ import { useState } from 'react';
 import logo from '../assets/pictures/logo_black.svg';
 
 import Account from './Accueil/Account';
+import Panier from './Accueil/Panier';
 
 
 const Header = () =>{
@@ -60,9 +61,16 @@ const Header = () =>{
                     </li>
                 </ul>
             </section>
-            {openPopupC && <div className="popup-background">
+            {openPopupC && 
+                <div className="popup-background">
                     <Account setOpenPopupC={setOpenPopupC} />
-                </div>}
+                </div>
+            }
+            {openPopupP &&
+                <div className="popup-background">
+                    <Panier setOpenPopupP={setOpenPopupP} />
+                </div>
+            }
         </header>
     )
 }
