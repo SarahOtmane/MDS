@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axiosInstance from '../../axiosConfig';
 
-const ArtisanCard = ({ artisan, jobs }) => {
+const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
     const [note, setNote] = useState(0);
 
     useEffect(() => {
@@ -33,8 +33,17 @@ const ArtisanCard = ({ artisan, jobs }) => {
 
     const job = jobs.find(job => job.id === artisan.id_job);
 
+    const updateCommand = (id) =>{
+        const update = {
+            ...command,
+            id_artisan: artisan.id
+        }
+        setCommand(update);
+        console.log(update);
+    }
+
     return (
-        <article className="row">
+        <article className="row" onClick={updateCommand}>
             <p className="pseudo">{artisan.lastname[0]}{artisan.firstname[0]}</p>
             <div className="contenu">
                 <div className="row justifycontent_spbetween">

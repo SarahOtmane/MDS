@@ -37,14 +37,6 @@ const AllArtisan = ({ artisans, notFound, setCommand, command }) => {
         getJobs();
     }, [navigate]);
 
-    const updateCommand = (id) =>{
-        setCommand({
-            ...command,
-            id_artisan: id
-        });
-        console.log(command);
-    }
-
 
     return (
         <>
@@ -56,13 +48,13 @@ const AllArtisan = ({ artisans, notFound, setCommand, command }) => {
             ) : (
                 <section className="allArtisan row justifycontent_spbetween">
                     {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} onclick={() => updateCommand(artisan.id)} />
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
                     ))}
                     {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
                     ))}
                     {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
                     ))}
                 </section>
             )}
