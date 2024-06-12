@@ -73,7 +73,7 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
             return;
         }
 
-        getArtisans();        
+        await getArtisans();        
     };
 
     if(serviceEnvoyeParRepare){
