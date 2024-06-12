@@ -8,14 +8,23 @@ import Account from './Accueil/Account';
 
 const Header = () =>{
     const navigate = useNavigate();
-    const [openPopup, setOpenPopup] = useState(false);
+    const [openPopupC, setOpenPopupC] = useState(false);
+    const [openPopupP, setOpenPopupP] = useState(false);
 
     const account = () =>{
         const token = localStorage.getItem('token');
         const role = localStorage.getItem('role');
-        if(!token) setOpenPopup(true);
+        if(!token) setOpenPopupC(true);
         if(role === 'user') navigate('/user/my-account/order');
         else if(role === 'artisan') navigate('artisan/my-account/order');
+    }
+
+    const panier = () =>{
+        const token = localStorage.getItem('token');
+        const role = localStorage.getItem('role');
+        if(!token) navigate('/user/login');
+        else if(role === 'user') navigate('/user/cart/check');
+        else if(role === 'artisan') setOpenPopupP(true);
     }
 
     return(
@@ -33,7 +42,7 @@ const Header = () =>{
                     </ul>
                 </nav>
                 <ul className='row alignitem_center'>
-                    <li>
+                    <li onClick={panier}>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1H4.38321L5.58853 12.9769C5.63862 13.3071 5.80643 13.608 6.06102 13.8243C6.31561 14.0406 6.63984 14.1576 6.97395 14.1538H15.7021C16.0042 14.1696 16.3032 14.0861 16.5534 13.9161C16.8035 13.7461 16.9912 13.4989 17.0875 13.2123L18.9302 7.67385C18.999 7.46564 19.0173 7.24406 18.9836 7.02739C18.9498 6.81072 18.865 6.60517 18.7362 6.42769C18.6021 6.23894 18.4227 6.08681 18.2146 5.98522C18.0065 5.88362 17.7761 5.83581 17.5447 5.84615H4.8681" stroke="#E4A2BE" strokeWidth="1.42857" strokeLinecap="round" strokeLinejoin="round"/>
                             <path d="M15.4661 18.9998C15.2824 18.9998 15.1062 18.9269 14.9763 18.7971C14.8464 18.6672 14.7734 18.4912 14.7734 18.3075C14.7734 18.1239 14.8464 17.9478 14.9763 17.818C15.1062 17.6882 15.2824 17.6152 15.4661 17.6152C15.6499 17.6152 15.8261 17.6882 15.956 17.818C16.0859 17.9478 16.1589 18.1239 16.1589 18.3075C16.1589 18.4912 16.0859 18.6672 15.956 18.7971C15.8261 18.9269 15.6499 18.9998 15.4661 18.9998Z" fill="#E4A2BE" stroke="#E4A2BE" strokeWidth="1.42857" strokeLinecap="round" strokeLinejoin="round"/>
@@ -51,8 +60,8 @@ const Header = () =>{
                     </li>
                 </ul>
             </section>
-            {openPopup && <div className="popup-background">
-                    <Account setOpenPopup={setOpenPopup} />
+            {openPopupC && <div className="popup-background">
+                    <Account setOpenPopupC={setOpenPopupC} />
                 </div>}
         </header>
     )
