@@ -118,6 +118,8 @@ const App = () => {
         job: '',
     });
 
+    const [service, setService] = useState('');
+
     const pagesBackWhite = [
         "/", "/concept", "/aide", "/repare", "/artisans", "/rejoindre",
         "/user/reparation/details", "/user/reparation/image"
@@ -132,10 +134,12 @@ const App = () => {
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare 
-                        setCommand={setCommand} 
+                        setService={setService} 
                     />} />
                     <Route path="/artisans" element={<Artisans />} />
-                    <Route path="/liste-artisan" element={<ListeArtisan />} />
+                    <Route path="/liste-artisan" element={<ListeArtisan 
+                        service={service}
+                    />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
