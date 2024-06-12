@@ -9,11 +9,12 @@ import Newsletter from '../sections/Newsletter';
 
 
 
-const Repare = ({setService}) =>{
+const Repare = ({setService, setServiceEnvoyeParRepare}) =>{
     const navigate = useNavigate();
 
     const chooseService = (name) =>{
         setService(name);
+        setServiceEnvoyeParRepare(true);
         navigate('/artisans');
     }
 

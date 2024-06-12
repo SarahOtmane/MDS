@@ -117,6 +117,7 @@ const App = () => {
     });
 
     const [service, setService] = useState('');
+    const [serviceEnvoyeParRepare, setServiceEnvoyeParRepare] = useState(false);
 
     const pagesBackWhite = [
         "/", "/concept", "/aide", "/repare", "/artisans", "/rejoindre",
@@ -132,10 +133,11 @@ const App = () => {
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare 
-                        setService={setService} 
+                        setService={setService} setServiceEnvoyeParRepare={setServiceEnvoyeParRepare}
                     />} />
                     <Route path="/artisans" element={<Artisans 
                         service={service}  setService={setService}
+                        serviceEnvoyeParRepare={serviceEnvoyeParRepare} setServiceEnvoyeParRepare={setServiceEnvoyeParRepare}
                     />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/assurance" element={<Assurance />} />

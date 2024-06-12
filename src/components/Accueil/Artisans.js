@@ -9,48 +9,40 @@ import Newsletter from "../sections/Newsletter";
 import ArtisanService from '../sections/ArtisanService';
 import AllArtisan from '../sections/AllArtisan';
 
-const Artisans = () => {
+const Artisans = ({ service, setService, setServiceEnvoyeParRepare, serviceEnvoyeParRepare }) => {
     const navigate = useNavigate();
     const [recherche, setRecherche] = useState(false);
     const [notFound, setNotFound] = useState(false);
     const [artisans, setArtisans] = useState([]);
-    const [formData, setFormData] = useState({
-        job: '',
-        postalCode: ''
-    });
+    const [postalCode, setPostalCode] = useState('');
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value.trim()
-        });
+        setRecherche(false);
+        if (e.target.name === 'postalCode') {
+            setPostalCode(e.target.value);
+        } else {
+            setService(e.target.value);
+        }
     };
 
-    const submitForm = async (e) => {
-        e.preventDefault();
-
-        if ((formData.job === '') && (formData.postalCode === '')) {
-            return;
-        }
-
+    const getArtisans = async() =>{
         try {
-            let data = { job: formData.job, postalCode: formData.postalCode };
-            if (formData.job === '') {
+            let data = { job: service, postalCode: postalCode };
+            if (service === '') {
                 data.job = '-1';
             } else {
-                if (formData.job === 'broderie') {
+                if (service === 'broderie') {
                     data.job = 'couture';
                 }
                 const job = await axios.get(`http://localhost:3003/jobs/${data.job}`);
                 data.job = job.data.id;
             }
 
-            if (formData.postalCode === '') data.postalCode = '-1';
+            if (postalCode === '') data.postalCode = '-1';
 
             const artisansResponse = await axios.get(`http://localhost:3003/artisans/${data.job}/${data.postalCode}`);
-            console.log(artisansResponse.data);
             setArtisans(artisansResponse.data);
+            setNotFound(artisansResponse.data.length === 0);
             setRecherche(true);
         } catch (error) {
             const status = error.response ? error.response.status : 500;
@@ -62,8 +54,8 @@ const Artisans = () => {
                     navigate('/error403');
                     break;
                 case 404:
-                    setRecherche(true);
                     setNotFound(true);
+                    setRecherche(true);
                     break;
                 case 500:
                     navigate('/error500');
@@ -72,7 +64,23 @@ const Artisans = () => {
                     console.error('Erreur lors de la recherche des artisans:', error);
             }
         }
+    }
+
+    const submitForm = async (e) => {
+        e.preventDefault();
+
+        if ((service === '') && (postalCode === '')) {
+            return;
+        }
+
+        getArtisans();        
     };
+
+    if(serviceEnvoyeParRepare){
+        getArtisans();
+        setServiceEnvoyeParRepare(false);
+    }
+
 
     return (
         <main className="artisans">
@@ -88,13 +96,13 @@ const Artisans = () => {
                     <input
                         name='job'
                         placeholder='Domaine, Spécialités ...'
-                        defaultValue={formData.job}
+                        value={service}
                         onChange={updateChamps}
                     />
                     <input
                         name='postalCode'
                         placeholder='Où ?'
-                        defaultValue={formData.postalCode}
+                        value={postalCode}
                         onChange={updateChamps}
                     />
                     <button type='submit'>
