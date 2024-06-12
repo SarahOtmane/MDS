@@ -27,16 +27,22 @@ const Repare = ({setService}) =>{
                 <p>Nos ateliers-boutiques répartis dans toute la France, vous ouvrent leurs portes pour vous rendre service.</p>
                 <form className='row justifycontent_spbetween'>
                     <article>
-                        <div></div>
-                        <button className='text_uppercase backVert2' onClick={() => chooseService('couture')}>Services couture</button>
+                        <div>
+                            <button onClick={() => chooseService('couture')}>Choisir son artisan</button>
+                        </div>
+                        <p className='text_uppercase backVert2'>Services couture</p>
                     </article>
                     <article>
-                        <div></div>
-                        <button className='text_uppercase backVert2' onClick={() => chooseService('maroquinnerie')}>Services maroquinnerie</button>
+                        <div>
+                            <button onClick={() => chooseService('maroquinnerie')}>Choisir son artisan</button>
+                        </div>
+                        <p className='text_uppercase backVert2'>Services maroquinnerie</p>
                     </article>
                     <article>
-                        <div></div>
-                        <button className='text_uppercase backVert2' onClick={() => chooseService('cordonnerie')}>Services cordonnerie</button>
+                        <div>
+                            <button onClick={() => chooseService('cordonnerie')}>Choisir son artisan</button>
+                        </div>
+                        <p className='text_uppercase backVert2'>Services cordonnerie</p>
                     </article>
                 </form>
             </section>
