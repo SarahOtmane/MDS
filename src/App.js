@@ -108,8 +108,8 @@ const App = () => {
     const [command, setCommand] = useState({
         name: '',
         picture: '',
-        user_email: '',
-        artisan_email: '',
+        id_user: '',
+        id_artisan: '',
         reparationType: '',
         clothType: '',
         categorie: '',
@@ -136,7 +136,7 @@ const App = () => {
                         setService={setService} setServiceEnvoyeParRepare={setServiceEnvoyeParRepare}
                     />} />
                     <Route path="/artisans" element={<Artisans 
-                        service={service}  setService={setService}
+                        service={service}  setService={setService} setCommand={setCommand} command={command}
                         serviceEnvoyeParRepare={serviceEnvoyeParRepare} setServiceEnvoyeParRepare={setServiceEnvoyeParRepare}
                     />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
