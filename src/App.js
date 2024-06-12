@@ -12,7 +12,6 @@ import Aide from "./components/Accueil/Aide";
 import Repare from "./components/Accueil/Repare";
 import Rejoindre from "./components/Accueil/Rejoindre";
 import Artisans from "./components/Accueil/Artisans";
-import ListeArtisan from "./components/Accueil/ListeArtisan";
 import Assurance from "./components/Accueil/Assurance";
 
 import SignUp from "./components/User/Sign/SignUp";
@@ -65,7 +64,6 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
     /repare
     /rejoindre
     /artisans
-    /liste-artisan
     /assurance
     /erreur401
     /erreur404
@@ -136,10 +134,7 @@ const App = () => {
                     <Route path="/repare" element={<Repare 
                         setService={setService} 
                     />} />
-                    <Route path="/artisans" element={<Artisans />} />
-                    <Route path="/liste-artisan" element={<ListeArtisan 
-                        service={service}
-                    />} />
+                    <Route path="/artisans" element={<Artisans service={service} />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
