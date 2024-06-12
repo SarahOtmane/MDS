@@ -43,7 +43,7 @@ const AccountOrder = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte" lien="/user/my-account/order" classe="backGris" />
+            <Titre titre="Mon compte utilisateur" lien="/user/my-account/order" classe="backGris" />
             
             <div className='row account'>
                 <AccountMenu selected="commandes" />

@@ -91,7 +91,7 @@ const AccountPassword = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte" lien="/user/my-account/update-password" classe="backGris" />
+            <Titre titre="Mon compte utilisateur" lien="/user/my-account/update-password" classe="backGris" />
             
             <div className='row account'>
                 <AccountMenu selected="motdepasse" />
