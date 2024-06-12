@@ -12,9 +12,9 @@ const Reparation = () =>{
             <Titre titre="Couture" lien="/reparation/couture" />
             <section className='loading column'>
                 <p>1/3 Votre réparation</p>
-                <div class="progress-bar">
-                    <div class="green"></div>
-                    <div class="black"></div>
+                <div className="progress-bar">
+                    <div className="green"></div>
+                    <div className="black"></div>
                 </div>
             </section>
             <section className="couture__contenu row justifycontent_spbetween">
