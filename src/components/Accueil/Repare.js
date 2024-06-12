@@ -14,7 +14,7 @@ const Repare = ({setService}) =>{
 
     const chooseService = (name) =>{
         setService(name);
-        navigate('/liste-artisan');
+        navigate('/artisans');
     }
 
     return(
