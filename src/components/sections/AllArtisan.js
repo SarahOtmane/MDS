@@ -50,6 +50,12 @@ const AllArtisan = ({ artisans, notFound }) => {
                     {artisans.map(artisan => (
                         <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
                     ))}
+                    {artisans.map(artisan => (
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
+                    ))}
+                    {artisans.map(artisan => (
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
+                    ))}
                 </section>
             )}
         </>
