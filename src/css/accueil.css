@@ -172,7 +172,6 @@
 
 .repare .repareService article{
    width: 30%;
-   text-align: center;
 }
 
 .repare .repareService article div{
@@ -200,13 +199,13 @@
     border-radius: 2rem;
     font-family: 'montserratbold', sans-serif;
     font-size: 1.3rem;
+    color: var(--black);
     border: none;
 }
 
 .repare .repareService form button:hover{
-    border: 2px solid var(--green_background_2);
     color: var(--green_background_2);
-    background-color: var(--white);
+    background-color: var(--black);
 } 
 
 .repare .tuto div{
