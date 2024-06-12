@@ -48,7 +48,7 @@ const AllArtisan = ({ artisans, notFound }) => {
             ) : (
                 <section className="allArtisan row justifycontent_spbetween">
                     {artisans.map(artisan => (
-                        <ArtisanCard artisan={artisan} jobs={jobs} />
+                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} />
                     ))}
                 </section>
             )}
