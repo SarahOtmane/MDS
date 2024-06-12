@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 
-const Account = ({setOpenPopup}) =>{
+const Account = ({setOpenPopupC}) =>{
     const navigate = useNavigate();
     const connexion = (role) =>{
         if(role === 'user') navigate('/user/login')
         else if(role === 'artisan') navigate('/artisan/login')
 
-        setOpenPopup(false)
+        setOpenPopupC(false)
     }
 
     return(
