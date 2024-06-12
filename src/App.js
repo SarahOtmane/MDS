@@ -114,6 +114,7 @@ const App = () => {
         clothType: '',
         categorie: '',
         job: '',
+        id_job: ''
     });
 
     const [service, setService] = useState('');

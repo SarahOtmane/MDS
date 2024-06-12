@@ -35,11 +35,15 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
 
     const job = jobs.find(job => job.id === artisan.id_job);
 
-    const updateCommand = (id) =>{
+    const updateCommand = () =>{
+        const job = jobs.find(job => job.id === artisan.id_job);
         const update = {
             ...command,
-            id_artisan: artisan.id
+            id_artisan: artisan.id,
+            id_job: artisan.id_job,
+            job: job.name
         }
+        console.group(update);
         setCommand(update);
         navigate('/user/reparation/details');
     }
