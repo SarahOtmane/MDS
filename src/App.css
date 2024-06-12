@@ -281,6 +281,10 @@ header nav + ul{
     justify-content: space-around;
 }
 
+header li{
+    cursor: pointer;
+}
+
 .popup{
     background-color: var(--white);
     border-radius: .3rem;
