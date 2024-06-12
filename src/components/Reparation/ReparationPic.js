@@ -1,18 +1,25 @@
 import '../../css/reparation.css';
 
+import { useState } from 'react';
+
 import Titre from "./Titre";
-import Input from "./Input";
 import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
 
-const Couture = () =>{
+const ReparationPic = () =>{
+    const [fileName, setFileName] = useState('');
+
+    const handleFileChange = (e) => {
+        setFileName(e.target.files[0]?.name || '');
+    };
+
     return(
         <main className="couture">
             <Titre titre="Couture" lien="/reparation/couture" />
             <section className='loading column'>
-                <p>1/3 Votre réparation</p>
-                <div class="progress-bar">
+                <p>2/3 Votre réparation</p>
+                <div class="progress-bar repa2">
                     <div class="green"></div>
                     <div class="black"></div>
                 </div>
@@ -20,23 +27,19 @@ const Couture = () =>{
             <section className="couture__contenu row justifycontent_spbetween">
                 <img className='repa' src={reparation} alt='' />
                 <form className='column'>
-                    <label>Quelle est la catégorie ?</label>
-                    <Input name="categorie" />
-
-                    <label>Quel est le type de vêtements ?</label>
-                    <Input name="clotheType" />
-
-                    <label>Quelle est la matière du vêtement ?</label>
-                    <Input name="clotheMatiere" />
-
-                    <label>Quel est votre besoin ?</label>
-                    <Input name="besoinType" />
-
-                    <label>Quelle est la réparation ?</label>
-                    <Input name="reparationType" />
-
-                    <label>Ajouter un commentaire</label>
-                    <textarea placeholder='Laissez un commentaire' rows={10} cols={40} />
+                    <label>Ajoute une photo</label>
+                    <div className='inputPics'>
+                        <input 
+                            type='file' 
+                            accept="image/*" 
+                            id="fileUpload" 
+                            onChange={handleFileChange}
+                            style={{ display: 'none' }} 
+                        />
+                        <label htmlFor="fileUpload" className="custom-file-upload">
+                            {fileName || '+ Ajoute une photo'}
+                        </label>
+                    </div>
                     
                     <button className='row'>
                         Continuer 
@@ -53,4 +56,4 @@ const Couture = () =>{
     )
 }
 
-export default Couture;
+export default ReparationPic;
