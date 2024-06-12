@@ -611,6 +611,7 @@
     margin-bottom: 2rem;
     border-radius: .5rem;
     padding: 1.5rem 0;
+    cursor: pointer;
 }
 
 .allArtisan article:hover{
