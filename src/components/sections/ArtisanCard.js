@@ -17,7 +17,7 @@ const ArtisanCard = ({ artisan, jobs }) => {
                     }
                 }
 
-                return somme / testimonials.length || 4.5;
+                return somme / testimonials.length || 0;
             } catch (error) {
                 return 0;
             }
