@@ -108,7 +108,6 @@ const Artisans = () => {
             </section>
             {recherche && <AllArtisan artisans={artisans} notFound={notFound} />}
             {!recherche && <ArtisanService />}
-            {!notFound && !recherche && <ArtisanService />}
             <Newsletter />
         </main>
     );
