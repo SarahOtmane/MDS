@@ -6,10 +6,10 @@ import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
 
-const Reparation = () =>{
+const Reparation = ({command, setCommand}) =>{
     return(
         <main className="couture">
-            <Titre titre="Couture" lien="/reparation/couture" />
+            <Titre titre={command.job} lien="/user/reparation/details" />
             <section className='loading column'>
                 <p>1/3 Votre réparation</p>
                 <div className="progress-bar">
@@ -21,19 +21,16 @@ const Reparation = () =>{
                 <img className='repa' src={reparation} alt='' />
                 <form className='column'>
                     <label>Quelle est la catégorie ?</label>
-                    <Input name="categorie" />
+                    <Input name="categorie" command={command} setCommand={setCommand} />
 
                     <label>Quel est le type de vêtements ?</label>
-                    <Input name="clotheType" />
-
-                    <label>Quelle est la matière du vêtement ?</label>
-                    <Input name="clotheMatiere" />
+                    <Input name="clotheType" command={command} setCommand={setCommand} />
 
                     <label>Quel est votre besoin ?</label>
-                    <Input name="besoinType" />
+                    <Input name="besoinType" command={command} setCommand={setCommand} />
 
                     <label>Quelle est la réparation ?</label>
-                    <Input name="reparationType" />
+                    <Input name="reparationType" command={command} setCommand={setCommand} />
 
                     <label>Ajouter un commentaire</label>
                     <textarea placeholder='Laissez un commentaire' rows={10} cols={40} />
