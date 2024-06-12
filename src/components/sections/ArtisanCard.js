@@ -43,7 +43,6 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
             id_job: artisan.id_job,
             job: job.name
         }
-        console.group(update);
         setCommand(update);
         navigate('/user/reparation/details');
     }
