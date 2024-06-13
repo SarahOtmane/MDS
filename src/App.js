@@ -187,7 +187,10 @@ const App = () => {
                                 command={command} 
                                 setCommand={setCommand}
                             />} />
-                            <Route path="image" element={<ReparationPic />} />
+                            <Route path="image" element={<ReparationPic 
+                                command={command} 
+                                setCommand={setCommand}
+                            />} />
                         </Route>
                     </Route>
                     <Route path="/artisan">
