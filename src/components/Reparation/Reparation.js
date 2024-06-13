@@ -39,11 +39,11 @@ const Reparation = ({ command, setCommand }) => {
 
                     {command.besoinType === 'personnalisation' && (
                         <div className='broderie row justifycontent_spbetween'>
-                            <div>
+                            <div className='child'>
                                 <label>Quel type de broderie ?</label>
                                 <Input name="broderieType" command={command} setCommand={setCommand} />
                             </div>
-                            <div>
+                            <div className='child'>
                                 <label>Taille de la police </label>
                                 <Input name="fontSize" command={command} setCommand={setCommand} />
                             </div>
