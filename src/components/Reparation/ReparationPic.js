@@ -1,32 +1,50 @@
 import '../../css/reparation.css';
-
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Titre from "./Titre";
 import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
 
-const ReparationPic = () =>{
+const ReparationPic = ({ command, setCommand }) => {
     const [fileName, setFileName] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleFileChange = (e) => {
-        setFileName(e.target.files[0]?.name || '');
+        const file = e.target.files[0];
+        if (file) {
+            setFileName(file.name);
+            setCommand({ ...command, picture: file });
+            setError('');
+        }
     };
 
-    return(
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!command.picture) {
+            setError('Veuillez ajouter une photo.');
+        } else {
+            setError('');
+            // Navigate to the next step or handle the form submission logic
+            navigate('/user/reparation/confirmation');
+        }
+    };
+
+    return (
         <main className="couture">
             <Titre titre="Couture" lien="/reparation/couture" />
             <section className='loading column'>
                 <p>2/3 Votre réparation</p>
-                <div class="progress-bar repa2">
-                    <div class="green"></div>
-                    <div class="black"></div>
+                <div className="progress-bar repa2">
+                    <div className="green"></div>
+                    <div className="black"></div>
                 </div>
             </section>
             <section className="couture__contenu row justifycontent_spbetween">
                 <img className='repa' src={reparation} alt='' />
-                <form className='column'>
+                <form className='column' onSubmit={handleSubmit}>
                     <label>Ajoute une photo</label>
                     <div className='inputPics'>
                         <input 
@@ -40,8 +58,10 @@ const ReparationPic = () =>{
                             {fileName || '+ Ajoute une photo'}
                         </label>
                     </div>
-                    
-                    <button className='row'>
+
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
+
+                    <button className='row' type='submit'>
                         Continuer 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M18.2896 11.4958C18.5701 11.7743 18.5701 12.2257 18.2896 12.5042L12.7541 18L11.7384 16.9916L16.766 12L11.7384 7.00845L12.7541 6L18.2896 11.4958Z" fill="white"/>
@@ -53,7 +73,7 @@ const ReparationPic = () =>{
 
             <Newsletter />
         </main>
-    )
-}
+    );
+};
 
 export default ReparationPic;
