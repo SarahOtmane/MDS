@@ -36,7 +36,7 @@ const ReparationPic = ({ command, setCommand }) => {
         <main className="couture">
             <Titre titre="Couture" lien="/reparation/couture" />
             <section className='loading column'>
-                <p>2/3 Votre réparation</p>
+                <p>2/2 Votre réparation</p>
                 <div className="progress-bar repa2">
                     <div className="green"></div>
                     <div className="black"></div>

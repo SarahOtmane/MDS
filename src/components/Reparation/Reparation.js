@@ -38,7 +38,7 @@ const Reparation = ({ command, setCommand }) => {
         <main className="couture">
             <Titre titre={command.job} lien="/user/reparation/details" />
             <section className='loading column'>
-                <p>1/3 Votre réparation</p>
+                <p>1/2 Votre réparation</p>
                 <div className="progress-bar">
                     <div className="green"></div>
                     <div className="black"></div>
