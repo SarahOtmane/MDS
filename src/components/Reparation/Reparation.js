@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../css/reparation.css';
 
 import Titre from "./Titre";
@@ -8,6 +9,31 @@ import Newsletter from "../sections/Newsletter";
 import reparation from '../../assets/pictures/reparation.png';
 
 const Reparation = ({ command, setCommand }) => {
+    const navigate = useNavigate();
+
+    const updateComment = (e) =>{
+        setCommand({
+            ...command,
+            comment : e.target.value
+        });
+
+        console.log(command);
+    }
+
+    const validateForm = () => {
+        if (!command.categorie || !command.clotheType || !command.besoinType) {
+            return false;
+        }
+        if (command.besoinType !== 'personnalisation' && !command.reparationType) {
+            return false;
+        }
+        if (command.besoinType === 'personnalisation' && (!command.broderieType || !command.fontSize)) {
+            return false;
+        }
+        return true;
+    };
+
+
     return (
         <main className="couture">
             <Titre titre={command.job} lien="/user/reparation/details" />
@@ -20,7 +46,7 @@ const Reparation = ({ command, setCommand }) => {
             </section>
             <section className="couture__contenu row justifycontent_spbetween">
                 <img className='repa' src={reparation} alt='' />
-                <form className='column'>
+                <form className='column' onSubmit={() => navigate('/user/reparation/image')}>
                     <label>Quelle est la catégorie ?</label>
                     <Input name="categorie" command={command} setCommand={setCommand} />
 
@@ -51,9 +77,10 @@ const Reparation = ({ command, setCommand }) => {
                     )}
 
                     <label>Ajouter un commentaire</label>
-                    <textarea placeholder='Laissez un commentaire' rows={10} cols={40} />
+                    <textarea placeholder='Laissez un commentaire' rows={10} cols={40} onChange={updateComment} />
 
-                    <button className='row'>
+                    {!validateForm() && <p style={{color: 'red'}}> Tous les champs, sauf le commentaire, sont obligatoires</p>}
+                    <button type='submit' className='row'>
                         Continuer 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M18.2896 11.4958C18.5701 11.7743 18.5701 12.2257 18.2896 12.5042L12.7541 18L11.7384 16.9916L16.766 12L11.7384 7.00845L12.7541 6L18.2896 11.4958Z" fill="white"/>
