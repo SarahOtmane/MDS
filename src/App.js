@@ -114,6 +114,8 @@ const App = () => {
         clothType: '',
         categorie: '',
         besoinType: '',
+        fontSize: '',
+        broderieType: '',
         job: '',
         id_job: ''
     });
