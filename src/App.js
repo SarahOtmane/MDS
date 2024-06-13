@@ -113,6 +113,7 @@ const App = () => {
         reparationType: '',
         clothType: '',
         categorie: '',
+        besoinType: '',
         job: '',
         id_job: ''
     });
