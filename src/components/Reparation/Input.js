@@ -26,6 +26,18 @@ const Input = ({ name, command, setCommand }) => {
                         { value: command.id_job, label: command.job },
                         { value: 'personnalisation', label: 'personnalisation' }
                     ];
+                }else if(name === 'broderieType'){
+                    formattedOptions = [
+                        { value: 'initial', label: 'Initial' },
+                        { value: 'lettres', label: 'Lettres' },
+                        { value: 'dessin', label: 'Dessin' }
+                    ];
+                }else if(name === 'fontSize'){
+                    formattedOptions = [
+                        { value: 'petite police', label: 'Petite police' },
+                        { value: 'moyenne police', label: 'Moyenne police' },
+                        { value: 'grande police', label: 'Grande police' }
+                    ];
                 }
 
                 // Filter unique labels
