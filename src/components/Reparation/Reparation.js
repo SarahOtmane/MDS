@@ -37,6 +37,19 @@ const Reparation = ({ command, setCommand }) => {
                         </>
                     )}
 
+                    {command.besoinType === 'personnalisation' && (
+                        <div className='broderie row justifycontent_spbetween'>
+                            <div>
+                                <label>Quel type de broderie ?</label>
+                                <Input name="broderieType" command={command} setCommand={setCommand} />
+                            </div>
+                            <div>
+                                <label>Taille de la police </label>
+                                <Input name="fontSize" command={command} setCommand={setCommand} />
+                            </div>
+                        </div>
+                    )}
+
                     <label>Ajouter un commentaire</label>
                     <textarea placeholder='Laissez un commentaire' rows={10} cols={40} />
 
