@@ -27,8 +27,7 @@ const ReparationPic = ({ command, setCommand }) => {
             setError('Veuillez ajouter une photo.');
         } else {
             setError('');
-            // Navigate to the next step or handle the form submission logic
-            navigate('/user/reparation/confirmation');
+            navigate('/user/reparation/devis');
         }
     };
 
