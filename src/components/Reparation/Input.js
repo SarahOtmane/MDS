@@ -24,7 +24,7 @@ const Input = ({ name, command, setCommand }) => {
                 } else if (name === 'besoinType') {
                     formattedOptions = [
                         { value: command.id_job, label: command.job },
-                        { value: -1, label: 'personnalisation' }
+                        { value: 'personnalisation', label: 'personnalisation' }
                     ];
                 }
 
@@ -48,7 +48,7 @@ const Input = ({ name, command, setCommand }) => {
     const handleChange = (selectedOption) => {
         setCommand(prevCommand => ({
             ...prevCommand,
-            [name]: selectedOption ? selectedOption.value : null
+            [name]: selectedOption ? selectedOption.label : null
         }));
     };
 

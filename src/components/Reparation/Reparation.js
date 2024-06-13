@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../css/reparation.css';
 
 import Titre from "./Titre";
@@ -6,8 +7,8 @@ import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
 
-const Reparation = ({command, setCommand}) =>{
-    return(
+const Reparation = ({ command, setCommand }) => {
+    return (
         <main className="couture">
             <Titre titre={command.job} lien="/user/reparation/details" />
             <section className='loading column'>
@@ -29,12 +30,16 @@ const Reparation = ({command, setCommand}) =>{
                     <label>Quel est votre besoin ?</label>
                     <Input name="besoinType" command={command} setCommand={setCommand} />
 
-                    <label>Quelle est la réparation ?</label>
-                    <Input name="reparationType" command={command} setCommand={setCommand} />
+                    {command.besoinType !== 'personnalisation' && (
+                        <>
+                            <label>Quelle est la réparation ?</label>
+                            <Input name="reparationType" command={command} setCommand={setCommand} />
+                        </>
+                    )}
 
                     <label>Ajouter un commentaire</label>
                     <textarea placeholder='Laissez un commentaire' rows={10} cols={40} />
-                    
+
                     <button className='row'>
                         Continuer 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +52,7 @@ const Reparation = ({command, setCommand}) =>{
 
             <Newsletter />
         </main>
-    )
-}
+    );
+};
 
 export default Reparation;
