@@ -35,6 +35,7 @@ import Politique from "./components/Legal/Politique";
 
 import Reparation from "./components/Reparation/Reparation";
 import ReparationPic from "./components/Reparation/ReparationPic";
+import Devis from "./components/Reparation/Devis";
 
 import Error404 from "./components/Error/Error404";
 import Error403 from "./components/Error/Error403";
@@ -188,6 +189,10 @@ const App = () => {
                                 setCommand={setCommand}
                             />} />
                             <Route path="image" element={<ReparationPic 
+                                command={command} 
+                                setCommand={setCommand}
+                            />} />
+                            <Route path="devis" element={<Devis 
                                 command={command} 
                                 setCommand={setCommand}
                             />} />
