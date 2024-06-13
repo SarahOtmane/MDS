@@ -117,7 +117,8 @@ const App = () => {
         fontSize: '',
         broderieType: '',
         job: '',
-        id_job: ''
+        id_job: '',
+        comment: ''
     });
 
     const [service, setService] = useState('');
