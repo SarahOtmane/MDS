@@ -172,6 +172,40 @@
 /* ----------- 5:= commandRecap ------------ */
 .commandRecap{
     width: 30%;
+    padding: 3rem 2rem;
+    border: 1px solid #BDDEB4;
+    border-radius: .5rem;
+    font-weight: bold;
+}
+
+.commandRecap h2{
+    margin-bottom: 3rem;
+}
+
+.commandRecap article{
+    margin: .5rem 0;
+}
+
+.commandRecap article p:first-child{
+    color: #999999;
+    font-size: 1.1rem;
+}
+
+.commandRecap hr{
+    background-color: #E6E7E8;
+}
+
+.commandRecap button, .commandRecap hr{
+    margin: 2rem 0;
+}
+
+.commandRecap button svg{
+    margin-left: 1rem;
+}
+
+.commandRecap a{
+    text-decoration: underline;
+    text-align: center;
 }
 
 
