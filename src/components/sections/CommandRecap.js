@@ -27,7 +27,7 @@ const CommandRecap = ({ name, command, setCommand }) => {
         } catch (error) {
             console.error('Erreur lors de la récupération des options:', error);
         }
-    }
+    };
 
     return (
         <section className="commandRecap column">
@@ -48,7 +48,7 @@ const CommandRecap = ({ name, command, setCommand }) => {
             <hr />
             <article className="row justifycontent_spbetween">
                 <p>Total</p>
-                <p>{parseInt(command.price) +3} €</p>
+                <p>{parseInt(command.price) + 3} €</p>
             </article>
             <button className="black" onClick={addPanier}>
                 Ajouter au panier
@@ -59,7 +59,7 @@ const CommandRecap = ({ name, command, setCommand }) => {
             </button>
             <a href="/repare">Continuer mes achats</a>
         </section>
-    )
-}
+    );
+};
 
 export default CommandRecap;
