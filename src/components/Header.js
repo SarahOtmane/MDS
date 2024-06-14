@@ -30,7 +30,7 @@ const Header = () =>{
 
     return(
         <header>
-            <p>Bonus Réparation. RenoWear labellisés Refashion.</p>
+            <p>Bonus Réparation. RenoWear labellisé Refashion.</p>
             <section className='row alignitem_center'>
                 <a href='/'><img src={logo} alt="RenoWear logo en noir" /></a>
                 <nav>
