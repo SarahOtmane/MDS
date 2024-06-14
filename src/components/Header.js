@@ -24,7 +24,7 @@ const Header = () =>{
         const token = localStorage.getItem('token');
         const role = localStorage.getItem('role');
         if(!token) navigate('/user/login');
-        else if(role === 'user') navigate('/user/cart/check');
+        else if(role === 'user') navigate('/user/reparation/panier');
         else if(role === 'artisan') setOpenPopupP(true);
     }
 
