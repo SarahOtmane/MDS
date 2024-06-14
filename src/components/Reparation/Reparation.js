@@ -17,8 +17,6 @@ const Reparation = ({ command, setCommand }) => {
             ...command,
             comment : e.target.value
         });
-
-        console.log(command);
     }
 
     const validateForm = () => {
