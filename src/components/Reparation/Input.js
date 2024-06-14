@@ -20,7 +20,7 @@ const Input = ({ name, command, setCommand }) => {
                 } else if (name === 'reparationType') {
                     const prestationsResponse = await axios.get(`http://localhost:3003/prestations/job/${command.id_job}`);
                     const prestations = prestationsResponse.data;
-                    formattedOptions = prestations.map(prestation => ({ value: prestation.id, label: prestation.reparationType }));
+                    formattedOptions = prestations.map(prestation => ({ value: prestation.reparationType, label: prestation.reparationType }));
                 } else if (name === 'besoinType') {
                     formattedOptions = [
                         { value: command.id_job, label: command.job },
