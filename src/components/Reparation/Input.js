@@ -15,7 +15,7 @@ const Input = ({ name, command, setCommand }) => {
                     if (name === "categorie") {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.categorie, label: clothe.categorie }));
                     } else {
-                        formattedOptions = clothes.map(clothe => ({ value: clothe.clotheType, label: clothe.clotheType }));
+                        formattedOptions = clothes.map(clothe => ({ value: clothe.clothType, label: clothe.clothType }));
                     }
                 } else if (name === 'reparationType') {
                     const prestationsResponse = await axios.get(`http://localhost:3003/prestations/job/${command.id_job}`);
