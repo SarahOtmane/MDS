@@ -4,7 +4,7 @@
 
 const CommandRecap = ({name}) =>{
     return(
-        <section className="commandRecap">
+        <section className="commandRecap column">
             <h2>Récapitulatif du {name}</h2>
             <article className="row justifycontent_spbetween">
                 <p>Sous Total :</p>
