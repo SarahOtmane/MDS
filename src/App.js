@@ -196,7 +196,7 @@ const App = () => {
                                 setCommand={setCommand}
                             />} />
                             <Route path="panier" element={<Panier />} />
-                            <Route path="panier" element={<Paiement />} />
+                            <Route path="paiement" element={<Paiement />} />
                         </Route>
                     </Route>
                     <Route path="/artisan">
