@@ -121,6 +121,7 @@ const App = () => {
         broderieType: '',
         comment: '',
         price: 0,
+        id: 0
     });
 
     const [service, setService] = useState('');

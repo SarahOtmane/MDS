@@ -11,7 +11,7 @@ const CommandRecap = ({ name, command, setCommand }) => {
             const updatedCommand = {
                 ...command,
                 id_user: user_id,
-                id: new Date().getTime() 
+                id: new Date().getTime()
             };
             setCommand(updatedCommand);
 
@@ -23,7 +23,6 @@ const CommandRecap = ({ name, command, setCommand }) => {
                 commandStorage.push(updatedCommand);
                 localStorage.setItem('command', JSON.stringify(commandStorage));
             }
-            console.log(localStorage.getItem('command'))
             setAddToPanier(true);
         } catch (error) {
             console.error('Erreur lors de la récupération des options:', error);
