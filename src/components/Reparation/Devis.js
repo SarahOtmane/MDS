@@ -10,7 +10,7 @@ const Devis = ({command, setCommand}) =>{
     return(
         <main>
             <Titre titre='Devis' lien="/user/reparation/devis" />
-            <div>
+            <div className="devis">
                 <section>
                     <h2>Votre devis</h2>
                     <Command />
