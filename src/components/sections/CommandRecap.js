@@ -30,7 +30,7 @@ const CommandRecap = ({name}) =>{
                     <path fillRule="evenodd" clipRule="evenodd" d="M12.9972 6.71308H0.5V5.28692H12.9972V6.71308Z" fill="#999999"/>
                 </svg>
             </button>
-            <a href="/">Continuer mes achats</a>
+            <a href="/repare">Continuer mes achats</a>
         </section>
     )
 }
