@@ -38,10 +38,7 @@ const Reparation = ({ command, setCommand }) => {
         e.preventDefault();
 
         try {
-            const prestationsResponse = await axiosInstance.get(`/prestations/name/${command.reparationType}`);
-            const prestationId = prestationsResponse.data.id;
-
-            const productResponse = await axiosInstance.get(`/prestations/${command.id_artisan}/${prestationId}`);
+            const productResponse = await axiosInstance.get(`/products/${command.id_artisan}/${command.id_presta}`);
             const price = productResponse.data.price;
 
             setCommand({
