@@ -107,7 +107,6 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
 
 const App = () => {
     const [command, setCommand] = useState({
-        name: '',
         picture: '',
         id_user: '',
         id_artisan: '',
