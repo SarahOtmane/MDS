@@ -24,8 +24,6 @@ import AccountPassword from "./components/User/Account/AccountPassword";
 import AccountDetails from "./components/User/Account/AccountDetails";
 import AccountAdress from "./components/User/Account/AccountAdress";
 
-import Panier from "./components/Cart/Panier";
-
 import SuccefullOrder from "./components/Order/SuccefullOrder";
 import FailedOrder from "./components/Order/FailedOrder";
 
@@ -36,6 +34,7 @@ import Politique from "./components/Legal/Politique";
 import Reparation from "./components/Reparation/Reparation";
 import ReparationPic from "./components/Reparation/ReparationPic";
 import Devis from "./components/Reparation/Devis";
+import Panier from "./components/Reparation/Panier";
 
 import Error404 from "./components/Error/Error404";
 import Error403 from "./components/Error/Error403";
