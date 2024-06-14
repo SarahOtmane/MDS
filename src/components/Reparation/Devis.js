@@ -12,11 +12,11 @@ const Devis = ({command, setCommand}) =>{
             <Titre titre='Devis' lien="/user/reparation/devis" classe="backGris" />
             <section>
             <div className="devis">
-                <section>
-                    <h2 className="devisTitre">Votre devis</h2>
+                <h2 className="devisTitre">Votre devis</h2>
+                <section className="row justifycontent_spbetween">
                     <Command command={command} />
+                    <CommandRecap name='devis' />
                 </section>
-                <CommandRecap name='devis' />
             </div>
             </section>
         </main>
