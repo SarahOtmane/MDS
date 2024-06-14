@@ -6,15 +6,15 @@ const CommandRecap = ({ name, command, setCommand }) => {
 
     const addPanier = async () => {
         try {
-            console.log(localStorage.getItem('token'))
             const userResponse = await axiosInstance.get('/users');
             const user_id = userResponse.data.id;
             const updatedCommand = {
                 ...command,
-                id_user: user_id
+                id_user: user_id,
+                id: new Date().getTime() 
             };
             setCommand(updatedCommand);
-            
+
             let commandStorage = localStorage.getItem('command');
             if (!commandStorage) {
                 localStorage.setItem('command', JSON.stringify([updatedCommand]));
@@ -23,6 +23,7 @@ const CommandRecap = ({ name, command, setCommand }) => {
                 commandStorage.push(updatedCommand);
                 localStorage.setItem('command', JSON.stringify(commandStorage));
             }
+            console.log(localStorage.getItem('command'))
             setAddToPanier(true);
         } catch (error) {
             console.error('Erreur lors de la récupération des options:', error);
