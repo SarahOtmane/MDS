@@ -12,12 +12,12 @@ import reparation from '../../assets/pictures/reparation.png';
 const Reparation = ({ command, setCommand }) => {
     const navigate = useNavigate();
 
-    const updateComment = (e) =>{
+    const updateComment = (e) => {
         setCommand({
             ...command,
-            comment : e.target.value
+            comment: e.target.value
         });
-    }
+    };
 
     const validateForm = () => {
         if (!command.categorie || !command.clotheType || !command.besoinType) {
@@ -32,7 +32,7 @@ const Reparation = ({ command, setCommand }) => {
         return true;
     };
 
-    const submitForm = async(e) =>{
+    const submitForm = async (e) => {
         e.preventDefault();
 
         try {
@@ -41,14 +41,13 @@ const Reparation = ({ command, setCommand }) => {
 
             setCommand({
                 ...command,
-                price : parseInt(price)
+                price: parseInt(price)
             });
-            navigate('/user/reparation/image')
+            navigate('/user/reparation/image');
         } catch (error) {
             console.error('Erreur lors de la récupération des options:', error);
         }
-    }
-
+    };
 
     return (
         <main className="couture">
