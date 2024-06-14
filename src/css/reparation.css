@@ -171,11 +171,13 @@
 
 /* ----------- 5:= commandRecap ------------ */
 .commandRecap{
-    width: 30%;
+    width: 25%;
     padding: 3rem 2rem;
     border: 1px solid #BDDEB4;
     border-radius: .5rem;
     font-weight: bold;
+    position: absolute;
+    right: 10rem;
 }
 
 .commandRecap h2{
@@ -219,7 +221,34 @@
 
 /* ----------- 6:= command ------------ */
 .command{
+    width: 60%;
+    padding-top: 5rem;
+    border-top: 1px solid #BDDEB4;
+}
 
+.command.delete{
+    display: none;
+}
+
+.command img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.command p{
+    font-size: .9rem;
+}
+
+.command span{
+    font-weight: bold;
+    margin: 0 .5rem;
+    font-size: 1.3rem;
+}
+
+.command svg{
+    padding: 1rem;
+    background-color: #FFDBE8;
+    border-radius: .3rem;
 }
 
 
@@ -235,5 +264,10 @@
 
 /* ----------- 6:= devis ------------ */
 .devis{
-    padding: 3rem 15rem;
+    padding: 3rem 10rem;
+    margin-bottom: 35rem;
+}
+
+.devis .devisTitre{
+    margin-bottom: 2rem;
 }
