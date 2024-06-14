@@ -15,7 +15,7 @@ const Input = ({ name, command, setCommand }) => {
                     if (name === "categorie") {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.categorie, label: clothe.categorie }));
                     } else {
-                        formattedOptions = clothes.map(clothe => ({ value: clothe.clothType, label: clothe.clothType }));
+                        formattedOptions = clothes.map(clothe => ({ value: clothe.clotheType, label: clothe.clotheType }));
                     }
                 } else if (name === 'reparationType') {
                     const prestationsResponse = await axios.get(`http://localhost:3003/prestations/job/${command.id_job}`);
@@ -26,13 +26,13 @@ const Input = ({ name, command, setCommand }) => {
                         { value: command.id_job, label: command.job },
                         { value: 'personnalisation', label: 'personnalisation' }
                     ];
-                }else if(name === 'broderieType'){
+                } else if (name === 'broderieType') {
                     formattedOptions = [
                         { value: 'initial', label: 'Initial' },
                         { value: 'lettres', label: 'Lettres' },
                         { value: 'dessin', label: 'Dessin' }
                     ];
-                }else if(name === 'fontSize'){
+                } else if (name === 'fontSize') {
                     formattedOptions = [
                         { value: 'petite police', label: 'Petite police' },
                         { value: 'moyenne police', label: 'Moyenne police' },
@@ -40,7 +40,6 @@ const Input = ({ name, command, setCommand }) => {
                     ];
                 }
 
-                // Filter unique labels
                 const uniqueOptions = Array.from(new Set(formattedOptions.map(option => option.label)))
                     .map(label => {
                         return formattedOptions.find(option => option.label === label);
@@ -63,7 +62,7 @@ const Input = ({ name, command, setCommand }) => {
             [name]: selectedOption ? selectedOption.label : null
         }));
 
-        if(name==='reparationType'){
+        if (name === 'reparationType') {
             setCommand(prevCommand => ({
                 ...prevCommand,
                 id_presta: selectedOption ? selectedOption.value : null
