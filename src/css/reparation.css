@@ -20,6 +20,9 @@
         Devis
     7:= devis
 
+        CheckCart
+    8:= panier
+
 */
 
 /* ----------- 1:= input ------------ */
@@ -270,4 +273,23 @@
 
 .devis .devisTitre{
     margin-bottom: 2rem;
+}
+
+
+
+/* ----------- 6:= panier ------------ */
+.panier .command{
+    width: 100%;
+}
+
+.panier .panier_command{
+    width: 60%;
+}
+
+.panier .panier_command article{
+    border-top: none;
+}
+
+.panier .panier_command article:first-child{
+    border-top: 1px solid #BDDEB4;
 }
