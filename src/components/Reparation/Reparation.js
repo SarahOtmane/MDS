@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../css/reparation.css';
+import axiosInstance from '../../../axiosConfig';
 
 import Titre from "./Titre";
 import Input from "./Input";
@@ -33,6 +34,26 @@ const Reparation = ({ command, setCommand }) => {
         return true;
     };
 
+    const submitForm = async(e) =>{
+        e.preventDefault();
+
+        try {
+            const prestationsResponse = await axiosInstance.get(`/prestations/name/${command.reparationType}`);
+            const prestationId = prestationsResponse.data.id;
+
+            const productResponse = await axiosInstance.get(`/prestations/${command.id_artisan}/${prestationId}`);
+            const price = productResponse.data.price;
+
+            setCommand({
+                ...command,
+                price : parseInt(price)
+            });
+            navigate('/user/reparation/image')
+        } catch (error) {
+            console.error('Erreur lors de la récupération des options:', error);
+        }
+    }
+
 
     return (
         <main className="couture">
@@ -46,7 +67,7 @@ const Reparation = ({ command, setCommand }) => {
             </section>
             <section className="couture__contenu row justifycontent_spbetween">
                 <img className='repa' src={reparation} alt='' />
-                <form className='column' onSubmit={() => navigate('/user/reparation/image')}>
+                <form className='column' onSubmit={submitForm}>
                     <label>Quelle est la catégorie ?</label>
                     <Input name="categorie" command={command} setCommand={setCommand} />
 
