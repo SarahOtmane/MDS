@@ -1,6 +1,7 @@
 
 
 import Command from "../sections/Command";
+import CommandRecap from "../sections/CommandRecap";
 import Titre from "./Titre";
 
 
@@ -14,6 +15,7 @@ const Devis = ({command, setCommand}) =>{
                     <h2>Votre devis</h2>
                     <Command />
                 </section>
+                <CommandRecap />
             </div>
         </main>
     )
