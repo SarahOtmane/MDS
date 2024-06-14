@@ -46,6 +46,7 @@ const Paiement = () => {
                     name: command.id
                 });
             }
+            localStorage.removeItem('command');
             navigate('/user/order/success');
         } catch (error) {
             navigate('/user/order/failed');
