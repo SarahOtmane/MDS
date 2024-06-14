@@ -2,14 +2,15 @@
 
 import Command from "../sections/Command";
 import CommandRecap from "../sections/CommandRecap";
-import Titre from "./Titre";
+import Titre from "../Titre";
 
 
 
 const Devis = ({command, setCommand}) =>{
     return(
         <main>
-            <Titre titre='Devis' lien="/user/reparation/devis" />
+            <Titre titre='Devis' lien="/user/reparation/devis" classe="backGris" />
+            <section>
             <div className="devis">
                 <section>
                     <h2>Votre devis</h2>
@@ -17,6 +18,7 @@ const Devis = ({command, setCommand}) =>{
                 </section>
                 <CommandRecap name='devis' />
             </div>
+            </section>
         </main>
     )
 }
