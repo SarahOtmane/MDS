@@ -111,16 +111,17 @@ const App = () => {
         picture: '',
         id_user: '',
         id_artisan: '',
+        job: '',
+        id_job: '',
+        id_presta: '',
         reparationType: '',
         clotheType: '',
         categorie: '',
         besoinType: '',
         fontSize: '',
         broderieType: '',
-        job: '',
-        id_job: '',
         comment: '',
-        price: 0
+        price: 0,
     });
 
     const [service, setService] = useState('');
