@@ -14,7 +14,7 @@ const Devis = ({command, setCommand}) =>{
             <div className="devis">
                 <h2 className="devisTitre">Votre devis</h2>
                 <section className="row justifycontent_spbetween">
-                    <Command command={command} />
+                    <Command command={command} setCommand={setCommand} />
                     <CommandRecap name='devis' />
                 </section>
             </div>
