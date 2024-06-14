@@ -24,7 +24,7 @@ import AccountPassword from "./components/User/Account/AccountPassword";
 import AccountDetails from "./components/User/Account/AccountDetails";
 import AccountAdress from "./components/User/Account/AccountAdress";
 
-import CheckCart from "./components/Cart/CheckCart";
+import Panier from "./components/Cart/Panier";
 
 import SuccefullOrder from "./components/Order/SuccefullOrder";
 import FailedOrder from "./components/Order/FailedOrder";
@@ -170,7 +170,7 @@ const App = () => {
                         </Route>
 
                         <Route path="cart">
-                            <Route path="check" element={<CheckCart />} />
+                            <Route path="check" element={<Panier />} />
                         </Route>
 
                         <Route path="order">
