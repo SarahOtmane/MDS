@@ -13,8 +13,8 @@ const Devis = ({command, setCommand}) =>{
             <section>
             <div className="devis">
                 <section>
-                    <h2>Votre devis</h2>
-                    <Command />
+                    <h2 className="devisTitre">Votre devis</h2>
+                    <Command command={command} />
                 </section>
                 <CommandRecap name='devis' />
             </div>
