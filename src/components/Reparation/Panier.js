@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Titre from '../Titre';
 import Command from '../sections/Command';
-import CommandRecap from '../sections/CommandRecap';
 
 const Panier = () => {
+    const navigate = useNavigate();
     const [commands, setCommands] = useState([]);
     const [total, setTotal] = useState(0);
 
@@ -28,7 +29,7 @@ const Panier = () => {
 
     return (
         <main>
-            <Titre titre="Panier" lien="/user/cart/check" classe="backGris" />
+            <Titre titre="Panier" lien="/user/reparation/panier" classe="backGris" />
             <section>
                 <div className="devis panier">
                     <h2 className="devisTitre">Panier</h2>
@@ -55,9 +56,9 @@ const Panier = () => {
                             <hr />
                             <article className="row justifycontent_spbetween">
                                 <p>Total</p>
-                                <p>{total + 3} €</p>
+                                <p>{total !== 0 ? total + 3 : 0} €</p>
                             </article>
-                            <button className="black" onClick={}>
+                            <button className="black" onClick={() => {navigate('/user/reparation/paiement')}}>
                                 Accéder au paiement
                                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M13.2896 5.49578C13.5701 5.77425 13.5701 6.22575 13.2896 6.50422L7.75414 12L6.73841 10.9916L11.766 6L6.73841 1.00845L7.75414 0L13.2896 5.49578Z" fill="#999999"/>

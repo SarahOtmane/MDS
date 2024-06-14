@@ -35,6 +35,7 @@ import Reparation from "./components/Reparation/Reparation";
 import ReparationPic from "./components/Reparation/ReparationPic";
 import Devis from "./components/Reparation/Devis";
 import Panier from "./components/Reparation/Panier";
+import Paiement from "./components/Reparation/Paiement";
 
 import Error404 from "./components/Error/Error404";
 import Error403 from "./components/Error/Error403";
@@ -79,8 +80,6 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
         /password :
             /forget
             /reset/:token
-        /cart :
-            /check
         /order : 
             /success
             /failed
@@ -92,6 +91,9 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
         /reparation :
             /details
             /image
+            /devis
+            /panier
+            /paiement
     /artisan : 
         /register
         /login
@@ -168,10 +170,6 @@ const App = () => {
                             <Route path="reset/:token" element={<ResetMdp />} />
                         </Route>
 
-                        <Route path="cart">
-                            <Route path="check" element={<Panier />} />
-                        </Route>
-
                         <Route path="order">
                             <Route path="success" element={<SuccefullOrder />} />
                             <Route path="failed" element={<FailedOrder />} />
@@ -197,6 +195,8 @@ const App = () => {
                                 command={command} 
                                 setCommand={setCommand}
                             />} />
+                            <Route path="panier" element={<Panier />} />
+                            <Route path="panier" element={<Paiement />} />
                         </Route>
                     </Route>
                     <Route path="/artisan">
