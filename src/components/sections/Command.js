@@ -4,7 +4,9 @@
 
 const Command = () =>{
     return(
-        <article></article>
+        <article className="command">
+
+        </article>
     )
 }
 
