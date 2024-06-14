@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import axiosInstance from '../../axiosConfig';
 
 import '../../css/cart.css';
 import Titre from '../Titre';
@@ -31,6 +32,25 @@ const Paiement = () => {
 
         getCommand();
     }, []);
+
+    const submitForm = async() =>{
+        try {
+            for(const command of commands){
+                await axiosInstance.post(`/commands/${command.id_artisan}`, {
+                    categorie: command.categorie,
+                    clothType: command.clotheType,
+                    id_job: command.id_job,
+                    reparationType: command.reparationType,
+                    comment: command.comment,
+                    picture: command.picture.name ? command.picture.name : '',
+                    name: command.id
+                });
+            }
+            navigate('/user/order/success');
+        } catch (error) {
+            navigate('/user/order/failed');
+        }
+    }
 
     return (
         <main>
@@ -112,7 +132,7 @@ const Paiement = () => {
                             <span className='text_bold'>{total !== 0 ? total + 3 : 0} €</span>
                         </article>
                     </section>
-                    <button className="black" type="button" onClick={() => navigate('/user/reparation/paiement')}>
+                    <button className={`black ${commands.length > 0 ? '' : 'notAble'}`} type="button" onClick={submitForm}>
                         Procéder au paiement
                         <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M13.2896 5.49578C13.5701 5.77425 13.5701 6.22575 13.2896 6.50422L7.75414 12L6.73841 10.9916L11.766 6L6.73841 1.00845L7.75414 0L13.2896 5.49578Z" fill="#999999"/>
