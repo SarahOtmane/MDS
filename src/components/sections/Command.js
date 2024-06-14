@@ -1,14 +1,24 @@
 
-
+import { useState } from 'react';
+import product from '../../assets/pictures/landingPage/product1.png';
 
 
 const Command = ({command}) =>{
+    const [deleteC, setDeleteC] = useState(false);
+
     return(
-        <article className="command row justifycontent_spbetween">
-            <img src={command.picture} alt='produit' />
+        <article className={`command ${deleteC ? 'delete' : ''}`} >
+            <div className='row justifycontent_spbetween alignitem_center'>
+            <img src={product} alt='produit' />
             <div className="column">
-                <p>{command.categorie} : {command.clothType} </p>
-                <p>{command.besoinType} : {command.reparationType ? command.reparationType : command.broderieType} </p>
+                <p>{command.categorie} <span>&rsaquo;</span> {command.clotheType} </p>
+                <p className='text_capitalize'>{command.besoinType} <span>&rsaquo;</span> {command.reparationType ? command.reparationType : command.broderieType} </p>
+            </div>
+            <p>{command.price} €</p>
+            <svg onClick={() => setDeleteC(true)} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5L5 15" stroke="#1E1E1E" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M5 5L15 15" stroke="#1E1E1E" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
             </div>
         </article>
     )
