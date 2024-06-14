@@ -4,12 +4,18 @@
         Input
     1:= input
 
-        Couture
+        Reparation
     2:= loading
     3:= couture__contenu
 
-        CouturePics
+        ReparationPic
     4:= inputPics
+
+        CommandRecap
+    5:= commandRecap
+
+        Command
+    6:= command
 
 */
 
@@ -151,4 +157,30 @@
 .custom-file-upload:hover {
     background-color: var(--input_border);
     color: white;
+}
+
+
+
+
+
+
+
+
+/* ----------- 5:= commandRecap ------------ */
+.commandRecap{
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= command ------------ */
+.command{
+    
 }
