@@ -277,6 +277,11 @@
 
 
 
+
+
+
+
+
 /* ----------- 6:= panier ------------ */
 .panier .command{
     width: 100%;
@@ -292,4 +297,14 @@
 
 .panier .panier_command article:first-child{
     border-top: 1px solid #BDDEB4;
+}
+
+.panier_vide{
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.panier_vide p{
+    width: 20%;
+    margin: 2rem auto 4rem;
 }
