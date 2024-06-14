@@ -122,15 +122,20 @@ const Paiement = () => {
                         </article>
 
                         <article className='row justifycontent_spbetween'>
-                            <span>Taxes :</span>
-                            <span className='text_bold'>3.00 €</span>
+                            <span>TVA :</span>
+                            <span className='text_bold'>20%</span>
+                        </article>
+
+                        <article className='row justifycontent_spbetween'>
+                            <span>Bonus :</span>
+                            <span className='text_bold'>10%</span>
                         </article>
 
                         <div></div>
 
                         <article className='row justifycontent_spbetween'>
                             <span>Total :</span>
-                            <span className='text_bold'>{total !== 0 ? total + 3 : 0} €</span>
+                            <span className='text_bold'>{total !== 0 ? total + (total * 0.1) : 0} €</span>
                         </article>
                     </section>
                     <button className={`black ${commands.length > 0 ? '' : 'notAble'}`} type="button" onClick={submitForm}>

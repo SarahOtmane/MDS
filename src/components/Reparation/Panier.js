@@ -49,14 +49,20 @@ const Panier = () => {
                                 <p>Dépot :</p>
                                 <p>Gratuit</p>
                             </article>
-                            <article className="row justifycontent_spbetween">
-                                <p>Taxes :</p>
-                                <p>3.00 €</p>
+                            <article className='row justifycontent_spbetween'>
+                                <p>TVA :</p>
+                                <p>20%</p>
                             </article>
+
+                            <article className='row justifycontent_spbetween'>
+                                <p>Bonus :</p>
+                                <p>10%</p>
+                            </article>
+
                             <hr />
                             <article className="row justifycontent_spbetween">
                                 <p>Total</p>
-                                <p>{total !== 0 ? total + 3 : 0} €</p>
+                                <p>{total !== 0 ? total + (total * 0.1) : 0} €</p>
                             </article>
                             <button className="black" onClick={() => {navigate('/user/reparation/paiement')}}>
                                 Accéder au paiement

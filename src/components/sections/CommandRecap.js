@@ -41,14 +41,19 @@ const CommandRecap = ({ name, command, setCommand }) => {
                 <p>Dépot :</p>
                 <p>Gratuit</p>
             </article>
-            <article className="row justifycontent_spbetween">
-                <p>Taxes :</p>
-                <p>3.00 €</p>
+            <article className='row justifycontent_spbetween'>
+                <p>TVA :</p>
+                <p>20%</p>
+            </article>
+
+            <article className='row justifycontent_spbetween'>
+                <p>Bonus :</p>
+                <p>10%</p>
             </article>
             <hr />
             <article className="row justifycontent_spbetween">
                 <p>Total</p>
-                <p>{parseInt(command.price) + 3} €</p>
+                <p>{parseInt(command.price) + parseInt(command.price) * 0.2} €</p>
             </article>
             <button className="black" onClick={addPanier}>
                 Ajouter au panier
