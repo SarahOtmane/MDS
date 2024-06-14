@@ -112,7 +112,7 @@ const App = () => {
         id_user: '',
         id_artisan: '',
         reparationType: '',
-        clothType: '',
+        clotheType: '',
         categorie: '',
         besoinType: '',
         fontSize: '',
