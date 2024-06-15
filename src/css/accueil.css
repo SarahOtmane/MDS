@@ -932,4 +932,22 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
+
+    .noArtisan{
+        background-size: 8rem, 15rem, 18rem;
+        background-position: 
+        3% 30%,
+        0 -11rem,
+        0 100%;
+    }
+
+    .noArtisan h2, .noArtisan p{
+        margin-left: 30%;
+        width: 60%;
+        padding-bottom: 10rem;
+    }
+
+    .noArtisan h2{
+        padding: 5rem 1rem 3rem 0;
+    }
 }
