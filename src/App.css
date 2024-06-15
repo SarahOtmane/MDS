@@ -223,6 +223,11 @@ button.black:hover{
     background-color: var(--white);
 }
 
+button.white{
+    color: var(--black);
+    background-color: var(--white);
+}
+
 button.white.notAble, button.white.notAble:hover{
     color: #999999;
     border-color: #F2F2F2;
