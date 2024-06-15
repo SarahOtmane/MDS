@@ -20,6 +20,9 @@
         ArtisanAccountJob
     6:= artisanJobs
 
+        SuppressionCompte
+    7:= suppression
+
     7:= responsive version desktop
 
 */
@@ -59,7 +62,7 @@
 
 
 /* ----------- 2:= commande ------------ */
-.commandes, section.updateMdp, section.details, section.adress{
+.commandes, section.updateMdp, section.details, section.adress, section.suppression{
     width: 65%;
     padding: 0 12rem 10rem 0;
     border-left: 1px solid #BDDEB4;
@@ -276,6 +279,37 @@ form.adress{
     margin-top: 3rem;
     position: absolute;
     right: 1rem;
+}
+
+
+
+
+
+
+
+
+/* ----------- 7:= suppression ------------ */
+.suppression div{
+    padding: 3rem 0 0 5rem;
+    width: 70%;
+}
+
+.suppression div h2{
+    margin-bottom: 2rem;
+}
+
+.suppression div p{
+    font-size: .9rem;
+    margin-top: 2rem;
+}
+
+.suppression div p+p{
+    margin-bottom: 2rem;
+}
+
+.suppression div button{
+    width: max-content;
+    margin-top: 2rem;
 }
 
 
