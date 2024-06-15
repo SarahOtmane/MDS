@@ -161,6 +161,10 @@ img.picto{
     margin: 2.5rem 5% 5rem 0;
 }
 
+.service a{
+    width: 100% !important;
+}
+
 .service a img,
 .fonctionnement a img,
 .landing .section7 a img{
@@ -1127,5 +1131,39 @@ img.picto{
 @media screen and (max-width: 790px){
     .section1Landing button{
         width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .slider article{
+        padding: 0 4rem;
+        background-size: 6rem, 6rem, 6rem, 6rem, 6rem;
+    }
+    .slider p, .slider h2 {
+        width: 90%;
+    }
+
+    .home .elements{
+        flex-direction: column;
+    }
+
+    .home .elements article{
+        width: 90%;
+        margin-top: 3rem;
     }
 }
