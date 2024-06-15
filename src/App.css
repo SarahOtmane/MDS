@@ -556,6 +556,31 @@ footer .copyright{
         display: block;
     }
 
+    .popup{
+        top: 40%;
+        margin-left: 8%;
+        width: 90%;
+        padding-bottom: 3rem;
+    }
+
+    .popup div{
+        flex-wrap: wrap;
+    }
+
+    .popup p{
+        width: 90%;
+        margin: auto;
+    }
+
+    .popup button{
+        width: 60%;
+        margin: auto;
+    }
+
+    .popup button:first-child{
+        margin: 2rem auto;
+    }
+
     footer{
         padding: 4rem;
     }
