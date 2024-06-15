@@ -14,7 +14,7 @@ const Fonctionnement = () =>{
         <section className='fonctionnement row alignitem_center justifycontent_spbetween'>
             <img className='picto' id="image4" src={image4} alt='' />
             <article>
-                <span className='text_bold textGreen'>Expérience</span>
+                <span className='text_bold textGreen expe'>Expérience</span>
                 <h2 className='text_uppercase'>Comment ça marche ?</h2>
                 <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
                 <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
