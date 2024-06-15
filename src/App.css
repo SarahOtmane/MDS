@@ -555,6 +555,27 @@ footer .copyright{
     .navigationMobile{
         display: block;
     }
+
+    footer{
+        padding: 4rem;
+    }
+
+    footer article:first-child p{
+        margin: 2rem 0;
+    }
+
+    footer .footer, footer article:last-child{
+        flex-direction: column;
+    }
+
+    footer article:first-child, footer article:last-child{
+        width: 90% !important;
+    }
+
+    footer article:last-child div{
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
 }
 
 
