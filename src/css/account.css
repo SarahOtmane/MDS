@@ -23,6 +23,9 @@
         SuppressionCompte
     7:= suppression
 
+        ArtisanAccountOrder.js
+    8:= commandesArtisan
+
     7:= responsive version desktop
 
 */
@@ -88,7 +91,7 @@
     margin-left: 1rem;
 }
 
-/* PLUSIEURS COMMANDES */
+/* PLUSIEURS COMMANDES USER */
 .existCommand h3{
     margin: 2rem 0 3rem 4rem;
 }
@@ -126,6 +129,11 @@
     margin-left: auto;
     text-underline-offset: 0.3rem;
 }
+
+
+
+
+
 
 
 
@@ -186,7 +194,7 @@ form.adress{
     border-radius: .5rem;
 }
 
-.artisanJobs div{
+.artisanJobs div, .commandesArtisan div.contenu{
     border: 2px solid #E9E9EB;
     border-radius: .5rem;
     margin-top: 4rem;
@@ -197,27 +205,28 @@ form.adress{
     margin: 3rem 0 3rem 2rem;
 }
 
-.artisanJobs div table{
+.artisanJobs div table, .commandesArtisan div table{
     width: 100%;
     text-align: left;
     border-collapse: collapse;
 }
 
-.artisanJobs div thead{
+.artisanJobs div thead, .commandesArtisan div thead{
     border-top: 1px solid #BDDEB4;
     border-bottom: 1px solid #BDDEB4;
 }
 
-.artisanJobs div thead th{
-    padding: 2rem 0;
+.artisanJobs div thead th, .commandesArtisan div thead th{
+    padding: 1rem 0;
 }
 
-.artisanJobs div tbody td, .artisanJobs div tbody th{
+.artisanJobs div tbody td, .artisanJobs div tbody th,
+.commandesArtisan div tbody td, .commandesArtisan div tbody th{
     padding: 2rem 2rem 2rem 0;
     width: max-content;
 }
 
-.artisanJobs div tbody td{
+.artisanJobs div tbody td, .commandesArtisan div tbody td{
     padding: 2rem 0 2rem 3rem;
 }
 
@@ -319,6 +328,24 @@ form.adress{
 
 
 
+/* ----------- 8:= commandesArtisan ------------ */
+.commandes.commandesArtisan{
+    border-left: none;
+    padding: 0;
+}
+
+.commandesArtisan div.contenu{
+    margin: 0;
+    margin-right: 1rem;
+    padding-top: 7rem;
+    font-size: .9rem;
+    min-height: 75vh;
+}
+
+.commandesArtisan div.contenu img{
+    width: 3.5rem;
+    height: 4rem;
+}
 
 
 
