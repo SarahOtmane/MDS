@@ -567,6 +567,11 @@ img.picto{
     font-size: 1.3rem;
 }
 
+.home .tuto p:first-child{
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+
 .home .tuto div{
     width: 80%;
     margin: auto;
@@ -1251,6 +1256,10 @@ img.picto{
     .fonctionnement #image4{
         left: 10%;
         margin-top: 97%;
+    }
+
+    .home .tuto{
+        font-size: 1rem;
     }
 
 }
