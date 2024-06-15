@@ -51,7 +51,7 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
         <article className="row" onClick={updateCommand}>
             <div>
                 <p className="pseudo">{artisan.lastname[0]}{artisan.firstname[0]}</p>
-                <div className="row metier">
+                <div className="column metier">
                     <p className="text_capitalize">{job ? job.name : 'Job non trouvé'}</p>
                     <p>Personnalisation</p>
                 </div>
