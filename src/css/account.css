@@ -2,23 +2,31 @@
                 Sommaire
 
     
-        AccountMenu.js
+        AccountMenu.js / ArtisanAccountMenu.js
     1:= menu
         
-        AccountOrder.js
+        AccountOrder.js / ArtisanAccountOrder.js
     2:= commandes
 
-        PasswordUpdate.js
+        AccountPassword.js / ArtisanAccountMdp.js
     3:= updateMdp
 
-        AccountDetails.js
+        AccountDetails.js / ArtisanAccountDetails.js
     4:= details
 
-        AccountAdress.js
+        AccountAdress.js / ArtisanAccountAdress.js
     5:= adress
 
-    6:= responsive version desktop
-    7:= version mobile
+        ArtisanAccountJob
+    6:= artisanJobs
+
+        SuppressionCompte
+    7:= suppression
+
+        ArtisanAccountOrder.js
+    8:= commandesArtisan
+
+    7:= responsive version desktop
 
 */
 
@@ -30,12 +38,12 @@
 
 /* ----------- 1:= menu ------------ */
 .menu{
-    width: 35%;
+    width: 25%;
     padding: 3rem 0 0 12rem;
 }
 
 .menu a{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 2rem;
     padding: 1rem;
     margin-right: 20%;
@@ -57,7 +65,7 @@
 
 
 /* ----------- 2:= commande ------------ */
-.commandes, section.updateMdp, section.details, section.adress{
+.commandes, section.updateMdp, section.details, section.adress, section.suppression{
     width: 65%;
     padding: 0 12rem 10rem 0;
     border-left: 1px solid #BDDEB4;
@@ -82,6 +90,48 @@
 .commandes button svg{
     margin-left: 1rem;
 }
+
+/* PLUSIEURS COMMANDES USER */
+.existCommand h3{
+    margin: 2rem 0 3rem 4rem;
+}
+
+.existCommand article{
+    width: 70%;
+    margin: 0 0 0 4rem;
+    padding: 0 0 2rem 0;
+    justify-content: flex-start;
+}
+
+.existCommand article + article{
+    border-top: 1px solid #E9E9EB;
+    padding-top: 2rem;
+}
+
+.existCommand img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 3rem;
+}
+
+.existCommand p{
+    margin: .3rem 0 0 0;
+    font-size: .8rem;
+    text-align: start;
+}
+
+.existCommand div p:first-child, .existCommand div p:last-child, .existCommand div+p{
+    font-size: 1rem;
+}
+
+.existCommand div+p{
+    text-decoration: underline;
+    margin-left: auto;
+    text-underline-offset: 0.3rem;
+}
+
+
+
 
 
 
@@ -122,13 +172,186 @@ form.adress{
 
 
 
+/* ----------- 5:= artisanJobs ------------ */
+.artisanJobs{
+    width: 70%;
+    border-left: 1px solid #BDDEB4;
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+}
+
+.artisanJobs h2{
+    margin-bottom: 2rem;
+}
+
+.artisanJobs p+p{
+    margin: 1rem 0 3rem 0;
+}
+
+.artisanJobs span{
+    border: 2px solid #E4A2BE;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.artisanJobs div, .commandesArtisan div.contenu{
+    border: 2px solid #E9E9EB;
+    border-radius: .5rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
+
+.artisanJobs div h2{
+    margin: 3rem 0 3rem 2rem;
+}
+
+.artisanJobs div table, .commandesArtisan div table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.artisanJobs div thead, .commandesArtisan div thead{
+    border-top: 1px solid #BDDEB4;
+    border-bottom: 1px solid #BDDEB4;
+}
+
+.artisanJobs div thead th, .commandesArtisan div thead th{
+    padding: 1rem 0;
+}
+
+.artisanJobs div tbody td, .artisanJobs div tbody th,
+.commandesArtisan div tbody td, .commandesArtisan div tbody th{
+    padding: 2rem 2rem 2rem 0;
+    width: max-content;
+}
+
+.artisanJobs div tbody td, .commandesArtisan div tbody td{
+    padding: 2rem 0 2rem 3rem;
+}
+
+.artisanJobs div tbody th.price{
+    width: 20rem;
+}
+
+.artisanJobs div .checkbox {
+    display: none;
+}
+
+.artisanJobs div .custom-checkbox {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #F6F6F6;
+    border: 1px solid #F6F6F6;
+    position: relative;
+    cursor: pointer;
+}
+
+.artisanJobs div .custom-checkbox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+}
+
+.artisanJobs div .custom-checkbox:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 0.8rem;
+    top: 0.3rem;
+    width: 0.6rem;
+    height: 1.4rem;
+    border: solid white;
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+}
+
+.artisanJobs div .checkbox:checked + .custom-checkbox {
+    background-color: #FFDBE8;
+}
+
+.artisanJobs div .checkbox:checked + .custom-checkbox:after {
+    display: block;
+}
+
+.artisanJobs div .custom-checkbox:hover {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.artisanJobs button {
+    margin-top: 3rem;
+    position: absolute;
+    right: 1rem;
+}
 
 
 
 
 
 
-/* ----------- 6:= Desktop ------------ */
+
+
+/* ----------- 7:= suppression ------------ */
+.suppression div{
+    padding: 3rem 0 0 5rem;
+    width: 70%;
+}
+
+.suppression div h2{
+    margin-bottom: 2rem;
+}
+
+.suppression div p{
+    font-size: .9rem;
+    margin-top: 2rem;
+}
+
+.suppression div p+p{
+    margin-bottom: 2rem;
+}
+
+.suppression div button{
+    width: max-content;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+/* ----------- 8:= commandesArtisan ------------ */
+.commandes.commandesArtisan{
+    border-left: none;
+    padding: 0;
+}
+
+.commandesArtisan div.contenu{
+    margin: 0;
+    margin-right: 1rem;
+    padding-top: 7rem;
+    font-size: .9rem;
+    min-height: 75vh;
+}
+
+.commandesArtisan div.contenu img{
+    width: 3.5rem;
+    height: 4rem;
+}
+
+
+
+
+
+/* ----------- 7:= Desktop ------------ */
 @media screen and (max-width: 1400px){
     .menu{
         padding-left: 8rem;

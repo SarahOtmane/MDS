@@ -4,12 +4,24 @@
         Input
     1:= input
 
-        Couture
+        Reparation
     2:= loading
     3:= couture__contenu
 
-        CouturePics
+        ReparationPic
     4:= inputPics
+
+        CommandRecap
+    5:= commandRecap
+
+        Command
+    6:= command
+
+        Devis
+    7:= devis
+
+        Panier
+    8:= panier
 
 */
 
@@ -40,8 +52,8 @@
 }
 
 .progress-bar .green {
-    width: 30%; 
-    height: 3px;
+    width: 50%; 
+    height: 5px;
     background-color: var(--green_background_2); 
     position: absolute;
     left: 0;
@@ -49,8 +61,8 @@
 }
 
 .progress-bar .black {
-    width: 70%; 
-    height: 1px;
+    width: 50%; 
+    height: 2px;
     background-color: #C4C4C4; 
     position: absolute;
     right: 0;
@@ -59,11 +71,11 @@
 }
 
 .repa2 .green{
-    width: 60%;
+    width: 100%;
 }
 
-.repa .black{
-    width: 40%;
+.repa2 .black{
+    width: 0% !important;
 }
 
 
@@ -75,7 +87,7 @@
 /* ----------- 3:= couture__contenu ------------ */
 .couture__contenu img.repa{
     width: 35%;
-    height: 20rem;
+    height: 25rem;
     margin-top: 11rem;
 }
 
@@ -114,6 +126,10 @@
     margin: 4rem 0 6rem;
 }
 
+.couture__contenu .broderie div.child{
+    width: 45%;
+}
+
 
 
 
@@ -147,4 +163,148 @@
 .custom-file-upload:hover {
     background-color: var(--input_border);
     color: white;
+}
+
+
+
+
+
+
+
+
+/* ----------- 5:= commandRecap ------------ */
+.commandRecap{
+    width: 25%;
+    padding: 3rem 2rem;
+    border: 1px solid #BDDEB4;
+    border-radius: .5rem;
+    font-weight: bold;
+    position: absolute;
+    right: 10rem;
+}
+
+.commandRecap h2{
+    margin-bottom: 3rem;
+}
+
+.commandRecap article{
+    margin: .5rem 0;
+}
+
+.commandRecap article p:first-child{
+    color: #999999;
+    font-size: 1.1rem;
+}
+
+.commandRecap hr{
+    background-color: #E6E7E8;
+}
+
+.commandRecap button, .commandRecap hr{
+    margin: 2rem 0;
+}
+
+.commandRecap button svg{
+    margin-left: 1rem;
+}
+
+.commandRecap a{
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= command ------------ */
+.command{
+    width: 60%;
+    padding-top: 5rem;
+    border-top: 1px solid #BDDEB4;
+}
+
+.command.delete{
+    display: none;
+}
+
+.command img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.command p{
+    font-size: .9rem;
+}
+
+.command span{
+    font-weight: bold;
+    margin: 0 .5rem;
+    font-size: 1.3rem;
+}
+
+.command svg{
+    padding: 1rem;
+    background-color: #FFDBE8;
+    border-radius: .3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 6:= devis ------------ */
+.devis{
+    padding: 3rem 10rem;
+    margin-bottom: 35rem;
+}
+
+.devis .devisTitre{
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+/* ----------- 6:= panier ------------ */
+.panier .command{
+    width: 100%;
+}
+
+.panier .panier_command{
+    width: 60%;
+}
+
+.panier .panier_command article{
+    border-top: none;
+}
+
+.panier .panier_command article:first-child{
+    border-top: 1px solid #BDDEB4;
+}
+
+.panier_vide{
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.panier_vide p{
+    width: 20%;
+    margin: 2rem auto 4rem;
 }

@@ -34,6 +34,7 @@ const SignIn = () =>{
             
             const token = response.data.token;
             addToken(token);
+            localStorage.setItem('role', 'user');
 
             navigate('/user/my-account/order');
         } catch (error) {

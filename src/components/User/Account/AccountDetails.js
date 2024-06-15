@@ -98,7 +98,7 @@ const AccountDetails = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte" lien="/user/my-account/details" classe="backGris" />
+            <Titre titre="Mon compte utilisateur" lien="/user/my-account/details" classe="backGris" />
             
             <div className='row account'>
                 <AccountMenu selected="details" />

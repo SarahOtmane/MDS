@@ -2,7 +2,7 @@
                 Sommaire
 
     
-        CheckCart
+        Paiement
     1:= livraison
     2:= commande
 
@@ -35,12 +35,27 @@ button{
 .livraison{
     width: 65%;
     padding-right: 5%;
-    border-right: 1px solid var(--input_border);
+    border-right: 2px solid #E4A2BE;
     padding-left: 12rem;
 }
 
 .livraison .double div{
     width: 46%;
+}
+
+.livraison div.numCarte{
+    position: relative;
+}
+
+.livraison div.numCarte input{
+    width: 95%;
+}
+
+.livraison div.numCarte figure{
+    width: max-content;
+    position: absolute;
+    right: 0;
+    top: 25%;
 }
 
 
@@ -66,7 +81,8 @@ button{
 
 .commande img{
     border-radius: 50%;
-    width: 25%;
+    width: 3rem;
+    height: 3rem;
     margin-right: .5rem;
 }
 
@@ -76,23 +92,32 @@ button{
     border: 1px solid #B6B7BC;
 }
 
-
 .commande .recap{
     margin: 6rem 0 2rem;
 }
 
 .commande .recap article{
     margin-bottom: 1.5rem;
+    color: #999999;
+}
+
+.commande .recap article span+span{
+    font-weight: bold;
+    color: var(--black);
 }
 
 .commande .recap div{
-    border: 1px solid var(--input_border);
+    border: 1px solid #BDDEB4;
     margin: 3rem 0;
 }
 
 .commande button[type='submit']{
     width: 100%;
     margin-top: 2rem;
+}
+
+.commande button svg{
+    margin-left: .5rem;
 }
 
 
@@ -102,7 +127,7 @@ button{
 
 /* ----------- 3:= success ------------ */
 .success{
-    width: 25%;
+    width: 40%;
     margin: auto;
     text-align: center;
     padding-top: 8rem;
@@ -115,6 +140,28 @@ button{
 
 .success button svg{
     margin-left: .5rem;
+}
+
+.success article{
+    text-align: left;
+    border: 1px solid var(--pink_text);
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.success article p{
+    font-weight: bolder;
+}
+
+.success ul{
+    margin-top: 2rem;
+    padding-left: 2rem;
+    list-style-image: url('../assets/pictures/order/check.svg');
+}
+
+.success li{
+    margin-top: 1.5rem;
+    padding-left: 1rem;
 }
 
 

@@ -30,11 +30,8 @@ const Rejoindre = () =>{
                     <article>
                         <h3 className='text_uppercase first'>La communauté RenoWear</h3>
                         <p>
-                            Des hommes et des femmes uniques rassemblés autour de la même passion : l’artisanat !
-                            <br></br>Des artisans passionnés, amoureux du travail bien fait et qui ont à coeur de transmettre leur savoir-faire. Des personnalités attentives, qui sauront satisfaire toutes les demandes de façon précise et bienveillante.
-                            <br></br>Une palette complète de savoir-faire : nos couturiers, brodeurs, maroquiniers et cordonniers partagent le même objectif, celui de faire perdurer tous les objets du quotidien.
+                            Une communauté d'hommes et de femmes uniques se forme autour d'une passion commune : l'artisanat ! Ces artisans dévoués, experts dans leur domaine, sont animés par le désir de transmettre leur savoir-faire. Leur attention particulière leur permet de répondre avec précision et bienveillance à chaque demande. Ensemble, nos couturiers, brodeurs, maroquiniers et cordonniers s'unissent dans le but commun de perpétuer avec excellence les objets du quotidien.
                         </p>
-                        
                     </article>
                     <article>
                         <h3 className='text_uppercase'>Tout un parcours</h3>

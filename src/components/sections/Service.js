@@ -21,9 +21,9 @@ const Service = () =>{
                     </article>
                 </div>
                 <article className='row'>
-                    <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
-                    <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
-                    <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
+                    <a href='/artisans' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
+                    <a href='/artisans' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
+                    <a href='/artisans' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
             </div>
         </section>

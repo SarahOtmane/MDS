@@ -25,6 +25,12 @@
         Etape
     10:= etape
 
+        AllArtisan
+    11:= noArtisan
+    12:= allArtisan
+
+        Assurance
+    13:= assuranceDescription
 
 
 
@@ -72,23 +78,8 @@
     padding: 7rem 0;
 }
 
-.description figure{
-    padding: 0 1.5rem;
-    margin-top: 4rem;
-}
-
 .description p{
     margin-top: 3rem;
-}
-
-.description figure img{
-    width: 25%;
-    height: 2rem;
-}
-
-.description figure img:nth-child(2){
-    width: 11%;
-    height: 3rem;
 }
 
 .description hr{
@@ -117,6 +108,16 @@
         100% 100%,
         0 100%;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -171,7 +172,6 @@
 
 .repare .repareService article{
    width: 30%;
-   text-align: center;
 }
 
 .repare .repareService article div{
@@ -180,6 +180,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: .7rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .repare .repareService article:first-child div{
@@ -194,19 +196,62 @@
     background-image: url('../assets/pictures/artisans/pic4.png');
 }
 
-.repare .repareService article p{
-    width: max-content;
+.repare .repareService form p{
     margin-top: 1.5rem;
-    padding: .5rem 1rem;
     border-radius: 2rem;
     font-family: 'montserratbold', sans-serif;
     font-size: 1.3rem;
-} 
+    color: var(--black);
+    border: none;
+    width: max-content;
+    padding: .5rem 1rem;
+}
+
+.repare .repareService form button{
+    position: relative;
+    top: 87%;
+    height: 13%;
+    width: 100%;
+    border-radius: 0;
+    display: none;
+    z-index: 2;
+}
+
+.repare .repareService article div:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(246, 246, 246, 0.5); 
+    z-index: 1;
+}
+
+.repare .repareService form div:hover button{
+    display: block;
+}
 
 .repare .tuto div{
     width: 50%;
     margin: auto;
     margin-top: 4rem;
+}
+
+
+.repare .tuto + section{
+    margin: 3rem 10rem 6rem 10rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.repare .tuto + section article{
+    width: 25%;
+    padding: 0 .5rem;
+}
+
+.repare .tuto + section article p {
+    padding-left: 1rem;
 }
 
 
@@ -334,6 +379,7 @@
         60% 10%,
         90% 0;
     height: 40vh;
+    padding-bottom: 5rem;
 }
 
 .renowear article{
@@ -457,6 +503,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ----------- 10:= etape ------------ */
 .etape{
     margin: 0 10rem;
@@ -497,6 +554,197 @@
 
 
 
+
+
+
+
+
+
+
+/* ----------- 11:= noArtisan ------------ */
+.noArtisan{
+    background-image: 
+        url('../assets/pictures/acceuil/deco6.svg'),
+        url('../assets/pictures/acceuil/deco5.svg'),
+        url('../assets/pictures/acceuil/deco7.svg')
+    ;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: var(--white);
+    background-position: 
+        5% 50%,
+        0 -24rem,
+        0 100%;
+}
+
+.noArtisan h2, .noArtisan p{
+    margin-left: 45%;
+    padding-bottom: 15rem;
+    width: 50%;
+}
+
+.noArtisan h2{
+    font-size: 3rem;
+    padding: 15rem 1rem 3rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 11:= allArtisan ------------ */
+.allArtisan{
+    flex-wrap: wrap;
+    padding: 2rem 10rem;
+}
+
+.allArtisan article{
+    width: 48%;
+    border: 2px solid #c4c2c2;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+.allArtisan article:hover{
+    border: 2px solid #E4A2BE;
+}
+
+.allArtisan .pseudo{
+    color: #E4A2BE;
+    background-color: #FFDBE8;
+    font-family: 'montserratbold', sans-serif;
+    border-radius: 50%;
+    width: max-content;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    height: max-content;
+    margin: 0 1rem;
+}
+
+.allArtisan .contenu{
+    padding: 0 2rem 1rem 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.allArtisan .contenu div:first-child p{
+    color: #F071A7;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.allArtisan .contenu div:first-child a{
+    color: var(--black);
+    font-family: 'montserratbold', sans-serif;
+    font-size: .8rem;
+}
+
+.allArtisan .contenu div:first-child svg{
+    margin-left: .5rem;
+}
+
+.allArtisan .contenu .expertise, .allArtisan .contenu .note{
+    margin: 1rem 0;
+}
+
+.allArtisan .contenu .note{
+    margin: 1rem 0 2rem 0;
+}
+
+.allArtisan .contenu .note svg{
+    margin-right: .5rem;
+}
+
+.allArtisan .contenu .metier p:first-child{
+   margin-right: 1rem;
+}
+
+.allArtisan .contenu .metier p{
+    border: 1px solid #c4c2c2;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- 13:= assuranceDescription ------------ */
+.assuranceDescription h3.titre{
+    width: max-content;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.assuranceDescription img{
+    margin-left: 45%;
+    margin-top: 2rem;
+}
+
+
+.assuranceDescription article{
+    width: 80%;
+    margin: 4rem auto;
+    text-align: justify;
+}
+
+.assuranceDescription ul{
+    list-style: disc;
+}
+
+.assuranceDescription ul, .assuranceDescription ol{
+    padding-left: 2rem;
+}
+
+.assuranceDescription ul ul{
+    padding-left: 3rem;
+}
+
+.assuranceDescription li, .assuranceDescription p{
+    margin-top: 1rem;
+}
+
+.assuranceDescription table{
+    margin: 4rem auto;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #c4c2c2;
+}
+
+.assuranceDescription thead{
+    background-color: #d8d8d8;
+}
+
+.assuranceDescription thead th, .assuranceDescription tbody td, .assuranceDescription tbody th{
+    padding: 1rem;
+    border: 1px solid #c4c2c2;
+}
+
+.assuranceDescription tbody td, .assuranceDescription tbody th{
+    padding-right: 5rem;
+}
+
+.assuranceDescription button{
+    margin: 7rem 0 5rem 42%;
+}
 
 
 

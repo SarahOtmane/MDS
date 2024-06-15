@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { useState } from "react";
 
 import './App.css';
@@ -23,9 +23,7 @@ import AccountOrder from "./components/User/Account/AccountOrder";
 import AccountPassword from "./components/User/Account/AccountPassword";
 import AccountDetails from "./components/User/Account/AccountDetails";
 import AccountAdress from "./components/User/Account/AccountAdress";
-import Account from "./components/User/Account";
-
-import CheckCart from "./components/Cart/CheckCart";
+import SuppressionCompte from "./components/User/SuppressionCompte";
 
 import SuccefullOrder from "./components/Order/SuccefullOrder";
 import FailedOrder from "./components/Order/FailedOrder";
@@ -34,8 +32,11 @@ import Mentions from "./components/Legal/Mentions";
 import Conditions from "./components/Legal/Conditions";
 import Politique from "./components/Legal/Politique";
 
-import Couture from "./components/Reparation/Couture";
-import CouturePics from "./components/Reparation/CouturePics";
+import Reparation from "./components/Reparation/Reparation";
+import ReparationPic from "./components/Reparation/ReparationPic";
+import Devis from "./components/Reparation/Devis";
+import Panier from "./components/Reparation/Panier";
+import Paiement from "./components/Reparation/Paiement";
 
 import Error404 from "./components/Error/Error404";
 import Error403 from "./components/Error/Error403";
@@ -44,6 +45,12 @@ import Error401 from "./components/Error/Error401";
 
 import ArtisanSignUp from "./components/Artisan/Sign/ArtisanSignUp";
 import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
+
+import ArtisanAccountDetails from "./components/Artisan/Account/ArtisanAccountDetails";
+import ArtisanAccountJob from "./components/Artisan/Account/ArtisanAccountJob";
+import ArtisanAccountAdress from "./components/Artisan/Account/ArtisanAccountAdress";
+import ArtisanAccountOrder from "./components/Artisan/Account/ArtisanAccountOrder";
+import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
 
 
 
@@ -68,14 +75,13 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
         /mentions
         /politique
         /condition
+    /suppression
     /user :
         /register
         /login
         /password :
             /forget
             /reset/:token
-        /cart :
-            /check
         /order : 
             /success
             /failed
@@ -85,25 +91,49 @@ import ArtisanSignIn from "./components/Artisan/Sign/ArtisanSignIn";
             /details
             /adress
         /reparation :
-            /couture
-            /couture-pics
+            /details
+            /image
+            /devis
+            /panier
+            /paiement
     /artisan : 
         /register
         /login
+        /my-account : 
+            /details
+            /metier
+            /adress
+            /order
+            /update-password
 */
 
 
 const App = () => {
     const [command, setCommand] = useState({
-        name: '',
         picture: '',
-        user_email: '',
-        artisan_email: '',
-        reparationType: '',
-        clothType: '',
-        categorie: '',
+        id_user: '',
+        id_artisan: '',
         job: '',
+        id_job: '',
+        id_presta: '',
+        reparationType: '',
+        clotheType: '',
+        categorie: '',
+        besoinType: '',
+        fontSize: '',
+        broderieType: '',
+        comment: '',
+        price: 0,
+        id: 0
     });
+
+    const [service, setService] = useState('');
+    const [serviceEnvoyeParRepare, setServiceEnvoyeParRepare] = useState(false);
+
+    const pagesBackWhite = [
+        "/", "/concept", "/aide", "/repare", "/artisans", "/rejoindre",
+        "/user/reparation/details", "/user/reparation/image"
+    ]
 
     return (
         <BrowserRouter>
@@ -114,10 +144,12 @@ const App = () => {
                     <Route path='/concept' element={<Concept />} />
                     <Route path="/aide" element={<Aide />} />
                     <Route path="/repare" element={<Repare 
-                        command={command} 
-                        setCommand={setCommand} 
+                        setService={setService} setServiceEnvoyeParRepare={setServiceEnvoyeParRepare}
                     />} />
-                    <Route path="/artisans" element={<Artisans />} />
+                    <Route path="/artisans" element={<Artisans 
+                        service={service}  setService={setService} setCommand={setCommand} command={command}
+                        serviceEnvoyeParRepare={serviceEnvoyeParRepare} setServiceEnvoyeParRepare={setServiceEnvoyeParRepare}
+                    />} />
                     <Route path="/rejoindre" element={<Rejoindre />} />
                     <Route path="/assurance" element={<Assurance />} />
                     <Route path="/error401" element={<Error401 />} />
@@ -131,6 +163,8 @@ const App = () => {
                         <Route path="condition" element={<Conditions />} />
                     </Route>
 
+                    <Route path="suppression" element={<SuppressionCompte />} />
+
                     <Route path="/user">
                         <Route path="register" element={<SignUp />} />
                         <Route path="login" element={<SignIn />} />
@@ -140,17 +174,12 @@ const App = () => {
                             <Route path="reset/:token" element={<ResetMdp />} />
                         </Route>
 
-                        <Route path="cart">
-                            <Route path="check" element={<CheckCart />} />
-                        </Route>
-
                         <Route path="order">
                             <Route path="success" element={<SuccefullOrder />} />
                             <Route path="failed" element={<FailedOrder />} />
                         </Route>
 
                         <Route path="my-account">
-                            <Route path="account" element={<Account />} />
                             <Route path="order" element={<AccountOrder />} />
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
@@ -158,17 +187,37 @@ const App = () => {
                         </Route>
 
                         <Route path="reparation">
-                            <Route path="couture" element={<Couture />} />
-                            <Route path="couturepics" element={<CouturePics />} />
+                            <Route path="details" element={<Reparation 
+                                command={command} 
+                                setCommand={setCommand}
+                            />} />
+                            <Route path="image" element={<ReparationPic 
+                                command={command} 
+                                setCommand={setCommand}
+                            />} />
+                            <Route path="devis" element={<Devis 
+                                command={command} 
+                                setCommand={setCommand}
+                            />} />
+                            <Route path="panier" element={<Panier />} />
+                            <Route path="paiement" element={<Paiement />} />
                         </Route>
                     </Route>
                     <Route path="/artisan">
                         <Route path="register" element={<ArtisanSignUp />} />
                         <Route path="login" element={<ArtisanSignIn />} />
+
+                        <Route path="my-account">
+                            <Route path="details" element={<ArtisanAccountDetails />} />
+                            <Route path="metier" element={<ArtisanAccountJob />} />
+                            <Route path="adress" element={<ArtisanAccountAdress />} />
+                            <Route path="order" element={<ArtisanAccountOrder />} />
+                            <Route path="update-password" element={<ArtisanAccountMdp />} />
+                        </Route>
                     </Route>
 
                 </Routes>
-                <Footer />
+                <Footer pagesBackWhite={pagesBackWhite} />
         </BrowserRouter>
     )
 }

@@ -6,11 +6,12 @@
     1:= detailsArtisan
     2:= jobArtisan
     3:= reparationArtisan
-    4:= artisan_signin
+    4:= abonnement
+    5:= artisan_signin
 
 */
 
-/* ----------- 1:= artisan_signup ------------ */
+/* ----------- 1:= detailsArtisan ------------ */
 .artisan_signup form.detailsArtisan{
     width: 50%;
     margin: auto;
@@ -20,7 +21,7 @@
     width: 100%;
 }
 
-.artisan_signup form.detailsArtisan div{
+.artisan_signup form.detailsArtisan div:not(.divInput){
     width: 45%;
 }
 
@@ -29,12 +30,22 @@
     margin: 2rem auto;
 }
 
+.artisan_signup .detailsArtisan img{
+    width: 1.5rem;
+    position: relative;
+    left: 90%;
+    top: 30%;
+    cursor: pointer;
+}
+
 .artisan_signup .detailsArtisan button{
     margin: 0;
     margin-left: 30%;
 }
 
-
+.artisan_signup .detailsArtisan .divInput input{
+    margin-top: -.5rem;
+}
 
 
 
@@ -111,9 +122,62 @@
 
 
 
+/* ----------- 3:= reparationArtisan ------------ */
+.artisan_signup .abonnement{
+    padding-bottom: 17rem;
+}
+
+.artisan_signup .abonnement div{
+    height: 70vh;
+    width: 100%;
+    background-color: var(--green_background_2);
+    background-image: 
+        url('../assets/pictures/acceuil/pelote.png'),
+        url('../assets/pictures/acceuil/aiguilles.png'),
+        url('../assets/pictures/picto/boutton_complet.png');
+    background-size: 12rem, 12rem, 12rem;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 
+    0 90%,
+    85% 10%,
+    30% 10%;
+    position: relative;
+}
+
+.artisan_signup .adhesion{
+    background-color: var(--white);
+    width: 40%;
+    border: 2px solid #E4A2BE;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 8rem 0;
+    position: absolute;
+    top: 43%;
+    left: 30%;
+}
+
+.artisan_signup .adhesion h4{
+    font-size: 2.7rem;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+}
+
+.artisan_signup .adhesion span{
+    font-size: 5.5rem;
+    font-family: 'montserratbold', sans-serif;
+}
+
+.artisan_signup .adhesion p{
+    width: 60%;
+    margin: 3rem auto 5rem;
+}
 
 
-/* ----------- 4:= artisan_signup ------------ */
+
+
+
+
+/* ----------- 5:= artisan_signup ------------ */
 .artisan_signin form{
     width: 25%;
     margin: auto;
