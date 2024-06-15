@@ -858,4 +858,26 @@
     .renowear h2{
         font-size: 1.5rem;
     }
+
+    .recherche form{
+        width: 95%;
+    }
+
+    .recherche input{
+        padding: 1rem;
+    }
+
+    .recherche input{
+        width: 20% !important;
+        padding: 1.3rem 1rem;
+    }
+
+    .recherche input:first-child{
+        width: 23%;
+    }
+
+    .recherche button{
+        width: max-content;
+        margin-top: .2rem;
+    }
 }
