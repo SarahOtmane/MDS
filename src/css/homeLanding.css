@@ -1150,12 +1150,16 @@ img.picto{
 
 
 @media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    
     .slider article{
         padding: 0 4rem;
         background-size: 6rem, 6rem, 6rem, 6rem, 6rem;
     }
     .slider p, .slider h2 {
-        width: 90%;
+        width: 80%;
     }
 
     .home .elements{
@@ -1165,5 +1169,38 @@ img.picto{
     .home .elements article{
         width: 90%;
         margin-top: 3rem;
+    }
+
+    .service{
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        background-size: 5rem, 5rem, 5rem, 5rem, 5rem;
+    }
+
+    .service h2{
+        width: 30%;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .service h2 + div{
+        flex-direction: column;
+        padding: 1rem 3rem 0 1rem;
+        width: 70%;
+    }
+
+    .service .card{
+        width: 100%;
+        margin: 0;
+    }
+
+    .service h3{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .service p, .service a{
+        font-size: .9rem;
     }
 }
