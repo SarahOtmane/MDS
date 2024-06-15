@@ -996,7 +996,7 @@
 
     .repare .repareService,
     .repare .tuto{
-        padding: 4rem;
+        padding: 2rem 3rem;
     }
 
     .etape{
@@ -1022,5 +1022,38 @@
         width: 90%;
         margin: auto;
     }
-    
+
+    .repare .repareService h2 + p,
+    .repare .tuto h2 + p{
+        font-size: 1rem;
+    }
+
+    .repare .repareService form{
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+
+    .repare .repareService article, .repare .tuto div{
+        width: 100%;
+    }
+
+    .repare .repareService form p{
+        margin-bottom: 2.5rem;
+    }
+
+    .repare .tuto + section{
+        margin: 2rem 3rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        flex-wrap: wrap;
+    }
+
+    .repare .tuto + section article{
+        width: 45%;
+        margin-bottom: 1.5rem;
+    }
+
+    .repare .tuto + section article p{
+        font-size: .7rem;
+    }
 }
