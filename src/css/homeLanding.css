@@ -667,15 +667,11 @@ img.picto{
     padding: 3rem 1.5rem;
 }
 
-.assurancesSlider h2, .assurancesSlider p{
+.assurancesSlider h2{
     font-size: 1.3rem;
     margin-left: 10rem;
     font-family: "montserratlight", sans-serif;
     font-weight: bolder;
-}
-
-.assurancesSlider p{
-    margin: 1rem 0 4rem 10rem;
 }
 
 .slick-dots{
@@ -1271,7 +1267,7 @@ img.picto{
         padding: .8rem .5rem;
     }
 
-    .avis div.button +div{
+    .avis div.button +div, .newsletter form{
         flex-wrap: wrap;
     }
 
@@ -1279,4 +1275,14 @@ img.picto{
         width: 90%;
         margin-left: 0;
     }
+
+    .assurancesSlider h2{
+        margin-left: 0;
+        margin-bottom: 4rem;
+    }
+
+    .newsletter article{
+        padding: 3rem;
+    }
+
 }
