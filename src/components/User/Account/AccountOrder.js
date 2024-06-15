@@ -27,7 +27,7 @@ const AccountOrder = () => {
                     const responseProduct = await axiosInstance.get(`/products/${command.id_product}`);
                     command.product = responseProduct.data;
                 }
-                
+
                 setCommands(commandData);
             } catch (error) {
                 const status = error.response ? error.response.status : 500;
@@ -66,18 +66,18 @@ const AccountOrder = () => {
                 <AccountMenu selected="commandes" />
                 <section className='commandes'>
                     {commands.length > 0 ? (
-                        <div className='column'>
+                        <div className='column existCommand'>
                             <h3>Commandes</h3>
                             {commands.map(command => (
-                                <article key={command.id} className='row justifycontent_spbetween'>
+                                <article key={command.id} className='row alignitem_center'>
                                     <img src={command.picture ? command.picture : product} alt='produit' />
                                     <div className='column'>
-                                        <p> {command.cloth.categorie} </p>
+                                        <p className='text_bold'> {command.cloth.categorie} </p>
                                         <p> {command.cloth.clothType} &rsaquo; {command.product.reparationType} </p>
                                         <p> Commandé le : {formatDate(command.createdAt)} </p>
-                                        <p> {parseInt(command.product.price) + parseInt(command.product.price)*0.1} €</p>
+                                        <p className='text_bold'> {parseInt(command.product.price) + parseInt(command.product.price)*0.1} €</p>
                                     </div>
-                                    <p>{command.dateFinished ? 'Terminée' : 'En cours'}</p>
+                                    <p className='text_bold'>{command.dateFinished ? 'Terminée' : 'En cours'}</p>
                                 </article>
                             ))}
                         </div>
