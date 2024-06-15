@@ -834,4 +834,28 @@
     .description{
         background-image: none;
     }
+
+    .renowear{
+        background-image: 
+            url('../assets/pictures/acceuil/Frame_47.png'),
+            url('../assets/pictures/acceuil/Frame_48.png'),
+            url('../assets/pictures/acceuil/Frame_49.png');
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 10rem, 20rem, 10rem;
+        background-position: 
+            100% 60%,
+            100% 0,
+            0 0;
+        height: 40vh;
+        padding-bottom: 2rem;
+    }
+
+    .renowear article{
+        padding-left: 20%;
+        padding-top: 45%;
+    }
+
+    .renowear h2{
+        font-size: 1.5rem;
+    }
 }
