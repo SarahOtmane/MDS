@@ -630,27 +630,21 @@
     margin: 0 1rem;
 }
 
+.allArtisan .pseudo + div{
+    display: none;
+}
+
 .allArtisan .contenu{
     padding: 0 2rem 1rem 1rem;
     width: 100%;
     margin-top: 1rem;
 }
 
-.allArtisan .contenu div:first-child p{
+.allArtisan .contenu p.name{
     color: #F071A7;
     font-weight: bolder;
     font-size: 1.3rem;
     font-family: 'montserratbold', sans-serif;
-}
-
-.allArtisan .contenu div:first-child a{
-    color: var(--black);
-    font-family: 'montserratbold', sans-serif;
-    font-size: .8rem;
-}
-
-.allArtisan .contenu div:first-child svg{
-    margin-left: .5rem;
 }
 
 .allArtisan .contenu .expertise, .allArtisan .contenu .note{
@@ -665,11 +659,11 @@
     margin-right: .5rem;
 }
 
-.allArtisan .contenu .metier p:first-child{
+.allArtisan .metier p:first-child{
    margin-right: 1rem;
 }
 
-.allArtisan .contenu .metier p{
+.allArtisan .metier p{
     border: 1px solid #c4c2c2;
     border-radius: .5rem;
     padding: .5rem 1rem;
@@ -911,5 +905,31 @@
 
     .artisanService p{
         width: 100%;
+    }
+
+    .allArtisan{
+        padding: 2rem;
+    }
+
+    .allArtisan article{
+        width: 100%;
+    }
+    
+    .allArtisan .contenu .metier{
+        display: none;
+    }
+
+    .allArtisan .pseudo + div{
+        display: block;
+        margin-left: 1rem;
+    }
+
+    .allArtisan article div:first-child, .allArtisan article div.contenu{
+        width: 50% !important;
+    }
+
+    .allArtisan .pseudo + div p:first-child{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 }
