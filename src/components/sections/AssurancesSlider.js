@@ -30,8 +30,7 @@ const AssurancesSlider = () =>{
     
     return(
         <section className="assurancesSlider">
-            <h2 className='text_uppercase'>Nos partenaires assureurs</h2>
-            <p>Des assurances incluses à chaque commande</p>
+            <h2 className='text_uppercase'>Nos partenaires</h2>
             <Slider {...settings}>
                 {partners.map((partner, index) => (
                     <div key={index}>

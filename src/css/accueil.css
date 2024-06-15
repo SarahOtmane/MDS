@@ -630,27 +630,21 @@
     margin: 0 1rem;
 }
 
+.allArtisan .pseudo + div{
+    display: none;
+}
+
 .allArtisan .contenu{
     padding: 0 2rem 1rem 1rem;
     width: 100%;
     margin-top: 1rem;
 }
 
-.allArtisan .contenu div:first-child p{
+.allArtisan .contenu p.name{
     color: #F071A7;
     font-weight: bolder;
     font-size: 1.3rem;
     font-family: 'montserratbold', sans-serif;
-}
-
-.allArtisan .contenu div:first-child a{
-    color: var(--black);
-    font-family: 'montserratbold', sans-serif;
-    font-size: .8rem;
-}
-
-.allArtisan .contenu div:first-child svg{
-    margin-left: .5rem;
 }
 
 .allArtisan .contenu .expertise, .allArtisan .contenu .note{
@@ -665,11 +659,11 @@
     margin-right: .5rem;
 }
 
-.allArtisan .contenu .metier p:first-child{
+.allArtisan .metier p:first-child{
    margin-right: 1rem;
 }
 
-.allArtisan .contenu .metier p{
+.allArtisan .metier p{
     border: 1px solid #c4c2c2;
     border-radius: .5rem;
     padding: .5rem 1rem;
@@ -797,5 +791,306 @@
     .concept .presentation article,
     .description div{
         width: 55%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .concept .presentation article, 
+    .description div{
+        width: 70%;
+    }
+
+    .concept .presentation h2,
+    .description h3{
+        font-size: 2rem !important;
+    }
+
+    .concept .presentation p,
+    .description p{
+        font-size: 1rem;
+    }
+
+    .description{
+        background-image: none;
+    }
+
+    .renowear{
+        background-image: 
+            url('../assets/pictures/acceuil/Frame_47.png'),
+            url('../assets/pictures/acceuil/Frame_48.png'),
+            url('../assets/pictures/acceuil/Frame_49.png');
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 10rem, 20rem, 10rem;
+        background-position: 
+            100% 60%,
+            100% 0,
+            0 0;
+        height: 40vh;
+        padding-bottom: 2rem;
+    }
+
+    .renowear article{
+        padding-left: 20%;
+        padding-top: 45%;
+    }
+
+    .renowear h2{
+        font-size: 1.5rem;
+    }
+
+    .recherche form{
+        width: 95%;
+    }
+
+    .recherche input{
+        padding: 1rem;
+    }
+
+    .recherche input{
+        width: 20% !important;
+        padding: 1.3rem 1rem;
+    }
+
+    .recherche input:first-child{
+        width: 23%;
+    }
+
+    .recherche button{
+        width: max-content;
+        margin-top: .2rem;
+    }
+
+    .artisanService section{
+        padding: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .artisanService article, .artisanService div{
+        width: 90%;
+    }
+
+    .artisanService div{
+        order: 1;
+    }
+
+    .artisanService article{
+        order: 2;
+        text-align: left !important;
+        text-align: justify;
+    }
+
+    .artisanService h2{
+        line-height: 2rem;
+        margin-top: 1rem;
+    }
+
+    .artisanService article.right p{
+        margin: 0;
+    }
+
+    .artisanService p{
+        width: 100%;
+    }
+
+    .allArtisan{
+        padding: 2rem;
+    }
+
+    .allArtisan article{
+        width: 100%;
+    }
+    
+    .allArtisan .contenu .metier{
+        display: none;
+    }
+
+    .allArtisan .pseudo + div{
+        display: block;
+        margin-left: 1rem;
+    }
+
+    .allArtisan article div:first-child, .allArtisan article div.contenu{
+        width: 50% !important;
+    }
+
+    .allArtisan .pseudo + div p:first-child{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .noArtisan{
+        background-size: 8rem, 15rem, 18rem;
+        background-position: 
+        3% 30%,
+        0 -11rem,
+        0 100%;
+    }
+
+    .noArtisan h2, .noArtisan p{
+        margin-left: 30%;
+        width: 60%;
+        padding-bottom: 10rem;
+    }
+
+    .noArtisan h2{
+        padding: 5rem 1rem 3rem 0;
+    }
+
+    .rejoindre .description{
+        background-image: 
+        url('../assets/pictures/acceuil/deco3.png'),
+        url('../assets/pictures/acceuil/boutton.png'),
+        url('../assets/pictures/acceuil/ceintre.png'),
+        url('../assets/pictures/acceuil/pelote.png'),
+        url('../assets/pictures/acceuil/ciseaux.png'),
+        url('../assets/pictures/acceuil/aiguilles.png'),
+        url('../assets/pictures/acceuil/deco1.png'),
+        url('../assets/pictures/acceuil/deco2.png');
+
+        background-size: 9rem, 5rem, 5rem, 5rem, 5rem, 5rem, 5rem, 5rem;
+        background-position: 
+        0 0,
+        100% 0,
+        0 33%,
+        100% 15%,
+        100% 57%,
+        11% 62%,
+        100% 100%,
+        0 100%;
+    }
+
+    .rejoindre .adhesion{
+        padding: 3rem 0;
+    }
+
+    .rejoindre .adhesion h4{
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-bottom: 3rem;
+    }
+
+    .rejoindre .adhesion span{
+        font-size: 4rem;
+        font-family: 'montserratbold', sans-serif;
+    }
+
+    .rejoindre .adhesion p{
+        width: 80%;
+        margin: 2rem auto 3rem;
+    }
+
+    .repare .repareService,
+    .repare .tuto{
+        padding: 2rem 3rem;
+    }
+
+    .etape{
+        margin: 0;
+    }
+
+    .etape .container{
+        flex-wrap: wrap;
+    }
+
+    .etape article{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .etape img{
+        margin: 0;
+        margin-right: 1rem;
+    }
+
+    .etape h3, .etape span{
+        width: 90%;
+        margin: auto;
+    }
+
+    .repare .repareService h2 + p,
+    .repare .tuto h2 + p{
+        font-size: 1rem;
+    }
+
+    .repare .repareService form{
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+
+    .repare .repareService article, .repare .tuto div{
+        width: 100%;
+    }
+
+    .repare .repareService form p{
+        margin-bottom: 2.5rem;
+    }
+
+    .repare .tuto + section{
+        margin: 2rem 3rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        flex-wrap: wrap;
+    }
+
+    .repare .tuto + section article{
+        width: 45%;
+        margin-bottom: 1.5rem;
+    }
+
+    .repare .tuto + section article p{
+        font-size: .7rem;
+    }
+
+    .aide .section{
+        padding: 2rem 3rem 6rem 3rem;
+    }
+
+    .aide .section h2, .aide .section h3{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .aide .section h3{
+        font-size: 1.1rem;
+        margin-bottom: 5rem;
+    }
+
+    .aide .accordion{
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .assuranceDescription img{
+        margin-left: 35%;
+    }
+
+    .assuranceDescription table{
+        font-size: .7rem;
+        margin: 1rem;
+    }
+
+    .assuranceDescription thead th, .assuranceDescription tbody td, .assuranceDescription tbody th{
+        padding: .5rem;
+    }
+
+    .assuranceDescription button{
+        margin: 2rem 0 5rem 25%;
     }
 }

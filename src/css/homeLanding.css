@@ -161,6 +161,10 @@ img.picto{
     margin: 2.5rem 5% 5rem 0;
 }
 
+.service a{
+    width: 100% !important;
+}
+
 .service a img,
 .fonctionnement a img,
 .landing .section7 a img{
@@ -238,22 +242,6 @@ img.picto{
 .fonctionnement #image4{
     right: 14%;
     margin-top: -51rem;
-}
-
-.fonctionnement #ceintre{
-    right: 0;
-    margin-top: -46rem;
-}
-
-.fonctionnement #machine{
-    left: 30%;
-    margin-top: -40rem;
-}
-
-.fonctionnement #picto_Section4{
-    left: 49%;
-    margin-top: 48rem;
-    z-index: 0;
 }
 
 
@@ -579,6 +567,11 @@ img.picto{
     font-size: 1.3rem;
 }
 
+.home .tuto p:first-child{
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+
 .home .tuto div{
     width: 80%;
     margin: auto;
@@ -674,15 +667,11 @@ img.picto{
     padding: 3rem 1.5rem;
 }
 
-.assurancesSlider h2, .assurancesSlider p{
+.assurancesSlider h2{
     font-size: 1.3rem;
     margin-left: 10rem;
     font-family: "montserratlight", sans-serif;
     font-weight: bolder;
-}
-
-.assurancesSlider p{
-    margin: 1rem 0 4rem 10rem;
 }
 
 .slick-dots{
@@ -1128,4 +1117,172 @@ img.picto{
     .section1Landing button{
         width: 70%;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+
+    h2{
+        font-size: 1.3rem !important;
+    }
+    
+    .slider article{
+        padding: 0 4rem;
+        background-size: 6rem, 6rem, 6rem, 6rem, 6rem;
+    }
+    .slider p, .slider h2 {
+        width: 80%;
+    }
+
+    .home .elements{
+        flex-direction: column;
+    }
+
+    .home .elements article{
+        width: 90%;
+        margin-top: 3rem;
+    }
+
+    .service{
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        background-size: 5rem, 5rem, 5rem, 5rem, 5rem;
+    }
+
+    .service h2{
+        width: 30%;
+        padding-left: 2rem;
+    }
+
+    .service h2 + div{
+        flex-direction: column;
+        padding: 1rem 3rem 0 1rem;
+        width: 70%;
+    }
+
+    .service .card{
+        width: 100%;
+        margin: 0;
+    }
+
+    .service h3{
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .service p, .service a{
+        font-size: .9rem;
+    }
+
+    .fonctionnement{
+        flex-wrap: wrap;
+        text-align: center;
+        background-image: url('../assets/pictures/picto/picto_section4.png');
+        background-repeat: no-repeat;
+        background-position: 5% 190%;
+        justify-content: space-between;
+    }
+
+    .fonctionnement article{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 2rem;
+    }
+
+    .fonctionnement h2, .fonctionnement span.expe{
+        width: 100%;
+    }
+
+    .fonctionnement p{
+        width: 46%;
+        font-size: .9rem;
+        text-align: start;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .fonctionnement p img{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .fonctionnement .twoImages, .fonctionnement .twoImages + figure{
+        width: 50%;
+    }
+
+    .fonctionnement .twoImages{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .fonctionnement .twoImages img{
+        width: 40%;
+        margin-top: 5rem;
+    }
+
+    .fonctionnement .twoImages img:first-child{
+        padding-left: 3rem;
+    }
+
+    .fonctionnement a{
+        display: none;
+    }
+
+    .fonctionnement #image4{
+        left: 10%;
+        margin-top: 97%;
+    }
+
+    .home .tuto{
+        font-size: 1rem;
+    }
+
+    .landing .section5, .avis{
+        margin: 3rem;
+    }
+
+    .avis div.button button{
+        font-size: .8rem;
+        padding: .8rem .5rem;
+    }
+
+    .avis div.button +div, .newsletter form{
+        flex-wrap: wrap;
+    }
+
+    .avis article{
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .assurancesSlider h2{
+        margin-left: 0;
+        margin-bottom: 4rem;
+    }
+
+    .newsletter article{
+        padding: 3rem;
+    }
+
 }
