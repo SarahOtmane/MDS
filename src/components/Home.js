@@ -46,7 +46,9 @@ const Home = () =>{
             <Fonctionnement />
             <section className='tuto'>
                 <p>
-                    Réparer avec Renowear .  <br></br>
+                Comment réparer avec RenoWear ?
+                </p>
+                <p>
                     Inutile de nous suivre jusqu'au bout du monde. Suivez juste ce tuto.
                 </p>
 
