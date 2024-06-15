@@ -75,6 +75,7 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
         /mentions
         /politique
         /condition
+    /suppression
     /user :
         /register
         /login
@@ -89,7 +90,6 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
             /update-password
             /details
             /adress
-            /suppression
         /reparation :
             /details
             /image
@@ -163,6 +163,8 @@ const App = () => {
                         <Route path="condition" element={<Conditions />} />
                     </Route>
 
+                    <Route path="suppression" element={<SuppressionCompte />} />
+
                     <Route path="/user">
                         <Route path="register" element={<SignUp />} />
                         <Route path="login" element={<SignIn />} />
@@ -182,7 +184,6 @@ const App = () => {
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
                             <Route path="adress" element={<AccountAdress />} />
-                            <Route path="suppression" element={<SuppressionCompte />} />
                         </Route>
 
                         <Route path="reparation">
