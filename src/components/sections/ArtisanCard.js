@@ -49,7 +49,14 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
 
     return (
         <article className="row" onClick={updateCommand}>
-            <p className="pseudo">{artisan.lastname[0]}{artisan.firstname[0]}</p>
+            <div>
+                <p className="pseudo">{artisan.lastname[0]}{artisan.firstname[0]}</p>
+                <div className="row metier">
+                    <p className="text_capitalize">{job ? job.name : 'Job non trouvé'}</p>
+                    <p>Personnalisation</p>
+                </div>
+            </div>
+
             <div className="contenu">
                 <p className="name">{artisan.lastname} {artisan.firstname}</p>
                 <p className="expertise">Expert(e) en {job ? job.name : 'Job non trouvé'}</p>
