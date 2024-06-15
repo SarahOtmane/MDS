@@ -1056,4 +1056,24 @@
     .repare .tuto + section article p{
         font-size: .7rem;
     }
+
+    .aide .section{
+        padding: 2rem 3rem 6rem 3rem;
+    }
+
+    .aide .section h2, .aide .section h3{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .aide .section h3{
+        font-size: 1.1rem;
+        margin-bottom: 5rem;
+    }
+
+    .aide .accordion{
+        width: 85%;
+        font-size: 1rem;
+    }
 }
