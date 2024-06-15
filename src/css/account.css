@@ -85,7 +85,44 @@
     margin-left: 1rem;
 }
 
+/* PLUSIEURS COMMANDES */
+.existCommand h3{
+    margin: 2rem 0 3rem 4rem;
+}
 
+.existCommand article{
+    width: 70%;
+    margin: 0 0 0 4rem;
+    padding: 0 0 2rem 0;
+    justify-content: flex-start;
+}
+
+.existCommand article + article{
+    border-top: 1px solid #E9E9EB;
+    padding-top: 2rem;
+}
+
+.existCommand img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 3rem;
+}
+
+.existCommand p{
+    margin: .3rem 0 0 0;
+    font-size: .8rem;
+    text-align: start;
+}
+
+.existCommand div p:first-child, .existCommand div p:last-child, .existCommand div+p{
+    font-size: 1rem;
+}
+
+.existCommand div+p{
+    text-decoration: underline;
+    margin-left: auto;
+    text-underline-offset: 0.3rem;
+}
 
 
 
