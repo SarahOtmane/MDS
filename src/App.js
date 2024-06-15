@@ -23,6 +23,7 @@ import AccountOrder from "./components/User/Account/AccountOrder";
 import AccountPassword from "./components/User/Account/AccountPassword";
 import AccountDetails from "./components/User/Account/AccountDetails";
 import AccountAdress from "./components/User/Account/AccountAdress";
+import SuppressionCompte from "./components/User/SuppressionCompte";
 
 import SuccefullOrder from "./components/Order/SuccefullOrder";
 import FailedOrder from "./components/Order/FailedOrder";
@@ -88,6 +89,7 @@ import ArtisanAccountMdp from "./components/Artisan/Account/ArtisanAccoutnMdp";
             /update-password
             /details
             /adress
+            /suppression
         /reparation :
             /details
             /image
@@ -180,6 +182,7 @@ const App = () => {
                             <Route path="update-password" element={<AccountPassword />} />
                             <Route path="details" element={<AccountDetails />} />
                             <Route path="adress" element={<AccountAdress />} />
+                            <Route path="suppression" element={<SuppressionCompte />} />
                         </Route>
 
                         <Route path="reparation">
