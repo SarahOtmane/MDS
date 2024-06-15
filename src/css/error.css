@@ -50,3 +50,29 @@
     margin: 4rem 0;
 }   
 
+
+
+
+@media screen and (max-width: 600px){
+    .error div{
+        padding: 10rem 0;
+        background-size: 8rem;
+        background-position:
+        0 100%,
+        108% 0,
+        110% 101%;
+    }
+
+    .error div > *{
+        padding: 0 3rem;
+    }
+
+    .error h1{
+        font-size: 3rem;
+    }
+
+    .error button{
+        padding: 1rem 2rem;
+        margin: 4rem 0;
+    }   
+}
