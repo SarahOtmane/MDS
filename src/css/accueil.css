@@ -1076,4 +1076,21 @@
         width: 85%;
         font-size: 1rem;
     }
+
+    .assuranceDescription img{
+        margin-left: 35%;
+    }
+
+    .assuranceDescription table{
+        font-size: .7rem;
+        margin: 1rem;
+    }
+
+    .assuranceDescription thead th, .assuranceDescription tbody td, .assuranceDescription tbody th{
+        padding: .5rem;
+    }
+
+    .assuranceDescription button{
+        margin: 2rem 0 5rem 25%;
+    }
 }
