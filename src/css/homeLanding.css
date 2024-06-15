@@ -1262,4 +1262,21 @@ img.picto{
         font-size: 1rem;
     }
 
+    .landing .section5, .avis{
+        margin: 3rem;
+    }
+
+    .avis div.button button{
+        font-size: .8rem;
+        padding: .8rem .5rem;
+    }
+
+    .avis div.button +div{
+        flex-wrap: wrap;
+    }
+
+    .avis article{
+        width: 90%;
+        margin-left: 0;
+    }
 }
