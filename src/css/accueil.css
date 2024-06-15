@@ -880,4 +880,36 @@
         width: max-content;
         margin-top: .2rem;
     }
+
+    .artisanService section{
+        padding: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .artisanService article, .artisanService div{
+        width: 90%;
+    }
+
+    .artisanService div{
+        order: 1;
+    }
+
+    .artisanService article{
+        order: 2;
+        text-align: left !important;
+        text-align: justify;
+    }
+
+    .artisanService h2{
+        line-height: 2rem;
+        margin-top: 1rem;
+    }
+
+    .artisanService article.right p{
+        margin: 0;
+    }
+
+    .artisanService p{
+        width: 100%;
+    }
 }
