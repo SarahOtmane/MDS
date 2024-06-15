@@ -244,22 +244,6 @@ img.picto{
     margin-top: -51rem;
 }
 
-.fonctionnement #ceintre{
-    right: 0;
-    margin-top: -46rem;
-}
-
-.fonctionnement #machine{
-    left: 30%;
-    margin-top: -40rem;
-}
-
-.fonctionnement #picto_Section4{
-    left: 49%;
-    margin-top: 48rem;
-    z-index: 0;
-}
-
 
 
 
@@ -1153,6 +1137,10 @@ img.picto{
     body{
         overflow-x: hidden;
     }
+
+    h2{
+        font-size: 1.3rem !important;
+    }
     
     .slider article{
         padding: 0 4rem;
@@ -1181,7 +1169,6 @@ img.picto{
     .service h2{
         width: 30%;
         padding-left: 2rem;
-        font-size: 1.3rem;
     }
 
     .service h2 + div{
@@ -1203,4 +1190,67 @@ img.picto{
     .service p, .service a{
         font-size: .9rem;
     }
+
+    .fonctionnement{
+        flex-wrap: wrap;
+        text-align: center;
+        background-image: url('../assets/pictures/picto/picto_section4.png');
+        background-repeat: no-repeat;
+        background-position: 5% 190%;
+        justify-content: space-between;
+    }
+
+    .fonctionnement article{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 2rem;
+    }
+
+    .fonctionnement h2, .fonctionnement span.expe{
+        width: 100%;
+    }
+
+    .fonctionnement p{
+        width: 46%;
+        font-size: .9rem;
+        text-align: start;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .fonctionnement p img{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .fonctionnement .twoImages, .fonctionnement .twoImages + figure{
+        width: 50%;
+    }
+
+    .fonctionnement .twoImages{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .fonctionnement .twoImages img{
+        width: 40%;
+        margin-top: 5rem;
+    }
+
+    .fonctionnement .twoImages img:first-child{
+        padding-left: 3rem;
+    }
+
+    .fonctionnement a{
+        display: none;
+    }
+
+    .fonctionnement #image4{
+        left: 10%;
+        margin-top: 97%;
+    }
+
 }
