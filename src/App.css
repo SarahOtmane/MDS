@@ -531,6 +531,9 @@ footer .copyright{
 /* ----------- 4:= Version mobile ------------ */
 
 @media screen and (max-width: 600px){
+    header, main, footer{
+        overflow-x: hidden;
+    }
     .header-main{
         margin: 1rem;
     }

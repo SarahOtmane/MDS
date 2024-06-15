@@ -1262,9 +1262,15 @@ img.picto{
         margin: 3rem;
     }
 
+    .avis div.button{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     .avis div.button button{
         font-size: .8rem;
         padding: .8rem .5rem;
+        width: 45%;
     }
 
     .avis div.button +div, .newsletter form{
