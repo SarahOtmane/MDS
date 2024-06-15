@@ -799,3 +799,39 @@
         width: 55%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .concept .presentation article, 
+    .description div{
+        width: 70%;
+    }
+
+    .concept .presentation h2,
+    .description h3{
+        font-size: 2rem !important;
+    }
+
+    .concept .presentation p,
+    .description p{
+        font-size: 1rem;
+    }
+
+    .description{
+        background-image: none;
+    }
+}
