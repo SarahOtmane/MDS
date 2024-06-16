@@ -25,6 +25,7 @@ const Command = ({ command }) => {
                 <div className="column">
                     <p>{command.categorie} <span>&rsaquo;</span> {command.clotheType} </p>
                     <p className='text_capitalize'>{command.besoinType} <span>&rsaquo;</span> {command.reparationType ? command.reparationType : command.broderieType} </p>
+                    <p className='price'>{command.price} €</p>
                 </div>
                 <p>{command.price} €</p>
                 <svg onClick={deleteCommand} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
