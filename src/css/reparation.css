@@ -308,3 +308,31 @@
     width: 20%;
     margin: 2rem auto 4rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .couture__contenu img.repa{
+        display: none;
+    }
+
+    .loading, .couture__contenu{
+        padding: 2rem;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+
+    .couture__contenu form{
+        width: 100%;
+    }
+}
