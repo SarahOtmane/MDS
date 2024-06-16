@@ -13,7 +13,7 @@ const ForgetMdp = () =>{
     const submitForm = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3003/users/forgot-password', { email : email });
+            await axios.post('http://localhost:3004/users/forgot-password', { email : email });
             setMessage({
                 error : '',
                 valide: 'Un email de réinitialisation a été envoyé à votre adresse.'

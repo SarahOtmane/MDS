@@ -34,13 +34,13 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
                 if (service === 'broderie') {
                     data.job = 'couture';
                 }
-                const job = await axios.get(`http://localhost:3003/jobs/${data.job}`);
+                const job = await axios.get(`http://localhost:3004/jobs/${data.job}`);
                 data.job = job.data.id;
             }
 
             if (postalCode === '') data.postalCode = '-1';
 
-            const artisansResponse = await axios.get(`http://localhost:3003/artisans/${data.job}/${data.postalCode}`);
+            const artisansResponse = await axios.get(`http://localhost:3004/artisans/${data.job}/${data.postalCode}`);
             setArtisans(artisansResponse.data);
             setNotFound(artisansResponse.data.length === 0);
             setRecherche(true);

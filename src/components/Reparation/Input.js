@@ -10,7 +10,7 @@ const Input = ({ name, command, setCommand }) => {
             try {
                 let formattedOptions = [];
                 if (name === "categorie" || name === "clotheType") {
-                    const clothesResponse = await axios.get(`http://localhost:3003/clothes/job/${command.id_job}`);
+                    const clothesResponse = await axios.get(`http://localhost:3004/clothes/job/${command.id_job}`);
                     const clothes = clothesResponse.data;
                     if (name === "categorie") {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.categorie, label: clothe.categorie }));
@@ -18,7 +18,7 @@ const Input = ({ name, command, setCommand }) => {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.clothType, label: clothe.clothType }));
                     }
                 } else if (name === 'reparationType') {
-                    const prestationsResponse = await axios.get(`http://localhost:3003/prestations/job/${command.id_job}`);
+                    const prestationsResponse = await axios.get(`http://localhost:3004/prestations/job/${command.id_job}`);
                     const prestations = prestationsResponse.data;
                     formattedOptions = prestations.map(prestation => ({ value: prestation.id, label: prestation.reparationType }));
                 } else if (name === 'besoinType') {

@@ -13,7 +13,7 @@ const Newsletter = () =>{
         e.preventDefault();
     
         try {
-            await axios.post('http://localhost:3003/newsletter', {email});
+            await axios.post('http://localhost:3004/newsletter', {email});
             setValidate(true);
         } catch (error) {
             setError(true);

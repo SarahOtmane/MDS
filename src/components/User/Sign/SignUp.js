@@ -77,7 +77,7 @@ const SignUp = () =>{
         }
     
         try {
-            await axios.post('http://localhost:3003/users/register', formData);
+            await axios.post('http://localhost:3004/users/register', formData);
             navigate('/user/login');
         }catch (error) {
             const status = error.response ? error.response.status : 500;
