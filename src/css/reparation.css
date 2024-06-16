@@ -254,6 +254,10 @@
     border-radius: .3rem;
 }
 
+.command .price{
+    display: none;
+}
+
 
 
 
@@ -320,19 +324,60 @@
 
 
 @media screen and (max-width: 600px){
-    .couture__contenu img.repa{
+    .couture__contenu img.repa, .command div + p{
         display: none;
     }
 
-    .loading, .couture__contenu{
+    .loading, .couture__contenu, .devis{
         padding: 2rem;
     }
 
-    .progress-bar {
+    .progress-bar, .command {
         width: 100%;
     }
 
     .couture__contenu form{
         width: 100%;
     }
+
+    .devis{
+        margin-bottom: 4rem;
+    }
+
+    .devis .devisTitre + section, .command div{
+        flex-wrap: wrap;
+    }
+
+    .devis .price{
+        display: block;
+    }
+
+    .command{
+        padding-top: 3rem;
+    }
+
+    .command div{
+        justify-content: start;
+    }
+
+    .command div div{
+        margin-left: 1rem;
+    }
+
+    .command svg{
+        position: absolute;
+        padding: .5rem;
+        width: .5rem;
+        height: .5rem;
+        top: 46%;
+        left: 18%;
+        border-radius: 0;
+    }
+
+    .commandRecap{
+        width: 90%;
+        position: inherit;
+        margin-top: 4rem;
+    }
+
 }
