@@ -478,4 +478,42 @@ form.adress{
         margin: 0;
         width: max-content;
     }
+
+    .commandes, section.updateMdp, section.details, section.adress, section.suppression{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5rem;
+        padding: 0;
+        border: none;
+    }
+
+    .commandes article{
+        width: 100%;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .commandes article div{
+        width: 70%;
+    }
+
+    .existCommand div+p{
+        margin-left: .5rem;
+        margin-top: 1rem;
+    }
+
+    form.updateMdp, form.details, form.adress{
+        width: 90%;
+        margin-left: 5%;
+        font-size: .9rem;
+    }
+
+    form.updateMdp button, form.details button, form.adress button{
+        width: max-content;
+        margin-top: 3rem;
+    }
+
+    form.adress div.double{
+        flex-direction: row;
+    }
 }
