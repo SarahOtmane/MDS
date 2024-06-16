@@ -328,15 +328,11 @@
         display: none;
     }
 
-    .loading, .couture__contenu, .devis{
+    .loading, .couture__contenu, .devis, .panier_vide{
         padding: 2rem;
     }
 
-    .progress-bar, .command {
-        width: 100%;
-    }
-
-    .couture__contenu form{
+    .progress-bar, .command, .couture__contenu form, .panier .panier_command{
         width: 100%;
     }
 
@@ -378,6 +374,10 @@
         width: 90%;
         position: inherit;
         margin-top: 4rem;
+    }
+
+    .panier_vide p {
+        width: 90%;
     }
 
 }
