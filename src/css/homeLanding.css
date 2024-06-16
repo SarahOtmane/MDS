@@ -1274,6 +1274,7 @@ img.picto{
     .avis div.button{
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0 1rem;
     }
 
     .avis div.button button{
