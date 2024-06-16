@@ -30,7 +30,7 @@ const ArtisanSignIn = () =>{
         e.preventDefault();
     
         try {
-            const response = await axios.post('http://localhost:3003/artisans/login', formData);
+            const response = await axios.post('http://localhost:3004/artisans/login', formData);
             
             const token = response.data.token;
             addToken(token);

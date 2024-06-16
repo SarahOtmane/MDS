@@ -44,7 +44,7 @@ const ArtisanSignUp = () =>{
     useEffect(() => {
         const getJob = async () => {
             try {
-                const response = await axios.get('http://localhost:3003/jobs');
+                const response = await axios.get('http://localhost:3004/jobs');
                 setJobs(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récup de la liste des jobs:', error); 
