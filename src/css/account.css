@@ -516,4 +516,15 @@ form.adress{
     form.adress div.double{
         flex-direction: row;
     }
+
+    form.details p{
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .suppression div{
+        padding: 3rem 0;
+        width: 90%;
+        margin: auto;
+    }
 }
