@@ -209,3 +209,38 @@ button{
         width: 35%;
     }
 }
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    form.paiement, .livraison .double{
+        flex-wrap: wrap;
+    }
+    .livraison, .commande{
+        width: 85%;
+        padding: 0;
+        margin: 2rem auto;
+        border: none;
+    }
+
+    .livraison .double div{
+        width: 80%;
+    }
+
+    .commande section + button{
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .success{
+        width: 90%;
+    }
+
+    .success ul{
+        font-size: .9rem;
+    }
+}
