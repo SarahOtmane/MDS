@@ -1144,9 +1144,14 @@ img.picto{
     }
     
     .slider article{
-        padding: 0 4rem;
+        padding: 0;
         background-size: 6rem, 6rem, 6rem, 6rem, 6rem;
     }
+
+    .slider article .slide-content{
+        padding: 0 3rem;
+    }
+
     .slider p, .slider h2 {
         width: 80%;
     }
