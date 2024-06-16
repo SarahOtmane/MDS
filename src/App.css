@@ -442,6 +442,11 @@ header li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    display: none;
+}
+
+#menu.open{
+    display: block;
 }
 
 #menu li{

@@ -11,6 +11,7 @@ const Header = () =>{
     const navigate = useNavigate();
     const [openPopupC, setOpenPopupC] = useState(false);
     const [openPopupP, setOpenPopupP] = useState(false);
+    const [openPopupM, setOpenPopupM] = useState(false);
 
     const account = () =>{
         const token = localStorage.getItem('token');
@@ -62,12 +63,12 @@ const Header = () =>{
                 </ul>
                 <nav className='navigationMobile'>
                     <div id="menuToggle">
-                        <input type="checkbox" />
+                        <input type="checkbox" onClick={() => setOpenPopupM(!openPopupM)} />
                             <span></span>
                             <span></span>
                             <span></span>
 
-                            <ul id='menu'>
+                            <ul id='menu' className={`${openPopupM ? 'open' : ''}`}>
                                 <li><a href="/concept">Le concept</a></li>
                                 <li><a href="/artisans">Nos artisans</a></li>
                                 <li><a href="/rejoindre">Nous rejoindre</a></li>
