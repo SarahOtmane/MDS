@@ -57,7 +57,7 @@ const Paiement = () => {
         <main>
             <Titre titre="Paiement" lien="/user/reparation/paiement" classe="backGris" />
 
-            <form className='row' onSubmit={(e) => e.preventDefault()}>
+            <form className='row paiement' onSubmit={(e) => e.preventDefault()}>
                 <section className='livraison column'>
                     <h2>Paiement</h2>
 
