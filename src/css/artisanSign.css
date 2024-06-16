@@ -250,4 +250,33 @@
     .artisan_signup .job_selection{
         font-size: .9rem;
     }
+
+    .artisan_signup .abonnement div{
+        background-size: 5rem;
+        background-position: 
+            0 90%,
+            93% 30%,
+            4% 34%;
+    }
+
+    .artisan_signup .adhesion{
+        width: 80%;
+        left: 10%;
+        top: 50%;
+        padding: 4rem 0;
+    }
+
+    .artisan_signup .adhesion h4{
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .artisan_signup .adhesion span{
+        font-size: 3rem;
+    }
+
+    .artisan_signup .adhesion p{
+        font-size: .9rem;
+        width: 70%;
+    }
 }  
