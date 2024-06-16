@@ -195,3 +195,44 @@
 .artisan_signin input + a{
     margin-bottom: 1rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .artisan_signin form{
+        width: 90%;
+    }
+
+    .artisan_signin button{
+        width: max-content;
+    }
+
+    .artisan_signin input + a, .artisan_signin button, .artisan_signin p,
+    .artisan_signup .detailsArtisan p, .artisan_signup .detailsArtisan button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .artisan_signup form.detailsArtisan{
+        width: 90%;
+    }
+
+    .artisan_signup form.detailsArtisan section{
+        flex-wrap: wrap;
+    }
+
+    .artisan_signup form.detailsArtisan div:not(.divInput),
+    .artisan_signup .detailsArtisan p, .artisan_signup .detailsArtisan button{
+        width: 100%;
+    }
+}  
