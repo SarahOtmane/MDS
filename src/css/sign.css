@@ -107,4 +107,17 @@
     .titre article{
         font-size: .9rem;
     }
+
+    .formulaire{
+        width: 90%;
+    }
+
+    .formulaire input + a, .formulaire button, .formulaire p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .formulaire button{
+        width: max-content;
+    }
 }  
