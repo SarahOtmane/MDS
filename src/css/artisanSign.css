@@ -223,7 +223,7 @@
         margin-right: auto;
     }
 
-    .artisan_signup form.detailsArtisan{
+    .artisan_signup form.detailsArtisan, .artisan_signup .job_selection p{
         width: 90%;
     }
 
@@ -234,5 +234,20 @@
     .artisan_signup form.detailsArtisan div:not(.divInput),
     .artisan_signup .detailsArtisan p, .artisan_signup .detailsArtisan button{
         width: 100%;
+    }
+
+    .artisan_signup .jobArtisan{
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 3rem;
+        padding: 0;
+    }
+
+    .artisan_signup .jobArtisan > *{
+        margin-left: 3rem;
+    }
+
+    .artisan_signup .job_selection{
+        font-size: .9rem;
     }
 }  
