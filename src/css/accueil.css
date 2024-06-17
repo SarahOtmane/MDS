@@ -873,6 +873,7 @@
     .recherche button{
         width: max-content;
         margin-top: .2rem;
+        align-items: center;
     }
 
     .artisanService section{
