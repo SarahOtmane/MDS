@@ -54,7 +54,7 @@ const Home = () =>{
 
                 <div>
                 <ReactPlayer
-                    url='https://www.youtube.com/watch?v=NZFNKqtfLT0' 
+                    url='https://www.youtube.com/watch?v=LrrbQQcOvzc' 
                     controls
                     width="100%"
                     className='video'
