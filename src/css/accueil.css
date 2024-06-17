@@ -874,6 +874,11 @@
         width: max-content;
         margin-top: .2rem;
         align-items: center;
+        padding: .4rem .8rem;
+    }
+
+    .recherche button svg{
+        padding-top: .3rem;
     }
 
     .artisanService section{
