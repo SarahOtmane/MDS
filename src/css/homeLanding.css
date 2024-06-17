@@ -1173,9 +1173,9 @@ img.picto{
     }
 
     .service h2{
-        width: 25%;
+        width: 30%;
         padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 2rem;
     }
 
     .service h2 + div{
@@ -1266,7 +1266,6 @@ img.picto{
 
     .home .tuto div{
         width: 90%;
-        height: 15rem;
     }
 
     .landing .section5, .avis{
