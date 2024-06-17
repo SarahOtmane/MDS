@@ -855,19 +855,19 @@
 
     .recherche form{
         width: 95%;
+        flex-wrap: wrap;
     }
 
     .recherche input{
         padding: 1rem;
     }
 
-    .recherche input{
-        width: 20% !important;
-        padding: 1.3rem 1rem;
+    .recherche input:first-child{
+        width: 70%;
     }
 
-    .recherche input:first-child{
-        width: 23%;
+    .recherche input:last-child{
+        width: 25%;
     }
 
     .recherche button{
@@ -886,6 +886,7 @@
 
     .artisanService div{
         order: 1;
+        height: 15rem;
     }
 
     .artisanService article{
