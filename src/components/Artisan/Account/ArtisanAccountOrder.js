@@ -82,6 +82,38 @@ const ArtisanAccountOrder = () => {
         return newPrice.toFixed(2);
     };
 
+    const getTodayDate = () => {
+        const today = new Date();
+        return today.toISOString(); 
+    };
+
+    const handleChange = async(event, commandId, commandDateFinished) => {
+        try {
+            const value = event.target.value;
+            console.log(`Command ID: ${commandId}, Selected Value: ${value}`);
+
+            if (value === 'Terminé' && !commandDateFinished) {
+                await axiosInstance.put(`/commands/${commandId}`, {
+                    dateFinished: getTodayDate()
+                });
+            } else if (value === 'En cours' && commandDateFinished) {
+                await axiosInstance.put(`/commands/${commandId}`, {
+                    dateFinished: null
+                });
+            }
+
+            setCommands((prevCommands) =>
+                prevCommands.map((command) =>
+                    command.id === commandId
+                        ? { ...command, dateFinished: value === 'Terminé' ? getTodayDate() : null }
+                        : command
+                )
+            );
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <main>
             <Titre titre="Mon compte artisan" lien="/artisan/my-account/update-password" classe="backGris" />
@@ -110,7 +142,8 @@ const ArtisanAccountOrder = () => {
                                             <th>
                                                 <FormControl variant="outlined" sx={{ minWidth: 120 }}>
                                                     <CustomSelect
-                                                        defaultValue={command.dateFinished ? 'Terminé' : 'En cours'}
+                                                        value={(command.dateFinished ? 'Terminé' : 'En cours')}
+                                                        onChange={(event) => handleChange(event, command.id, command.dateFinished)}
                                                     >
                                                         <MenuItem
                                                         sx={{
