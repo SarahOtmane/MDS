@@ -1268,6 +1268,10 @@ img.picto{
         width: 90%;
     }
 
+    .home .tuto div .video{
+        height: 15rem !important;
+    }
+
     .landing .section5, .avis{
         margin: 0;
     }
