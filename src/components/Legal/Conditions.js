@@ -38,11 +38,11 @@ const Conditions = () =>{
 
                     <li className='liOrdonne'>
                         <h3>Inscription et Compte Utilisateur</h3>
-                        <p>5.1. Création de Compte</p>
+                        <p className='sous-titre'>5.1. Création de Compte</p>
                         <p>
                             Pour utiliser les services de RenoWear, vous devez créer un compte en fournissant des informations exactes et complètes. Vous êtes responsable de la confidentialité de vos identifiants de connexion et de toutes les activités effectuées depuis votre compte.
                         </p>
-                        <p>5.2. Vérification</p>
+                        <p className='sous-titre'>5.2. Vérification</p>
                         <p>
                             Nous nous réservons le droit de vérifier les informations fournies et de suspendre ou de supprimer tout compte ne respectant pas les présentes CGV/CGU.
                         </p>
@@ -50,11 +50,11 @@ const Conditions = () =>{
 
                     <li className='liOrdonne'>
                         <h3> Processus de Commande</h3>
-                        <p>6.1. Passation de Commande</p>
+                        <p className='sous-titre'>6.1. Passation de Commande</p>
                         <p>
                             Pour passer commande, sélectionnez les services souhaités, ajoutez-les à votre panier et validez votre commande en procédant au paiement selon les modalités proposées sur le Site.
                         </p>
-                        <p>6.2. Confirmation de Commande</p>
+                        <p className='sous-titre'>6.2. Confirmation de Commande</p>
                         <p>
                             Vous recevrez retrouverez les étapes de votre dépôt une fois la commande réussie.
                         </p>
@@ -62,11 +62,11 @@ const Conditions = () =>{
 
                     <li className='liOrdonne'>
                         <h3> Tarification et Paiement</h3>
-                        <p>7.1. Tarification</p>
+                        <p className='sous-titre'>7.1. Tarification</p>
                         <p>
                             Les prix des services sont indiqués en euros, toutes taxes comprises (TTC). Le taux de TVA applicable est soumis au taux normal de TVA de 20 %.
                         </p>
-                        <p>7.2. Modalités de Paiement</p>
+                        <p className='sous-titre'>7.2. Modalités de Paiement</p>
                         <p>
                             Le paiement est exigible immédiatement à la commande. Vous pouvez régler votre commande par carte bancaire ou tout autre moyen de paiement proposé sur le Site.
                         </p>
@@ -74,11 +74,11 @@ const Conditions = () =>{
 
                     <li className='liOrdonne'>
                         <h3> Exécution des Services</h3>
-                        <p>8.1. Délais de Réalisation</p>
+                        <p className='sous-titre'>8.1. Délais de Réalisation</p>
                         <p>
                             Les services commandés seront réalisés dans les délais indiqués par le site RenoWear. En cas de retard, nous vous informerons par email.
                         </p>
-                        <p>8.2. Lieu de Réalisation</p>
+                        <p className='sous-titre'>8.2. Lieu de Réalisation</p>
                         <p>
                             Les services sont réalisés à l'adresse indiquée par l’artisan lors de la commande.
                         </p>
