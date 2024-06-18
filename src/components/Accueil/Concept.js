@@ -22,17 +22,17 @@ const Concept = () =>{
                 <div>
                     <article>
                         <h3>Une place de marché mondiale pour la réparation d’articles</h3>
-                        <p>RenoWear est une place de marché mondiale de réparation de vêtements. Grâce à notre processus de vérification rigoureux, notre charte qualité exigeante, seuls les meilleurs artisans peuvent nous rejoindre sur notre site et sublimé votre garde-robe, pour une mode durable.</p>
+                        <p>RenoWear est une plateforme de réparation de vêtements. Seuls les meilleurs artisans, sélectionnés grâce à notre processus de vérification rigoureux et notre charte qualité exigeante, peuvent rejoindre notre site pour sublimer votre garde-robe et promouvoir une mode durable.</p>
                     </article>
                     <hr></hr>
                     <article>
                         <h3>Le meilleur de la réparation</h3>
-                        <p>On travaille main dans la main avec des artisans professionnels, français pour garantir que chaque article a été réparé et remis en parfait état.  </p>
+                        <p>Nous collaborons avec des artisans professionnels français pour garantir que chaque article est réparé et remis en parfait état.</p>
                     </article>
                     <hr></hr>
                     <article>
                         <h3>Meilleur pour la planète</h3>
-                        <p>Comparé à un article neuf, un vêtement réparé permet d'éviter le gaspillage de 2 700 litres d'eau. Mais il génère aussi 79% de déchets en moins et libère 50% d'émissions de carbone en moins dans l'atmosphère.  </p>
+                        <p>En comparaison avec un article neuf, un vêtement réparé permet d'économiser 2 700 litres d'eau, de réduire les déchets d’en moyenne 79 % et de diminuer les émissions de carbone.</p>
                     </article>
                 </div>
             </section>
