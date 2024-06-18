@@ -10,7 +10,7 @@ const Mentions = () =>{
                 <h2 className='titre'>Mentions légales</h2>
                 <h3>Date d'entrée en vigueur : 29 Avril 2024</h3>
                 <p>
-                    Le site RenoWear est édité par Société Renowear, une société [forme juridique] au capital de [montant] euros, inscrite au Registre du Commerce et des Sociétés de Paris sous le numéro [numéro d'inscription].
+                    Le site RenoWear est édité par Société Renowear, une société SARL au capital de 24108 euros, inscrite au Registre du Commerce et des Sociétés de Paris sous le numéro 123 456 789.
                     <b></b>
                     Adresse : 40 rue du Chemin Vert, 75011 Paris
                     <b></b>
@@ -19,7 +19,7 @@ const Mentions = () =>{
                     E-mail : contact@renowear.fr
                 </p>
                 <p>
-                    Le nom de domaine a été acheté sur OVHCloud, et le site est hébérgé sur VERCEL.
+                    Le nom de domaine a été acheté sur OVHCloud, et le site est hébergé sur VERCEL.
                 </p>
 
                 <h3>Propriété intellectuelle</h3>
@@ -29,12 +29,12 @@ const Mentions = () =>{
 
                 <h3>Données personnelles</h3>
                 <p>
-                Pour plus d'informations sur la manière dont nous traitons vos données personnelles, veuillez consulter notre <a href='/legal/politique'>Politique de Confidentialité</a>.
+                    Pour plus d'informations sur la manière dont nous traitons vos données personnelles, veuillez consulter notre <a href='/legal/politique'>Politique de Confidentialité</a>.
                 </p>
 
                 <h3>Conditions d’utilisation</h3>
                 <p>
-                L’utilisation du site Renowear est régie par les termes des conditions générales d'utilisation du site. Nous vous invitons à les consulter en cliquant <a href='/legal/condition'>ici</a>.
+                    L’utilisation du site Renowear est régie par les termes des conditions générales d'utilisation du site. Nous vous invitons à les consulter en cliquant  <a href='/legal/condition'>ici</a>.
                 </p>
 
                 <h3>Limitation de responsabilité.</h3>
@@ -42,7 +42,7 @@ const Mentions = () =>{
 
                 <h3>Droit applicable</h3>
                 <p>
-                    Les présentes mentions légales sont soumises au droit interne du pays de Renowear. En cas de litige, les tribunaux de ce pays seront seuls compétent 
+                    Les présentes mentions légales sont soumises au droit interne du pays de Renowear. En cas de litige, les tribunaux de ce pays seront seuls compétent.
                 </p>
                 <p>Ce site est un projet scolaire développé dans le cadre de notre diplôme Bachelor.</p>
             </section>
