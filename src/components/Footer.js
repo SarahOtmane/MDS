@@ -51,7 +51,7 @@ const Footer = ({pagesBackWhite}) =>{
                     <ul>
                         <li><a href='/legal/mentions'>Mentions légales</a></li>
                         <li><a href='/legal/politique'>Politique de confidentialité</a></li>
-                        <li><a href='/legal/condition'>Conditions générales de vente</a></li>
+                        <li><a href='/legal/condition'>CGU / CGV</a></li>
                         <li><a href='/assurance'>Assurance</a></li>
                     </ul>
                 </div>
