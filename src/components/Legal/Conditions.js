@@ -7,7 +7,7 @@ const Conditions = () =>{
         <main className='condition'>
             <Titre titre="Conditions génrales" lien="/legal/condition" classe="backGris" /> 
             <section className='backImg section'>
-                <h2 className='titre'>Conditions génrales</h2>
+                <h2 className='titre'>CGU / CGV</h2>
                 <ol className='ordonne'>
                     <li className='liOrdonne'>
                         <h3>Identification de l'Entreprise</h3>
