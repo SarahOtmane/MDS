@@ -16,10 +16,10 @@ const Fonctionnement = () =>{
             <article>
                 <span className='text_bold textGreen expe'>Expérience</span>
                 <h2 className='text_uppercase'>Comment ça marche ?</h2>
-                <p className='row'> <img src={loupe} alt="icone svg" /> Réalisez votre diagnostic.</p>
+                <p className='row'> <img src={loupe} alt="icone svg" /> Cherchez votre artisan & réalisez un diagnostic.</p>
                 <p className='row'> <img src={check} alt="icone svg" /> Validez le devis final.</p>
-                <p className='row'> <img src={send} alt="icone svg" /> Envoyez vos articles.</p>
-                <p className='row'> <img src={ok} alt="icone svg" /> Réceptionnez vos vêtements sous 5 à 10 jours.</p>
+                <p className='row'> <img src={send} alt="icone svg" /> Déposez vos articles.</p>
+                <p className='row'> <img src={ok} alt="icone svg" /> Récupérez les sous 5 à 10 jours.</p>
                 <a href='/' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
             </article>
             <figure className='column twoImages'>
