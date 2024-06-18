@@ -36,14 +36,14 @@ const Rejoindre = () =>{
                     <article>
                         <h3 className='text_uppercase'>Tout un parcours</h3>
                         <p>
-                            Chez RenoWear, nous comprenons que chacun a un parcours unique, que vous soyez étudiant, autodidacte, diplômé ou en recherche d'emploi. Nous nous engageons à adapter nos opportunités pour répondre à vos besoins à chaque étape de votre vie professionnelle. En tant qu'Entreprise d'Insertion, nous offrons un accompagnement personnalisé pour faciliter votre intégration dans le monde du travail.
-                            Nous proposons une variété de postes et de missions : que vous souhaitiez travailler à votre rythme, former ou être formé, ou encore obtenir un emploi stable dans nos ateliers, RenoWear est prêt à ouvrir ses portes et à explorer toutes les perspectives d'emploi avec vous.    
+                        Chez RenoWear, nous reconnaissons la diversité des parcours professionnels, que vous soyez étudiant, autodidacte, diplômé ou en quête d'emploi. Nous nous engageons à personnaliser nos opportunités pour répondre à vos besoins à chaque étape de votre carrière. En tant qu'Entreprise d'Insertion, nous offrons un soutien individualisé pour faciliter votre transition vers le monde du travail.
+                        Nous offrons une multitude de postes et de missions adaptés à vos préférences : que vous recherchiez un rythme de travail flexible, une possibilité de formation, ou encore un emploi stable au sein de nos ateliers, RenoWear est ouvert à toutes les possibilités d'emploi et prêt à explorer ces options avec vous.
                         </p>
                     </article>
                     <article>
                         <h3 className='text_uppercase'>Pourquoi choisir RenoWear</h3>
                         <p>
-                            Rejoignez une communauté qui redéfinit les normes de l'artisanat. Chez Tilli, notre objectif principal est de valoriser vos compétences tout en développant un métier qui s'adapte à l'évolution du monde. En faisant partie de notre réseau d'artisans, vous aurez l'opportunité de vivre de votre passion à votre propre rythme. Nous comptons sur vous pour revitaliser et perpétuer le savoir-faire français, et ainsi établir une relation durable avec nos produits.
+                            Rejoignez une communauté qui réinvente les standards de l'artisanat. Notre objectif principal est de mettre en avant vos compétences tout en adaptant nos métiers aux évolutions du monde. En faisant partie de notre réseau d'artisans, vous aurez la possibilité de vivre votre passion à votre rythme. Nous vous invitons à contribuer à la revitalisation et à la perpétuation du savoir-faire français, tout en établissant des relations durables avec nos produits.
                         </p>
                         <ul>
                             <li className='column'>
@@ -52,7 +52,7 @@ const Rejoindre = () =>{
                             </li>
                             <li className='column'>
                                 <span>Liberté</span>
-                                Gardez votre indépendance et restez maître de votre activité.
+                                Préservez votre indépendance et gardez le contrôle sur votre activité.
                             </li>
                             <li className='column'>
                                 <span>Simplicité</span>
@@ -71,7 +71,7 @@ const Rejoindre = () =>{
                     <article>
                         <h3 className='text_uppercase'>REJOINDRE LA MAISON RENOWEAR</h3>
                         <p className='rejoindre'>
-                            Nous sélectionnons avec soin chacun d’entre vous et vous accompagnons dans les démarches nécessaires pour nous rejoindre rapidement.
+                            Nous prenons le temps de choisir méticuleusement chacun d'entre vous, et nous vous guidons à travers les étapes nécessaires pour rejoindre nos rangs rapidement.
                         </p>
                         <div className='adhesion'>
                             <h4>Frais d’adhésion</h4>
