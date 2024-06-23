@@ -129,7 +129,7 @@ const ArtisanSignUp = () =>{
         }
     
         try {
-            await axios.post('http://localhost:3003/artisans/register', formData);
+            await axios.post('http://localhost:3004/artisans/register', formData);
             navigate('/artisan/login');
         }catch (error) {
             const status = error.response ? error.response.status : 500;
@@ -153,7 +153,7 @@ const ArtisanSignUp = () =>{
             let job = jobs.find(job => job.name === formData.job);
             let id_job = job.id;
             try {
-                const response = await axios.get(`http://localhost:3003/prestations/job/${id_job}`);
+                const response = await axios.get(`http://localhost:3004/prestations/job/${id_job}`);
                 setPrestations(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récup des prestations:', error); 
