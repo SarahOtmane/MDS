@@ -19,7 +19,7 @@ const AccountOrder = () => {
         const getCommands = async () => {
             try {
                 const responseCommand = await axiosInstance.get('/commands/users');
-                let commandData = responseCommand.data;
+                let commandData = responseCommand.data;   
                 for(const command of commandData){
                     const responseCloth = await axiosInstance.get(`/clothes/${command.id_cloth}`);
                     command.cloth = responseCloth.data;
@@ -28,7 +28,7 @@ const AccountOrder = () => {
                     command.product = responseProduct.data;
                 }
 
-                setCommands(commandData);
+                setCommands(commandData);          
             } catch (error) {
                 const status = error.response ? error.response.status : 500;
                 switch (status) {
