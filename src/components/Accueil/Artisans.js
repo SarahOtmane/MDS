@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import axiosInstance from '../../service/axiosConfig';
 
 import '../../css/accueil.css';
 
@@ -34,7 +35,7 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
                 if (service === 'broderie') {
                     data.job = 'couture';
                 }
-                const job = await axios.get(`http://localhost:3004/jobs/${data.job}`);
+                const job = await axiosInstance.get(`/jobs/${data.job}`);
                 data.job = job.data.id;
             }
 
