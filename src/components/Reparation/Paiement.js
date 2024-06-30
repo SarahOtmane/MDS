@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../service/axiosConfig';
 
 import '../../css/cart.css';
 import Titre from '../Titre';

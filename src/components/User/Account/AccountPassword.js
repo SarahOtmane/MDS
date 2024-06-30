@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import axiosInstance, { removeToken }  from '../../service/axiosConfi';
+import axiosInstance, { removeToken }  from '../../../service/axiosConfig';
 
 import '../../../css/account.css';
 

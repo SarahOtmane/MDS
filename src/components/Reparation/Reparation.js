@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../css/reparation.css';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../service/axiosConfig';
 
 import Titre from "./Titre";
 import Input from "./Input";

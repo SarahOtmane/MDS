@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axiosInstance from '../../service/axiosConfig';
+import axiosInstance from '../../../service/axiosConfig';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import Select from '@mui/material/Select';
