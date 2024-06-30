@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../service/axiosConfig';
 
 const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
     const navigate = useNavigate();
