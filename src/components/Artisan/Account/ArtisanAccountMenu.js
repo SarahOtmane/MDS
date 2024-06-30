@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { removeToken }  from '../../../axiosConfig';
+import { removeToken }  from '../../service/axiosConfig';
 
 const ArtisanAccountMenu = ({selected}) =>{
     const navigate = useNavigate();
