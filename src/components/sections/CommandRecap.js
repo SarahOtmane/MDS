@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../service/axiosConfig';
 
 const CommandRecap = ({ name, command, setCommand }) => {
     const [addToPanier, setAddToPanier] = useState(false);
