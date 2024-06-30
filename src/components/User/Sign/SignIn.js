@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { addToken} from '../../../axiosConfig';
+import { addToken} from '../../service/axiosConfig';
 
 import '../../../css/sign.css';
 
