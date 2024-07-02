@@ -4,7 +4,7 @@ import '../../css/reparation.css';
 import axiosInstance from '../../service/axiosConfig';
 
 import Titre from "./Titre";
-import Input from "./Input";
+import SelectLabel from './SelectLabel';
 import Newsletter from "../sections/Newsletter";
 
 import reparation from '../../assets/pictures/reparation.png';
@@ -62,31 +62,40 @@ const Reparation = ({ command, setCommand }) => {
             <section className="couture__contenu row justifycontent_spbetween">
                 <img className='repa' src={reparation} alt='' />
                 <form className='column' onSubmit={submitForm}>
-                    <label>Quelle est la catégorie ?</label>
-                    <Input name="categorie" command={command} setCommand={setCommand} />
+                    <SelectLabel 
+                        command={command} setCommand={setCommand}
+                        name='categorie' label='Quelle est la catégorie ?'
+                    />
 
-                    <label>Quel est le type de vêtements ?</label>
-                    <Input name="clotheType" command={command} setCommand={setCommand} />
+                    <SelectLabel 
+                        command={command} setCommand={setCommand}
+                        name='clotheType' label='Quel est le type de vêtements ?'
+                    />
 
-                    <label>Quel est votre besoin ?</label>
-                    <Input name="besoinType" command={command} setCommand={setCommand} />
-
+                    <SelectLabel 
+                        command={command} setCommand={setCommand}
+                        name='besoinType' label='Quel est votre besoin ?'
+                    />
                     {command.besoinType !== 'personnalisation' && (
-                        <>
-                            <label>Quelle est la réparation ?</label>
-                            <Input name="reparationType" command={command} setCommand={setCommand} />
-                        </>
+                        <SelectLabel 
+                            command={command} setCommand={setCommand}
+                            name='reparationType' label='Quelle est la réparation ?'
+                        />
                     )}
 
                     {command.besoinType === 'personnalisation' && (
                         <div className='broderie row justifycontent_spbetween'>
                             <div className='child'>
-                                <label>Quel type de broderie ?</label>
-                                <Input name="broderieType" command={command} setCommand={setCommand} />
+                                <SelectLabel 
+                                    command={command} setCommand={setCommand}
+                                    name='broderieType' label='Quel type de broderie ?'
+                                />
                             </div>
                             <div className='child'>
-                                <label>Taille de la police </label>
-                                <Input name="fontSize" command={command} setCommand={setCommand} />
+                                <SelectLabel 
+                                    command={command} setCommand={setCommand}
+                                    name='fontSize' label='Taille de la police'
+                                />
                             </div>
                         </div>
                     )}
