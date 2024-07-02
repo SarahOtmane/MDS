@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 
-const Input = ({ name, command, setCommand }) => {
+const SelectForm = ({ name, command, setCommand }) => {
     const [options, setOptions] = useState([]);
 
     useEffect(() => {
@@ -120,4 +120,4 @@ const Input = ({ name, command, setCommand }) => {
     );
 };
 
-export default Input;
+export default SelectForm;
