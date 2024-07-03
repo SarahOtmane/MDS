@@ -29,19 +29,12 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
     const getArtisans = async() =>{
         try {
             let data = { job: service, postalCode: postalCode };
-            if (service === '') {
-                data.job = '-1';
-            } else {
-                if (service === 'broderie') {
-                    data.job = 'couture';
-                }
-                const job = await axiosInstance.get(`/jobs/${data.job}`);
-                data.job = job.data.id;
-            }
+            if (service === 'broderie') data.job = 'couture';
 
             if (postalCode === '') data.postalCode = '-1';
 
-            const artisansResponse = await axios.get(`http://localhost:3004/artisans/${data.job}/${data.postalCode}`);
+             await axios.get(`http://localhost:3004/artisans/${data.job}/${data.postalCode}`);
+            const artisansResponse = await axiosInstance(`/artisans/${data.job}/${data.postalCode}`)
             setArtisans(artisansResponse.data);
             setNotFound(artisansResponse.data.length === 0);
             setRecherche(true);
