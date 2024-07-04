@@ -19,25 +19,25 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
                     for (const testimonial of testimonials) {
                         somme += parseInt(testimonial.stars);
                     }
+                    return somme / testimonials.length;
                 }
 
-                return somme / testimonials.length || 0;
+                return 0;
             } catch (error) {
                 return 0;
             }
         };
 
-        const details = async() =>{
+        const details = async() => {
             try {
                 const response = await axiosInstance.get(`/artisans/${artisan.id_artisan}`);
                 const addressResponse = await axiosInstance.get(`/addresses/${artisan.id_address}`);
                 setAddress(addressResponse.data);
                 setArtisanDetail(response.data);
-                
             } catch (error) {
-                console.error('Erreur lors de la récupération des données:', error);
+                console.error('Erreur lors de la récupération des détails de l\'artisan:', error);
             }
-        }
+        };
 
         const fetchNote = async () => {
             const noteValue = await getNote(artisan.id_artisan);
@@ -48,19 +48,18 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
         fetchNote();
     }, [artisan.id_artisan, artisan.id_address]);
 
-
     const job = jobs.find(job => job.name === artisanDetail.name_job);
 
-    const updateCommand = () =>{
+    const updateCommand = () => {
         const job = jobs.find(job => job.name === artisanDetail.name_job);
         const update = {
             ...command,
             id_artisan: artisan.id_artisan,
-            job: job.name
-        }
+            job: job ? job.name : 'Job non trouvé'
+        };
         setCommand(update);
         navigate('/user/reparation/details');
-    }
+    };
 
     return (
         <article className="row" onClick={updateCommand}>
