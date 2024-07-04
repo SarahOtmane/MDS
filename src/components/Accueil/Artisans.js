@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import axiosInstance from '../../service/axiosConfig';
 
 import '../../css/accueil.css';
@@ -11,7 +9,6 @@ import ArtisanService from '../sections/ArtisanService';
 import AllArtisan from '../sections/AllArtisan';
 
 const Artisans = ({setCommand, command, service, setService, setServiceEnvoyeParRepare, serviceEnvoyeParRepare }) => {
-    const navigate = useNavigate();
     const [recherche, setRecherche] = useState(false);
     const [notFound, setNotFound] = useState(false);
     const [artisans, setArtisans] = useState([]);
@@ -28,31 +25,21 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
 
     const getArtisans = async() =>{
         try {
-            let data = { job: service, postalCode: postalCode };
-            if (service === 'broderie') data.job = 'couture';
+            let job = service;
+            let postalCodeParam = postalCode;
+            if (service === 'broderie') job = 'couture';
+            if(postalCodeParam === '') postalCodeParam = '-1';
 
-            if (postalCode === '') data.postalCode = '-1';
-
-             await axios.get(`http://localhost:3004/artisans/${data.job}/${data.postalCode}`);
-            const artisansResponse = await axiosInstance(`/artisans/${data.job}/${data.postalCode}`)
+            const artisansResponse = await axiosInstance.get(`/artisans/${job}/${postalCodeParam}`);
             setArtisans(artisansResponse.data);
             setNotFound(artisansResponse.data.length === 0);
             setRecherche(true);
         } catch (error) {
             const status = error.response ? error.response.status : 500;
             switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
                 case 404:
                     setNotFound(true);
                     setRecherche(true);
-                    break;
-                case 500:
-                    navigate('/error500');
                     break;
                 default:
                     console.error('Erreur lors de la recherche des artisans:', error);
@@ -92,6 +79,7 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
                         placeholder='Domaine, Spécialités ...'
                         value={service}
                         onChange={updateChamps}
+                        required
                     />
                     <input
                         name='postalCode'
