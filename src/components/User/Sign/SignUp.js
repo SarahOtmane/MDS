@@ -15,10 +15,6 @@ const SignUp = () =>{
         email: '',
         password: '',
         mobile: '',
-        streetAdress: '',
-        city: '',
-        country: '',
-        postalCode: ''
     });
 
     const [errors, setErrors] = useState({});
