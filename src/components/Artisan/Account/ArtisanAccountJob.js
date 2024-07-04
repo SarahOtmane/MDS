@@ -24,18 +24,18 @@ const ArtisanAccountJob = () =>{
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const artisanResponse = await axiosInstance.get('/artisans');
-                const id_job = artisanResponse.data.id_job;
-                const id_artisan = artisanResponse.data.id;
+                const artisanResponse = await axiosInstance.get('/persons/artisan');
+                const id_artisan = artisanResponse.data.id_artisan;
 
-                const jobResponse = await axiosInstance.get(`/jobs/id/${id_job}`);
-                const jobName = jobResponse.data.name;
+                const artisanDetailsResponse = await axiosInstance.get(`/artisans/${id_artisan}`);
+                const name_job = artisanDetailsResponse.data.name_job;
 
-                const prestationsResponse = await axiosInstance.get(`/prestations/job/${id_job}`);
+                const prestationsResponse = await axiosInstance.get(`/prestations/job/${name_job}`);
                 const prestations = prestationsResponse.data;
-
-                const productsResponse = await axiosInstance.get(`products/artisan/${id_artisan}`);
+                
+                const productsResponse = await axiosInstance.get(`/products/artisan/${id_artisan}`);
                 const products = productsResponse.data;
+                console.log(products);
                 let tab = [];
                 for(const product of products){
                     tab.push({
@@ -44,33 +44,14 @@ const ArtisanAccountJob = () =>{
                     })
                 }
 
-                console.log(tab);
-
                 setData({
-                    job: jobName,
+                    job: name_job,
                     id_artisan: id_artisan,
-                    id_job: id_job,
                     prestations: prestations,
                 });
                 setCheckedItems(tab);
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de la récupération des données:', error);
-                }
+                console.error('Erreur lors de la récupération des données:', error);
             }
         };
 
@@ -133,7 +114,7 @@ const ArtisanAccountJob = () =>{
                     });
                 }else{
                     const prestaBdd = data.prestations.find(presta => presta.id === prestation.id);
-                    await axiosInstance.post(`/products`, {
+                    await axiosInstance.post(`/products/artisan/${data.id_artisan}`, {
                         price: prestation.price,
                         reparationType: prestaBdd.reparationType
                     });
@@ -150,23 +131,7 @@ const ArtisanAccountJob = () =>{
             setUpdate('Changements validés');
             
         } catch (error) {
-            const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de la récupération des données:', error);
-                }
+            console.error('Erreur lors de la récupération des données:', error);
         }
     };
 
