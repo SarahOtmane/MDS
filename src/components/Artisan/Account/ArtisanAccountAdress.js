@@ -20,6 +20,7 @@ const ArtisanAccountAdress = () =>{
             try {
                 const response = await axiosInstance.get('/persons/artisan');
                 setArtisan(response.data);
+                console.log(response.data);
             } catch (error) {
                 console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
             }
