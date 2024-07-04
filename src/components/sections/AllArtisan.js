@@ -15,23 +15,7 @@ const AllArtisan = ({ artisans, notFound, setCommand, command }) => {
                 const jobsResponse = await axiosInstance.get('/jobs');
                 setJobs(jobsResponse.data);
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de la récupération des données:', error);
-                }
+                console.error('Erreur lors de la récupération des données:', error);
             }
         };
         getJobs();
