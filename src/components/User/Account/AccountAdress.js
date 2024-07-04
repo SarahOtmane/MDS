@@ -17,26 +17,10 @@ const AccountAdress = () =>{
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = await axiosInstance.get('/users');
+                const response = await axiosInstance.get('/persons/user');
                 setUser(response.data);
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-                }  
+                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
             }
         };
 
@@ -55,26 +39,10 @@ const AccountAdress = () =>{
         e.preventDefault();
 
         try {
-            await axiosInstance.put('users', user);
+            await axiosInstance.put('persons/user', user);
             setUpdate(true);
         } catch (error) {
-            const status = error.response ? error.response.status : 500;
-            switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
-                case 404:
-                    navigate('/error404');
-                    break;
-                case 500:
-                    navigate('/error500');
-                    break;
-                default:
-                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-            }  
+            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error); 
         }
     };
 
@@ -97,9 +65,9 @@ const AccountAdress = () =>{
                         <label className="text_bold">Numéro de la rue</label>
                         <input 
                             type="text" 
-                            name="streetAdress"
+                            name="streetAddress"
                             placeholder="4 Rue Solférino" 
-                            defaultValue={user.streetAdress}
+                            defaultValue={user.streetAddress}
                             onChange={updateChamps}
                             required
                         />
