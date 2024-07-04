@@ -75,6 +75,7 @@ const ArtisanSignUp = () =>{
         tva: '',
         siret: '',
         prestations: [],
+        role : 'artisan'
     });
 
     const [errors, setErrors] = useState({});
