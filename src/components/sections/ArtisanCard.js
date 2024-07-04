@@ -5,6 +5,8 @@ import axiosInstance from '../../service/axiosConfig';
 const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
     const navigate = useNavigate();
     const [note, setNote] = useState(0);
+    const [artisanDetail, setArtisanDetail] = useState({});
+    const [address, setAddress] = useState({});
 
     useEffect(() => {
         const getNote = async (id) => {
@@ -25,22 +27,35 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
             }
         };
 
+        const details = async() =>{
+            try {
+                const response = await axiosInstance.get(`/artisans/${artisan.id_artisan}`);
+                const addressResponse = await axiosInstance.get(`/addresses/${artisan.id_address}`);
+                setAddress(addressResponse.data);
+                setArtisanDetail(response.data);
+                
+            } catch (error) {
+                console.error('Erreur lors de la récupération des données:', error);
+            }
+        }
+
         const fetchNote = async () => {
-            const noteValue = await getNote(artisan.id);
+            const noteValue = await getNote(artisan.id_artisan);
             setNote(noteValue);
         };
 
+        details();
         fetchNote();
-    }, [artisan.id]);
+    }, [artisan.id_artisan, artisan.id_address]);
 
-    const job = jobs.find(job => job.id === artisan.id_job);
+
+    const job = jobs.find(job => job.name === artisanDetail.name_job);
 
     const updateCommand = () =>{
-        const job = jobs.find(job => job.id === artisan.id_job);
+        const job = jobs.find(job => job.name === artisanDetail.name_job);
         const update = {
             ...command,
-            id_artisan: artisan.id,
-            id_job: artisan.id_job,
+            id_artisan: artisan.id_artisan,
             job: job.name
         }
         setCommand(update);
@@ -60,8 +75,8 @@ const ArtisanCard = ({ artisan, jobs, setCommand, command }) => {
             <div className="contenu">
                 <p className="name">{artisan.lastname} {artisan.firstname}</p>
                 <p className="expertise">Expert(e) en {job ? job.name : 'Job non trouvé'}</p>
-                <p>{artisan.streetAdress}</p>
-                <p>{artisan.postalCode} {artisan.country}</p>
+                <p>{address.streetAddress}</p>
+                <p>{address.postalCode} {address.country}</p>
                 <p className="note row alignitem_center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 4.5L14.472 9.43691L20 10.2334L16 14.0741L16.944 19.5L12 16.9369L7.056 19.5L8 14.0741L4 10.2334L9.528 9.43691L12 4.5Z" fill="#BDDEB4" />
