@@ -31,14 +31,14 @@ const AllArtisan = ({ artisans, notFound, setCommand, command }) => {
                 </section>
             ) : (
                 <section className="allArtisan row justifycontent_spbetween">
-                    {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
+                    {artisans.map((artisan, index) => (
+                        <ArtisanCard key={index} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
                     ))}
-                    {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
+                    {artisans.map((artisan, index) => (
+                        <ArtisanCard key={index} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
                     ))}
-                    {artisans.map(artisan => (
-                        <ArtisanCard key={artisan.id} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
+                    {artisans.map((artisan, index) => (
+                        <ArtisanCard key={index} artisan={artisan} jobs={jobs} setCommand={setCommand} command={command} />
                     ))}
                 </section>
             )}
