@@ -20,9 +20,9 @@ const ArtisanAccountAdress = () =>{
             try {
                 const response = await axiosInstance.get('/persons/artisan');
                 setArtisan(response.data);
-                console.log(response.data);
+                console.log(response.data.address.streetAddress);
             } catch (error) {
-                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                console.error('Erreur:', error);
             }
         };
 
@@ -47,7 +47,7 @@ const ArtisanAccountAdress = () =>{
             console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
         }
     };
-
+    if(artisan && artisan.address && artisan.address.streetAddress){
     return(
         <main>
             <Titre titre="Mon compte artisan" lien="/artisan/my-account/adress" classe="backGris" />
@@ -69,7 +69,7 @@ const ArtisanAccountAdress = () =>{
                             type="text" 
                             name="streetAddress"
                             placeholder="4 Rue Solférino" 
-                            defaultValue={artisan.streetAddress}
+                            defaultValue={artisan.address.streetAddress}
                             onChange={updateChamps}
                             required
                         />
@@ -79,7 +79,7 @@ const ArtisanAccountAdress = () =>{
                             type="text" 
                             name='city'
                             placeholder="Boulogne-Billancourt" 
-                            defaultValue={artisan.city}
+                            defaultValue={artisan.address.city}
                             onChange={updateChamps}
                             required
                         />
@@ -90,7 +90,7 @@ const ArtisanAccountAdress = () =>{
                                 type="text" 
                                 name='postalCode'
                                 placeholder="92100" 
-                                defaultValue={artisan.postalCode}
+                                defaultValue={artisan.address.postalCode}
                                 onChange={updateChamps}
                                 required
                             /></div>
@@ -100,7 +100,7 @@ const ArtisanAccountAdress = () =>{
                                 type="text" 
                                 name='country'
                                 placeholder="France" 
-                                defaultValue={artisan.country}
+                                defaultValue={artisan.address.country}
                                 onChange={updateChamps}
                                 required
                             />
@@ -112,7 +112,8 @@ const ArtisanAccountAdress = () =>{
                 </section>
             </div>
         </main>
-    )
+    )}
+
 }
 
 
