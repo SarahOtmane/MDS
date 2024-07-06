@@ -1146,6 +1146,17 @@ img.picto{
     .slider article{
         padding: 0;
         background-size: 6rem, 6rem, 6rem, 6rem, 6rem;
+        background-image: 
+            url('../assets/pictures/picto/aiguilles.png'),
+            url('../assets/pictures/picto/bobine.png'),
+            url('../assets/pictures/picto/pelote.png'),
+            url('../assets/pictures/picto/ciseaux.png');
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: 
+            37% 100%,
+            60% 0,
+            20% 0,
+            2% 100%;
     }
 
     .slider article .slide-content{
