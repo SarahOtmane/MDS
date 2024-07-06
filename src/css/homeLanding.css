@@ -1153,8 +1153,8 @@ img.picto{
             url('../assets/pictures/picto/ciseaux.png');
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
         background-position: 
-            37% 100%,
-            60% 0,
+            600% 100%,
+            100% 0,
             20% 0,
             2% 100%;
     }
