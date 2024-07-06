@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { addToken} from '../../../axiosConfig';
+import axiosInstance, { addToken} from '../../../service/axiosConfig';
 
 import '../../../css/sign.css';
 
@@ -30,7 +29,7 @@ const SignIn = () =>{
         e.preventDefault();
     
         try {
-            const response = await axios.post('http://localhost:3004/users/login', formData);
+            const response = await axiosInstance.post('/persons/login', formData);
             
             const token = response.data.token;
             addToken(token);
@@ -43,14 +42,8 @@ const SignIn = () =>{
                 case 401:
                     setError(true);
                     break;
-                case 403:
-                    navigate('/error403');
-                    break;
                 case 404:
                     setError(true);
-                    break;
-                case 500:
-                    navigate('/error500');
                     break;
                 default:
                     console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);

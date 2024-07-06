@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../service/axiosConfig';
 
 import '../../css/cart.css';
 import Titre from '../Titre';
@@ -37,9 +37,9 @@ const Paiement = () => {
         try {
             for(const command of commands){
                 await axiosInstance.post(`/commands/${command.id_artisan}`, {
-                    categorie: command.categorie,
+                    category: command.categorie,
                     clothType: command.clotheType,
-                    id_job: command.id_job,
+                    name_job: command.job,
                     reparationType: command.reparationType,
                     comment: command.comment,
                     picture: command.picture.name ? command.picture.name : '',

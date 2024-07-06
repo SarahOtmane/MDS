@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../../../axiosConfig';
+import axiosInstance from '../../../service/axiosConfig';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
@@ -30,23 +30,7 @@ const AccountOrder = () => {
 
                 setCommands(commandData);          
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-                }
+                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
             }
         };
 

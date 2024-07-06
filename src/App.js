@@ -114,7 +114,6 @@ const App = () => {
         id_user: '',
         id_artisan: '',
         job: '',
-        id_job: '',
         id_presta: '',
         reparationType: '',
         clotheType: '',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axiosInstance from '../../../service/axiosConfig';
 
 import '../../../css/artisanSign.css';
 
@@ -44,7 +44,7 @@ const ArtisanSignUp = () =>{
     useEffect(() => {
         const getJob = async () => {
             try {
-                const response = await axios.get('http://localhost:3004/jobs');
+                const response = await axiosInstance.get('/jobs');
                 setJobs(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récup de la liste des jobs:', error); 
@@ -67,14 +67,15 @@ const ArtisanSignUp = () =>{
         password: '',
         confirmPassword: '',
         mobile: '',
-        streetAdress: '',
+        streetAddress: '',
         city: '',
         country: '',
         postalCode: '',
         job: '',
-        numeroTVA: '',
+        tva: '',
         siret: '',
         prestations: [],
+        role : 'artisan'
     });
 
     const [errors, setErrors] = useState({});
@@ -129,7 +130,7 @@ const ArtisanSignUp = () =>{
         }
     
         try {
-            await axios.post('http://localhost:3004/artisans/register', formData);
+            await axiosInstance.post('/persons/artisan/register', formData);
             navigate('/artisan/login');
         }catch (error) {
             const status = error.response ? error.response.status : 500;
@@ -150,10 +151,8 @@ const ArtisanSignUp = () =>{
         }
         setButtonAble(false);
         if(name === 'reparation'){
-            let job = jobs.find(job => job.name === formData.job);
-            let id_job = job.id;
             try {
-                const response = await axios.get(`http://localhost:3004/prestations/job/${id_job}`);
+                const response = await axiosInstance.get(`/prestations/job/${formData.job}`);
                 setPrestations(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récup des prestations:', error); 

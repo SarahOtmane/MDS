@@ -84,9 +84,9 @@ const DetailForm = ({suiteForm, updateChamps, formData, errors, showPassword, sh
                     <label className="text_bold">Adresse</label>
                     <input 
                         type="text" 
-                        name='streetAdress'
+                        name='streetAddress'
                         placeholder="Tom" 
-                        defaultValue={formData.streetAdress}
+                        defaultValue={formData.streetAddress}
                         onChange={updateChamps}
                         required
                     />
@@ -124,9 +124,9 @@ const DetailForm = ({suiteForm, updateChamps, formData, errors, showPassword, sh
                     <label className="text_bold">Numéro TVA</label>
                     <input 
                         type="text" 
-                        name='numeroTVA'
+                        name='tva'
                         placeholder="FR 93 602 036 444" 
-                        defaultValue={formData.numeroTVA}
+                        defaultValue={formData.tva}
                         onChange={updateChamps}
                         required
                     />

@@ -1,29 +1,36 @@
 import { useState } from 'react';
-import axiosInstance from '../../axiosConfig';
+import axiosInstance from '../../service/axiosConfig';
+import { useNavigate } from 'react-router-dom';
 
 const CommandRecap = ({ name, command, setCommand }) => {
     const [addToPanier, setAddToPanier] = useState(false);
+    const navigate = useNavigate();
 
     const addPanier = async () => {
         try {
-            const userResponse = await axiosInstance.get('/users');
-            const user_id = userResponse.data.id;
-            const updatedCommand = {
-                ...command,
-                id_user: user_id,
-                id: new Date().getTime()
-            };
-            setCommand(updatedCommand);
+            console.log(localStorage.getItem('role'));
+            if(localStorage.getItem('role') === null || localStorage.getItem('role') === 'artisan'){
+                navigate('/user/login');
+            }else{
+                const userResponse = await axiosInstance.get('/persons/user');
+                const user_id = userResponse.data.id;
+                const updatedCommand = {
+                    ...command,
+                    id_user: user_id,
+                    id: new Date().getTime()
+                };
+                setCommand(updatedCommand);
 
-            let commandStorage = localStorage.getItem('command');
-            if (!commandStorage) {
-                localStorage.setItem('command', JSON.stringify([updatedCommand]));
-            } else {
-                commandStorage = JSON.parse(commandStorage);
-                commandStorage.push(updatedCommand);
-                localStorage.setItem('command', JSON.stringify(commandStorage));
+                let commandStorage = localStorage.getItem('command');
+                if (!commandStorage) {
+                    localStorage.setItem('command', JSON.stringify([updatedCommand]));
+                } else {
+                    commandStorage = JSON.parse(commandStorage);
+                    commandStorage.push(updatedCommand);
+                    localStorage.setItem('command', JSON.stringify(commandStorage));
+                }
+                setAddToPanier(true);
             }
-            setAddToPanier(true);
         } catch (error) {
             console.error('Erreur lors de la récupération des options:', error);
         }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axiosInstance from '../../../axiosConfig';
+import axiosInstance from '../../../service/axiosConfig';
 
 import '../../../css/account.css';
 
@@ -18,26 +18,11 @@ const ArtisanAccountAdress = () =>{
     useEffect(() => {
         const getArtisan = async () => {
             try {
-                const response = await axiosInstance.get('/artisans');
+                const response = await axiosInstance.get('/persons/artisan');
                 setArtisan(response.data);
+                console.log(response.data.address.streetAddress);
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-                }  
+                console.error('Erreur:', error);
             }
         };
 
@@ -56,29 +41,13 @@ const ArtisanAccountAdress = () =>{
         e.preventDefault();
 
         try {
-            await axiosInstance.put('artisans', artisan);
+            await axiosInstance.put('/persons/artisan', artisan);
             setUpdate(true);
         } catch (error) {
-            const status = error.response ? error.response.status : 500;
-            switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
-                case 404:
-                    navigate('/error404');
-                    break;
-                case 500:
-                    navigate('/error500');
-                    break;
-                default:
-                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-            }  
+            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
         }
     };
-
+    if(artisan && artisan.address && artisan.address.streetAddress){
     return(
         <main>
             <Titre titre="Mon compte artisan" lien="/artisan/my-account/adress" classe="backGris" />
@@ -98,9 +67,9 @@ const ArtisanAccountAdress = () =>{
                         <label className="text_bold">Numéro de la rue</label>
                         <input 
                             type="text" 
-                            name="streetAdress"
+                            name="streetAddress"
                             placeholder="4 Rue Solférino" 
-                            defaultValue={artisan.streetAdress}
+                            defaultValue={artisan.address.streetAddress}
                             onChange={updateChamps}
                             required
                         />
@@ -110,7 +79,7 @@ const ArtisanAccountAdress = () =>{
                             type="text" 
                             name='city'
                             placeholder="Boulogne-Billancourt" 
-                            defaultValue={artisan.city}
+                            defaultValue={artisan.address.city}
                             onChange={updateChamps}
                             required
                         />
@@ -121,7 +90,7 @@ const ArtisanAccountAdress = () =>{
                                 type="text" 
                                 name='postalCode'
                                 placeholder="92100" 
-                                defaultValue={artisan.postalCode}
+                                defaultValue={artisan.address.postalCode}
                                 onChange={updateChamps}
                                 required
                             /></div>
@@ -131,7 +100,7 @@ const ArtisanAccountAdress = () =>{
                                 type="text" 
                                 name='country'
                                 placeholder="France" 
-                                defaultValue={artisan.country}
+                                defaultValue={artisan.address.country}
                                 onChange={updateChamps}
                                 required
                             />
@@ -143,7 +112,8 @@ const ArtisanAccountAdress = () =>{
                 </section>
             </div>
         </main>
-    )
+    )}
+
 }
 
 

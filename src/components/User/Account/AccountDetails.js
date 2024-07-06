@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import axiosInstance from '../../../axiosConfig';
+import axiosInstance from '../../../service/axiosConfig';
 
 import '../../../css/account.css';
 
@@ -22,7 +22,7 @@ const AccountDetails = () =>{
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = await axiosInstance.get('/users');
+                const response = await axiosInstance.get('/persons/user');
                 setUser(response.data);
                 setFormData({
                     lastname: response.data.lastname,
@@ -30,23 +30,7 @@ const AccountDetails = () =>{
                     mobile: response.data.mobile,
                 });
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-                } 
+                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
             }
         };
 
@@ -72,26 +56,10 @@ const AccountDetails = () =>{
         }
     
         try {
-            await axiosInstance.put('users', data);
+            await axiosInstance.put('/persons/user', data);
             setUpdate(true);
         } catch (error) {
-            const status = error.response ? error.response.status : 500;
-            switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
-                case 404:
-                    navigate('/error404');
-                    break;
-                case 500:
-                    navigate('/error500');
-                    break;
-                default:
-                    console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-            }  
+            console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);  
         }
     };
 

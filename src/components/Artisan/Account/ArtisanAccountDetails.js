@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import axiosInstance from '../../../axiosConfig';
+import axiosInstance from '../../../service/axiosConfig';
 
 import '../../../css/account.css';
 
@@ -22,7 +22,7 @@ const ArtisanAccountDetails = () =>{
     useEffect(() => {
         const getArtisan = async () => {
             try {
-                const response = await axiosInstance.get('/artisans');
+                const response = await axiosInstance.get('/persons/artisan');
                 setArtisan(response.data);
                 setFormData({
                     lastname: response.data.lastname,
@@ -30,23 +30,7 @@ const ArtisanAccountDetails = () =>{
                     mobile: response.data.mobile,
                 });
             } catch (error) {
-                const status = error.response ? error.response.status : 500;
-                switch (status) {
-                    case 401:
-                        navigate('/error401');
-                        break;
-                    case 403:
-                        navigate('/error403');
-                        break;
-                    case 404:
-                        navigate('/error404');
-                        break;
-                    case 500:
-                        navigate('/error500');
-                        break;
-                    default:
-                        console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
-                } 
+                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
             }
         };
 
@@ -72,27 +56,10 @@ const ArtisanAccountDetails = () =>{
         }
     
         try {
-            console.log(data);
-            await axiosInstance.put('artisans', data);
+            await axiosInstance.put('/persons/artisan', data);
             setUpdate(true);
         } catch (error) {
-            const status = error.response ? error.response.status : 500;
-            switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
-                case 404:
-                    navigate('/error404');
-                    break;
-                case 500:
-                    navigate('/error500');
-                    break;
-                default:
-                    console.error('Erreur lors de l\'enregistrement de l\'artisan:', error);
-            }  
+            console.error('Erreur lors de l\'enregistrement de l\'artisan:', error); 
         }
     };
 

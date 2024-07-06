@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axiosInstance from '../../../service/axiosConfig';
 
 import '../../../css/sign.css';
 
@@ -15,10 +15,6 @@ const SignUp = () =>{
         email: '',
         password: '',
         mobile: '',
-        streetAdress: '',
-        city: '',
-        country: '',
-        postalCode: ''
     });
 
     const [errors, setErrors] = useState({});
@@ -77,25 +73,13 @@ const SignUp = () =>{
         }
     
         try {
-            await axios.post('http://localhost:3004/users/register', formData);
+            await axiosInstance.post('/persons/user/register', formData);
             navigate('/user/login');
         }catch (error) {
             const status = error.response ? error.response.status : 500;
             switch (status) {
-                case 401:
-                    navigate('/error401');
-                    break;
-                case 403:
-                    navigate('/error403');
-                    break;
-                case 404:
-                    navigate('/error404');
-                    break;
                 case 409:
                     setEmailExist(true);
-                    break;
-                case 500:
-                    navigate('/error500');
                     break;
                 default:
                     console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);

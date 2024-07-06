@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
 
-const Input = ({ name, command, setCommand }) => {
+const SelectForm = ({ name, command, setCommand }) => {
     const [options, setOptions] = useState([]);
 
     useEffect(() => {
@@ -10,15 +10,15 @@ const Input = ({ name, command, setCommand }) => {
             try {
                 let formattedOptions = [];
                 if (name === "categorie" || name === "clotheType") {
-                    const clothesResponse = await axios.get(`http://localhost:3004/clothes/job/${command.id_job}`);
+                    const clothesResponse = await axios.get(`http://localhost:3004/clothes/job/${command.job}`);
                     const clothes = clothesResponse.data;
                     if (name === "categorie") {
-                        formattedOptions = clothes.map(clothe => ({ value: clothe.categorie, label: clothe.categorie }));
+                        formattedOptions = clothes.map(clothe => ({ value: clothe.category, label: clothe.category }));
                     } else {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.clothType, label: clothe.clothType }));
                     }
                 } else if (name === 'reparationType') {
-                    const prestationsResponse = await axios.get(`http://localhost:3004/prestations/job/${command.id_job}`);
+                    const prestationsResponse = await axios.get(`http://localhost:3004/prestations/job/${command.job}`);
                     const prestations = prestationsResponse.data;
                     formattedOptions = prestations.map(prestation => ({ value: prestation.id, label: prestation.reparationType }));
                 } else if (name === 'besoinType') {
@@ -51,10 +51,10 @@ const Input = ({ name, command, setCommand }) => {
             }
         };
 
-        if (command.id_job) {
+        if (command.job) {
             getOptions();
         }
-    }, [name, command.id_job, command.job]);
+    }, [name, command.job, command]);
 
     const handleChange = (selectedOption) => {
         setCommand(prevCommand => ({
@@ -120,4 +120,4 @@ const Input = ({ name, command, setCommand }) => {
     );
 };
 
-export default Input;
+export default SelectForm;
