@@ -11,9 +11,9 @@ const Aide = () =>{
         <main className="aide">
             <Titre titre="Aide" lien="/aide" classe="backGris" />
             <section className="backImg section">
-                <h2 className="text_capitalize">Besoin d'aide? nous sommes là. </h2>
+                <h2 className="text_capitalize">Vous rencontrez un problème ? </h2>
                 <div>
-                    <h3>Questions les plus fréquemment posées</h3>
+                    <h3>Vos questions les plus demandées</h3>
                     <Accordion className='accordion'>
                         <AccordionSummary
                             aria-controls="delais-content"
