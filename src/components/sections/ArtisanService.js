@@ -8,11 +8,10 @@ const ArtisanService = () =>{
                     <h2 className="text_uppercase">
                         services <span className="backRose2">couture</span> 
                         <br></br>
-                        ajuste, répare & réinvente
+                        ajuste, répare & crée
                     </h2>
                     <p>
-                        Notre équipe d'artisans couturiers chevronnés est enthousiaste à l'idée de répondre à tous vos besoins d'ajustement, de retouche et de modification de vos pièces en textile. Chez RenoWear, nous prônons la réutilisation et la valorisation de ce que vous possédez déjà, en le préservant, en le prolongeant dans le temps ou même en lui donnant une toute nouvelle vie.
-                        Chérissez vos vêtements et redonnez-leur leur valeur !
+                        Chaque couture est une œuvre d'art personnalisée. Nous vous offrons des créations sur mesure et des services de retouche de haute qualité, adaptés à vos besoins et à votre style. Que ce soit pour une robe de soirée étincelante ou pour ajuster votre tenue préférée, notre équipe passionnée et expérimentée est là pour vous offrir un service impeccable. Faites confiance à notre savoir-faire artisanal et à notre attention méticuleuse aux détails pour des résultats qui vous raviront.
                     </p>
                 </article>
                 <div></div>
@@ -26,7 +25,7 @@ const ArtisanService = () =>{
                         entretien, répare & sublime
                     </h2>
                     <p>
-                    Nos maroquiniers experts sont à votre disposition pour toutes vos demandes de maintenance, de réparation et même de recoloration de vos accessoires. Notre philosophie est de redonner vie à vos biens en les remettant au goût du jour, en assurant leur durabilité, en les préservant pour les générations futures, ou même en les transformant pour créer quelque chose d'exceptionnel.
+                        Chaque pièce est un mélange parfait d'artisanat traditionnel et de design contemporain. Nous vous proposons des créations sur mesure ainsi que des services de réparation et de personnalisation, tous réalisés avec passion et expertise. Que vous cherchiez un sac unique qui reflète votre style ou que vous ayez besoin de restaurer un article précieux, notre équipe dévouée est là pour répondre à vos besoins avec une attention particulière aux détails. 
                     </p>
                 </article>
             </section>
@@ -38,7 +37,7 @@ const ArtisanService = () =>{
                         personnalise & customise
                     </h2>
                     <p>
-                        Nos maîtres brodeurs, riches de leur savoir-faire, se réjouissent de répondre à vos souhaits de personnalisation. Nous croyons en la valeur de réutiliser ce que vous avez déjà, en l'embellissant, en assurant sa longévité, en le partageant et, si désiré, en le métamorphosant.
+                        Nous offrons des services de broderie sur mesure pour embellir vos vêtements et accessoires, transformant chaque pièce en une œuvre unique et personnalisée. Que vous souhaitiez ajouter une touche de finesse à votre robe de mariée ou personnaliser un cadeau spécial, notre équipe de brodeuses talentueuses vous assure un travail méticuleux et de haute qualité.
                     </p>
                 </article>
                 <div></div>
@@ -49,10 +48,10 @@ const ArtisanService = () =>{
                     <h2 className="text_uppercase">
                         services <span className="backRose2">cordonnerie</span> 
                         <br></br>
-                        sublime, répare & réinvente
+                        embellit, transforme & répare
                     </h2>
                     <p>
-                        Notre équipe d'artisans cordonniers compétents est heureuse de vous aider dans toutes vos requêtes de soins, de réparations et de recoloration de vos chaussures. Chez RenoWear, nous valorisons l'art de renouveler ce que vous possédez déjà, afin de lui donner une nouvelle vie, de prolonger son usage et de le transformer, si vous le souhaitez, en quelque chose d'unique.
+                        Chaque chaussure retrouve son éclat d'origine grâce à notre savoir-faire artisanal. Nous vous proposons des services de réparation et de rénovation sur mesure pour vos chaussures préférées, garantissant confort et longévité. Que ce soit pour ressemeler vos souliers de luxe ou ajuster la taille de vos bottes, notre équipe expérimentée est là pour répondre à tous vos besoins avec précision et dévouement.
                     </p>
                 </article>
             </section>

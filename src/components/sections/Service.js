@@ -8,17 +8,17 @@ const Service = () =>{
             <div className='row'>
                 <article className='column card'>
                     <h3>Couturiers</h3>
-                    <p>Ils réparent et transforment tous vos textiles, des simples ourlets. Tout est possible, du dressing à la déco d'intérieur.</p>
+                    <p>Exprimez votre style personnel avec nos créations sur mesure et ajustements précis, réalisés par une équipe dévouée pour un résultat élégant et impeccable.</p>
                     <a href='/artisans' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
                 <article className='column card'>
                     <h3>Cordonniers</h3>
-                    <p>Ils préviennent l'usure et restaurent vos chaussures, prolongeant ainsi leur durée de vie pas à pas.</p>
+                    <p>Redonnez vie à vos chaussures préférées avec notre service de réparation et de rénovation sur mesure, assurant confort optimal et durabilité grâce à notre expertise</p>
                     <a href='/artisans' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
                 <article className='column card'>
                     <h3>Maroquiniers</h3>
-                    <p>Ils entretiennent, réparent et revitalisent vos sacs et accessoires en cuir, offrant tout, de la nouvelle teinture à la création sur-mesure.</p>                   
+                    <p>Réparation et personnalisation expertes pour des accessoires en cuir alliant qualité, fonctionnalité et esthétique</p>                   
                     <a href='/artisans' className='row text_bold alignitem_center'>En savoir plus <img src={arrow} alt='flèche' /> </a>
                 </article>
             </div>

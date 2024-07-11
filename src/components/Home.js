@@ -49,7 +49,7 @@ const Home = () =>{
                 Comment réparer avec RenoWear ?
                 </p>
                 <p>
-                    Inutile de nous suivre jusqu'au bout du monde. Suivez juste ce tuto.
+                Consultez notre tutoriel détaillé pour vous guider étape par étape.
                 </p>
 
                 <div>
@@ -63,7 +63,7 @@ const Home = () =>{
                 </div>
             </section>
             <Avis />
-            <h2 className="text_uppercase newsletter backGris">construisez une relation durables avec vos articles</h2>
+            <h2 className="text_uppercase newsletter backGris">UN CONCEPT DE RÉPARATION DE VOS ARTICLES</h2>
             <AssurancesSlider />
             <Newsletter />
         </main>

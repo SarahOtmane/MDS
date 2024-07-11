@@ -1145,18 +1145,21 @@ img.picto{
     
     .slider article{
         padding: 0;
-        background-size: 6rem, 6rem, 6rem, 6rem, 6rem;
+        width: 100%;
+        background-size: 7rem, 6rem, 6rem, 6rem, 8rem;
         background-image: 
             url('../assets/pictures/picto/aiguilles.png'),
             url('../assets/pictures/picto/bobine.png'),
             url('../assets/pictures/picto/pelote.png'),
-            url('../assets/pictures/picto/ciseaux.png');
+            url('../assets/pictures/picto/ciseaux.png'),
+            url('../assets/pictures/picto/pince2.png');
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
         background-position: 
-            37% 100%,
-            60% 0,
+            40% 100%,
+            70% 0,
             20% 0,
-            2% 100%;
+            2% 100%,
+            90% 100%;
     }
 
     .slider article .slide-content{

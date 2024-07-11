@@ -10,7 +10,7 @@ import recu from '../../assets/pictures/acceuil/recu.svg';
 const Etape = () =>{
     return(
         <section className="etape backRose2 column">
-            <h3>Faites des affaires avec vos affaires</h3>
+            <h3>Transformez vos affaires en opportunités.</h3>
             <span>Réparez vos vêtements pour leurs offrir une seconce vie</span>
             <div className="row container justifycontent_spbetween">
                 <article className="row">

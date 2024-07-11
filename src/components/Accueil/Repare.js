@@ -49,7 +49,7 @@ const Repare = ({setService, setServiceEnvoyeParRepare}) =>{
             </section>
             <section className='tuto'>
                 <h2>Comment réparer avec RenoWear ?</h2>
-                <p>Inutile de nous suivre jusqu'au bout du monde. Suivez juste ce tuto.</p>
+                <p>Consultez notre tutoriel détaillé pour vous guider étape par étape.</p>
 
                 <div>
                 <ReactPlayer 

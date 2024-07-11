@@ -19,7 +19,7 @@ const Rejoindre = () =>{
                 <article>
                     <h2>Vous êtes artisans ?</h2>
                     <p>
-                        Avec  RenoWear rejoignez une communauté de plus de 500 talents qui vous ressemblent et profitez d’un service clé en main pour vous reconnecter à vos clients.
+                        Pour un artisan spécialisé dans la réparation de vêtements, rejoindre une plateforme qui met en relation artisans et utilisateurs présente plusieurs avantages.
                     </p>
                     <button className='black' onClick={navigat}>Rejoindre RenoWear</button>
                 </article>
@@ -30,43 +30,24 @@ const Rejoindre = () =>{
                     <article>
                         <h3 className='text_uppercase first'>La communauté RenoWear</h3>
                         <p>
-                            Une communauté d'hommes et de femmes uniques se forme autour d'une passion commune : l'artisanat ! Ces artisans dévoués, experts dans leur domaine, sont animés par le désir de transmettre leur savoir-faire. Leur attention particulière leur permet de répondre avec précision et bienveillance à chaque demande. Ensemble, nos couturiers, brodeurs, maroquiniers et cordonniers s'unissent dans le but commun de perpétuer avec excellence les objets du quotidien.
+                            Renowear est bien plus qu'une de la réparation : c'est une communauté vibrante, unie par la passion pour l'exploration et le respect de notre planète. Ensemble, nous croyons en un style de vie durable, où chaque produit est conçu avec soin à partir de matériaux recyclés et respectueux de l'environnement. Rejoignez-nous pour faire partie d'un mouvement qui combine mode et responsabilité, et ensemble, faisons une différence positive dans le monde.                        
                         </p>
                     </article>
                     <article>
-                        <h3 className='text_uppercase'>Tout un parcours</h3>
+                        <h3 className='text_uppercase'>UN PARCOURS AVEC RENOWEAR</h3>
                         <p>
-                        Chez RenoWear, nous reconnaissons la diversité des parcours professionnels, que vous soyez étudiant, autodidacte, diplômé ou en quête d'emploi. Nous nous engageons à personnaliser nos opportunités pour répondre à vos besoins à chaque étape de votre carrière. En tant qu'Entreprise d'Insertion, nous offrons un soutien individualisé pour faciliter votre transition vers le monde du travail.
-                        Nous offrons une multitude de postes et de missions adaptés à vos préférences : que vous recherchiez un rythme de travail flexible, une possibilité de formation, ou encore un emploi stable au sein de nos ateliers, RenoWear est ouvert à toutes les possibilités d'emploi et prêt à explorer ces options avec vous.
+                            Chez RenoWear, nous valorisons la diversité des parcours professionnels, que vous soyez étudiant, autodidacte, diplômé ou en recherche d'emploi. En tant qu'entreprise d'insertion, nous personnalisons nos opportunités pour répondre à vos besoins à chaque étape de votre carrière, avec une variété de postes adaptés à vos préférences : flexibilité du travail, formations disponibles et emplois stables dans nos ateliers. Rejoignez une équipe où votre parcours est respecté et vos talents valorisés, contribuant ainsi à notre mission de qualité, inclusion sociale et développement personnel.
                         </p>
                     </article>
                     <article>
-                        <h3 className='text_uppercase'>Pourquoi choisir RenoWear</h3>
+                        <h3 className='text_uppercase'>REJOIGNEZ NOTRE ÉQUIPE</h3>
                         <p>
-                            Rejoignez une communauté qui réinvente les standards de l'artisanat. Notre objectif principal est de mettre en avant vos compétences tout en adaptant nos métiers aux évolutions du monde. En faisant partie de notre réseau d'artisans, vous aurez la possibilité de vivre votre passion à votre rythme. Nous vous invitons à contribuer à la revitalisation et à la perpétuation du savoir-faire français, tout en établissant des relations durables avec nos produits.
+                        Les artisans devraient choisir RenoWear pour son approche simplifiée et efficace qui met en valeur leur savoir-faire sans les tracas administratifs. Notre plateforme offre une visibilité accrue et une connexion directe avec une clientèle engagée dans la durabilité, facilitant ainsi le développement de leur activité tout en conservant une liberté totale dans la gestion de leurs services. 
+                            <br></br><br></br>
+                        Chez RenoWear, les artisans peuvent fixer leurs tarifs, définir leurs horaires et choisir les types de réparations qu'ils souhaitent offrir, ce qui leur permet de travailler de manière autonome tout en bénéficiant du soutien nécessaire pour réussir.
+                            <br></br><br></br>
+                        En rejoignant RenoWear, les artisans contribuent à promouvoir une mode plus durable en prolongeant la vie des vêtements tout en offrant un service de qualité. Ils font partie d'une communauté dédiée à l'artisanat et à l'excellence, renforçant ainsi leur réputation et leur expertise dans le domaine. Rejoignez-nous chez RenoWear pour faire partie d'une initiative enrichissante qui valorise votre métier tout en répondant aux attentes élevées d'une clientèle consciente et soucieuse de la qualité.
                         </p>
-                        <ul>
-                            <li className='column'>
-                                <span>Flexibilité</span>
-                                Acceptez des missions en fonction de vos disponibilités.
-                            </li>
-                            <li className='column'>
-                                <span>Liberté</span>
-                                Préservez votre indépendance et gardez le contrôle sur votre activité.
-                            </li>
-                            <li className='column'>
-                                <span>Simplicité</span>
-                                Bénéficiez de tarifs préalablement négociés pour vous.
-                            </li>
-                            <li className='column'>
-                                <span>Tranquillité</span>
-                                Opérez directement depuis votre propre atelier.
-                            </li>
-                            <li className='column'>
-                                <span>Gestion</span>
-                                Confiez à RenoWear le soin de gérer la relation client.
-                            </li>
-                        </ul>
                     </article>
                     <article>
                         <h3 className='text_uppercase'>REJOINDRE LA MAISON RENOWEAR</h3>
