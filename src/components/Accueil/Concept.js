@@ -12,27 +12,25 @@ const Concept = () =>{
                 <article>
                     <h2>Hey, nous c'est Renowear</h2>
                     <p>
-                        Offrez une nouvelle vie à vos vêtements et accessoires. 
-                        Transformez vos pièces usées en créations uniques et personnalisées. 
-                        Plus abordable, meilleure pour la planète mais tout aussi performante.
+                        Transformez vos vêtements et accessoires en créations uniques et personnalisées, offrant une alternative abordable, respectueuse de la planète et tout aussi performante, pour une mode durable.
                     </p>
                 </article>
             </section>
             <section className='description'>
                 <div>
                     <article>
-                        <h3>Une place de marché mondiale pour la réparation d’articles</h3>
-                        <p>RenoWear est une plateforme de réparation de vêtements. Seuls les meilleurs artisans, sélectionnés grâce à notre processus de vérification rigoureux et notre charte qualité exigeante, peuvent rejoindre notre site pour sublimer votre garde-robe et promouvoir une mode durable.</p>
+                        <h3>Une plateforme de services pour la réparation d'articles</h3>
+                        <p>Chez RenoWear, nous croyons en une mode qui ne se contente pas de suivre les tendances, mais qui préserve également notre planète. Notre concept repose sur une idée simple mais puissante : prolonger la vie de vos vêtements préférés grâce à des réparations expertes et soignées. En choisissant RenoWear, vous optez pour une approche responsable de la mode, où chaque pièce compte et chaque geste a un impact positif.</p>
                     </article>
                     <hr></hr>
                     <article>
-                        <h3>Le meilleur de la réparation</h3>
-                        <p>Nous collaborons avec des artisans professionnels français pour garantir que chaque article est réparé et remis en parfait état.</p>
+                        <h3>Réparation et Transformation Responsables</h3>
+                        <p>Notre plateforme met en relation des artisans qualifiés avec des utilisateurs soucieux de réduire leur empreinte écologique. Nous facilitons non seulement la réparation de vêtements, mais aussi la transformation de votre garde-robe en une collection durable et personnalisée. Avec RenoWear, vous avez accès à des conseils pratiques et à des tutoriels pour vous aider à entretenir et réparer vos vêtements à la maison, soutenant ainsi une consommation responsable et éclairée.</p>
                     </article>
                     <hr></hr>
                     <article>
-                        <h3>Meilleur pour la planète</h3>
-                        <p>En comparaison avec un article neuf, un vêtement réparé permet d'économiser 2 700 litres d'eau, de réduire les déchets d’en moyenne 79 % et de diminuer les émissions de carbone.</p>
+                        <h3>Pour une mode durable</h3>
+                        <p>Ensemble, changeons la manière dont nous consommons la mode. Optez pour RenoWear et participez à notre mission de préserver les ressources naturelles tout en favorisant une industrie textile plus durable et éthique. Rejoignez-nous dans cette aventure où chaque choix compte pour un avenir plus vert et plus conscient.</p>
                     </article>
                 </div>
             </section>
