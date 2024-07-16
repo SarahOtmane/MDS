@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -70,7 +71,7 @@ const ArtisanAccountJob = () =>{
     };
 
     const inputChange = (e, prestaId) => {
-        const { value } = e.target;
+        const { value } =  xss(e.target);
         setCheckedItems(prevState => 
             prevState.map(item =>
                 item.id === prestaId ? { ...item, price: value } : item

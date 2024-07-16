@@ -6,6 +6,7 @@ import '../../../css/account.css';
 
 import ArtisanAccountMenu from './ArtisanAccountMenu';
 import Titre from "../../Titre";
+import xss from 'xss';
 
 
 
@@ -22,7 +23,7 @@ const ArtisanAccountMdp = () =>{
     const [newErrors, setNewErrors] = useState({});
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
+        const { name, value } = xss(e.target);
         setFormData({
             ...formData,
             [name]: value.trim()

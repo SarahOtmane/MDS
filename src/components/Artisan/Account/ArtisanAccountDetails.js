@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import axiosInstance from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -38,7 +39,7 @@ const ArtisanAccountDetails = () =>{
     }, [navigate]);
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
+        const { name, value } = xss(e.target);
         setFormData({
             ...formData,
             [name]: value.trim()

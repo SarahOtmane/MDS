@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/artisanSign.css';
 
@@ -85,7 +86,7 @@ const ArtisanSignUp = () =>{
     const confirmPasswordVisible = () =>{setShowConfirmPassword(!showConfirmPassword)};
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
+        const { name, value } = xss(e.target);
         setFormData({
             ...formData,
             [name]: value.trim()

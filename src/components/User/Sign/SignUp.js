@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/sign.css';
 
@@ -21,7 +22,7 @@ const SignUp = () =>{
     const [emailExist, setEmailExist] = useState(false);
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
+        const { name, value } = xss(e.target);
         setFormData({
             ...formData,
             [name]: value.trim()

@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import { styled } from '@mui/material/styles';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -72,8 +73,7 @@ const ArtisanAccountOrder = () => {
 
     const handleChange = async(event, commandId, commandDateFinished) => {
         try {
-            const value = event.target.value;
-            console.log(`Command ID: ${commandId}, Selected Value: ${value}`);
+            const value = xss(event.target.value);
 
             if (value === 'Terminé' && !commandDateFinished) {
                 await axiosInstance.put(`/commands/${commandId}`, {
