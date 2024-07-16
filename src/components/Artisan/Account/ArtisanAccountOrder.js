@@ -15,7 +15,6 @@ import Titre from "../../Titre";
 
 import product from '../../../assets/pictures/landingPage/product3.png';
 
-// Custom styled Select component
 const CustomSelect = styled(Select)(({ theme }) => ({
     '& .MuiOutlinedInput-notchedOutline': {
         border: 'none',
@@ -35,7 +34,7 @@ const ArtisanAccountOrder = () => {
     useEffect(() => {
         const getCommands = async () => {
             try {
-                const commandsResponse = await axiosInstance.get(`/commands`);
+                const commandsResponse = await axiosInstance.get(`/commands/artisans`);
                 let commandData = commandsResponse.data;
 
                 for (const command of commandData) {
@@ -48,7 +47,7 @@ const ArtisanAccountOrder = () => {
 
                 setCommands(commandData);
             } catch (error) {
-                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                console.error('Erreur lors de la récupération des commandes:', error);
             }
         };
 
