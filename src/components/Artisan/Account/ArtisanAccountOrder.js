@@ -99,7 +99,7 @@ const ArtisanAccountOrder = () => {
 
     return (
         <main>
-            <Titre titre="Mon compte artisan" lien="/artisan/my-account/update-password" classe="backGris" />
+            <Titre titre="Mon compte artisan" lien="/artisan/my-account/order" classe="backGris" />
             <div className='row account'>
                 <ArtisanAccountMenu selected="commandes" />
                 {commands.length > 0 ? (

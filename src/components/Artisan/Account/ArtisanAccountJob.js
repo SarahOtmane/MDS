@@ -137,7 +137,7 @@ const ArtisanAccountJob = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte artisan" lien="/user/my-account/adress" classe="backGris" />
+            <Titre titre="Mon compte artisan" lien="/artisan/my-account/metier" classe="backGris" />
             <div className='row account'>
                 <ArtisanAccountMenu selected="job" />
                 <section className='artisanJobs'>
