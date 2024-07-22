@@ -76,11 +76,11 @@ const ArtisanAccountOrder = () => {
             const value = xss(event.target.value);
 
             if (value === 'Terminé' && !commandDateFinished) {
-                await axiosInstance.put(`/commands/${commandId}`, {
+                await axiosInstance.put(`/commands/artisan/${commandId}`, {
                     dateFinished: getTodayDate()
                 });
             } else if (value === 'En cours' && commandDateFinished) {
-                await axiosInstance.put(`/commands/${commandId}`, {
+                await axiosInstance.put(`/commands/artisan/${commandId}`, {
                     dateFinished: null
                 });
             }
