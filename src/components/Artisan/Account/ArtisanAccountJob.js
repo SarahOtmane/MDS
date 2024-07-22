@@ -71,10 +71,9 @@ const ArtisanAccountJob = () =>{
     };
 
     const inputChange = (e, prestaId) => {
-        const { value } =  xss(e.target);
         setCheckedItems(prevState => 
             prevState.map(item =>
-                item.id === prestaId ? { ...item, price: value } : item
+                item.id === prestaId ? { ...item, price: xss(e.target.value) } : item
             )
         );
     };

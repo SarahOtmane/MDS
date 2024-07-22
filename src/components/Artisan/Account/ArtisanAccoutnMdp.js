@@ -23,10 +23,9 @@ const ArtisanAccountMdp = () =>{
     const [newErrors, setNewErrors] = useState({});
 
     const updateChamps = (e) => {
-        const { name, value } = xss(e.target);
         setFormData({
             ...formData,
-            [name]: value.trim()
+            [xss(e.target.name)]: xss(e.target.value).trim()
         });
     };
 

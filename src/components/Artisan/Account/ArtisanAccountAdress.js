@@ -30,10 +30,9 @@ const ArtisanAccountAdress = () =>{
     }, [navigate]);
 
     const updateChamps = (e) => {
-        const { name, value } = xss(e.target);
         setArtisan({
             ...artisan,
-            [name]: value.trim()
+            [xss(e.target.name)]: xss(e.target.value).trim()
         });
     };
 
