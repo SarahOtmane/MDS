@@ -119,7 +119,7 @@ const ArtisanAccountOrder = () => {
                                     {commands.map(command => (
                                         <tr key={command.id}>
                                             <td> <img src={command.picture ? command.picture : product} alt={command.name} /> </td>
-                                            <th> {command.cloth.categorie} : {command.cloth.clothType} </th>
+                                            <th> {command.cloth.category} : {command.cloth.clothType} </th>
                                             <th> {formatDate(command.createdAt)} </th>
                                             <th> {countPrice(command.product.price)} €</th>
                                             <th>
