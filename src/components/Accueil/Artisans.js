@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axiosInstance from '../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../css/accueil.css';
 
@@ -16,10 +17,10 @@ const Artisans = ({setCommand, command, service, setService, setServiceEnvoyePar
 
     const updateChamps = (e) => {
         setRecherche(false);
-        if (e.target.name === 'postalCode') {
-            setPostalCode(e.target.value);
+        if (xss(e.target.value) === 'postalCode') {
+            setPostalCode(xss(e.target.value));
         } else {
-            setService(e.target.value);
+            setService(xss(e.target.value));
         }
     };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -20,7 +21,6 @@ const ArtisanAccountAdress = () =>{
             try {
                 const response = await axiosInstance.get('/persons/artisan');
                 setArtisan(response.data);
-                console.log(response.data.address.streetAddress);
             } catch (error) {
                 console.error('Erreur:', error);
             }
@@ -30,10 +30,9 @@ const ArtisanAccountAdress = () =>{
     }, [navigate]);
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
         setArtisan({
             ...artisan,
-            [name]: value.trim()
+            [xss(e.target.name)]: xss(e.target.value).trim()
         });
     };
 

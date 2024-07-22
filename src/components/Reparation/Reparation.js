@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../css/reparation.css';
 import axiosInstance from '../../service/axiosConfig';
+import xss from 'xss';
 
 import Titre from "./Titre";
 import SelectLabel from './SelectLabel';
@@ -15,7 +16,7 @@ const Reparation = ({ command, setCommand }) => {
     const updateComment = (e) => {
         setCommand({
             ...command,
-            comment: e.target.value
+            comment: xss(e.target.value)
         });
     };
 

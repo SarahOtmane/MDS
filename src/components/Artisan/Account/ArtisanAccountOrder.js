@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import { styled } from '@mui/material/styles';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -15,7 +16,6 @@ import Titre from "../../Titre";
 
 import product from '../../../assets/pictures/landingPage/product3.png';
 
-// Custom styled Select component
 const CustomSelect = styled(Select)(({ theme }) => ({
     '& .MuiOutlinedInput-notchedOutline': {
         border: 'none',
@@ -35,7 +35,7 @@ const ArtisanAccountOrder = () => {
     useEffect(() => {
         const getCommands = async () => {
             try {
-                const commandsResponse = await axiosInstance.get(`/commands`);
+                const commandsResponse = await axiosInstance.get(`/commands/artisans`);
                 let commandData = commandsResponse.data;
 
                 for (const command of commandData) {
@@ -48,7 +48,7 @@ const ArtisanAccountOrder = () => {
 
                 setCommands(commandData);
             } catch (error) {
-                console.error('Erreur lors de l\'enregistrement de l\'utilisateur:', error);
+                console.error('Erreur lors de la récupération des commandes:', error);
             }
         };
 
@@ -73,15 +73,14 @@ const ArtisanAccountOrder = () => {
 
     const handleChange = async(event, commandId, commandDateFinished) => {
         try {
-            const value = event.target.value;
-            console.log(`Command ID: ${commandId}, Selected Value: ${value}`);
+            const value = xss(event.target.value);
 
             if (value === 'Terminé' && !commandDateFinished) {
-                await axiosInstance.put(`/commands/${commandId}`, {
+                await axiosInstance.put(`/commands/artisan/${commandId}`, {
                     dateFinished: getTodayDate()
                 });
             } else if (value === 'En cours' && commandDateFinished) {
-                await axiosInstance.put(`/commands/${commandId}`, {
+                await axiosInstance.put(`/commands/artisan/${commandId}`, {
                     dateFinished: null
                 });
             }
@@ -100,7 +99,7 @@ const ArtisanAccountOrder = () => {
 
     return (
         <main>
-            <Titre titre="Mon compte artisan" lien="/artisan/my-account/update-password" classe="backGris" />
+            <Titre titre="Mon compte artisan" lien="/artisan/my-account/order" classe="backGris" />
             <div className='row account'>
                 <ArtisanAccountMenu selected="commandes" />
                 {commands.length > 0 ? (
@@ -120,7 +119,7 @@ const ArtisanAccountOrder = () => {
                                     {commands.map(command => (
                                         <tr key={command.id}>
                                             <td> <img src={command.picture ? command.picture : product} alt={command.name} /> </td>
-                                            <th> {command.cloth.categorie} : {command.cloth.clothType} </th>
+                                            <th> {command.cloth.category} : {command.cloth.clothType} </th>
                                             <th> {formatDate(command.createdAt)} </th>
                                             <th> {countPrice(command.product.price)} €</th>
                                             <th>

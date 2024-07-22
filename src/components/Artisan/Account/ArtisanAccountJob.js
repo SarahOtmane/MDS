@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -70,10 +71,9 @@ const ArtisanAccountJob = () =>{
     };
 
     const inputChange = (e, prestaId) => {
-        const { value } = e.target;
         setCheckedItems(prevState => 
             prevState.map(item =>
-                item.id === prestaId ? { ...item, price: value } : item
+                item.id === prestaId ? { ...item, price: xss(e.target.value) } : item
             )
         );
     };
@@ -137,7 +137,7 @@ const ArtisanAccountJob = () =>{
 
     return(
         <main>
-            <Titre titre="Mon compte artisan" lien="/user/my-account/adress" classe="backGris" />
+            <Titre titre="Mon compte artisan" lien="/artisan/my-account/metier" classe="backGris" />
             <div className='row account'>
                 <ArtisanAccountMenu selected="job" />
                 <section className='artisanJobs'>

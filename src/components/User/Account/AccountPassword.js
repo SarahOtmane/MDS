@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance, { removeToken }  from '../../../service/axiosConfig';
+import xss from 'xss';
 
 import '../../../css/account.css';
 
@@ -20,10 +21,9 @@ const AccountPassword = () =>{
     const [newErrors, setNewErrors] = useState({});
 
     const updateChamps = (e) => {
-        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [name]: value.trim()
+            [xss(e.target.name)]: xss(e.target.value).trim()
         });
     };
 
