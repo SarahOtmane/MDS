@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://api.renowear.fr/'
+    baseURL: 'https://api.renowear.fr/'
 });
 
 instance.interceptors.request.use(config => {
