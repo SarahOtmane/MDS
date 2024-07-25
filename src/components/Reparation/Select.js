@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../service/axiosConfig';
 import Select from 'react-select';
 
 const SelectForm = ({ name, command, setCommand }) => {
@@ -10,7 +10,7 @@ const SelectForm = ({ name, command, setCommand }) => {
             try {
                 let formattedOptions = [];
                 if (name === "categorie" || name === "clotheType") {
-                    const clothesResponse = await axios.get(`http://localhost:3004/clothes/job/${command.job}`);
+                    const clothesResponse = await axiosInstance.get(`/clothes/job/${command.job}`);
                     const clothes = clothesResponse.data;
                     if (name === "categorie") {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.category, label: clothe.category }));
@@ -18,7 +18,7 @@ const SelectForm = ({ name, command, setCommand }) => {
                         formattedOptions = clothes.map(clothe => ({ value: clothe.clothType, label: clothe.clothType }));
                     }
                 } else if (name === 'reparationType') {
-                    const prestationsResponse = await axios.get(`http://localhost:3004/prestations/job/${command.job}`);
+                    const prestationsResponse = await axiosInstance.get(`/prestations/job/${command.job}`);
                     const prestations = prestationsResponse.data;
                     formattedOptions = prestations.map(prestation => ({ value: prestation.id, label: prestation.reparationType }));
                 } else if (name === 'besoinType') {
