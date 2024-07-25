@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from 'axios';
+import axiosInstance from '../../service/axiosConfig';
 
 
 
@@ -13,7 +13,7 @@ const Newsletter = () =>{
         e.preventDefault();
     
         try {
-            await axios.post('http://localhost:3004/newsletter', {email});
+            await axiosInstance.post('/newsletters', {email});
             setValidate(true);
         } catch (error) {
             setError(true);
